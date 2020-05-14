@@ -15,7 +15,7 @@ struct CountView: View {
     
     @FetchRequest(entity: CountRecord.entity(), sortDescriptors: []) var countRecords: FetchedResults<CountRecord>
     
-    let timePublisher = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    @State var timePublisher = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @State var counter = 0
     @State var isCounting = false
     @State var timer = 0
@@ -37,7 +37,7 @@ struct CountView: View {
                 .font(.subheadline)
                 .onReceive(self.timePublisher) { time in
                     if(self.isCounting) {
-                        if (self.timer >= 2) {
+                        if (self.timer >= 30) {
                             self.isCounting = false
                             self.showResults = true
                             self.bpm = self.counter * 2
@@ -46,7 +46,7 @@ struct CountView: View {
                             record.beats = Int16(self.counter)
                             record.time = Date(timeIntervalSinceReferenceDate: time.timeIntervalSinceReferenceDate)
                             let df = DateFormatter()
-                            df.dateFormat = "yyyy-MM-dd hh:mm:ss"
+                            df.dateFormat = "MM-dd-yyyy hh:mm:ss"
                             record.timeText = df.string(from: record.time ?? Date())
                             
                             self.timer = 0
@@ -62,6 +62,7 @@ struct CountView: View {
             Spacer()
             Button(action: {
                 if (!self.isCounting) {
+                    self.timePublisher = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
                     self.counter = 1
                     self.isCounting = true
                     self.timer = 0
@@ -71,9 +72,9 @@ struct CountView: View {
             }) {
                 GeometryReader { geometry in
                     
-                    Image(self.colorScheme == .dark ? "baseline_pets_white_48pt" : "baseline_pets_black_48pt").frame(width: geometry.size.width, height: geometry.size.height).background(Color(red:52/255, green:73/255, blue:94/255)).foregroundColor(Color(red:236/255, green:240/255, blue:241/255)).cornerRadius(20)
+                    Image("icon").frame(width: geometry.size.width, height: geometry.size.height).background(Color(red:78/255, green:78/255, blue:78/255)).cornerRadius(20)
                 }
-            }
+            }.buttonStyle(PlainButtonStyle())
             Spacer()
             Spacer()
         }

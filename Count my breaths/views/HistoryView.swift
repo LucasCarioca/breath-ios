@@ -15,22 +15,24 @@ struct HistoryView: View {
     var body: some View {
         VStack {
             HStack {
-                VStack {
-                    Text("History View")
-                        .font(.title)
-                        .padding(.bottom)
-                    List{
-                        ForEach(countRecords, id: \.id) { record in
-                            VStack{
-                                Text(String(record.beats * 2) + " Breaths per minute").font(.headline)
-                                Text(record.timeText ?? "Unknown").font(.subheadline)
-                            }
-                        }
-                    }
-                }
+                Text("History View")
+                    .font(.title)
+                    .padding(.bottom)
+                
                 Spacer()
             }
-            Spacer()
+            HStack {
+                Text("Previous records will show up here.")
+                Spacer()
+            }
+            List{
+                ForEach(countRecords, id: \.id) { record in
+                    VStack{
+                        Text(String(record.beats * 2) + " Breaths per minute").font(.headline)
+                        Text(record.timeText ?? "Unknown").font(.subheadline)
+                    }
+                }
+            }
         }
     }
 }
