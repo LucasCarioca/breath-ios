@@ -18,4 +18,4 @@ jobs:
       - name: Xcode version
         run: /usr/bin/xcodebuild -version
       - name: Build app
-        run : xcodebuild -sdk iphoneos -project Count\ my\ breaths.xcodeproj/ -configuration Release -scheme Count\ my\ breaths
+        run : xcodebuild -sdk iphoneos -project Count\ my\ breaths.xcodeproj/ 
