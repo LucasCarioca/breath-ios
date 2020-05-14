@@ -1,0 +1,22 @@
+name: CI
+# This workflow is triggered on pushes to the repository.
+on:
+  push:
+    branches:
+    - develop
+    - feature/*
+jobs:
+  build:
+    # Job name is test
+    name: Test
+    # This job runs on macOS
+    runs-on: macOS-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Select Xcode
+        run: sudo xcode-select -switch /Applications/Xcode_11.3.app
+      - name: Xcode version
+        run: /usr/bin/xcodebuild -version
+      - name: build
+        run : xcodebuild -sdk iphoneos -project Count\ my\ breaths.xcodeproj/ -configuration Release -scheme Count\ my\ breaths
