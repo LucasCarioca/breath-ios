@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DF0A7A62246C6B760004D826 /* countmybreaths.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DF0A7A60246C6B760004D826 /* countmybreaths.xcdatamodeld */; };
+		DF0A7A94246C6F900004D826 /* countmybreaths.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DF0A7A60246C6B760004D826 /* countmybreaths.xcdatamodeld */; };
+		DF8E95B7246B8E8F004AB783 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95B6246B8E8F004AB783 /* AppDelegate.swift */; };
+		DF8E95B9246B8E8F004AB783 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95B8246B8E8F004AB783 /* SceneDelegate.swift */; };
+		DF8E95BB246B8E8F004AB783 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95BA246B8E8F004AB783 /* ContentView.swift */; };
+		DF8E95BD246B8E93004AB783 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF8E95BC246B8E93004AB783 /* Assets.xcassets */; };
+		DF8E95C0246B8E93004AB783 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF8E95BF246B8E93004AB783 /* Preview Assets.xcassets */; };
+		DF8E95C3246B8E93004AB783 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF8E95C1246B8E93004AB783 /* LaunchScreen.storyboard */; };
+		DF8E95CE246B8E93004AB783 /* Count_my_breathsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95CD246B8E93004AB783 /* Count_my_breathsTests.swift */; };
+		DF8E95DC246B9086004AB783 /* CountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95DB246B9086004AB783 /* CountView.swift */; };
+		DF8E95DE246B927C004AB783 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95DD246B927C004AB783 /* AccountView.swift */; };
+		DF8E95E0246B92F1004AB783 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95DF246B92F1004AB783 /* HistoryView.swift */; };
+		DF8E95F0246BA766004AB783 /* CounterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95EF246BA766004AB783 /* CounterService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DF8E95CA246B8E93004AB783 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF8E95AB246B8E8E004AB783 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF8E95B2246B8E8E004AB783;
+			remoteInfo = "Count my breaths";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DF0A7A61246C6B760004D826 /* countmybreaths.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = countmybreaths.xcdatamodel; sourceTree = "<group>"; };
+		DF8E95B3246B8E8F004AB783 /* Count my breaths.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Count my breaths.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF8E95B6246B8E8F004AB783 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DF8E95B8246B8E8F004AB783 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DF8E95BA246B8E8F004AB783 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DF8E95BC246B8E93004AB783 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DF8E95BF246B8E93004AB783 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DF8E95C2246B8E93004AB783 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DF8E95C4246B8E93004AB783 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF8E95C9246B8E93004AB783 /* Count my breathsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Count my breathsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF8E95CD246B8E93004AB783 /* Count_my_breathsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Count_my_breathsTests.swift; sourceTree = "<group>"; };
+		DF8E95CF246B8E93004AB783 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF8E95DB246B9086004AB783 /* CountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountView.swift; sourceTree = "<group>"; };
+		DF8E95DD246B927C004AB783 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		DF8E95DF246B92F1004AB783 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		DF8E95EF246BA766004AB783 /* CounterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DF8E95B0246B8E8E004AB783 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF8E95C6246B8E93004AB783 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DF8E95AA246B8E8E004AB783 = {
+			isa = PBXGroup;
+			children = (
+				DF8E95B5246B8E8F004AB783 /* Count my breaths */,
+				DF8E95CC246B8E93004AB783 /* Count my breathsTests */,
+				DF8E95B4246B8E8F004AB783 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DF8E95B4246B8E8F004AB783 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DF8E95B3246B8E8F004AB783 /* Count my breaths.app */,
+				DF8E95C9246B8E93004AB783 /* Count my breathsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DF8E95B5246B8E8F004AB783 /* Count my breaths */ = {
+			isa = PBXGroup;
+			children = (
+				DF8E95E3246B9318004AB783 /* services */,
+				DF8E95E2246B9311004AB783 /* models */,
+				DF8E95D8246B8F21004AB783 /* views */,
+				DF8E95B6246B8E8F004AB783 /* AppDelegate.swift */,
+				DF8E95B8246B8E8F004AB783 /* SceneDelegate.swift */,
+				DF8E95BA246B8E8F004AB783 /* ContentView.swift */,
+				DF8E95BC246B8E93004AB783 /* Assets.xcassets */,
+				DF8E95C1246B8E93004AB783 /* LaunchScreen.storyboard */,
+				DF8E95C4246B8E93004AB783 /* Info.plist */,
+				DF8E95BE246B8E93004AB783 /* Preview Content */,
+				DF0A7A60246C6B760004D826 /* countmybreaths.xcdatamodeld */,
+			);
+			path = "Count my breaths";
+			sourceTree = "<group>";
+		};
+		DF8E95BE246B8E93004AB783 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				DF8E95BF246B8E93004AB783 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DF8E95CC246B8E93004AB783 /* Count my breathsTests */ = {
+			isa = PBXGroup;
+			children = (
+				DF8E95CD246B8E93004AB783 /* Count_my_breathsTests.swift */,
+				DF8E95CF246B8E93004AB783 /* Info.plist */,
+			);
+			path = "Count my breathsTests";
+			sourceTree = "<group>";
+		};
+		DF8E95D8246B8F21004AB783 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				DF8E95DB246B9086004AB783 /* CountView.swift */,
+				DF8E95DD246B927C004AB783 /* AccountView.swift */,
+				DF8E95DF246B92F1004AB783 /* HistoryView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		DF8E95E2246B9311004AB783 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		DF8E95E3246B9318004AB783 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				DF8E95EF246BA766004AB783 /* CounterService.swift */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DF8E95B2246B8E8E004AB783 /* Count my breaths */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF8E95D2246B8E93004AB783 /* Build configuration list for PBXNativeTarget "Count my breaths" */;
+			buildPhases = (
+				DF8E95AF246B8E8E004AB783 /* Sources */,
+				DF8E95B0246B8E8E004AB783 /* Frameworks */,
+				DF8E95B1246B8E8E004AB783 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Count my breaths";
+			productName = "Count my breaths";
+			productReference = DF8E95B3246B8E8F004AB783 /* Count my breaths.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DF8E95C8246B8E93004AB783 /* Count my breathsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF8E95D5246B8E93004AB783 /* Build configuration list for PBXNativeTarget "Count my breathsTests" */;
+			buildPhases = (
+				DF8E95C5246B8E93004AB783 /* Sources */,
+				DF8E95C6246B8E93004AB783 /* Frameworks */,
+				DF8E95C7246B8E93004AB783 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF8E95CB246B8E93004AB783 /* PBXTargetDependency */,
+			);
+			name = "Count my breathsTests";
+			productName = "Count my breathsTests";
+			productReference = DF8E95C9246B8E93004AB783 /* Count my breathsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DF8E95AB246B8E8E004AB783 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Lucas Desouza";
+				TargetAttributes = {
+					DF8E95B2246B8E8E004AB783 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					DF8E95C8246B8E93004AB783 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = DF8E95B2246B8E8E004AB783;
+					};
+				};
+			};
+			buildConfigurationList = DF8E95AE246B8E8E004AB783 /* Build configuration list for PBXProject "Count my breaths" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DF8E95AA246B8E8E004AB783;
+			productRefGroup = DF8E95B4246B8E8F004AB783 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DF8E95B2246B8E8E004AB783 /* Count my breaths */,
+				DF8E95C8246B8E93004AB783 /* Count my breathsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DF8E95B1246B8E8E004AB783 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF8E95C3246B8E93004AB783 /* LaunchScreen.storyboard in Resources */,
+				DF8E95C0246B8E93004AB783 /* Preview Assets.xcassets in Resources */,
+				DF8E95BD246B8E93004AB783 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF8E95C7246B8E93004AB783 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DF8E95AF246B8E8E004AB783 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF8E95B7246B8E8F004AB783 /* AppDelegate.swift in Sources */,
+				DF8E95E0246B92F1004AB783 /* HistoryView.swift in Sources */,
+				DF8E95F0246BA766004AB783 /* CounterService.swift in Sources */,
+				DF0A7A62246C6B760004D826 /* countmybreaths.xcdatamodeld in Sources */,
+				DF8E95B9246B8E8F004AB783 /* SceneDelegate.swift in Sources */,
+				DF8E95DC246B9086004AB783 /* CountView.swift in Sources */,
+				DF8E95BB246B8E8F004AB783 /* ContentView.swift in Sources */,
+				DF8E95DE246B927C004AB783 /* AccountView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF8E95C5246B8E93004AB783 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF8E95CE246B8E93004AB783 /* Count_my_breathsTests.swift in Sources */,
+				DF0A7A94246C6F900004D826 /* countmybreaths.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DF8E95CB246B8E93004AB783 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF8E95B2246B8E8E004AB783 /* Count my breaths */;
+			targetProxy = DF8E95CA246B8E93004AB783 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DF8E95C1246B8E93004AB783 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF8E95C2246B8E93004AB783 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DF8E95D0246B8E93004AB783 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DF8E95D1246B8E93004AB783 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DF8E95D3246B8E93004AB783 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_ASSET_PATHS = "\"Count my breaths/Preview Content\"";
+				DEVELOPMENT_TEAM = Y259ZT3SQK;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Count my breaths/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lucasdesouza.countmybreaths;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		DF8E95D4246B8E93004AB783 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_ASSET_PATHS = "\"Count my breaths/Preview Content\"";
+				DEVELOPMENT_TEAM = Y259ZT3SQK;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Count my breaths/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lucasdesouza.countmybreaths;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		DF8E95D6246B8E93004AB783 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Count my breathsTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "de.Count-my-breathsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Count my breaths.app/Count my breaths";
+			};
+			name = Debug;
+		};
+		DF8E95D7246B8E93004AB783 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Count my breathsTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "de.Count-my-breathsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Count my breaths.app/Count my breaths";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DF8E95AE246B8E8E004AB783 /* Build configuration list for PBXProject "Count my breaths" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF8E95D0246B8E93004AB783 /* Debug */,
+				DF8E95D1246B8E93004AB783 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF8E95D2246B8E93004AB783 /* Build configuration list for PBXNativeTarget "Count my breaths" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF8E95D3246B8E93004AB783 /* Debug */,
+				DF8E95D4246B8E93004AB783 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF8E95D5246B8E93004AB783 /* Build configuration list for PBXNativeTarget "Count my breathsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF8E95D6246B8E93004AB783 /* Debug */,
+				DF8E95D7246B8E93004AB783 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DF0A7A60246C6B760004D826 /* countmybreaths.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DF0A7A61246C6B760004D826 /* countmybreaths.xcdatamodel */,
+			);
+			currentVersion = DF0A7A61246C6B760004D826 /* countmybreaths.xcdatamodel */;
+			path = countmybreaths.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DF8E95AB246B8E8E004AB783 /* Project object */;
+}
