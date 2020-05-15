@@ -13,7 +13,7 @@ struct AccountView: View {
         VStack {
             HStack {
                 VStack {
-                    Text("Account View")
+                    Text("Account")
                         .font(.title)
                         .padding(.bottom)
                     Text("Comming soon...")

@@ -37,7 +37,7 @@ struct CountView: View {
                 .font(.subheadline)
                 .onReceive(self.timePublisher) { time in
                     if(self.isCounting) {
-                        if (self.timer >= 30) {
+                        if (self.timer >= 2) {
                             self.isCounting = false
                             self.showResults = true
                             self.bpm = self.counter * 2
@@ -48,7 +48,7 @@ struct CountView: View {
                             let df = DateFormatter()
                             df.dateFormat = "MM-dd-yyyy hh:mm:ss"
                             record.timeText = df.string(from: record.time ?? Date())
-                            
+                            try? self.managedObjectContext.save()
                             self.timer = 0
                         } else {
                             self.timer += 1
