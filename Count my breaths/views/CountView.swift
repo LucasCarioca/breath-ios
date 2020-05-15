@@ -32,7 +32,7 @@ struct CountView: View {
                 .font(.subheadline)
                 .onReceive(self.timePublisher) { time in
                     if(self.isCounting) {
-                        if (self.timer >= 2) {
+                        if (self.timer >= 30) {
                             self.isCounting = false
                             self.showResults = true
                             self.bpm = self.counter * 2
