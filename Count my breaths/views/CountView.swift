@@ -24,12 +24,7 @@ struct CountView: View {
     
     var body: some View {
         VStack {
-            HStack {
-                Text("Counter")
-                    .font(.largeTitle)
-
-                Spacer()
-            }
+            HeaderView(title: "Counter", subTitle: "")
             Spacer()
             Text("Breaths: " + String(self.counter))
                 .font(.subheadline)

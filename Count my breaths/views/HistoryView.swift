@@ -14,17 +14,7 @@ struct HistoryView: View {
     
     var body: some View {
         VStack {
-            HStack {
-                Text("History")
-                    .font(.title)
-                    .padding(.bottom)
-                
-                Spacer()
-            }
-            HStack {
-                Text("Previous records will show up here.")
-                Spacer()
-            }
+            HeaderView(title: "History", subTitle: "Previous records will show up here.")
             List{
                 ForEach(countRecords.indices) { record in
                     RecordView(beats: self.countRecords[record].beats, timeText: self.countRecords[record].timeText ?? "unknown")
