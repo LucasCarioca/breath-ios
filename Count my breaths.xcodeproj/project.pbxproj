@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DF0A7A62246C6B760004D826 /* countmybreaths.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DF0A7A60246C6B760004D826 /* countmybreaths.xcdatamodeld */; };
 		DF0A7A94246C6F900004D826 /* countmybreaths.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DF0A7A60246C6B760004D826 /* countmybreaths.xcdatamodeld */; };
+		DF2A7D49246F2FC000140EDA /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2A7D48246F2FC000140EDA /* HeaderView.swift */; };
 		DF8E95B7246B8E8F004AB783 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95B6246B8E8F004AB783 /* AppDelegate.swift */; };
 		DF8E95B9246B8E8F004AB783 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95B8246B8E8F004AB783 /* SceneDelegate.swift */; };
 		DF8E95BB246B8E8F004AB783 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95BA246B8E8F004AB783 /* ContentView.swift */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		DF0A7A61246C6B760004D826 /* countmybreaths.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = countmybreaths.xcdatamodel; sourceTree = "<group>"; };
+		DF2A7D48246F2FC000140EDA /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		DF8E95B3246B8E8F004AB783 /* Count my breaths.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Count my breaths.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF8E95B6246B8E8F004AB783 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF8E95B8246B8E8F004AB783 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF2A7D47246F2FAC00140EDA /* components */ = {
+			isa = PBXGroup;
+			children = (
+				DF2A7D48246F2FC000140EDA /* HeaderView.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
 		DF8E95AA246B8E8E004AB783 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +100,7 @@
 		DF8E95B5246B8E8F004AB783 /* Count my breaths */ = {
 			isa = PBXGroup;
 			children = (
+				DF2A7D47246F2FAC00140EDA /* components */,
 				DF8E95E3246B9318004AB783 /* services */,
 				DF8E95E2246B9311004AB783 /* models */,
 				DF8E95D8246B8F21004AB783 /* views */,
@@ -249,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF8E95B7246B8E8F004AB783 /* AppDelegate.swift in Sources */,
+				DF2A7D49246F2FC000140EDA /* HeaderView.swift in Sources */,
 				DF8E95E0246B92F1004AB783 /* HistoryView.swift in Sources */,
 				DF8E95F0246BA766004AB783 /* CounterService.swift in Sources */,
 				DF0A7A62246C6B760004D826 /* countmybreaths.xcdatamodeld in Sources */,

@@ -11,15 +11,7 @@ import SwiftUI
 struct AccountView: View {
     var body: some View {
         VStack {
-            HStack {
-                VStack {
-                    Text("Account")
-                        .font(.title)
-                        .padding(.bottom)
-                    Text("Comming soon...")
-                }
-                Spacer()
-            }
+            HeaderView(title:"Account", subTitle: "Comming soon...")
             Spacer()
         }
     }
