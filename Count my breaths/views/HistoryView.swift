@@ -15,7 +15,7 @@ struct HistoryView: View {
     var body: some View {
         VStack {
             HStack {
-                Text("History View")
+                Text("History")
                     .font(.title)
                     .padding(.bottom)
                 
@@ -26,12 +26,46 @@ struct HistoryView: View {
                 Spacer()
             }
             List{
-                ForEach(countRecords, id: \.id) { record in
-                    VStack{
-                        Text(String(record.beats * 2) + " Breaths per minute").font(.headline)
-                        Text(record.timeText ?? "Unknown").font(.subheadline)
-                    }
+                ForEach(countRecords.indices) { record in
+                    RecordView(beats: self.countRecords[record].beats, timeText: self.countRecords[record].timeText ?? "unknown")
                 }
+            }
+        }
+    }
+}
+
+struct BarView: View {
+    
+    var value: Int16
+    
+    var body: some View {
+        VStack {
+            ZStack (alignment: .leading) {
+                Capsule().frame(width: 300, height: 30).foregroundColor(.gray)
+                if value >= 30 {
+                        Capsule().frame(width: CGFloat(value * 5), height: 30).foregroundColor(.red)
+                } else {
+                        Capsule().frame(width: CGFloat(value * 5), height: 30).foregroundColor(.green)
+                }
+                Text(String(value)).padding()
+            }
+        }
+    }
+}
+
+struct RecordView: View {
+    var beats: Int16
+    var timeText: String
+    
+    var body: some View {
+        VStack{
+            HStack {
+                BarView(value: beats * 2)
+                Spacer()
+            }
+            HStack {
+                Text(timeText).font(.subheadline)
+                Spacer()
             }
         }
     }
@@ -42,3 +76,5 @@ struct HistoryView_Previews: PreviewProvider {
         HistoryView()
     }
 }
+
+
