@@ -10,7 +10,7 @@ import SwiftUI
 import CoreData
 
 struct HistoryView: View {
-    @FetchRequest(entity: CountRecord.entity(), sortDescriptors: []) var countRecords: FetchedResults<CountRecord>
+    @FetchRequest(entity: CountRecord.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \CountRecord.time, ascending: false)]) var countRecords: FetchedResults<CountRecord>
     
     var body: some View {
         VStack {
