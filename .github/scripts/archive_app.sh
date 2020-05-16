@@ -7,4 +7,5 @@ xcodebuild -project Count\ my\ breaths.xcodeproj \
             -sdk iphoneos \
             -configuration AppStoreDistribution \
             -archivePath $PWD/build/Count\ my\ breaths.xcarchive \
+            -allowProvisioningUpdates \
             clean archive | xcpretty
