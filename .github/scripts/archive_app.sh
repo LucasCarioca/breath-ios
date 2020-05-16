@@ -2,7 +2,7 @@
 
 set -eo pipefail
 
-xcodebuild -workspace Count\ my\ breaths.xcodeproj \
+xcodebuild -project Count\ my\ breaths.xcodeproj \
             -scheme Count\ my\ breaths \
             -sdk iphoneos \
             -configuration AppStoreDistribution \
