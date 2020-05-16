@@ -8,7 +8,7 @@
     <string>Y259ZT3SQK</string>
     <key>provisioningProfiles</key>
     <dict>
-        <key>countmybreaths</key>
+        <key>countmybreaths.mobileprovision</key>
         <string>distribution</string>
     </dict>
 </dict>
