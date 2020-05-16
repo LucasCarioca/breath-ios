@@ -1,12 +1,12 @@
 #!/bin/sh
 set -eo pipefail
 
-gpg --quiet --batch --yes --decrypt --passphrase="$IOS_KEYS" --output ./.github/secrets/provisioningiOSCountmybreaths.mobileprovision ./.github/secrets/provisioningiOSCountmybreaths.mobileprovision.gpg
+gpg --quiet --batch --yes --decrypt --passphrase="$IOS_KEYS" --output ./.github/secrets/countmybreaths.mobileprovision ./.github/secrets/countmybreaths.mobileprovision.gpg
 gpg --quiet --batch --yes --decrypt --passphrase="$IOS_KEYS" --output ./.github/secrets/Certificates.p12 ./.github/secrets/Certificates.p12.gpg
 
 mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
 
-cp ./.github/secrets/provisioningiOSCountmybreaths.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/provisioningiOSCountmybreaths.mobileprovision
+cp ./.github/secrets/countmybreaths.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/countmybreaths.mobileprovision
 
 
 security create-keychain -p "" build.keychain
