@@ -60,11 +60,10 @@ platform :ios do
     )
     # sync_code_signing(type: "appstore")
     build_app(scheme: "Count my breaths")
-    # upload_to_testflight(
-    #     skip_waiting_for_build_processing: true,
-    #     apple_id: "1513102381"
-    # )
-    upload_to_play_store
+    upload_to_testflight(
+        skip_waiting_for_build_processing: true,
+        apple_id: "1513102381"
+    )
     commit_version_bump(xcodeproj: "Count my breaths.xcodeproj")
     add_git_tag
     push_to_git_remote
