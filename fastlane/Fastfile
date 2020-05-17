@@ -24,7 +24,10 @@ platform :ios do
         xcodeproj: "Count my breaths.xcodeproj"
     )
     build_app(scheme: "Count my breaths")
-    upload_to_testflight
+    upload_to_testflight(
+        skip_waiting_for_build_processing: true,
+        apple_id: "lucasfds2777@gmail.com"
+    )
     commit_version_bump(xcodeproj: "Count my breaths.xcodeproj")
     add_git_tag
     push_to_git_remote
