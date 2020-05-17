@@ -21,9 +21,34 @@ or alternatively using `brew cask install fastlane`
 fastlane ios beta
 ```
 Push a new beta build to TestFlight
-### ios release
+### ios major
 ```
-fastlane ios release
+fastlane ios major
+```
+
+### ios minor
+```
+fastlane ios minor
+```
+
+### ios patch
+```
+fastlane ios patch
+```
+
+### ios bump_major
+```
+fastlane ios bump_major
+```
+
+### ios bump_minor
+```
+fastlane ios bump_minor
+```
+
+### ios bump_patch
+```
+fastlane ios bump_patch
 ```
 
 
