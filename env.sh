@@ -28,3 +28,6 @@ fi
 # Switch to branch from current workflow run
 echo "Switching branch..."
 git checkout "$GITHUB_REF"
+
+git config --local user.name "Lucas Desouza"
+git config --local user.email "lucasfds2777@gmail.com"
