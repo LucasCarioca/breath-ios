@@ -24,5 +24,7 @@ jobs:
       - name: Git status
         run: git status
       - name: Publish beta
+        env:
+          FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
         run: fastlane beta
 
