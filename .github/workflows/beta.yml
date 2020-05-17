@@ -19,7 +19,6 @@ jobs:
           sudo xcode-select -switch /Applications/Xcode_11.3.app
           /usr/bin/xcodebuild -version
           sh -x ./env.sh
-          git remote set-url origin https://$GH_USER:$GH_TOKEN@github.com/$GH_REPO
       - name: Install dependencies
         run: brew bundle
       - name: Setup provisioning profile
@@ -27,7 +26,10 @@ jobs:
           IOS_KEYS: ${{ secrets.IOS_KEYS }}
         run: sh -x ./.github/secrets/decrypt_secrets.sh
       - name: Git status
-        run: git status
+        run: |
+          git status
+          git config --local -l
+          git branch
       - name: Publish beta
         env:
           FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
