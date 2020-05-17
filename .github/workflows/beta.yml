@@ -2,10 +2,10 @@ name: CICD
 on:
   push:
     branches:
-    - master
+    - feat/*
 jobs:
-  publish:
-    name: Build & Publish iOS App
+  beta:
+    name: Publish to TestFlight
     runs-on: macOS-latest
     steps:
       - name: Checkout
@@ -14,13 +14,8 @@ jobs:
         run: sudo xcode-select -switch /Applications/Xcode_11.3.app
       - name: Xcode version
         run: /usr/bin/xcodebuild -version
-      - name: App version
-        run: |
-          xcrun agvtool next-version -all
-          xcrun agvtool what-version
-          xcrun agvtool what-marketing-version
-      - name: Install gpg
-        run: brew install gnupg
+      - name: Install dependencies
+        run: brew bundle
       - name: Setup provisioning profile
         env:
           IOS_KEYS: ${{ secrets.IOS_KEYS }}

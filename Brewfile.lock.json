@@ -1,0 +1,60 @@
+{
+  "entries": {
+    "brew": {
+      "fastlane": {
+        "version": "2.148.0",
+        "bottle": {
+          "cellar": ":any",
+          "prefix": "/usr/local",
+          "files": {
+            "catalina": {
+              "url": "https://homebrew.bintray.com/bottles/fastlane-2.148.0.catalina.bottle.tar.gz",
+              "sha256": "c68693868a932139b87ccffde7ed75e4ebdff230be142c5eb3721ebfc947a27e"
+            },
+            "mojave": {
+              "url": "https://homebrew.bintray.com/bottles/fastlane-2.148.0.mojave.bottle.tar.gz",
+              "sha256": "57cc9b4bb5500b645360f8c4dd9716fbe6ed9850fff314c77fc07f66bec4ee49"
+            },
+            "high_sierra": {
+              "url": "https://homebrew.bintray.com/bottles/fastlane-2.148.0.high_sierra.bottle.tar.gz",
+              "sha256": "914e59b23c028bf718f69e8a9634811c824602eb962c060bcfa9abbb0e695442"
+            }
+          }
+        }
+      },
+      "gnupg": {
+        "version": "2.2.20",
+        "bottle": {
+          "cellar": "/usr/local/Cellar",
+          "prefix": "/usr/local",
+          "files": {
+            "catalina": {
+              "url": "https://homebrew.bintray.com/bottles/gnupg-2.2.20.catalina.bottle.tar.gz",
+              "sha256": "527ac31afe998a9931a6648c6fcc7288462ae73d6e6e8b84ecf46561c82d50ec"
+            },
+            "mojave": {
+              "url": "https://homebrew.bintray.com/bottles/gnupg-2.2.20.mojave.bottle.tar.gz",
+              "sha256": "e826cf4b1764da749eba007097be8077f433e52d8f96405044e57a384b114942"
+            },
+            "high_sierra": {
+              "url": "https://homebrew.bintray.com/bottles/gnupg-2.2.20.high_sierra.bottle.tar.gz",
+              "sha256": "179b68a29fe9f6731a294a674fbd439623acf22c1997c68b6358808adc83b763"
+            }
+          }
+        }
+      }
+    }
+  },
+  "system": {
+    "macos": {
+      "catalina": {
+        "HOMEBREW_VERSION": "2.2.16",
+        "HOMEBREW_PREFIX": "/usr/local",
+        "Homebrew/homebrew-core": "8d295b1def42ab3d5e3592ddc9912f2fa2b569de",
+        "CLT": "",
+        "Xcode": "11.4.1",
+        "macOS": "10.15.3"
+      }
+    }
+  }
+}
