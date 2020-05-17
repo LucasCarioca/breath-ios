@@ -10,10 +10,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-      - name: Select Xcode
-        run: sudo xcode-select -switch /Applications/Xcode_11.3.app
-      - name: Xcode version
-        run: /usr/bin/xcodebuild -version
+      - name: Setup environment
+        run: |
+          sudo xcode-select -switch /Applications/Xcode_11.3.app
+          /usr/bin/xcodebuild -version
+          sh -x ./env.sh
       - name: Install dependencies
         run: brew bundle
       - name: Setup provisioning profile
