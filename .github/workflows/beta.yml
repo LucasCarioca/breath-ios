@@ -21,24 +21,4 @@ jobs:
         env:
           IOS_KEYS: ${{ secrets.IOS_KEYS }}
         run: sh -x ./.github/secrets/decrypt_secrets.sh
-      - name: Archiving project
-        env:
-          PR_NUMBER: $(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
-        run: sh -x ./.github/scripts/archive_app.sh
-      - name: Exporting .ipa
-        run: sh -x ./.github/scripts/export_ipa.sh
-      - name: Publishing app
-        if: success()
-        env:
-          APPLEID_USERNAME: ${{ secrets.APPLEID_USERNAME }}
-          APPLEID_PASSWORD: ${{ secrets.APPLEID_PASSWORD }}
-        run: sh -x ./.github/scripts/publish_testflight.sh
-      - name: Commit changes
-        uses: EndBug/add-and-commit@v4
-        with:
-          author_name: Lucas Desouza
-          author_email: lucasfds2777@gmail.com
-          message: "Build version bumped"
-          add: "."
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
