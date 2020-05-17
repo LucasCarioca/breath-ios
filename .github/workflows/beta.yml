@@ -11,10 +11,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
       - name: Setup environment
+        env: 
+          GH_USER: ${{ secrets.GITHUB_ACTOR }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ secrets.GITHUB_REPOSITORY }}
         run: |
           sudo xcode-select -switch /Applications/Xcode_11.3.app
           /usr/bin/xcodebuild -version
           sh -x ./env.sh
+          git remote set-url origin https://$GH_USER:$GH_TOKEN@github.com/$GH_REPO
       - name: Install dependencies
         run: brew bundle
       - name: Setup provisioning profile

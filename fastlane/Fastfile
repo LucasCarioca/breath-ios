@@ -30,5 +30,6 @@ platform :ios do
     )
     commit_version_bump(xcodeproj: "Count my breaths.xcodeproj")
     add_git_tag
+    push_to_git_remote
   end
 end
