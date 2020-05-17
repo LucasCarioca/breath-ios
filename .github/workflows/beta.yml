@@ -24,13 +24,19 @@ jobs:
       - name: Git status
         run: git status
       - name: Publish beta
-        uses: oleksiyrudenko/gha-git-credentials@v1
-        with:
-          token: '${{ secrets.GITHUB_TOKEN }}'
         env:
           FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
           FASTLANE_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
           FASTLANE_SESSION: ${{ secrets.FASTLANE_SESSION }}
           FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
         run: fastlane beta
+      - name: Commit version
+        uses: EndBug/add-and-commit@v4
+        with:
+          author_name: Lucas Desouza
+          author_email: lucasfds2777@gmail.com
+          message: "[skip ci] BETA Release"
+          add: "."
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
