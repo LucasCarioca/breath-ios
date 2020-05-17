@@ -1,6 +1,5 @@
 app_identifier("com.lucasdesouza.countmybreaths") # The bundle identifier of your app
 apple_id("lucasfds2777@gmail.com") # Your Apple email address
-skip_waiting_for_build_processing(true)
 
 itc_team_id("118595984") # App Store Connect Team ID
 team_id("Y259ZT3SQK") # Developer Portal Team ID
