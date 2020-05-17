@@ -3,6 +3,8 @@ on:
   push:
     branches:
     - feat/*
+    - fix/*
+    - breaking/*
 jobs:
   beta:
     name: Publish to TestFlight
