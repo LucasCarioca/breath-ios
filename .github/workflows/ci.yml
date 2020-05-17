@@ -19,6 +19,7 @@ jobs:
         run: /usr/bin/xcodebuild -version
       - name: App version
         run: |
+          xcode agvtool next-version -all
           xcrun agvtool what-version
           xcrun agvtool what-marketing-version
       - name: Install gpg
@@ -39,3 +40,12 @@ jobs:
           APPLEID_USERNAME: ${{ secrets.APPLEID_USERNAME }}
           APPLEID_PASSWORD: ${{ secrets.APPLEID_PASSWORD }}
         run: sh -x ./.github/scripts/publish_testflight.sh
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v4
+        with:
+          author_name: Lucas Desouza
+          author_email: lucasfds2777@gmail.com
+          message: "Build version bumped"
+          add: "."
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
