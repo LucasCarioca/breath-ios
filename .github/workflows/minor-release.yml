@@ -1,11 +1,11 @@
-name: RELEASE
+name: MINOR
 on:
   push:
     branches:
     - master
 jobs:
-  release:
-    name: Publish to AppStore
+  minor:
+    name: Publish to AppStore - minor
     runs-on: macOS-latest
     steps:
       - name: Checkout
@@ -36,4 +36,4 @@ jobs:
           FASTLANE_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
           FASTLANE_SESSION: ${{ secrets.FASTLANE_SESSION }}
           FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
-        run: fastlane release
+        run: fastlane minor
