@@ -1,11 +1,11 @@
-name: MINOR
+name: RELEASE
 on:
   push:
     branches:
     - master
 jobs:
-  minor:
-    name: Publish to AppStore - minor
+  release:
+    name: Publish to AppStore
     runs-on: macOS-latest
     steps:
       - name: Checkout
@@ -30,10 +30,27 @@ jobs:
           git status
           git config --local -l
           git branch
-      - name: Publish beta
+      - name: Publish release - minor
+        if: contains(toJson(github.event.commits), 'feat:') == false
         env:
           FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
           FASTLANE_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
           FASTLANE_SESSION: ${{ secrets.FASTLANE_SESSION }}
           FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
         run: fastlane minor
+      - name: Publish release - patch 
+        if: contains(toJson(github.event.commits), 'fix:') == false
+        env:
+          FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
+          FASTLANE_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
+          FASTLANE_SESSION: ${{ secrets.FASTLANE_SESSION }}
+          FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
+        run: fastlane patch
+      - name: Publish release - major
+        if: contains(toJson(github.event.commits), 'breaking:') == false
+        env:
+          FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
+          FASTLANE_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
+          FASTLANE_SESSION: ${{ secrets.FASTLANE_SESSION }}
+          FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
+        run: fastlane major
