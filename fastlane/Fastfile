@@ -54,10 +54,7 @@ platform :ios do
   lane :minor do
     ensure_git_status_clean
     increment_version_number(bump_type: "minor")
-    increment_build_number(
-        build_number: latest_testflight_build_number + 1, 
-        xcodeproj: "Count my breaths.xcodeproj"
-    )
+    increment_build_number(xcodeproj: "Count my breaths.xcodeproj")
     # sync_code_signing(type: "appstore")
     build_app(scheme: "Count my breaths")
     upload_to_testflight(
