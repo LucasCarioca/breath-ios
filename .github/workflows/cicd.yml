@@ -1,14 +1,11 @@
-name: CI
-# This workflow is triggered on pushes to the repository.
+name: CICD
 on:
   push:
     branches:
     - master
 jobs:
-  test:
-    # Job name is test
-    name: Build & Deploy
-    # This job runs on macOS
+  publish:
+    name: Build & Publish iOS App
     runs-on: macOS-latest
     steps:
       - name: Checkout
