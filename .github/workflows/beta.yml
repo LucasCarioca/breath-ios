@@ -1,0 +1,40 @@
+name: BETA
+on:
+  push:
+    branches:
+    - feat/*
+jobs:
+  beta:
+    name: Publish to TestFlight
+    runs-on: macOS-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Setup environment
+        env: 
+          GITHUB_REF: ${{ secrets.GITHUB_REF }}
+          GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          sudo xcode-select -switch /Applications/Xcode_11.3.app
+          /usr/bin/xcodebuild -version
+          sh -x ./env.sh
+      - name: Install dependencies
+        run: brew bundle
+      - name: Setup provisioning profile
+        env:
+          IOS_KEYS: ${{ secrets.IOS_KEYS }}
+        run: sh -x ./.github/secrets/decrypt_secrets.sh
+      - name: Git status
+        run: |
+          git status
+          git config --local -l
+          git branch
+      - name: Publish beta
+        env:
+          FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
+          FASTLANE_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
+          FASTLANE_SESSION: ${{ secrets.FASTLANE_SESSION }}
+          FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
+        run: fastlane beta
+

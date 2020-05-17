@@ -1,3 +1,4 @@
 # Breath iOS App
 
-![CICD](https://github.com/LucasCarioca/breath-ios/workflows/CICD/badge.svg)
+![RELEASE](https://github.com/LucasCarioca/breath-ios/workflows/RELEASE/badge.svg)
+![BETA](https://github.com/LucasCarioca/breath-ios/workflows/BETA/badge.svg)
