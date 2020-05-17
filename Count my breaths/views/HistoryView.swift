@@ -8,17 +8,43 @@
 
 import SwiftUI
 import CoreData
+import SwiftUICharts
 
 struct HistoryView: View {
     @FetchRequest(entity: CountRecord.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \CountRecord.time, ascending: false)]) var countRecords: FetchedResults<CountRecord>
-    
+    @State var pickerSelectedItem = 0
     var body: some View {
         VStack {
             HeaderView(title: "History", subTitle: "Previous records will show up here.")
-            List{
-                ForEach(countRecords.indices) { record in
-                    RecordView(beats: self.countRecords[record].beats, timeText: self.countRecords[record].timeText ?? "unknown")
-                }
+            Picker(selection: $pickerSelectedItem, label: Text("")) {
+                Text("List").tag(0)
+                Text("Graph").tag(1)
+            }.pickerStyle(SegmentedPickerStyle())
+            if pickerSelectedItem == 0 {
+                RecordsListView(countRecords: countRecords)
+            }
+            else if pickerSelectedItem == 1 {
+                RecordsGraphView(countRecords: countRecords)
+            }
+        }
+    }
+}
+
+struct RecordsGraphView: View {
+    var countRecords: FetchedResults<CountRecord>
+    
+    var body: some View {
+        LineView(data: getBpmList(countRecords: countRecords))
+    }
+}
+
+struct RecordsListView: View {
+    var countRecords: FetchedResults<CountRecord>
+    
+    var body: some View {
+        List{
+            ForEach(countRecords.indices) { record in
+                RecordView(beats: self.countRecords[record].beats, timeText: self.countRecords[record].timeText ?? "unknown")
             }
         }
     }
@@ -67,4 +93,11 @@ struct HistoryView_Previews: PreviewProvider {
     }
 }
 
+func getBpmList(countRecords: FetchedResults<CountRecord>) -> [Double] {
+    var list: [Double] = []
+    for record in countRecords{
+        list.append(Double(record.beats * 2))
+    }
+    return list
+}
 
