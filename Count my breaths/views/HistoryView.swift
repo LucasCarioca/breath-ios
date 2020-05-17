@@ -98,6 +98,6 @@ func getBpmList(countRecords: FetchedResults<CountRecord>) -> [Double] {
     for record in countRecords{
         list.append(Double(record.beats * 2))
     }
-    return list
+    return list.reversed()
 }
 
