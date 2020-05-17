@@ -19,7 +19,7 @@ jobs:
         run: /usr/bin/xcodebuild -version
       - name: App version
         run: |
-          xcode agvtool next-version -all
+          xcrun agvtool next-version -all
           xcrun agvtool what-version
           xcrun agvtool what-marketing-version
       - name: Install gpg
