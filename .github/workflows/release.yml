@@ -31,7 +31,7 @@ jobs:
           git config --local -l
           git branch
       - name: Publish release - minor
-        if: contains(toJson(github.event.commits), 'feat:') == false
+        if: contains(toJson(github.event.commits), 'feat:')
         env:
           FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
           FASTLANE_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
@@ -39,7 +39,7 @@ jobs:
           FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
         run: fastlane minor
       - name: Publish release - patch 
-        if: contains(toJson(github.event.commits), 'fix:') == false
+        if: contains(toJson(github.event.commits), 'fix:')
         env:
           FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
           FASTLANE_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
@@ -47,7 +47,7 @@ jobs:
           FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
         run: fastlane patch
       - name: Publish release - major
-        if: contains(toJson(github.event.commits), 'breaking:') == false
+        if: contains(toJson(github.event.commits), 'breaking:')
         env:
           FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
           FASTLANE_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
