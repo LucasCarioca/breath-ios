@@ -21,8 +21,6 @@ jobs:
         env:
           IOS_KEYS: ${{ secrets.IOS_KEYS }}
         run: sh -x ./.github/secrets/decrypt_secrets.sh
-      - name: Git status
-        run: git status
       - name: Publish beta
         run: fastlane beta
 
