@@ -15,7 +15,7 @@ struct HistoryView: View {
     @State var pickerSelectedItem = 0
     var body: some View {
         VStack {
-            HeaderView(title: "History", subTitle: "Previous records will show up here.")
+            HeaderView(title: "History", subTitle: nil)
             Picker(selection: $pickerSelectedItem, label: Text("")) {
                 Text("List").tag(0)
                 Text("Graph").tag(1)
@@ -34,7 +34,9 @@ struct RecordsGraphView: View {
     var countRecords: FetchedResults<CountRecord>
     
     var body: some View {
-        LineView(data: getBpmList(countRecords: countRecords))
+        ScrollView {
+            LineView(data: getBpmList(countRecords: countRecords)).padding(.top, -75)
+        }
     }
 }
 

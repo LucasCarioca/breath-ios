@@ -24,7 +24,7 @@ struct CountView: View {
     
     var body: some View {
         VStack {
-            HeaderView(title: "Counter", subTitle: "")
+            HeaderView(title: "Counter", subTitle: nil)
             Spacer()
             Text("Breaths: " + String(self.counter))
                 .font(.subheadline)
@@ -67,7 +67,7 @@ struct CountView: View {
             }) {
                 GeometryReader { geometry in
                     
-                    Image("icon").frame(width: geometry.size.width, height: geometry.size.height).background(Color(red:78/255, green:78/255, blue:78/255)).cornerRadius(20)
+                    Image("icon-sm").frame(width: geometry.size.width, height: geometry.size.height).background(Color(red:78/255, green:78/255, blue:78/255)).cornerRadius(20)
                 }
             }.buttonStyle(PlainButtonStyle())
             Spacer()

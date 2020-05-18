@@ -11,20 +11,21 @@ import SwiftUI
 struct HeaderView: View {
     
     var title: String
-    var subTitle: String
+    var subTitle: String?
     
     var body: some View {
         VStack{
             HStack {
             Text(title)
                 .font(.title)
-                .padding(.bottom)
             
             Spacer()
             }
-            HStack {
-                Text(subTitle)
-                Spacer()
+            if subTitle != nil{
+                HStack {
+                    Text(subTitle!)
+                    Spacer()
+                }
             }
         }
     }
