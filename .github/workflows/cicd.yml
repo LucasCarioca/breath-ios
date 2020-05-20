@@ -29,7 +29,7 @@ jobs:
           IOS_KEYS: ${{ secrets.IOS_KEYS }}
         run: sh -x ./.github/secrets/decrypt_secrets.sh
       - name: build
-        if: (!contains(toJson(github.event.commits), 'fix:') && !contains(toJson(github.event.commits), 'feat:') && !contains(toJson(github.event.commits), 'breaking:')
+        if: (!contains(toJson(github.event.commits), 'fix:') && !contains(toJson(github.event.commits), 'feat:') && !contains(toJson(github.event.commits), 'breaking:'))
         env:
           FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
           FASTLANE_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
