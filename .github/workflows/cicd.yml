@@ -2,10 +2,8 @@ name: CICD
 on:
   push:
     branches:
-    - master
-    - feat/*
-    - fix/*
-    - breaking/*
+    - 'master'
+    - '*'
 jobs:
   cicd:
     name: Publish to AppStore
