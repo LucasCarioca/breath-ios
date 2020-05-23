@@ -33,7 +33,7 @@ jobs:
           FASTLANE_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
           FASTLANE_SESSION: ${{ secrets.FASTLANE_SESSION }}
           FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
-          FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT: 60
+          FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT: 600
         run: bundle exec fastlane beta
       - name: minor
         if: contains(toJson(github.event.commits), 'feat:')
@@ -42,7 +42,7 @@ jobs:
           FASTLANE_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
           FASTLANE_SESSION: ${{ secrets.FASTLANE_SESSION }}
           FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
-          FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT: 60
+          FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT: 600
         run: bundle exec fastlane minor
       - name: patch 
         if: contains(toJson(github.event.commits), 'fix:')
@@ -51,7 +51,7 @@ jobs:
           FASTLANE_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
           FASTLANE_SESSION: ${{ secrets.FASTLANE_SESSION }}
           FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
-          FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT: 60
+          FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT: 600
         run: bundle exec fastlane patch
       - name: major
         if: contains(toJson(github.event.commits), 'breaking:')
@@ -60,5 +60,5 @@ jobs:
           FASTLANE_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
           FASTLANE_SESSION: ${{ secrets.FASTLANE_SESSION }}
           FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
-          FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT: 60
+          FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT: 600
         run: bundle exec fastlane major
