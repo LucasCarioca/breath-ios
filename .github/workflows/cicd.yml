@@ -33,7 +33,7 @@ jobs:
           FASTLANE_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
           FASTLANE_SESSION: ${{ secrets.FASTLANE_SESSION }}
           FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
-        run: fastlane beta
+        run: bundle exec fastlane beta
       - name: minor
         if: contains(toJson(github.event.commits), 'feat:')
         env:
@@ -41,7 +41,7 @@ jobs:
           FASTLANE_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
           FASTLANE_SESSION: ${{ secrets.FASTLANE_SESSION }}
           FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
-        run: fastlane minor
+        run: bundle exec fastlane minor
       - name: patch 
         if: contains(toJson(github.event.commits), 'fix:')
         env:
@@ -49,7 +49,7 @@ jobs:
           FASTLANE_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
           FASTLANE_SESSION: ${{ secrets.FASTLANE_SESSION }}
           FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
-        run: fastlane patch
+        run: bundle exec fastlane patch
       - name: major
         if: contains(toJson(github.event.commits), 'breaking:')
         env:
@@ -57,4 +57,4 @@ jobs:
           FASTLANE_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
           FASTLANE_SESSION: ${{ secrets.FASTLANE_SESSION }}
           FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
-        run: fastlane major
+        run: bundle exec fastlane major

@@ -18,7 +18,6 @@ default_platform(:ios)
 platform :ios do
   desc "Push a new beta build to TestFlight"
   lane :beta do
-    sh("cd .. && xcodebuild -resolvePackageDependencies")
     ensure_git_status_clean
     increment_build_number(xcodeproj: "Count my breaths.xcodeproj")
     build_app(scheme: "Count my breaths")
@@ -32,7 +31,6 @@ platform :ios do
   end
 
   lane :major do
-    sh("cd .. && xcodebuild -resolvePackageDependencies")
     ensure_git_status_clean
     increment_version_number(bump_type: "major")
     increment_build_number(xcodeproj: "Count my breaths.xcodeproj")
@@ -48,7 +46,6 @@ platform :ios do
   end
 
   lane :minor do
-    sh("cd .. && xcodebuild -resolvePackageDependencies")
     ensure_git_status_clean
     increment_version_number(bump_type: "minor")
     increment_build_number(xcodeproj: "Count my breaths.xcodeproj")
@@ -65,7 +62,6 @@ platform :ios do
   end
 
   lane :patch do
-    sh("cd .. && xcodebuild -resolvePackageDependencies")
     ensure_git_status_clean
     increment_version_number(bump_type: "patch")
     increment_build_number(xcodeproj: "Count my breaths.xcodeproj")
@@ -81,7 +77,6 @@ platform :ios do
   end
 
   lane :bump_major do
-    sh("cd .. && xcodebuild -resolvePackageDependencies")
     increment_version_number(bump_type: "major")
     increment_build_number(xcodeproj: "Count my breaths.xcodeproj")
     commit_version_bump(xcodeproj: "Count my breaths.xcodeproj")
@@ -89,7 +84,6 @@ platform :ios do
   end
 
   lane :bump_minor do
-    sh("cd .. && xcodebuild -resolvePackageDependencies")
     increment_version_number(bump_type: "minor")
     increment_build_number(xcodeproj: "Count my breaths.xcodeproj")
     commit_version_bump(xcodeproj: "Count my breaths.xcodeproj")
@@ -97,7 +91,6 @@ platform :ios do
   end
 
   lane :bump_patch do
-    sh("cd .. && xcodebuild -resolvePackageDependencies")
     increment_version_number(bump_type: "patch")
     increment_build_number(xcodeproj: "Count my breaths.xcodeproj")
     commit_version_bump(xcodeproj: "Count my breaths.xcodeproj")
