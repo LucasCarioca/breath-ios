@@ -30,21 +30,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="313b362e-9483-4cc8-bab6-ddfeb6965117" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Count my breaths.xcodeproj/xcuserdata/lucasdesouza.xcuserdatad/xcschemes/RecordServiceTests.test_headerShouldAddHeaderToCSV.xcscheme" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Count my breaths.xcodeproj/xcuserdata/lucasdesouza.xcuserdatad/xcschemes/RecordServiceTests.xcscheme" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Count my breaths/components/BarView.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Count my breaths/components/MailView.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Count my breaths/components/RecordView.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Count my breaths/components/RecordsGraphView.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Count my breaths/components/RecordsListView.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Count my breaths/services/RecordService.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Count my breaths.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Count my breaths.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Count my breaths.xcodeproj/project.xcworkspace/contents.xcworkspacedata" beforeDir="false" afterPath="$PROJECT_DIR$/Count my breaths.xcodeproj/project.xcworkspace/contents.xcworkspacedata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Count my breaths.xcodeproj/xcuserdata/lucasdesouza.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Count my breaths.xcodeproj/xcuserdata/lucasdesouza.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Count my breaths/services/CounterService.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Count my breaths/views/HistoryView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Count my breaths/views/HistoryView.swift" afterDir="false" />
-    </list>
+    <list default="true" id="313b362e-9483-4cc8-bab6-ddfeb6965117" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,11 +67,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HistoryViewTests" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" temporary="true" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" SCHEME_NAME="HistoryViewTests" IS_LOCATION_SIMULATION_ALLOWED="true" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" TEST_CLASS="HistoryViewTests" TEST_MODE="SUITE_TEST">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="RecordServiceTests" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" temporary="true" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Count my breaths" TARGET_NAME="Count my breathsTests" CONFIG_NAME="Debug" SCHEME_NAME="RecordServiceTests" IS_LOCATION_SIMULATION_ALLOWED="true" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" TEST_CLASS="RecordServiceTests" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -98,7 +79,6 @@
     </configuration>
     <list>
       <item itemvalue="Application.Count my breaths" />
-      <item itemvalue="XCTest.HistoryViewTests" />
       <item itemvalue="XCTest.RecordServiceTests.test_headerShouldAddHeaderToCSV" />
       <item itemvalue="XCTest.RecordServiceTests" />
     </list>
@@ -106,7 +86,6 @@
       <list>
         <item itemvalue="XCTest.RecordServiceTests" />
         <item itemvalue="XCTest.RecordServiceTests.test_headerShouldAddHeaderToCSV" />
-        <item itemvalue="XCTest.HistoryViewTests" />
       </list>
     </recent_temporary>
   </component>
@@ -122,7 +101,7 @@
       <updated>1589945086846</updated>
       <workItem from="1589945088199" duration="177000" />
       <workItem from="1589945520228" duration="1567000" />
-      <workItem from="1590205824081" duration="11662000" />
+      <workItem from="1590205824081" duration="12748000" />
     </task>
     <servers />
   </component>
@@ -145,38 +124,38 @@
       <screen x="0" y="23" width="1680" height="989" />
     </state>
     <state x="578" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.989@0.23.1680.989" timestamp="1590214577837" />
-    <state width="1638" height="61" key="GridCell.Tab.0.bottom" timestamp="1590217523468">
+    <state width="1638" height="300" key="GridCell.Tab.0.bottom" timestamp="1590219388818">
       <screen x="0" y="23" width="1680" height="989" />
     </state>
-    <state width="1638" height="61" key="GridCell.Tab.0.bottom/0.23.1680.989@0.23.1680.989" timestamp="1590217523468" />
-    <state width="1638" height="61" key="GridCell.Tab.0.center" timestamp="1590217523466">
+    <state width="1638" height="300" key="GridCell.Tab.0.bottom/0.23.1680.989@0.23.1680.989" timestamp="1590219388818" />
+    <state width="1638" height="300" key="GridCell.Tab.0.center" timestamp="1590219388817">
       <screen x="0" y="23" width="1680" height="989" />
     </state>
-    <state width="1638" height="61" key="GridCell.Tab.0.center/0.23.1680.989@0.23.1680.989" timestamp="1590217523466" />
-    <state width="1638" height="61" key="GridCell.Tab.0.left" timestamp="1590217523454">
+    <state width="1638" height="300" key="GridCell.Tab.0.center/0.23.1680.989@0.23.1680.989" timestamp="1590219388817" />
+    <state width="1638" height="300" key="GridCell.Tab.0.left" timestamp="1590219388816">
       <screen x="0" y="23" width="1680" height="989" />
     </state>
-    <state width="1638" height="61" key="GridCell.Tab.0.left/0.23.1680.989@0.23.1680.989" timestamp="1590217523454" />
-    <state width="1638" height="61" key="GridCell.Tab.0.right" timestamp="1590217523467">
+    <state width="1638" height="300" key="GridCell.Tab.0.left/0.23.1680.989@0.23.1680.989" timestamp="1590219388816" />
+    <state width="1638" height="300" key="GridCell.Tab.0.right" timestamp="1590219388818">
       <screen x="0" y="23" width="1680" height="989" />
     </state>
-    <state width="1638" height="61" key="GridCell.Tab.0.right/0.23.1680.989@0.23.1680.989" timestamp="1590217523467" />
-    <state width="1638" height="61" key="GridCell.Tab.1.bottom" timestamp="1590217523077">
+    <state width="1638" height="300" key="GridCell.Tab.0.right/0.23.1680.989@0.23.1680.989" timestamp="1590219388818" />
+    <state width="1638" height="300" key="GridCell.Tab.1.bottom" timestamp="1590219388822">
       <screen x="0" y="23" width="1680" height="989" />
     </state>
-    <state width="1638" height="61" key="GridCell.Tab.1.bottom/0.23.1680.989@0.23.1680.989" timestamp="1590217523077" />
-    <state width="1638" height="61" key="GridCell.Tab.1.center" timestamp="1590217523076">
+    <state width="1638" height="300" key="GridCell.Tab.1.bottom/0.23.1680.989@0.23.1680.989" timestamp="1590219388822" />
+    <state width="1638" height="300" key="GridCell.Tab.1.center" timestamp="1590219388820">
       <screen x="0" y="23" width="1680" height="989" />
     </state>
-    <state width="1638" height="61" key="GridCell.Tab.1.center/0.23.1680.989@0.23.1680.989" timestamp="1590217523076" />
-    <state width="1638" height="61" key="GridCell.Tab.1.left" timestamp="1590217523076">
+    <state width="1638" height="300" key="GridCell.Tab.1.center/0.23.1680.989@0.23.1680.989" timestamp="1590219388820" />
+    <state width="1638" height="300" key="GridCell.Tab.1.left" timestamp="1590219388819">
       <screen x="0" y="23" width="1680" height="989" />
     </state>
-    <state width="1638" height="61" key="GridCell.Tab.1.left/0.23.1680.989@0.23.1680.989" timestamp="1590217523076" />
-    <state width="1638" height="61" key="GridCell.Tab.1.right" timestamp="1590217523077">
+    <state width="1638" height="300" key="GridCell.Tab.1.left/0.23.1680.989@0.23.1680.989" timestamp="1590219388819" />
+    <state width="1638" height="300" key="GridCell.Tab.1.right" timestamp="1590219388821">
       <screen x="0" y="23" width="1680" height="989" />
     </state>
-    <state width="1638" height="61" key="GridCell.Tab.1.right/0.23.1680.989@0.23.1680.989" timestamp="1590217523077" />
+    <state width="1638" height="300" key="GridCell.Tab.1.right/0.23.1680.989@0.23.1680.989" timestamp="1590219388821" />
     <state width="600" height="400" key="NewXcodeProjectWizard" timestamp="1590035266772">
       <screen x="0" y="23" width="1680" height="989" />
     </state>
