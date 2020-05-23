@@ -21,7 +21,7 @@ jobs:
           /usr/bin/xcodebuild -version
           sh -x ./env.sh
       - name: Install dependencies
-        run: brew bundle
+        run: bundle update --bundler
       - name: Setup provisioning profile
         env:
           IOS_KEYS: ${{ secrets.IOS_KEYS }}
