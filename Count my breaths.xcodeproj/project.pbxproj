@@ -11,7 +11,7 @@
 		DF0A7A94246C6F900004D826 /* countmybreaths.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DF0A7A60246C6B760004D826 /* countmybreaths.xcdatamodeld */; };
 		DF2A7D49246F2FC000140EDA /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2A7D48246F2FC000140EDA /* HeaderView.swift */; };
 		DF8D992D2479BE5D00824C52 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = DF12190A2471E0B500112F63 /* SwiftUICharts */; };
-		DF8D99332479C21B00824C52 /* QuickComponents in Frameworks */ = {isa = PBXBuildFile; productRef = DF8D99322479C21B00824C52 /* QuickComponents */; };
+		DF8D99362479CD4C00824C52 /* QuickComponents in Frameworks */ = {isa = PBXBuildFile; productRef = DF8D99352479CD4C00824C52 /* QuickComponents */; };
 		DF8E95B7246B8E8F004AB783 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95B6246B8E8F004AB783 /* AppDelegate.swift */; };
 		DF8E95B9246B8E8F004AB783 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95B8246B8E8F004AB783 /* SceneDelegate.swift */; };
 		DF8E95BB246B8E8F004AB783 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95BA246B8E8F004AB783 /* ContentView.swift */; };
@@ -70,7 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF8D99332479C21B00824C52 /* QuickComponents in Frameworks */,
+				DF8D99362479CD4C00824C52 /* QuickComponents in Frameworks */,
 				DF8D992D2479BE5D00824C52 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,7 +195,7 @@
 			name = "Count my breaths";
 			packageProductDependencies = (
 				DF12190A2471E0B500112F63 /* SwiftUICharts */,
-				DF8D99322479C21B00824C52 /* QuickComponents */,
+				DF8D99352479CD4C00824C52 /* QuickComponents */,
 			);
 			productName = "Count my breaths";
 			productReference = DF8E95B3246B8E8F004AB783 /* Count my breaths.app */;
@@ -249,7 +249,7 @@
 			mainGroup = DF8E95AA246B8E8E004AB783;
 			packageReferences = (
 				DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference "ChartView" */,
-				DF8D99312479C21B00824C52 /* XCRemoteSwiftPackageReference "QuickComponents" */,
+				DF8D99342479CD4C00824C52 /* XCRemoteSwiftPackageReference "QuickComponents" */,
 			);
 			productRefGroup = DF8E95B4246B8E8F004AB783 /* Products */;
 			projectDirPath = "";
@@ -581,7 +581,7 @@
 				minimumVersion = 1.5.0;
 			};
 		};
-		DF8D99312479C21B00824C52 /* XCRemoteSwiftPackageReference "QuickComponents" */ = {
+		DF8D99342479CD4C00824C52 /* XCRemoteSwiftPackageReference "QuickComponents" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/LucasCarioca/QuickComponents.git";
 			requirement = {
@@ -597,9 +597,9 @@
 			package = DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference "ChartView" */;
 			productName = SwiftUICharts;
 		};
-		DF8D99322479C21B00824C52 /* QuickComponents */ = {
+		DF8D99352479CD4C00824C52 /* QuickComponents */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DF8D99312479C21B00824C52 /* XCRemoteSwiftPackageReference "QuickComponents" */;
+			package = DF8D99342479CD4C00824C52 /* XCRemoteSwiftPackageReference "QuickComponents" */;
 			productName = QuickComponents;
 		};
 /* End XCSwiftPackageProductDependency section */
