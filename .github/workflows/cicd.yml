@@ -17,7 +17,7 @@ jobs:
           GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          sudo xcode-select -switch /Applications/Xcode_11.3.app
+          sudo xcode-select -switch /Applications/Xcode_11.4.app
           /usr/bin/xcodebuild -version
           sh -x ./env.sh
       - name: Install dependencies
