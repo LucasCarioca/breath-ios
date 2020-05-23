@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DF0A7A62246C6B760004D826 /* countmybreaths.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DF0A7A60246C6B760004D826 /* countmybreaths.xcdatamodeld */; };
 		DF0A7A94246C6F900004D826 /* countmybreaths.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DF0A7A60246C6B760004D826 /* countmybreaths.xcdatamodeld */; };
+		DF12190B2471E0B500112F63 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = DF12190A2471E0B500112F63 /* SwiftUICharts */; };
 		DF2A7D49246F2FC000140EDA /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2A7D48246F2FC000140EDA /* HeaderView.swift */; };
 		DF8E95B7246B8E8F004AB783 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95B6246B8E8F004AB783 /* AppDelegate.swift */; };
 		DF8E95B9246B8E8F004AB783 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95B8246B8E8F004AB783 /* SceneDelegate.swift */; };
@@ -20,12 +21,7 @@
 		DF8E95DC246B9086004AB783 /* CountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95DB246B9086004AB783 /* CountView.swift */; };
 		DF8E95DE246B927C004AB783 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95DD246B927C004AB783 /* AccountView.swift */; };
 		DF8E95E0246B92F1004AB783 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95DF246B92F1004AB783 /* HistoryView.swift */; };
-		F8C4D534A2CFC6B426FF341C /* RecordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D2EBA99DC7A9432F87C0 /* RecordService.swift */; };
-		F8C4D9480366FEA2E9E15B48 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D4F7559C8F0EC23B7CE8 /* MailView.swift */; };
-		F8C4D9E0FCC2D28F860786A4 /* RecordsGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D4D342E23DCAEC57C1E1 /* RecordsGraphView.swift */; };
-		F8C4DA41CA3E6E0360071D8D /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D40187BFEFB580BD2143 /* BarView.swift */; };
-		F8C4DD3D60B3429B7565D81E /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DF38D1D6E628F00E3D21 /* RecordView.swift */; };
-		F8C4DFFC17B5D799FCDD8EEE /* RecordsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DE44270C080C3CBD2443 /* RecordsListView.swift */; };
+		DF8E95F0246BA766004AB783 /* CounterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95EF246BA766004AB783 /* CounterService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,12 +51,7 @@
 		DF8E95DB246B9086004AB783 /* CountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountView.swift; sourceTree = "<group>"; };
 		DF8E95DD246B927C004AB783 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		DF8E95DF246B92F1004AB783 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
-		F8C4D2EBA99DC7A9432F87C0 /* RecordService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordService.swift; sourceTree = "<group>"; };
-		F8C4D40187BFEFB580BD2143 /* BarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
-		F8C4D4D342E23DCAEC57C1E1 /* RecordsGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordsGraphView.swift; sourceTree = "<group>"; };
-		F8C4D4F7559C8F0EC23B7CE8 /* MailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
-		F8C4DE44270C080C3CBD2443 /* RecordsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordsListView.swift; sourceTree = "<group>"; };
-		F8C4DF38D1D6E628F00E3D21 /* RecordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
+		DF8E95EF246BA766004AB783 /* CounterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF12190B2471E0B500112F63 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,11 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				DF2A7D48246F2FC000140EDA /* HeaderView.swift */,
-				F8C4D4F7559C8F0EC23B7CE8 /* MailView.swift */,
-				F8C4DF38D1D6E628F00E3D21 /* RecordView.swift */,
-				F8C4D40187BFEFB580BD2143 /* BarView.swift */,
-				F8C4D4D342E23DCAEC57C1E1 /* RecordsGraphView.swift */,
-				F8C4DE44270C080C3CBD2443 /* RecordsListView.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -168,7 +155,7 @@
 		DF8E95E3246B9318004AB783 /* services */ = {
 			isa = PBXGroup;
 			children = (
-				F8C4D2EBA99DC7A9432F87C0 /* RecordService.swift */,
+				DF8E95EF246BA766004AB783 /* CounterService.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -190,7 +177,7 @@
 			);
 			name = "Count my breaths";
 			packageProductDependencies = (
-				DF12190A2471E0B500112F63 /* XCSwiftPackageProductDependency */,
+				DF12190A2471E0B500112F63 /* SwiftUICharts */,
 			);
 			productName = "Count my breaths";
 			productReference = DF8E95B3246B8E8F004AB783 /* Count my breaths.app */;
@@ -243,7 +230,7 @@
 			);
 			mainGroup = DF8E95AA246B8E8E004AB783;
 			packageReferences = (
-				DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference */,
+				DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference "ChartView" */,
 			);
 			productRefGroup = DF8E95B4246B8E8F004AB783 /* Products */;
 			projectDirPath = "";
@@ -283,17 +270,12 @@
 				DF8E95B7246B8E8F004AB783 /* AppDelegate.swift in Sources */,
 				DF2A7D49246F2FC000140EDA /* HeaderView.swift in Sources */,
 				DF8E95E0246B92F1004AB783 /* HistoryView.swift in Sources */,
+				DF8E95F0246BA766004AB783 /* CounterService.swift in Sources */,
 				DF0A7A62246C6B760004D826 /* countmybreaths.xcdatamodeld in Sources */,
 				DF8E95B9246B8E8F004AB783 /* SceneDelegate.swift in Sources */,
 				DF8E95DC246B9086004AB783 /* CountView.swift in Sources */,
 				DF8E95BB246B8E8F004AB783 /* ContentView.swift in Sources */,
 				DF8E95DE246B927C004AB783 /* AccountView.swift in Sources */,
-				F8C4D534A2CFC6B426FF341C /* RecordService.swift in Sources */,
-				F8C4D9480366FEA2E9E15B48 /* MailView.swift in Sources */,
-				F8C4DD3D60B3429B7565D81E /* RecordView.swift in Sources */,
-				F8C4DA41CA3E6E0360071D8D /* BarView.swift in Sources */,
-				F8C4D9E0FCC2D28F860786A4 /* RecordsGraphView.swift in Sources */,
-				F8C4DFFC17B5D799FCDD8EEE /* RecordsListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,8 +428,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 29;
 				DEVELOPMENT_ASSET_PATHS = "\"Count my breaths/Preview Content\"";
 				DEVELOPMENT_TEAM = Y259ZT3SQK;
@@ -460,7 +442,7 @@
 				MARKETING_VERSION = 0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucasdesouza.countmybreaths;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = countmybreaths;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -471,8 +453,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 29;
 				DEVELOPMENT_ASSET_PATHS = "\"Count my breaths/Preview Content\"";
 				DEVELOPMENT_TEAM = Y259ZT3SQK;
@@ -485,7 +467,7 @@
 				MARKETING_VERSION = 0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucasdesouza.countmybreaths;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = countmybreaths;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -567,7 +549,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference */ = {
+		DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference "ChartView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AppPear/ChartView.git";
 			requirement = {
@@ -578,9 +560,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		DF12190A2471E0B500112F63 /* XCSwiftPackageProductDependency */ = {
+		DF12190A2471E0B500112F63 /* SwiftUICharts */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference */;
+			package = DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference "ChartView" */;
 			productName = SwiftUICharts;
 		};
 /* End XCSwiftPackageProductDependency section */
