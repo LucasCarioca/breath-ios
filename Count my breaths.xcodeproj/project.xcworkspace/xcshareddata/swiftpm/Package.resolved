@@ -12,7 +12,7 @@
       },
       {
         "package": "QuickComponents",
-        "repositoryURL": "https://github.com/LucasCarioca/QuickComponents",
+        "repositoryURL": "https://github.com/LucasCarioca/QuickComponents.git",
         "state": {
           "branch": null,
           "revision": "826a3e14fd15d2db4297ca8fbaf626b521a717a0",
