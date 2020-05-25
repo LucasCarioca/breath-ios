@@ -6,20 +6,34 @@
 import SwiftUI
 
 struct RecordsListView: View {
+    @Environment(\.managedObjectContext) var managedObjectContext
     var countRecords: FetchedResults<CountRecord>
 
     init(countRecords: FetchedResults<CountRecord>){
         self.countRecords = countRecords
         UITableView.appearance().separatorStyle = .none
     }
+
     var body: some View {
         VStack {
             List {
-                ForEach(countRecords.indices) { record in
+                ForEach(countRecords.indices, id: \.self) { record in
                     RecordView(beats: self.countRecords[record].beats, timeText: self.countRecords[record].timeText ?? "unknown")
-                }
+                }.onDelete(perform: delete)
             }
             MailButtonView(csvData: getCsvData())
+        }
+    }
+
+    func delete(at offsets: IndexSet) {
+        print("deleting \(offsets.first!)")
+        if let index = offsets.first {
+            managedObjectContext.delete(countRecords[index])
+        }
+        do {
+            try managedObjectContext.save()
+        } catch {
+            print("error occurred trying to save to core data")
         }
     }
 
