@@ -8,7 +8,7 @@
 
 import SwiftUI
 import CoreData
-import MessageUI
+import QuickComponents
 
 struct HistoryView: View {
     @FetchRequest(entity: CountRecord.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \CountRecord.time, ascending: false)]) var countRecords: FetchedResults<CountRecord>
@@ -16,16 +16,10 @@ struct HistoryView: View {
     var body: some View {
         VStack {
             HeaderView(title: "History", subTitle: "Previous records will show up here.")
-            Picker(selection: $pickerSelectedItem, label: Text("")) {
-                Text("List").tag(0)
-                Text("Graph").tag(1)
-            }.pickerStyle(SegmentedPickerStyle())
-            if pickerSelectedItem == 0 {
-                RecordsListView(countRecords: countRecords)
-            }
-            else if pickerSelectedItem == 1 {
-                RecordsGraphView(countRecords: countRecords)
-            }
+            SwitcherView(pages: [
+                SwitcherPage(label: "List", view: RecordsListView(countRecords: countRecords)),
+                SwitcherPage(label: "Graph", view: RecordsGraphView(countRecords: countRecords))
+            ])
         }
     }
 }

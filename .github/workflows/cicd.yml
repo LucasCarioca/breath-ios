@@ -17,11 +17,11 @@ jobs:
           GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          sudo xcode-select -switch /Applications/Xcode_11.3.app
+          sudo xcode-select -switch /Applications/Xcode_11.4.app
           /usr/bin/xcodebuild -version
           sh -x ./env.sh
       - name: Install dependencies
-        run: brew bundle
+        run: bundle update --bundler
       - name: Setup provisioning profile
         env:
           IOS_KEYS: ${{ secrets.IOS_KEYS }}
@@ -33,7 +33,8 @@ jobs:
           FASTLANE_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
           FASTLANE_SESSION: ${{ secrets.FASTLANE_SESSION }}
           FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
-        run: fastlane beta
+          FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT: 600
+        run: bundle exec fastlane beta
       - name: minor
         if: contains(toJson(github.event.commits), 'feat:')
         env:
@@ -41,7 +42,8 @@ jobs:
           FASTLANE_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
           FASTLANE_SESSION: ${{ secrets.FASTLANE_SESSION }}
           FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
-        run: fastlane minor
+          FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT: 600
+        run: bundle exec fastlane minor
       - name: patch 
         if: contains(toJson(github.event.commits), 'fix:')
         env:
@@ -49,7 +51,8 @@ jobs:
           FASTLANE_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
           FASTLANE_SESSION: ${{ secrets.FASTLANE_SESSION }}
           FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
-        run: fastlane patch
+          FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT: 600
+        run: bundle exec fastlane patch
       - name: major
         if: contains(toJson(github.event.commits), 'breaking:')
         env:
@@ -57,4 +60,5 @@ jobs:
           FASTLANE_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
           FASTLANE_SESSION: ${{ secrets.FASTLANE_SESSION }}
           FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
-        run: fastlane major
+          FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT: 600
+        run: bundle exec fastlane major

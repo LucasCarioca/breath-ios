@@ -51,6 +51,11 @@ fastlane ios bump_minor
 fastlane ios bump_patch
 ```
 
+### ios bump_build
+```
+fastlane ios bump_build
+```
+
 
 ----
 
