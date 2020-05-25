@@ -17,13 +17,13 @@ struct HeaderView: View {
         VStack{
             HStack {
             Text(title)
-                .font(.title)
+                .font(.largeTitle)
                 .padding(.bottom)
             
             Spacer()
             }
             HStack {
-                Text(subTitle)
+                Text(subTitle).font(.subheadline)
                 Spacer()
             }
         }

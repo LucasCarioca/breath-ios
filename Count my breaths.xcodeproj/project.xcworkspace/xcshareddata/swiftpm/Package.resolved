@@ -9,6 +9,15 @@
           "revision": "c12c773af0b18be3abc30a5e39fc8370a6498502",
           "version": "1.5.0"
         }
+      },
+      {
+        "package": "QuickComponents",
+        "repositoryURL": "https://github.com/LucasCarioca/QuickComponents.git",
+        "state": {
+          "branch": null,
+          "revision": "4b48af441152a85f207e26fb37f7c00768c66422",
+          "version": "0.2.1"
+        }
       }
     ]
   },

@@ -30,7 +30,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="313b362e-9483-4cc8-bab6-ddfeb6965117" name="Default Changelist" comment="" />
+    <list default="true" id="313b362e-9483-4cc8-bab6-ddfeb6965117" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Count my breaths.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Count my breaths.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Count my breaths.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved" beforeDir="false" afterPath="$PROJECT_DIR$/Count my breaths.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Count my breaths/components/BarView.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Count my breaths/components/RecordView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Count my breaths/components/RecordView.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Count my breaths/components/RecordsListView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Count my breaths/components/RecordsListView.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Count my breaths/views/CountView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Count my breaths/views/CountView.swift" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,7 +47,7 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_7af21eb03d8c1bee4e2afbcd88a43c06f0ba5e0b" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -102,6 +110,7 @@
       <workItem from="1589945088199" duration="177000" />
       <workItem from="1589945520228" duration="1567000" />
       <workItem from="1590205824081" duration="12748000" />
+      <workItem from="1590428370935" duration="1227000" />
     </task>
     <servers />
   </component>
@@ -118,6 +127,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="578" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590214577837">

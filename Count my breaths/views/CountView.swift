@@ -8,6 +8,7 @@
 
 import SwiftUI
 import CoreData
+import QuickComponents
 
 struct CountView: View {
     @Environment(\.colorScheme) var colorScheme
@@ -25,11 +26,9 @@ struct CountView: View {
     var body: some View {
         VStack {
             HeaderView(title: "Counter", subTitle: "")
-            Spacer()
-            Text("Breaths: " + String(self.counter))
+            Text("Breaths: " + String(self.counter)).font(.title)
                 .font(.subheadline)
-            Text("Seconds " + String(self.timer))
-                .font(.subheadline)
+            BarView(value: CGFloat(self.timer), max: 30).frame(height:50)
                 .onReceive(self.timePublisher) { time in
                     if(self.isCounting) {
                         if (self.timer >= 30) {
@@ -50,9 +49,11 @@ struct CountView: View {
                         }
                     }
             }
-            if self.showResults {
-                Text("Counted " + String(self.bpm) + " beats per minute.")
-            }
+            self.showResults ?
+                Text("Counted " + String(self.bpm) + " beats per minute.") : nil
+            self.isCounting ?
+                Text("Seconds remaining \(30-self.timer)") : nil
+            
             Spacer()
             Spacer()
             Button(action: {
