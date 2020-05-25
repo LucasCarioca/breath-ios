@@ -4,6 +4,7 @@
 //
 
 import SwiftUI
+import QuickComponents
 
 struct RecordView: View {
     var beats: Int16
@@ -11,14 +12,23 @@ struct RecordView: View {
 
     var body: some View {
         VStack{
-            HStack {
-                BarView(value: beats * 2)
-                Spacer()
-            }
+            BarView(
+                value: CGFloat(beats * 2),
+                max: 40,
+                showLabel: true,
+                color: ((beats * 2) >= 30) ? .red : nil)
+                    .padding(.bottom)
+                    .padding(.top)
             HStack {
                 Text(timeText).font(.subheadline)
                 Spacer()
             }
         }
+    }
+}
+
+struct RecordView_Previews: PreviewProvider {
+    static var previews: some View {
+        RecordView(beats: 20, timeText: "HelloWorld")
     }
 }

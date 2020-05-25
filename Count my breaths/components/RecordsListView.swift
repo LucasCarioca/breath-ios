@@ -8,6 +8,10 @@ import SwiftUI
 struct RecordsListView: View {
     var countRecords: FetchedResults<CountRecord>
 
+    init(countRecords: FetchedResults<CountRecord>){
+        self.countRecords = countRecords
+        UITableView.appearance().separatorStyle = .none
+    }
     var body: some View {
         VStack {
             List {
