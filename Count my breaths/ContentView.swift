@@ -10,38 +10,38 @@ import SwiftUI
 
 struct ContentView: View {
     @Environment(\.colorScheme) var colorScheme
-    
+
     @State private var selection = 0
- 
+
     var body: some View {
         TabView(selection: $selection){
             CountView()
-                .padding()
-                .tabItem {
-                    VStack {
-                        Image(colorScheme == .dark ? "timer2w" : "timer2")
-                        Text("Counter")
+                    .padding()
+                    .tabItem {
+                        VStack {
+                            Image(uiImage: UIImage(systemName: "timer")!)
+                            Text("Counter")
+                        }
                     }
-                }
-                .tag(0)
+                    .tag(0)
             HistoryView()
-                .padding()
-                .tabItem {
-                    VStack {
-                        Image(colorScheme == .dark ? "chart2w" : "chart2")
-                        Text("History")
+                    .padding()
+                    .tabItem {
+                        VStack {
+                            Image(uiImage: UIImage(systemName: "chart.bar.fill")!)
+                            Text("History")
+                        }
                     }
-                }
-                .tag(1)
+                    .tag(1)
             AccountView()
-                .padding()
-                .tabItem {
-                    VStack {
-                        Image(colorScheme == .dark ? "account2w" : "account2")
-                        Text("Account")
+                    .padding()
+                    .tabItem {
+                        VStack {
+                            Image(uiImage: UIImage(systemName: "person.circle.fill")!)
+                            Text("Account")
+                        }
                     }
-                }
-                .tag(3)
+                    .tag(3)
         }
     }
 }
