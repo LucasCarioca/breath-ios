@@ -26,17 +26,13 @@ struct ContentView: View {
                 }
                 Spacer()
                 ZStack {
-                    if self.showPopUp {
-                       PlusMenu()
-                        .offset(y: -geometry.size.height/6)
-                    }
                     HStack {
                         Image(systemName: "timer")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .padding(20)
                             .frame(width: geometry.size.width/3, height: 75)
-                            .foregroundColor(self.viewRouter.currentView == "counter" ? .black : .gray)
+                            .foregroundColor(self.viewRouter.currentView == "counter" ? .blue : .gray)
                             .onTapGesture {
                                 self.viewRouter.currentView = "counter"
                             }
@@ -62,13 +58,12 @@ struct ContentView: View {
                             .aspectRatio(contentMode: .fit)
                             .padding(20)
                             .frame(width: geometry.size.width/3, height: 75)
-                            .foregroundColor(self.viewRouter.currentView == "history" ? .black : .gray)
+                            .foregroundColor(self.viewRouter.currentView == "history" ? .blue : .gray)
                             .onTapGesture {
                                 self.viewRouter.currentView = "history"
                             }
                     }
                         .frame(width: geometry.size.width, height: geometry.size.height/10)
-                    .background(Color.white.shadow(radius: 2))
                 }
             }.edgesIgnoringSafeArea(.bottom)
         }
