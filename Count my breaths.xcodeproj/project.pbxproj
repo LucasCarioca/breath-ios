@@ -45,7 +45,6 @@
 		DF0A7A61246C6B760004D826 /* countmybreaths.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = countmybreaths.xcdatamodel; sourceTree = "<group>"; };
 		DF1CCDEE247FFBCB00E53F71 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		DF2A7D48246F2FC000140EDA /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
-		DF6EEFDF247F5B8A00FC80D0 /* Count my breaths.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Count my breaths.entitlements"; sourceTree = "<group>"; };
 		DF6EEFE1247F5B9F00FC80D0 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		DF8E95B3246B8E8F004AB783 /* Count my breaths.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Count my breaths.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF8E95B6246B8E8F004AB783 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -132,7 +131,6 @@
 		DF8E95B5246B8E8F004AB783 /* Count my breaths */ = {
 			isa = PBXGroup;
 			children = (
-				DF6EEFDF247F5B8A00FC80D0 /* Count my breaths.entitlements */,
 				DF2A7D47246F2FAC00140EDA /* components */,
 				DF8E95E2246B9311004AB783 /* models */,
 				DF8E95D8246B8F21004AB783 /* views */,
@@ -466,9 +464,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Count my breaths/Count my breaths.entitlements";
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 47;
 				DEVELOPMENT_ASSET_PATHS = "\"Count my breaths/Preview Content\"";
 				DEVELOPMENT_TEAM = Y259ZT3SQK;
@@ -481,7 +478,7 @@
 				MARKETING_VERSION = 0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucasdesouza.countmybreaths;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = countmybreaths;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -492,9 +489,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Count my breaths/Count my breaths.entitlements";
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 47;
 				DEVELOPMENT_ASSET_PATHS = "\"Count my breaths/Preview Content\"";
 				DEVELOPMENT_TEAM = Y259ZT3SQK;
@@ -507,7 +503,7 @@
 				MARKETING_VERSION = 0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucasdesouza.countmybreaths;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = countmybreaths;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
