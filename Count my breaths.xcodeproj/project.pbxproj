@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		DF0A7A62246C6B760004D826 /* countmybreaths.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DF0A7A60246C6B760004D826 /* countmybreaths.xcdatamodeld */; };
 		DF0A7A94246C6F900004D826 /* countmybreaths.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DF0A7A60246C6B760004D826 /* countmybreaths.xcdatamodeld */; };
+		DF1CCDEF247FFBCB00E53F71 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1CCDEE247FFBCB00E53F71 /* ViewRouter.swift */; };
 		DF2A7D49246F2FC000140EDA /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2A7D48246F2FC000140EDA /* HeaderView.swift */; };
+		DF6EEFE2247F5B9F00FC80D0 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF6EEFE1247F5B9F00FC80D0 /* CloudKit.framework */; };
 		DF8D992D2479BE5D00824C52 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = DF12190A2471E0B500112F63 /* SwiftUICharts */; };
 		DF8D99362479CD4C00824C52 /* QuickComponents in Frameworks */ = {isa = PBXBuildFile; productRef = DF8D99352479CD4C00824C52 /* QuickComponents */; };
 		DF8E95B7246B8E8F004AB783 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95B6246B8E8F004AB783 /* AppDelegate.swift */; };
@@ -41,7 +43,10 @@
 
 /* Begin PBXFileReference section */
 		DF0A7A61246C6B760004D826 /* countmybreaths.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = countmybreaths.xcdatamodel; sourceTree = "<group>"; };
+		DF1CCDEE247FFBCB00E53F71 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		DF2A7D48246F2FC000140EDA /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		DF6EEFDF247F5B8A00FC80D0 /* Count my breaths.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Count my breaths.entitlements"; sourceTree = "<group>"; };
+		DF6EEFE1247F5B9F00FC80D0 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		DF8E95B3246B8E8F004AB783 /* Count my breaths.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Count my breaths.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF8E95B6246B8E8F004AB783 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF8E95B8246B8E8F004AB783 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF6EEFE2247F5B9F00FC80D0 /* CloudKit.framework in Frameworks */,
 				DF8D99362479CD4C00824C52 /* QuickComponents in Frameworks */,
 				DF8D992D2479BE5D00824C52 /* SwiftUICharts in Frameworks */,
 			);
@@ -91,8 +97,17 @@
 				F8C4DD068B5466C2E4DADF36 /* RecordView.swift */,
 				F8C4DBFEC4C3519C9527EF8B /* RecordsGraphView.swift */,
 				F8C4D8FCBEA2568ED521A60B /* RecordsListView.swift */,
+				DF1CCDEE247FFBCB00E53F71 /* ViewRouter.swift */,
 			);
 			path = components;
+			sourceTree = "<group>";
+		};
+		DF6EEFE0247F5B9F00FC80D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF6EEFE1247F5B9F00FC80D0 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		DF8E95AA246B8E8E004AB783 = {
@@ -101,6 +116,7 @@
 				DF8E95B5246B8E8F004AB783 /* Count my breaths */,
 				DF8E95CC246B8E93004AB783 /* Count my breathsTests */,
 				DF8E95B4246B8E8F004AB783 /* Products */,
+				DF6EEFE0247F5B9F00FC80D0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,6 +132,7 @@
 		DF8E95B5246B8E8F004AB783 /* Count my breaths */ = {
 			isa = PBXGroup;
 			children = (
+				DF6EEFDF247F5B8A00FC80D0 /* Count my breaths.entitlements */,
 				DF2A7D47246F2FAC00140EDA /* components */,
 				DF8E95E2246B9311004AB783 /* models */,
 				DF8E95D8246B8F21004AB783 /* views */,
@@ -284,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF8E95B7246B8E8F004AB783 /* AppDelegate.swift in Sources */,
+				DF1CCDEF247FFBCB00E53F71 /* ViewRouter.swift in Sources */,
 				DF2A7D49246F2FC000140EDA /* HeaderView.swift in Sources */,
 				DF8E95E0246B92F1004AB783 /* HistoryView.swift in Sources */,
 				DF0A7A62246C6B760004D826 /* countmybreaths.xcdatamodeld in Sources */,
@@ -448,8 +466,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_ENTITLEMENTS = "Count my breaths/Count my breaths.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 46;
 				DEVELOPMENT_ASSET_PATHS = "\"Count my breaths/Preview Content\"";
 				DEVELOPMENT_TEAM = Y259ZT3SQK;
@@ -462,7 +481,7 @@
 				MARKETING_VERSION = 0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucasdesouza.countmybreaths;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = countmybreaths;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -473,8 +492,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_ENTITLEMENTS = "Count my breaths/Count my breaths.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 46;
 				DEVELOPMENT_ASSET_PATHS = "\"Count my breaths/Preview Content\"";
 				DEVELOPMENT_TEAM = Y259ZT3SQK;
@@ -487,7 +507,7 @@
 				MARKETING_VERSION = 0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucasdesouza.countmybreaths;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = countmybreaths;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -582,7 +602,7 @@
 			repositoryURL = "https://github.com/LucasCarioca/QuickComponents.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.2.1;
+				minimumVersion = 0.3.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
