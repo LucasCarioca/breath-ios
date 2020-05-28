@@ -63,7 +63,7 @@ struct ContentView: View {
                                 self.viewRouter.currentView = "history"
                             }
                     }
-                        .frame(width: geometry.size.width, height: geometry.size.height/10)
+                    .frame(width: geometry.size.width, height: geometry.size.height/10).padding(.bottom)
                 }
             }.edgesIgnoringSafeArea(.bottom)
         }
