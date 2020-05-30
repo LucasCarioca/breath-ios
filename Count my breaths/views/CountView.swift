@@ -13,9 +13,9 @@ import QuickComponents
 struct CountView: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.managedObjectContext) var managedObjectContext
-    
-    @FetchRequest(entity: CountRecord.entity(), sortDescriptors: []) var countRecords: FetchedResults<CountRecord>
-    
+
+    @FetchRequest(fetchRequest: requestBuilder(limit: 1, sort: [])) var countRecords: FetchedResults<CountRecord>
+
     @State var timePublisher = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @State var counter = 0
     @State var isCounting = false
@@ -42,7 +42,14 @@ struct CountView: View {
                             let df = DateFormatter()
                             df.dateFormat = "MM-dd-yyyy hh:mm:ss"
                             record.timeText = df.string(from: record.time ?? Date())
-                            try? self.managedObjectContext.save()
+                            do{
+                               try self.managedObjectContext.save()
+                            } catch {
+                                print("Failed to save")
+                            }
+                            let userDefaults = UserDefaults.standard
+                            let countRuns = userDefaults.integer(forKey: "countruns")
+                            userDefaults.set(countRuns+1, forKey: "countruns")
                             self.timer = 0
                         } else {
                             self.timer += 1

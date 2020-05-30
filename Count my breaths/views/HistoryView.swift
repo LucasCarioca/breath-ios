@@ -11,11 +11,13 @@ import CoreData
 import QuickComponents
 
 struct HistoryView: View {
-    @FetchRequest(entity: CountRecord.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \CountRecord.time, ascending: false)]) var countRecords: FetchedResults<CountRecord>
+
+    @FetchRequest(fetchRequest: requestBuilder(limit: 100, sort: [NSSortDescriptor(keyPath: \CountRecord.time, ascending: false)])) var countRecords: FetchedResults<CountRecord>
+
     @State var pickerSelectedItem = 0
     var body: some View {
         VStack {
-            HeaderView(title: "History", subTitle: "Previous records will show up here.")
+            HeaderView(title: "History", subTitle: "")
             SwitcherView(pages: [
                 SwitcherPage(label: "List", view: RecordsListView(countRecords: countRecords)),
                 SwitcherPage(label: "Graph", view: RecordsGraphView(countRecords: countRecords))
