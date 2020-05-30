@@ -4,6 +4,7 @@
 //
 
 import MessageUI
+import QuickComponents
 import SwiftUI
 
 struct MailButtonView: View {
@@ -17,7 +18,7 @@ struct MailButtonView: View {
             if MFMailComposeViewController.canSendMail() {
                 Button("Email records") {
                     self.isShowingMailView.toggle()
-                }
+                }.frame(width:100, height:50).buttonStyle(PrimaryButton(variant: .contained))
             }
         }.sheet(isPresented: $isShowingMailView) {
             MailView(isShowing: self.$isShowingMailView, result: self.$result, csv: self.$csvData)
