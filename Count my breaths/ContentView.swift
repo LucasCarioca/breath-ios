@@ -7,41 +7,65 @@
 //
 
 import SwiftUI
+import QuickComponents
 
 struct ContentView: View {
-    @Environment(\.colorScheme) var colorScheme
-
-    @State private var selection = 0
-
+    
+    @ObservedObject var viewRouter = ViewRouter()
+    
+    @State var showPopUp = false
+    
     var body: some View {
-        TabView(selection: $selection){
-            CountView()
-                    .padding()
-                    .tabItem {
-                        VStack {
-                            Image(uiImage: UIImage(systemName: "timer")!)
-                            Text("Counter")
-                        }
+        GeometryReader { geometry in
+            VStack {
+                Spacer()
+                if self.viewRouter.currentView == "counter" {
+                    CountView().padding(.horizontal)
+                } else if self.viewRouter.currentView == "history" {
+                    HistoryView().padding(.horizontal)
+                }
+                Spacer()
+                ZStack {
+                    HStack {
+                        Image(systemName: "timer")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .padding(20)
+                            .frame(width: geometry.size.width/3, height: 75)
+                            .foregroundColor(self.viewRouter.currentView == "counter" ? .blue : .gray)
+                            .onTapGesture {
+                                self.viewRouter.currentView = "counter"
+                            }
+//                        ZStack {
+//                            Circle()
+//                                .foregroundColor(Color.white)
+//                                .frame(width: 75, height: 75)
+//                            Image(systemName: "plus.circle.fill")
+//                                .resizable()
+//                                .aspectRatio(contentMode: .fit)
+//                                .frame(width: 75, height: 75)
+//                                .foregroundColor(.blue)
+//                                .rotationEffect(Angle(degrees: self.showPopUp ? 90 : 0))
+//                        }
+//                            .offset(y: -geometry.size.height/10/2)
+//                            .onTapGesture {
+//                                withAnimation {
+//                                   self.showPopUp.toggle()
+//                                }
+//                            }
+                        Image(systemName: "chart.bar.fill")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .padding(20)
+                            .frame(width: geometry.size.width/3, height: 75)
+                            .foregroundColor(self.viewRouter.currentView == "history" ? .blue : .gray)
+                            .onTapGesture {
+                                self.viewRouter.currentView = "history"
+                            }
                     }
-                    .tag(0)
-            HistoryView()
-                    .padding()
-                    .tabItem {
-                        VStack {
-                            Image(uiImage: UIImage(systemName: "chart.bar.fill")!)
-                            Text("History")
-                        }
-                    }
-                    .tag(1)
-            AccountView()
-                    .padding()
-                    .tabItem {
-                        VStack {
-                            Image(uiImage: UIImage(systemName: "person.circle.fill")!)
-                            Text("Account")
-                        }
-                    }
-                    .tag(3)
+                    .frame(width: geometry.size.width, height: geometry.size.height/10).padding(.bottom)
+                }
+            }.edgesIgnoringSafeArea(.bottom)
         }
     }
 }
@@ -49,5 +73,35 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+struct PlusMenu: View {
+    var body: some View {
+        HStack(spacing: 50) {
+            ZStack {
+                Circle()
+                    .foregroundColor(Color.blue)
+                    .frame(width: 70, height: 70)
+                Image(systemName: "camera")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .padding(20)
+                    .frame(width: 70, height: 70)
+                    .foregroundColor(.white)
+            }
+            ZStack {
+                Circle()
+                    .foregroundColor(Color.blue)
+                    .frame(width: 70, height: 70)
+                Image(systemName: "photo")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .padding(20)
+                    .frame(width: 70, height: 70)
+                    .foregroundColor(.white)
+            }
+        }
+            .transition(.scale)
     }
 }
