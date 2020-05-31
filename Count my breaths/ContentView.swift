@@ -8,12 +8,24 @@
 
 import SwiftUI
 import QuickComponents
+import StoreKit
 
 struct ContentView: View {
     
     @ObservedObject var viewRouter = ViewRouter()
     
     @State var showPopUp = false
+
+    init() {
+        let userDefaults = UserDefaults.standard
+        let appRuns = userDefaults.integer(forKey: "appruns")
+        let countRuns = userDefaults.integer(forKey: "countruns")
+        let reviewShown = userDefaults.bool(forKey: "reviewshown")
+        if  (appRuns >= 5 || countRuns >= 5) && !reviewShown {
+            SKStoreReviewController.requestReview()
+            userDefaults.set(true, forKey: "reviewshown")
+        }
+    }
     
     var body: some View {
         GeometryReader { geometry in
