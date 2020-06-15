@@ -5,19 +5,16 @@
 
 import SwiftUI
 import SwiftUICharts
+import QuickComponents
 
 struct RecordsGraphView: View {
-    var countRecords: FetchedResults<CountRecord>
 
     var body: some View {
-        LineView(data: getBpmList(countRecords: countRecords))
-    }
-
-    func getBpmList(countRecords: FetchedResults<CountRecord>) -> [Double] {
-        var list: [Double] = []
-        for record in countRecords{
-            list.append(Double(record.beats * 2))
-        }
-        return list.reversed()
+        SwitcherView(reverse:true, pages: [
+            SwitcherPage(label: "1w", view: GraphView(by:.WEEK)),
+            SwitcherPage(label: "2w", view: GraphView(by:.TWO_WEEKS)),
+            SwitcherPage(label: "1m", view: GraphView(by:.MONTH)),
+            SwitcherPage(label: "6m", view: GraphView(by:.SIX_MONTHS)),
+        ])
     }
 }

@@ -7,10 +7,9 @@ import SwiftUI
 
 struct RecordsListView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
-    var countRecords: FetchedResults<CountRecord>
+    @FetchRequest(fetchRequest: requestBuilder(limit: 100, sort: [NSSortDescriptor(keyPath: \CountRecord.time, ascending: false)])) var countRecords: FetchedResults<CountRecord>
 
-    init(countRecords: FetchedResults<CountRecord>){
-        self.countRecords = countRecords
+    init(){
         UITableView.appearance().separatorStyle = .none
     }
 
