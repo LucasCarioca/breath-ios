@@ -12,15 +12,13 @@ import QuickComponents
 
 struct HistoryView: View {
 
-    @FetchRequest(fetchRequest: requestBuilder(limit: 100, sort: [NSSortDescriptor(keyPath: \CountRecord.time, ascending: false)])) var countRecords: FetchedResults<CountRecord>
-
     @State var pickerSelectedItem = 0
     var body: some View {
         VStack {
             HeaderView(title: "History", subTitle: "")
             SwitcherView(pages: [
-                SwitcherPage(label: "List", view: RecordsListView(countRecords: countRecords)),
-                SwitcherPage(label: "Graph", view: RecordsGraphView(countRecords: countRecords))
+                SwitcherPage(label: "List", view: RecordsListView()),
+                SwitcherPage(label: "Graph", view: RecordsGraphView())
             ])
         }
     }

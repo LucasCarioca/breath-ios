@@ -12,3 +12,9 @@ func requestBuilder(limit: Int, sort: [NSSortDescriptor]) -> NSFetchRequest<Coun
     request.sortDescriptors = sort
     return request
 }
+
+func requestBuilder(sort: [NSSortDescriptor]) -> NSFetchRequest<CountRecord> {
+    let request: NSFetchRequest<CountRecord> = CountRecord.fetchRequest()
+    request.sortDescriptors = sort
+    return request
+}
