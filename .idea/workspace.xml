@@ -8,30 +8,25 @@
       </path>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:feat" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:feat" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
     <select />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="313b362e-9483-4cc8-bab6-ddfeb6965117" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Count my breaths/components/GraphView.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Count my breaths.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Count my breaths.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Count my breaths/Utilities/CoreDataUtilities.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Count my breaths/Utilities/CoreDataUtilities.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Count my breaths/components/RecordsGraphView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Count my breaths/components/RecordsGraphView.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Count my breaths/components/RecordsListView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Count my breaths/components/RecordsListView.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Count my breaths/views/HistoryView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Count my breaths/views/HistoryView.swift" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,6 +100,7 @@
       <workItem from="1589945520228" duration="1567000" />
       <workItem from="1590205824081" duration="12748000" />
       <workItem from="1590428370935" duration="1227000" />
+      <workItem from="1592182726868" duration="3742000" />
     </task>
     <servers />
   </component>
@@ -128,22 +124,22 @@
       <screen x="0" y="23" width="1680" height="989" />
     </state>
     <state x="578" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.989@0.23.1680.989" timestamp="1590214577837" />
-    <state width="1638" height="330" key="GridCell.Tab.0.bottom" timestamp="1590863742293">
+    <state width="1638" height="299" key="GridCell.Tab.0.bottom" timestamp="1592186198782">
       <screen x="0" y="23" width="1680" height="989" />
     </state>
-    <state width="1638" height="330" key="GridCell.Tab.0.bottom/0.23.1680.989@0.23.1680.989" timestamp="1590863742293" />
-    <state width="1638" height="330" key="GridCell.Tab.0.center" timestamp="1590863742292">
+    <state width="1638" height="299" key="GridCell.Tab.0.bottom/0.23.1680.989@0.23.1680.989" timestamp="1592186198782" />
+    <state width="1638" height="299" key="GridCell.Tab.0.center" timestamp="1592186198781">
       <screen x="0" y="23" width="1680" height="989" />
     </state>
-    <state width="1638" height="330" key="GridCell.Tab.0.center/0.23.1680.989@0.23.1680.989" timestamp="1590863742292" />
-    <state width="1638" height="330" key="GridCell.Tab.0.left" timestamp="1590863742292">
+    <state width="1638" height="299" key="GridCell.Tab.0.center/0.23.1680.989@0.23.1680.989" timestamp="1592186198781" />
+    <state width="1638" height="299" key="GridCell.Tab.0.left" timestamp="1592186198781">
       <screen x="0" y="23" width="1680" height="989" />
     </state>
-    <state width="1638" height="330" key="GridCell.Tab.0.left/0.23.1680.989@0.23.1680.989" timestamp="1590863742292" />
-    <state width="1638" height="330" key="GridCell.Tab.0.right" timestamp="1590863742293">
+    <state width="1638" height="299" key="GridCell.Tab.0.left/0.23.1680.989@0.23.1680.989" timestamp="1592186198781" />
+    <state width="1638" height="299" key="GridCell.Tab.0.right" timestamp="1592186198782">
       <screen x="0" y="23" width="1680" height="989" />
     </state>
-    <state width="1638" height="330" key="GridCell.Tab.0.right/0.23.1680.989@0.23.1680.989" timestamp="1590863742293" />
+    <state width="1638" height="299" key="GridCell.Tab.0.right/0.23.1680.989@0.23.1680.989" timestamp="1592186198782" />
     <state width="1638" height="330" key="GridCell.Tab.1.bottom" timestamp="1590863742294">
       <screen x="0" y="23" width="1680" height="989" />
     </state>

@@ -22,8 +22,11 @@
 		DF8E95DC246B9086004AB783 /* CountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95DB246B9086004AB783 /* CountView.swift */; };
 		DF8E95DE246B927C004AB783 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95DD246B927C004AB783 /* AccountView.swift */; };
 		DF8E95E0246B92F1004AB783 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95DF246B92F1004AB783 /* HistoryView.swift */; };
+		DFB89C8324970E4500219348 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = DF12190A2471E0B500112F63 /* SwiftUICharts */; };
+		DFB89C8424970E4500219348 /* QuickComponents in Frameworks */ = {isa = PBXBuildFile; productRef = DF8D99352479CD4C00824C52 /* QuickComponents */; };
 		F8C4D05B47D43AAD9F7052D0 /* CoreDataUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DE596DF08528DE33AAED /* CoreDataUtilities.swift */; };
 		F8C4D288C2C6FBE421E45443 /* RecordsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D8FCBEA2568ED521A60B /* RecordsListView.swift */; };
+		F8C4D6A4A4226575503A6234 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D3222819B96152879DDB /* GraphView.swift */; };
 		F8C4D7A6E2FCDE83C42D019A /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DE65EDFBCB8B01B277C4 /* MailView.swift */; };
 		F8C4D9FFF6E61BB0DA0B4806 /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DD068B5466C2E4DADF36 /* RecordView.swift */; };
 		F8C4DB6730AA424BAD4DFA11 /* RecordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D99E15B371A2CD78632B /* RecordService.swift */; };
@@ -59,6 +62,7 @@
 		DF8E95DB246B9086004AB783 /* CountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountView.swift; sourceTree = "<group>"; };
 		DF8E95DD246B927C004AB783 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		DF8E95DF246B92F1004AB783 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		F8C4D3222819B96152879DDB /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		F8C4D8FCBEA2568ED521A60B /* RecordsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordsListView.swift; sourceTree = "<group>"; };
 		F8C4D99E15B371A2CD78632B /* RecordService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordService.swift; sourceTree = "<group>"; };
 		F8C4DBFEC4C3519C9527EF8B /* RecordsGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordsGraphView.swift; sourceTree = "<group>"; };
@@ -73,6 +77,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF6EEFE2247F5B9F00FC80D0 /* CloudKit.framework in Frameworks */,
+				DFB89C8324970E4500219348 /* SwiftUICharts in Frameworks */,
+				DFB89C8424970E4500219348 /* QuickComponents in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +101,7 @@
 				F8C4DBFEC4C3519C9527EF8B /* RecordsGraphView.swift */,
 				F8C4D8FCBEA2568ED521A60B /* RecordsListView.swift */,
 				DF1CCDEE247FFBCB00E53F71 /* ViewRouter.swift */,
+				F8C4D3222819B96152879DDB /* GraphView.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -213,8 +220,8 @@
 			);
 			name = "Count my breaths";
 			packageProductDependencies = (
-				DF12190A2471E0B500112F63 /* XCSwiftPackageProductDependency */,
-				DF8D99352479CD4C00824C52 /* XCSwiftPackageProductDependency */,
+				DF12190A2471E0B500112F63 /* SwiftUICharts */,
+				DF8D99352479CD4C00824C52 /* QuickComponents */,
 			);
 			productName = "Count my breaths";
 			productReference = DF8E95B3246B8E8F004AB783 /* Count my breaths.app */;
@@ -267,8 +274,8 @@
 			);
 			mainGroup = DF8E95AA246B8E8E004AB783;
 			packageReferences = (
-				DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference */,
-				DF8D99342479CD4C00824C52 /* XCRemoteSwiftPackageReference */,
+				DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference "ChartView" */,
+				DF8D99342479CD4C00824C52 /* XCRemoteSwiftPackageReference "QuickComponents" */,
 			);
 			productRefGroup = DF8E95B4246B8E8F004AB783 /* Products */;
 			projectDirPath = "";
@@ -320,6 +327,7 @@
 				F8C4D288C2C6FBE421E45443 /* RecordsListView.swift in Sources */,
 				F8C4DB6730AA424BAD4DFA11 /* RecordService.swift in Sources */,
 				F8C4D05B47D43AAD9F7052D0 /* CoreDataUtilities.swift in Sources */,
+				F8C4D6A4A4226575503A6234 /* GraphView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,7 +482,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 55;
+				CURRENT_PROJECT_VERSION = 56;
 				DEVELOPMENT_ASSET_PATHS = "\"Count my breaths/Preview Content\"";
 				DEVELOPMENT_TEAM = Y259ZT3SQK;
 				ENABLE_PREVIEWS = YES;
@@ -499,7 +507,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 55;
+				CURRENT_PROJECT_VERSION = 56;
 				DEVELOPMENT_ASSET_PATHS = "\"Count my breaths/Preview Content\"";
 				DEVELOPMENT_TEAM = Y259ZT3SQK;
 				ENABLE_PREVIEWS = YES;
@@ -593,7 +601,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference */ = {
+		DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference "ChartView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AppPear/ChartView.git";
 			requirement = {
@@ -601,25 +609,25 @@
 				minimumVersion = 1.5.0;
 			};
 		};
-		DF8D99342479CD4C00824C52 /* XCRemoteSwiftPackageReference */ = {
+		DF8D99342479CD4C00824C52 /* XCRemoteSwiftPackageReference "QuickComponents" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/LucasCarioca/QuickComponents.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.3.2;
+				branch = master;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		DF12190A2471E0B500112F63 /* XCSwiftPackageProductDependency */ = {
+		DF12190A2471E0B500112F63 /* SwiftUICharts */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference */;
+			package = DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference "ChartView" */;
 			productName = SwiftUICharts;
 		};
-		DF8D99352479CD4C00824C52 /* XCSwiftPackageProductDependency */ = {
+		DF8D99352479CD4C00824C52 /* QuickComponents */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DF8D99342479CD4C00824C52 /* XCRemoteSwiftPackageReference */;
+			package = DF8D99342479CD4C00824C52 /* XCRemoteSwiftPackageReference "QuickComponents" */;
 			productName = QuickComponents;
 		};
 /* End XCSwiftPackageProductDependency section */

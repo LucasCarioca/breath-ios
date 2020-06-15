@@ -14,9 +14,9 @@
         "package": "QuickComponents",
         "repositoryURL": "https://github.com/LucasCarioca/QuickComponents.git",
         "state": {
-          "branch": null,
-          "revision": "8a2f152b4f606837c16108bac3c69fa82ca495f5",
-          "version": "0.3.2"
+          "branch": "master",
+          "revision": "fbe294a1e579f6c3aa218991bc6a0cf02bd89ba5",
+          "version": null
         }
       }
     ]
