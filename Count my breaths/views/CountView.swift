@@ -78,7 +78,15 @@ struct CountView: View {
                     Image("icon").frame(width: geometry.size.width, height: geometry.size.height).background(Color(red:78/255, green:78/255, blue:78/255)).cornerRadius(20)
                 }
             }.buttonStyle(PlainButtonStyle())
-            Spacer()
+            self.isCounting ?
+                    Button(action: {
+                        self.isCounting = false
+                        self.showResults = false
+                        self.counter = 0
+                        self.timer = 0
+                    }){
+                        Text("Reset")
+                    }.frame(height:50).buttonStyle(SecondaryButton()) : nil
             Spacer()
         }
     }
