@@ -19,15 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="313b362e-9483-4cc8-bab6-ddfeb6965117" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Count my breaths/components/GraphView.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Count my breaths.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Count my breaths.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Count my breaths/Utilities/CoreDataUtilities.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Count my breaths/Utilities/CoreDataUtilities.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Count my breaths/components/RecordsGraphView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Count my breaths/components/RecordsGraphView.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Count my breaths/components/RecordsListView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Count my breaths/components/RecordsListView.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Count my breaths/views/HistoryView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Count my breaths/views/HistoryView.swift" afterDir="false" />
-    </list>
+    <list default="true" id="313b362e-9483-4cc8-bab6-ddfeb6965117" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
