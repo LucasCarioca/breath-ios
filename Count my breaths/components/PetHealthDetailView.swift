@@ -4,3 +4,21 @@
 //
 
 import Foundation
+import SwiftUI
+
+struct PetHealthDetailView: View {
+    var item: PetHealthItem
+    var body: some View {
+        VStack{
+            HStack{
+                Text(item.title).font(.title)
+                Spacer()
+            }.padding()
+            HStack{
+                Text(item.content)
+                Spacer()
+            }.padding()
+            Spacer()
+        }
+    }
+}
