@@ -19,28 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="313b362e-9483-4cc8-bab6-ddfeb6965117" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Count my breaths/Assets.xcassets/five.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Count my breaths/Assets.xcassets/five.imageset/five.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Count my breaths/Assets.xcassets/four.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Count my breaths/Assets.xcassets/four.imageset/four.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Count my breaths/Assets.xcassets/one.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Count my breaths/Assets.xcassets/one.imageset/one.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Count my breaths/Assets.xcassets/three.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Count my breaths/Assets.xcassets/three.imageset/three.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Count my breaths/Assets.xcassets/toto.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Count my breaths/Assets.xcassets/toto.imageset/toto.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Count my breaths/Assets.xcassets/two.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Count my breaths/Assets.xcassets/two.imageset/two.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Count my breaths/components/HowToItemView.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Count my breaths.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Count my breaths.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Count my breaths.xcodeproj/project.xcworkspace/xcuserdata/lucasdesouza.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/Count my breaths.xcodeproj/project.xcworkspace/xcuserdata/lucasdesouza.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Count my breaths/components/PetHealthDetailView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Count my breaths/components/PetHealthDetailView.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Count my breaths/views/AboutUsView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Count my breaths/views/AboutUsView.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Count my breaths/views/HowToView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Count my breaths/views/HowToView.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Count my breaths/views/PetHealthView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Count my breaths/views/PetHealthView.swift" afterDir="false" />
-    </list>
+    <list default="true" id="313b362e-9483-4cc8-bab6-ddfeb6965117" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -142,26 +121,26 @@
       <screen x="0" y="25" width="1680" height="954" />
     </state>
     <state x="100" y="125" width="1480" height="754" key="DiffContextDialog/0.25.1680.954@0.25.1680.954" timestamp="1593396065291" />
-    <state width="1498" height="284" key="GridCell.Tab.0.bottom" timestamp="1593846530894">
+    <state width="1498" height="284" key="GridCell.Tab.0.bottom" timestamp="1593846765189">
       <screen x="0" y="25" width="1680" height="954" />
     </state>
     <state width="1638" height="299" key="GridCell.Tab.0.bottom/0.23.1680.989@0.23.1680.989" timestamp="1592186198782" />
-    <state width="1498" height="284" key="GridCell.Tab.0.bottom/0.25.1680.954@0.25.1680.954" timestamp="1593846530894" />
-    <state width="1498" height="284" key="GridCell.Tab.0.center" timestamp="1593846530894">
+    <state width="1498" height="284" key="GridCell.Tab.0.bottom/0.25.1680.954@0.25.1680.954" timestamp="1593846765189" />
+    <state width="1498" height="284" key="GridCell.Tab.0.center" timestamp="1593846765188">
       <screen x="0" y="25" width="1680" height="954" />
     </state>
     <state width="1638" height="299" key="GridCell.Tab.0.center/0.23.1680.989@0.23.1680.989" timestamp="1592186198781" />
-    <state width="1498" height="284" key="GridCell.Tab.0.center/0.25.1680.954@0.25.1680.954" timestamp="1593846530894" />
-    <state width="1498" height="284" key="GridCell.Tab.0.left" timestamp="1593846530893">
+    <state width="1498" height="284" key="GridCell.Tab.0.center/0.25.1680.954@0.25.1680.954" timestamp="1593846765188" />
+    <state width="1498" height="284" key="GridCell.Tab.0.left" timestamp="1593846765187">
       <screen x="0" y="25" width="1680" height="954" />
     </state>
     <state width="1638" height="299" key="GridCell.Tab.0.left/0.23.1680.989@0.23.1680.989" timestamp="1592186198781" />
-    <state width="1498" height="284" key="GridCell.Tab.0.left/0.25.1680.954@0.25.1680.954" timestamp="1593846530893" />
-    <state width="1498" height="284" key="GridCell.Tab.0.right" timestamp="1593846530894">
+    <state width="1498" height="284" key="GridCell.Tab.0.left/0.25.1680.954@0.25.1680.954" timestamp="1593846765187" />
+    <state width="1498" height="284" key="GridCell.Tab.0.right" timestamp="1593846765189">
       <screen x="0" y="25" width="1680" height="954" />
     </state>
     <state width="1638" height="299" key="GridCell.Tab.0.right/0.23.1680.989@0.23.1680.989" timestamp="1592186198782" />
-    <state width="1498" height="284" key="GridCell.Tab.0.right/0.25.1680.954@0.25.1680.954" timestamp="1593846530894" />
+    <state width="1498" height="284" key="GridCell.Tab.0.right/0.25.1680.954@0.25.1680.954" timestamp="1593846765189" />
     <state width="1638" height="330" key="GridCell.Tab.1.bottom" timestamp="1590863742294">
       <screen x="0" y="23" width="1680" height="989" />
     </state>
