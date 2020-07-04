@@ -506,11 +506,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-<<<<<<< HEAD
 				CURRENT_PROJECT_VERSION = 61;
-=======
-				CURRENT_PROJECT_VERSION = 59;
->>>>>>> 3cc3bac136f5ceaef85eee66d5dfe3d3d77af4a2
 				DEVELOPMENT_ASSET_PATHS = "\"Count my breaths/Preview Content\"";
 				DEVELOPMENT_TEAM = Y259ZT3SQK;
 				ENABLE_PREVIEWS = YES;
@@ -535,11 +531,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-<<<<<<< HEAD
 				CURRENT_PROJECT_VERSION = 61;
-=======
-				CURRENT_PROJECT_VERSION = 59;
->>>>>>> 3cc3bac136f5ceaef85eee66d5dfe3d3d77af4a2
 				DEVELOPMENT_ASSET_PATHS = "\"Count my breaths/Preview Content\"";
 				DEVELOPMENT_TEAM = Y259ZT3SQK;
 				ENABLE_PREVIEWS = YES;
