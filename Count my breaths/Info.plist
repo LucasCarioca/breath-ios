@@ -15,9 +15,15 @@
 	<key>CFBundlePackageType</key>
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
+<<<<<<< HEAD
 	<string>1.11.0</string>
 	<key>CFBundleVersion</key>
 	<string>61</string>
+=======
+	<string>1.10.0</string>
+	<key>CFBundleVersion</key>
+	<string>59</string>
+>>>>>>> 3cc3bac136f5ceaef85eee66d5dfe3d3d77af4a2
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>LSRequiresIPhoneOS</key>
