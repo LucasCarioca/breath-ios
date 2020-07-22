@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/AppPear/ChartView.git",
         "state": {
           "branch": null,
-          "revision": "c12c773af0b18be3abc30a5e39fc8370a6498502",
-          "version": "1.5.0"
+          "revision": "c6610f567975469aaa2a8d6eb225c7162e6d0736",
+          "version": "1.5.3"
         }
       },
       {
@@ -15,7 +15,7 @@
         "repositoryURL": "https://github.com/LucasCarioca/QuickComponents.git",
         "state": {
           "branch": "master",
-          "revision": "fbe294a1e579f6c3aa218991bc6a0cf02bd89ba5",
+          "revision": "40af5fef30581b4ad31cd4030807a6c874bfb19e",
           "version": null
         }
       }
