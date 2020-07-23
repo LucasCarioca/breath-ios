@@ -24,6 +24,7 @@ struct CountView: View {
     @State var bpm: Int = 0
     let impactMed = UIImpactFeedbackGenerator(style: .medium)
     let impactHeavy = UIImpactFeedbackGenerator(style: .heavy)
+    let hapticNotification = UINotificationFeedbackGenerator()
 
     var body: some View {
         VStack {
@@ -34,9 +35,7 @@ struct CountView: View {
                 .onReceive(self.timePublisher) { time in
                     if(self.isCounting) {
                         if (self.timer >= 30) {
-                            self.impactHeavy.impactOccurred()
-                            self.impactHeavy.impactOccurred()
-                            self.impactHeavy.impactOccurred()
+                            self.hapticNotification.notificationOccurred(.success)
                             self.isCounting = false
                             self.showResults = true
                             self.bpm = self.counter * 2
