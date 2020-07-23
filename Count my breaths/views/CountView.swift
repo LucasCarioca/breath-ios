@@ -22,7 +22,8 @@ struct CountView: View {
     @State var timer = 0
     @State var showResults = false
     @State var bpm: Int = 0
-    
+    let impact = UIImpactFeedbackGenerator(style: .medium)
+
     var body: some View {
         VStack {
             HeaderView(title: "Counter", subTitle: "")
@@ -64,6 +65,7 @@ struct CountView: View {
             Spacer()
             Spacer()
             Button(action: {
+                self.impact.impactOccurred()
                 if (!self.isCounting) {
                     self.timePublisher = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
                     self.counter = 1
