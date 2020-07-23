@@ -22,7 +22,8 @@ struct CountView: View {
     @State var timer = 0
     @State var showResults = false
     @State var bpm: Int = 0
-    let impact = UIImpactFeedbackGenerator(style: .medium)
+    let impactMed = UIImpactFeedbackGenerator(style: .medium)
+    let impactHeavy = UIImpactFeedbackGenerator(style: .heavy)
 
     var body: some View {
         VStack {
@@ -33,6 +34,9 @@ struct CountView: View {
                 .onReceive(self.timePublisher) { time in
                     if(self.isCounting) {
                         if (self.timer >= 30) {
+                            self.impactHeavy.impactOccurred()
+                            self.impactHeavy.impactOccurred()
+                            self.impactHeavy.impactOccurred()
                             self.isCounting = false
                             self.showResults = true
                             self.bpm = self.counter * 2
@@ -65,7 +69,7 @@ struct CountView: View {
             Spacer()
             Spacer()
             Button(action: {
-                self.impact.impactOccurred()
+                self.impactMed.impactOccurred()
                 if (!self.isCounting) {
                     self.timePublisher = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
                     self.counter = 1
