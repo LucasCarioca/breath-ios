@@ -22,9 +22,11 @@ struct CountView: View {
     @State var timer = 0
     @State var showResults = false
     @State var bpm: Int = 0
+    @State var warning = false
     let impactMed = UIImpactFeedbackGenerator(style: .medium)
     let impactHeavy = UIImpactFeedbackGenerator(style: .heavy)
     let hapticNotification = UINotificationFeedbackGenerator()
+    
 
     var body: some View {
         VStack {
@@ -35,10 +37,15 @@ struct CountView: View {
                 .onReceive(self.timePublisher) { time in
                     if(self.isCounting) {
                         if (self.timer >= 30) {
-                            self.hapticNotification.notificationOccurred(.success)
                             self.isCounting = false
                             self.showResults = true
                             self.bpm = self.counter * 2
+                            if self.bpm >= 30 {
+                                self.warning = true
+                                self.hapticNotification.notificationOccurred(.error)
+                            } else {
+                                self.hapticNotification.notificationOccurred(.success)
+                            }
                             let record = CountRecord(context: self.managedObjectContext)
                             record.elapsedTime = Int16(self.timer)
                             record.beats = Int16(self.counter)
@@ -93,6 +100,8 @@ struct CountView: View {
                         Text("Reset")
                     }.frame(height:50).buttonStyle(SecondaryButton()) : nil
             Spacer()
+        }.alert(isPresented: self.$warning) {
+            Alert(title: Text("Your pets breathing is high"), message: Text("Please contact your veterinarian."), dismissButton: .default(Text("Ok")))
         }
     }
 }
