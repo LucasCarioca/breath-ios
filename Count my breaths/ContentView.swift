@@ -11,9 +11,9 @@ import QuickComponents
 import StoreKit
 
 struct ContentView: View {
-    
+
     @ObservedObject var viewRouter = ViewRouter()
-    
+
     @State var showPopUp = false
 
     init() {
@@ -21,33 +21,35 @@ struct ContentView: View {
         let appRuns = userDefaults.integer(forKey: "appruns")
         let countRuns = userDefaults.integer(forKey: "countruns")
         let reviewShown = userDefaults.bool(forKey: "reviewshown")
-        if  (appRuns >= 5 || countRuns >= 5) && !reviewShown {
+        if (appRuns >= 5 || countRuns >= 5) && !reviewShown {
             SKStoreReviewController.requestReview()
             userDefaults.set(true, forKey: "reviewshown")
         }
     }
-    
     var body: some View {
-        GeometryReader { geometry in
-            VStack {
-                Spacer()
-                if self.viewRouter.currentView == "counter" {
-                    CountView().padding(.horizontal)
-                } else if self.viewRouter.currentView == "history" {
-                    HistoryView().padding(.horizontal)
-                }
-                Spacer()
-                ZStack {
-                    HStack {
-                        Image(systemName: "timer")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .padding(20)
-                            .frame(width: geometry.size.width/3, height: 75)
-                            .foregroundColor(self.viewRouter.currentView == "counter" ? .blue : .gray)
-                            .onTapGesture {
-                                self.viewRouter.currentView = "counter"
-                            }
+        NavigationView {
+            GeometryReader { geometry in
+                VStack {
+                    Spacer()
+                    if self.viewRouter.currentView == "counter" {
+                        CountView().padding(.horizontal)
+                    } else if self.viewRouter.currentView == "history" {
+                        HistoryView().padding(.horizontal)
+                    } else if self.viewRouter.currentView == "info" {
+                        InfoView().padding(.horizontal)
+                    }
+                    Spacer()
+                    ZStack {
+                        HStack {
+                            Image(systemName: "timer")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .padding(20)
+                                    .frame(width: geometry.size.width / 3, height: 75)
+                                    .foregroundColor(self.viewRouter.currentView == "counter" ? .blue : .gray)
+                                    .onTapGesture {
+                                        self.viewRouter.currentView = "counter"
+                                    }
 //                        ZStack {
 //                            Circle()
 //                                .foregroundColor(Color.white)
@@ -65,20 +67,33 @@ struct ContentView: View {
 //                                   self.showPopUp.toggle()
 //                                }
 //                            }
-                        Image(systemName: "chart.bar.fill")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .padding(20)
-                            .frame(width: geometry.size.width/3, height: 75)
-                            .foregroundColor(self.viewRouter.currentView == "history" ? .blue : .gray)
-                            .onTapGesture {
-                                self.viewRouter.currentView = "history"
-                            }
+                            Image(systemName: "chart.bar.fill")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .padding(20)
+                                    .frame(width: geometry.size.width / 3, height: 75)
+                                    .foregroundColor(self.viewRouter.currentView == "history" ? .blue : .gray)
+                                    .onTapGesture {
+                                        self.viewRouter.currentView = "history"
+                                    }
+                            Image(systemName: "info.circle.fill")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .padding(20)
+                                    .frame(width: geometry.size.width / 3, height: 75)
+                                    .foregroundColor(self.viewRouter.currentView == "info" ? .blue : .gray)
+                                    .onTapGesture {
+                                        self.viewRouter.currentView = "info"
+                                    }
+                        }
+                                .frame(width: geometry.size.width, height: geometry.size.height / 10).padding(.bottom)
                     }
-                    .frame(width: geometry.size.width, height: geometry.size.height/10).padding(.bottom)
-                }
-            }.edgesIgnoringSafeArea(.bottom)
+                }.edgesIgnoringSafeArea(.bottom)
+            }
+                    .navigationBarTitle("")
+                    .navigationBarHidden(true)
         }
+
     }
 }
 
@@ -93,27 +108,27 @@ struct PlusMenu: View {
         HStack(spacing: 50) {
             ZStack {
                 Circle()
-                    .foregroundColor(Color.blue)
-                    .frame(width: 70, height: 70)
+                        .foregroundColor(Color.blue)
+                        .frame(width: 70, height: 70)
                 Image(systemName: "camera")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .padding(20)
-                    .frame(width: 70, height: 70)
-                    .foregroundColor(.white)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .padding(20)
+                        .frame(width: 70, height: 70)
+                        .foregroundColor(.white)
             }
             ZStack {
                 Circle()
-                    .foregroundColor(Color.blue)
-                    .frame(width: 70, height: 70)
+                        .foregroundColor(Color.blue)
+                        .frame(width: 70, height: 70)
                 Image(systemName: "photo")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .padding(20)
-                    .frame(width: 70, height: 70)
-                    .foregroundColor(.white)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .padding(20)
+                        .frame(width: 70, height: 70)
+                        .foregroundColor(.white)
             }
         }
-            .transition(.scale)
+                .transition(.scale)
     }
 }

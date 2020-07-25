@@ -4,3 +4,5 @@ Count my breaths.ipa
 fastlane/report.xml
 Brewfile.lock.json
 Count\ my\ breaths.xcodeproj/project.xcworkspace/xcuserdata/
+.idea/
+*.iml
