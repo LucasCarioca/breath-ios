@@ -26,7 +26,6 @@ struct ContentView: View {
             userDefaults.set(true, forKey: "reviewshown")
         }
     }
-
     var body: some View {
         NavigationView {
             GeometryReader { geometry in
