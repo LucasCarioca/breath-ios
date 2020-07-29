@@ -36,7 +36,7 @@ struct GraphView: View {
 
     func fetch() -> [CountRecord] {
         var countRecords: [CountRecord]
-        var request = requestBuilder(sort: [NSSortDescriptor(keyPath: \CountRecord.time, ascending: false)])
+        let request = requestBuilder(sort: [NSSortDescriptor(keyPath: \CountRecord.time, ascending: false)])
         switch self.by {
             case .MAX:
                 try! countRecords = self.moc.fetch(request)
@@ -48,8 +48,6 @@ struct GraphView: View {
                 try! countRecords = self.moc.fetch(query(days: 30, request: request))
             case .SIX_MONTHS:
                 try! countRecords = self.moc.fetch(query(days: 180, request: request))
-            default:
-                try! countRecords = self.moc.fetch(request)
         }
         return countRecords
     }
@@ -58,8 +56,8 @@ struct GraphView: View {
         let toDate = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM-dd-yyyy hh:mm:ss"
-        var dayComp = DateComponents(day: -days)
-        var fromDate = Calendar.current.date(byAdding: dayComp, to: toDate)!
+        let dayComp = DateComponents(day: -days)
+        let fromDate = Calendar.current.date(byAdding: dayComp, to: toDate)!
         print(fromDate)
         print(toDate)
         request.predicate = NSPredicate(format: "(time >= %@) AND (time <= %@)", fromDate as NSDate, toDate as NSDate)
