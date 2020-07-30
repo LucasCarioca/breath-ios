@@ -16,12 +16,15 @@ struct CountView: View {
     @FetchRequest(fetchRequest: requestBuilder(limit: 1, sort: [])) var countRecords: FetchedResults<CountRecord>
 
     @State var timePublisher = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    @State var counter = 0
     @State var isCounting = false
+    @State var counter = 0
     @State var timer = 0
-    @State var showResults = false
     @State var bpm: Int = 0
-    @State var warning = false
+    
+    @State var showResults = false
+    @State var showWarning = false
+    @State var messageTitle: String = ""
+    @State var messageContent: String = ""
     
     let impactMed = UIImpactFeedbackGenerator(style: .medium)
     let impactHeavy = UIImpactFeedbackGenerator(style: .heavy)
@@ -29,15 +32,18 @@ struct CountView: View {
     
     var body: some View {
         VStack {
-            Text("Counter").Heading(size: .H3)
-            Text("Breaths: " + String(self.counter)).font(.title)
-                .font(.subheadline)
-            self.showResults ?
-                Text("Counted " + String(self.bpm) + " beats per minute.") : nil
-            self.isCounting ?
-                TimerView(time: self.timer, max: 30) : nil
-            Spacer()
+            Text("Counter").Heading(size: .H5)
             
+            self.showResults ?
+                Text("Counted " + String(self.bpm) + " beats per minute.")
+                    .Paragraph(align: .center, size: .MD) : nil
+            
+            if(self.isCounting) {
+                TimerView(counter: self.counter, time: self.timer, max: 30)
+            } else {
+                Text("Click on the heart below to start counting").Paragraph(align: .center, size: .MD)
+            }
+            Spacer()
             
             Button(action: self.breath) {
                 GeometryReader { geometry in
@@ -63,12 +69,11 @@ struct CountView: View {
             }.frame(height:50).buttonStyle(SecondaryButton()) : nil
             Spacer()
             
-        }.alert(isPresented: self.$warning) {
+        }.alert(isPresented: self.$showWarning) {
             Alert(
-                title: Text("Your pets breathing is high"),
-                message: Text("Please contact your veterinarian."),
-                dismissButton: .default(Text("Ok")
-                )
+                title: Text(self.messageTitle),
+                message: Text(self.messageContent),
+                dismissButton: .default(Text("Ok"))
             )
         }    }
     
@@ -79,7 +84,7 @@ struct CountView: View {
     }
     
     func finishCounting() {
-        calculateResults()
+        self.bpm = self.counter * 2
         if self.bpm >= 30 {
             highBreathing()
         } else {
@@ -87,11 +92,6 @@ struct CountView: View {
         }
         reset()
         trackRuns()
-    }
-    
-    func calculateResults() {
-        self.bpm = self.counter * 2
-        self.showResults = true
     }
     
     func saveRecord(timeInterval: TimeInterval) {
@@ -116,17 +116,24 @@ struct CountView: View {
     }
     
     func highBreathing() {
-        self.warning = true
         self.hapticNotification.notificationOccurred(.error)
+        self.messageTitle = "Your pets breathing is high"
+        self.messageContent = "Your pets breathing rate is \(String(self.bpm)). Please contact your veterinarian."
+        self.showResults = true
+        self.showWarning = true
     }
     
     func normalBreathing() {
         self.hapticNotification.notificationOccurred(.success)
+        self.messageTitle = "Your pets breathing is normal"
+        self.messageContent = "Your pets breathing rate is \(String(self.bpm))."
+        self.showResults = true
     }
     
     func breath() {
         self.impactMed.impactOccurred()
         if (!self.isCounting) {
+            self.showResults = false
             self.timePublisher = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
             self.counter = 1
             self.isCounting = true
@@ -139,11 +146,14 @@ struct CountView: View {
 
 struct TimerView: View {
     
+    var counter: Int
     var time: Int
     var max: Int
     
     var body: some View {
         VStack{
+            Text("Breaths: " + String(counter)).font(.title)
+            .font(.subheadline)
             BarView(value: CGFloat(time), max: CGFloat(max)).frame(height:50)
             Text("Seconds remaining \(max-time)")
         }
