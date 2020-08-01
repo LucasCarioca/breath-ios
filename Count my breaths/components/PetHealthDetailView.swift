@@ -5,8 +5,10 @@
 
 import Foundation
 import SwiftUI
+import QuickComponents
 
 struct PetHealthDetailView: View {
+    @Binding var isPresented: Bool
     var item: PetHealthItem
     var body: some View {
         VStack {
@@ -30,6 +32,13 @@ struct PetHealthDetailView: View {
                         Spacer()
                     }.padding() : nil
             Spacer()
+            Button(action: {
+                self.$isPresented.wrappedValue.toggle()
+            }) {
+                Text("Close").Paragraph(align: .center, size: .LG)
+            }.frame(width: 150, height: 75, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            .padding()
+            .buttonStyle(SecondaryButton(variant: .empty))
         }
     }
 }

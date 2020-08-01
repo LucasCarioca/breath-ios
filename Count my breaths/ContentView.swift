@@ -27,108 +27,56 @@ struct ContentView: View {
         }
     }
     var body: some View {
-        NavigationView {
-            GeometryReader { geometry in
-                VStack {
-                    Spacer()
-                    if self.viewRouter.currentView == "counter" {
-                        CountView().padding(.horizontal)
-                    } else if self.viewRouter.currentView == "history" {
-                        HistoryView().padding(.horizontal)
-                    } else if self.viewRouter.currentView == "info" {
-                        InfoView().padding(.horizontal)
+        GeometryReader { geometry in
+            VStack {
+                Spacer()
+                if self.viewRouter.currentView == "counter" {
+                    CountView().padding(.horizontal)
+                } else if self.viewRouter.currentView == "history" {
+                    HistoryView().padding(.horizontal)
+                } else if self.viewRouter.currentView == "info" {
+                    InfoView().padding(.horizontal)
+                }
+                Spacer()
+                ZStack {
+                    HStack {
+                        Image(systemName: "timer")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .padding(20)
+                                .frame(width: geometry.size.width / 3, height: 75)
+                                .foregroundColor(self.viewRouter.currentView == "counter" ? .blue : .gray)
+                                .onTapGesture {
+                                    self.viewRouter.currentView = "counter"
+                                }
+                        Image(systemName: "chart.bar.fill")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .padding(20)
+                                .frame(width: geometry.size.width / 3, height: 75)
+                                .foregroundColor(self.viewRouter.currentView == "history" ? .blue : .gray)
+                                .onTapGesture {
+                                    self.viewRouter.currentView = "history"
+                                }
+                        Image(systemName: "info.circle.fill")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .padding(20)
+                                .frame(width: geometry.size.width / 3, height: 75)
+                                .foregroundColor(self.viewRouter.currentView == "info" ? .blue : .gray)
+                                .onTapGesture {
+                                    self.viewRouter.currentView = "info"
+                                }
                     }
-                    Spacer()
-                    ZStack {
-                        HStack {
-                            Image(systemName: "timer")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .padding(20)
-                                    .frame(width: geometry.size.width / 3, height: 75)
-                                    .foregroundColor(self.viewRouter.currentView == "counter" ? .blue : .gray)
-                                    .onTapGesture {
-                                        self.viewRouter.currentView = "counter"
-                                    }
-//                        ZStack {
-//                            Circle()
-//                                .foregroundColor(Color.white)
-//                                .frame(width: 75, height: 75)
-//                            Image(systemName: "plus.circle.fill")
-//                                .resizable()
-//                                .aspectRatio(contentMode: .fit)
-//                                .frame(width: 75, height: 75)
-//                                .foregroundColor(.blue)
-//                                .rotationEffect(Angle(degrees: self.showPopUp ? 90 : 0))
-//                        }
-//                            .offset(y: -geometry.size.height/10/2)
-//                            .onTapGesture {
-//                                withAnimation {
-//                                   self.showPopUp.toggle()
-//                                }
-//                            }
-                            Image(systemName: "chart.bar.fill")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .padding(20)
-                                    .frame(width: geometry.size.width / 3, height: 75)
-                                    .foregroundColor(self.viewRouter.currentView == "history" ? .blue : .gray)
-                                    .onTapGesture {
-                                        self.viewRouter.currentView = "history"
-                                    }
-                            Image(systemName: "info.circle.fill")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .padding(20)
-                                    .frame(width: geometry.size.width / 3, height: 75)
-                                    .foregroundColor(self.viewRouter.currentView == "info" ? .blue : .gray)
-                                    .onTapGesture {
-                                        self.viewRouter.currentView = "info"
-                                    }
-                        }
-                                .frame(width: geometry.size.width, height: geometry.size.height / 10).padding(.bottom)
-                    }
-                }.edgesIgnoringSafeArea(.bottom)
-            }
-                    .navigationBarTitle("")
-                    .navigationBarHidden(true)
+                            .frame(width: geometry.size.width, height: geometry.size.height / 10).padding(.bottom)
+                }
+            }.edgesIgnoringSafeArea(.bottom)
         }
-
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-    }
-}
-
-struct PlusMenu: View {
-    var body: some View {
-        HStack(spacing: 50) {
-            ZStack {
-                Circle()
-                        .foregroundColor(Color.blue)
-                        .frame(width: 70, height: 70)
-                Image(systemName: "camera")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .padding(20)
-                        .frame(width: 70, height: 70)
-                        .foregroundColor(.white)
-            }
-            ZStack {
-                Circle()
-                        .foregroundColor(Color.blue)
-                        .frame(width: 70, height: 70)
-                Image(systemName: "photo")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .padding(20)
-                        .frame(width: 70, height: 70)
-                        .foregroundColor(.white)
-            }
-        }
-                .transition(.scale)
     }
 }
