@@ -87,7 +87,7 @@ struct CountView: View {
             }) {
                 GeometryReader { geometry in
                     
-                    Image("icon").frame(width: geometry.size.width, height: geometry.size.height).background(Color(red:78/255, green:78/255, blue:78/255)).cornerRadius(20)
+                    Image("icon").frame(width: geometry.size.width, height: geometry.size.height).frame(maxHeight: 500).background(Color(red:78/255, green:78/255, blue:78/255)).cornerRadius(20)
                 }
             }.buttonStyle(PlainButtonStyle())
             self.isCounting ?
@@ -102,7 +102,7 @@ struct CountView: View {
             Spacer()
         }.alert(isPresented: self.$warning) {
             Alert(title: Text("Your pets breathing is high"), message: Text("Please contact your veterinarian."), dismissButton: .default(Text("Ok")))
-        }
+        }.frame(maxWidth: 1000)
     }
 }
 
