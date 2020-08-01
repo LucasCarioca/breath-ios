@@ -2,7 +2,8 @@ name: CICD
 on:
   push:
     branches:
-    - 'master'
+    - 'unversalApp'
+    - 'universalApp/*'
 jobs:
   cicd:
     name: Publish to AppStore
@@ -16,7 +17,7 @@ jobs:
           GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          sudo xcode-select -switch /Applications/Xcode_11.4.app
+          sudo xcode-select -switch /Applications/Xcode_12_beta.app
           /usr/bin/xcodebuild -version
           sh -x ./env.sh
       - name: Install dependencies
