@@ -10,6 +10,33 @@ import SwiftUI
 import QuickComponents
 import StoreKit
 
+#if targetEnvironment(macCatalyst)
+struct ContentView: View {
+    @State var selected: Int? = 0
+    
+    var body: some View {
+        NavigationView {
+            List{
+                NavigationLink(destination: CountView().padding(), tag: 0, selection: $selected) {
+                    Text("Counter")
+                }
+                NavigationLink(destination: HistoryView().padding(), tag: 1, selection: $selected) {
+                    Text("History")
+                }
+                NavigationLink(destination: HowToView().padding(), tag: 2, selection: $selected) {
+                    Text("How to use this App")
+                }
+                NavigationLink(destination: PetHealthView().padding(), tag: 3, selection: $selected) {
+                    Text("Pet health information")
+                }
+                NavigationLink(destination: AboutUsView().padding(), tag: 4, selection: $selected) {
+                    Text("About us")
+                }
+            }.navigationBarTitle("Count My Breaths")
+        }
+    }
+}
+#else
 struct ContentView: View {
 
     @ObservedObject var viewRouter = ViewRouter()
@@ -74,6 +101,7 @@ struct ContentView: View {
         }
     }
 }
+#endif
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
