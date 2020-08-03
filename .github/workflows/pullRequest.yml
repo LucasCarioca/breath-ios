@@ -1,0 +1,34 @@
+name: Beta
+on:
+  pull_request:
+    types: [opened, synchronize]
+jobs:
+  publish:
+    name: Publish to TestFlight
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Setup environment
+        env: 
+          GITHUB_REF: ${{ secrets.GITHUB_REF }}
+          GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          sudo xcode-select -switch /Applications/Xcode_11.4.app
+          /usr/bin/xcodebuild -version
+          sh -x ./env.sh
+      - name: Install dependencies
+        run: bundle update --bundler
+      - name: Setup provisioning profile
+        env:
+          IOS_KEYS: ${{ secrets.IOS_KEYS }}
+        run: sh -x ./.github/secrets/decrypt_secrets.sh
+      - name: build
+        env:
+          FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
+          FASTLANE_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
+          FASTLANE_SESSION: ${{ secrets.FASTLANE_SESSION }}
+          FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
+          FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT: 600
+        run: bundle exec fastlane beta

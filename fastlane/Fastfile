@@ -30,47 +30,12 @@ platform :ios do
     push_to_git_remote
   end
 
-  lane :major do
+  lane :release do
     ensure_git_status_clean
-    increment_version_number(bump_type: "major")
     increment_build_number(xcodeproj: "Count my breaths.xcodeproj")
-    # sync_code_signing(type: "appstore")
+    sync_code_signing(type: "appstore")
     build_app(scheme: "Count my breaths")
-    upload_to_testflight(
-        skip_waiting_for_build_processing: true,
-        apple_id: "1513102381"
-    )
-    commit_version_bump(xcodeproj: "Count my breaths.xcodeproj", force: true)
-    add_git_tag
-    push_to_git_remote
-  end
-
-  lane :minor do
-    ensure_git_status_clean
-    increment_version_number(bump_type: "minor")
-    increment_build_number(xcodeproj: "Count my breaths.xcodeproj")
-    # sync_code_signing(type: "appstore")
-    build_app(scheme: "Count my breaths")
-    upload_to_testflight(
-        skip_waiting_for_build_processing: true,
-        apple_id: "1513102381"
-    )
-    # upload_to_app_store
-    commit_version_bump(xcodeproj: "Count my breaths.xcodeproj", force: true)
-    add_git_tag
-    push_to_git_remote
-  end
-
-  lane :patch do
-    ensure_git_status_clean
-    increment_version_number(bump_type: "patch")
-    increment_build_number(xcodeproj: "Count my breaths.xcodeproj")
-    # sync_code_signing(type: "appstore")
-    build_app(scheme: "Count my breaths")
-    upload_to_testflight(
-        skip_waiting_for_build_processing: true,
-        apple_id: "1513102381"
-    )
+    upload_to_app_store
     commit_version_bump(xcodeproj: "Count my breaths.xcodeproj", force: true)
     add_git_tag
     push_to_git_remote
@@ -80,27 +45,27 @@ platform :ios do
     increment_version_number(bump_type: "major")
     increment_build_number(xcodeproj: "Count my breaths.xcodeproj")
     commit_version_bump(xcodeproj: "Count my breaths.xcodeproj", force: true)
-    add_git_tag
+    push_to_git_remote
   end
 
   lane :bump_minor do
     increment_version_number(bump_type: "minor")
     increment_build_number(xcodeproj: "Count my breaths.xcodeproj")
     commit_version_bump(xcodeproj: "Count my breaths.xcodeproj", force: true)
-    add_git_tag
+    push_to_git_remote
   end
 
   lane :bump_patch do
     increment_version_number(bump_type: "patch")
     increment_build_number(xcodeproj: "Count my breaths.xcodeproj")
     commit_version_bump(xcodeproj: "Count my breaths.xcodeproj", force: true)
-    add_git_tag
+    push_to_git_remote
   end
 
   lane :bump_build do
     increment_build_number(xcodeproj: "Count my breaths.xcodeproj")
     commit_version_bump(xcodeproj: "Count my breaths.xcodeproj", force: true)
-    add_git_tag
+    push_to_git_remote
   end
 
 end
