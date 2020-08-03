@@ -15,7 +15,7 @@ struct HistoryView: View {
     @State var pickerSelectedItem = 0
     var body: some View {
         VStack {
-            HeaderView(title: "History", subTitle: "")
+            Text("History").Heading(size: .H5)
             SwitcherView(pages: [
                 SwitcherPage(label: "List", view: RecordsListView()),
                 SwitcherPage(label: "Graph", view: RecordsGraphView())
