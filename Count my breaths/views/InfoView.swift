@@ -11,7 +11,7 @@ struct InfoView: View {
 
     var body: some View {
         VStack {
-            HeaderView(title: "Info", subTitle: "")
+            Text("Info").Heading(size: .H5)
             SwitcherView(pages: [
                 SwitcherPage(label: "Using this app", view: HowToView()),
                 SwitcherPage(label: "Pet Health", view: PetHealthView()),
