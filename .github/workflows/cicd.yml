@@ -3,7 +3,6 @@ on:
   push:
     branches:
     - 'master'
-    - '*'
 jobs:
   cicd:
     name: Publish to AppStore
