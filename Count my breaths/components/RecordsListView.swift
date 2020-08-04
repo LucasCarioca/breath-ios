@@ -11,6 +11,7 @@ struct RecordsListView: View {
 
     init(){
         UITableView.appearance().separatorStyle = .none
+        UITableView.appearance().backgroundColor = UIColor.clear
     }
 
     var body: some View {
@@ -19,7 +20,7 @@ struct RecordsListView: View {
                 ForEach(countRecords.indices, id: \.self) { record in
                     RecordView(beats: self.countRecords[record].beats, timeText: self.countRecords[record].timeText ?? "unknown")
                 }.onDelete(perform: delete)
-            }
+            }.listStyle(PlainListStyle())
             MailButtonView(csvData: getCsvData())
         }
     }

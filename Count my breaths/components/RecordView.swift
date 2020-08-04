@@ -16,9 +16,7 @@ struct RecordView: View {
                 value: CGFloat(beats * 2),
                 max: 40,
                 showLabel: true,
-                color: ((beats * 2) >= 30) ? .red : nil)
-                    .padding(.bottom)
-                    .padding(.top)
+                color: ((beats * 2) >= 30) ? .red : nil).frame(height: 50)
             HStack {
                 Text(timeText).font(.subheadline)
                 Spacer()
