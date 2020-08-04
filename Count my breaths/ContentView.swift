@@ -16,23 +16,67 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            List{
-                NavigationLink(destination: CountView().padding(), tag: 0, selection: $selected) {
-                    Text("Counter")
+            List {
+                NavigationLink(
+                    destination:
+                        CountView()
+                            .padding()
+                            .padding(.top, 50)
+                            .edgesIgnoringSafeArea(.all),
+                    tag: 0,
+                    selection: $selected) {
+                    SideBarLabel("Counter", systemImage: "info.circle.fill")
                 }
-                NavigationLink(destination: HistoryView().padding(), tag: 1, selection: $selected) {
-                    Text("History")
+                NavigationLink(
+                    destination:
+                        HistoryView()
+                        .padding()
+                        .padding(.top, 50)
+                        .edgesIgnoringSafeArea(.all),
+                    tag: 1,
+                    selection: $selected) {
+                    SideBarLabel("History", systemImage: "info.circle.fill")
                 }
-                NavigationLink(destination: HowToView().padding(), tag: 2, selection: $selected) {
-                    Text("How to use this App")
+                NavigationLink(
+                    destination:
+                        VStack {
+                            Text("How to use this app").Heading(size: .H5)
+                            HowToView()
+                        }
+                        .padding()
+                        .padding(.top, 50)
+                        .edgesIgnoringSafeArea(.all),
+                    tag: 2,
+                    selection: $selected) {
+                    SideBarLabel("How to use this App", systemImage: "info.circle.fill")
                 }
-                NavigationLink(destination: PetHealthView().padding(), tag: 3, selection: $selected) {
-                    Text("Pet health information")
+                NavigationLink(
+                    destination:
+                        VStack {
+                            Text("Pet health information").Heading(size: .H5)
+                            PetHealthView()
+                        }
+                        .padding()
+                        .padding(.top, 50)
+                        .edgesIgnoringSafeArea(.all),
+                    tag: 3,
+                    selection: $selected) {
+                    SideBarLabel("Pet health information", systemImage: "heart.fill")
                 }
-                NavigationLink(destination: AboutUsView().padding(), tag: 4, selection: $selected) {
-                    Text("About us")
+                NavigationLink(
+                    destination:
+                        VStack {
+                            Text("About us").Heading(size: .H5)
+                            AboutUsView()
+                        }
+                        .padding()
+                        .padding(.top, 50)
+                        .edgesIgnoringSafeArea(.all),
+                    tag: 4,
+                    selection: $selected) {
+                    SideBarLabel("About us", systemImage: "face.smiling.fill")
                 }
-            }.navigationBarTitle("Count My Breaths")
+            }.listStyle(SidebarListStyle())
         }
     }
 }
@@ -102,6 +146,24 @@ struct ContentView: View {
     }
 }
 #endif
+
+struct SideBarLabel: View {
+    var text: String
+    var systemImage: String
+    
+    init(_ text: String, systemImage: String) {
+        self.text = text
+        self.systemImage = systemImage
+    }
+    
+    var body: some View {
+        HStack {
+            Image(systemName: systemImage).resizable().frame(width: 25, height: 25)
+            Text(text).Paragraph(size: .MD)
+        }
+    }
+}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

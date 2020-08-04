@@ -75,7 +75,8 @@ struct CountView: View {
                 message: Text(self.messageContent),
                 dismissButton: .default(Text("Ok"))
             )
-        }    }
+        }
+    }
     
     func reset() {
         self.isCounting = false
