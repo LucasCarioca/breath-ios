@@ -28,24 +28,24 @@ struct iOSRoot: View {
         return NavigationView {
             GeometryReader { geometry in
                 ZStack(alignment: .leading) {
-                    if viewRouter.currentView == "breathingTracker" {
+                    if self.viewRouter.currentView == "breathingTracker" {
                         BreathingTrackerRootView()
                             .frame(width: geometry.size.width, height: geometry.size.height)
                             .offset(x: self.showMenu ? geometry.size.width/2 : 0)
                             .disabled(self.showMenu ? true : false).navigationBarTitle("Breathing Tracker", displayMode: .inline)
-                    } else if viewRouter.currentView == "info" {
+                    } else if self.viewRouter.currentView == "info" {
                         InfoRootView()
                             .frame(width: geometry.size.width, height: geometry.size.height)
                             .offset(x: self.showMenu ? geometry.size.width/2 : 0)
                             .disabled(self.showMenu ? true : false).navigationBarTitle("Information", displayMode: .inline)
                     } else {
-                        MainView(showMenu: $showMenu)
+                        MainView(showMenu: self.$showMenu)
                             .frame(width: geometry.size.width, height: geometry.size.height)
                             .offset(x: self.showMenu ? geometry.size.width/2 : 0)
                             .disabled(self.showMenu ? true : false)
                     }
                     if self.showMenu {
-                        MenuView(viewRouter: viewRouter, showMenu: $showMenu)
+                        MenuView(viewRouter: viewRouter, showMenu: self.$showMenu)
                             .frame(width: geometry.size.width*0.90)
                             .transition(.move(edge: .leading))
                     }
@@ -79,7 +79,7 @@ struct iOSRoot: View {
             VStack {
                 HowToView()
                 Button(action: {
-                    showHelp = false
+                    self.showHelp = false
                 }) {
                     Text("Close")
                 }.buttonStyle(SecondaryButton()).frame(width: 100, height: 50)

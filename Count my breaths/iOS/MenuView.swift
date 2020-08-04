@@ -20,7 +20,7 @@ struct MenuView: View {
                     .foregroundColor(self.viewRouter.currentView == "breathingTracker" ? Theme.colors.primary : Theme.colors.text)
                     .font(.headline)
             }.onTapGesture() {
-                navigateTo(page: "breathingTracker")
+                self.navigateTo(page: "breathingTracker")
             }
             .padding(.top, 100)
             HStack {
@@ -30,7 +30,7 @@ struct MenuView: View {
                     .foregroundColor(self.viewRouter.currentView == "info" ? Theme.colors.primary : Theme.colors.text)
                     .font(.headline)
             }.onTapGesture() {
-                navigateTo(page: "info")
+                self.navigateTo(page: "info")
             }
                 .padding(.top, 30)
             Spacer()
