@@ -11,27 +11,46 @@ import QuickComponents
 
 struct InfoRootView: View {
     @Environment(\.presentationMode) var presentationMode
-
+    @ObservedObject var viewRouter = InfoViewRouter()
     var body: some View {
-        VStack {
-            SwitcherView(pages: [
-                SwitcherPage(label: "Using this app", view: HowToView()),
-                SwitcherPage(label: "Pet Health", view: PetHealthView()),
-                SwitcherPage(label: "AboutUs", view: AboutUsView())
-            ])
-            Spacer()
-        }
-        .navigationBarTitle(Text("Information"), displayMode: .inline)
-        .navigationBarBackButtonHidden(true)
-        .navigationBarItems(leading:
-            Button(action: {
-                self.presentationMode.wrappedValue.dismiss()
-            }) {
-                HStack {
-                    Image(systemName: "line.horizontal.3").imageScale(.large)
+        GeometryReader { geometry in
+            VStack {
+                Spacer()
+                if self.viewRouter.currentView == "health" {
+                    PetHealthView().padding(.horizontal)
+                } else if self.viewRouter.currentView == "about" {
+                    AboutUsView().padding(.horizontal)
                 }
-            }.buttonStyle(PlainButtonStyle())
-        )
+                Spacer()
+                ZStack {
+                    HStack {
+                        Image(systemName: "heart.fill")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .padding(20)
+                                .frame(width: geometry.size.width / 3, height: 75)
+                                .foregroundColor(self.viewRouter.currentView == "about" ? Theme.colors.primary : Theme.colors.text)
+                                .onTapGesture {
+                                    withAnimation {
+                                        self.viewRouter.currentView = "about"
+                                    }
+                                }
+                        Image(systemName: "info.circle.fill")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .padding(20)
+                                .frame(width: geometry.size.width / 3, height: 75)
+                                .foregroundColor(self.viewRouter.currentView == "health" ? Theme.colors.primary : Theme.colors.text)
+                                .onTapGesture {
+                                    withAnimation {
+                                        self.viewRouter.currentView = "health"
+                                    }
+                                }
+                    }
+                            .frame(width: geometry.size.width, height: geometry.size.height / 10).padding(.bottom)
+                }
+            }.edgesIgnoringSafeArea(.bottom)
+        }
     }
 }
 

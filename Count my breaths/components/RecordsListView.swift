@@ -9,11 +9,6 @@ struct RecordsListView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
     @FetchRequest(fetchRequest: requestBuilder(limit: 100, sort: [NSSortDescriptor(keyPath: \CountRecord.time, ascending: false)])) var countRecords: FetchedResults<CountRecord>
 
-    init(){
-        UITableView.appearance().separatorStyle = .none
-        UITableView.appearance().backgroundColor = UIColor.clear
-    }
-
     var body: some View {
         VStack {
             List {
