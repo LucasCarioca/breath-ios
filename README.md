@@ -1,6 +1,7 @@
 # Breath iOS App
 
-![CICD](https://github.com/LucasCarioca/breath-ios/workflows/CICD/badge.svg)
+![Release](https://github.com/LucasCarioca/breath-ios/workflows/Release/badge.svg)
+![Beta](https://github.com/LucasCarioca/breath-ios/workflows/Beta/badge.svg)
 
 Breath is an app for tracking breathing rates for pets with Mitral Valve disease and Congestive Hearth Failure. 
 

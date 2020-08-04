@@ -15,6 +15,8 @@
 		DF1F9BF824B04E2400D0D90D /* HowToItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1F9BF724B04E2400D0D90D /* HowToItemView.swift */; };
 		DF2A7D49246F2FC000140EDA /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2A7D48246F2FC000140EDA /* HeaderView.swift */; };
 		DF6EEFE2247F5B9F00FC80D0 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF6EEFE1247F5B9F00FC80D0 /* CloudKit.framework */; };
+		DF7744E624D5E4AB00A8B33B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7744E524D5E4AB00A8B33B /* Theme.swift */; };
+		DF7744E824D5E63900A8B33B /* Overwrites.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7744E724D5E63900A8B33B /* Overwrites.swift */; };
 		DF8E95B7246B8E8F004AB783 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95B6246B8E8F004AB783 /* AppDelegate.swift */; };
 		DF8E95B9246B8E8F004AB783 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95B8246B8E8F004AB783 /* SceneDelegate.swift */; };
 		DF8E95BB246B8E8F004AB783 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95BA246B8E8F004AB783 /* ContentView.swift */; };
@@ -56,6 +58,8 @@
 		DF2A7D48246F2FC000140EDA /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		DF6EEFE1247F5B9F00FC80D0 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		DF7744E024D52EA000A8B33B /* Count my breaths.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Count my breaths.entitlements"; sourceTree = "<group>"; };
+		DF7744E524D5E4AB00A8B33B /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		DF7744E724D5E63900A8B33B /* Overwrites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overwrites.swift; sourceTree = "<group>"; };
 		DF8E95B3246B8E8F004AB783 /* Count my breaths.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Count my breaths.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF8E95B6246B8E8F004AB783 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF8E95B8246B8E8F004AB783 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +133,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DF7744E424D5E48100A8B33B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				DF7744E524D5E4AB00A8B33B /* Theme.swift */,
+				DF7744E724D5E63900A8B33B /* Overwrites.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		DF8E95AA246B8E8E004AB783 = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				DF7744E024D52EA000A8B33B /* Count my breaths.entitlements */,
+				DF7744E424D5E48100A8B33B /* Common */,
 				DF2A7D47246F2FAC00140EDA /* components */,
 				DF8E95E2246B9311004AB783 /* models */,
 				DF8E95D8246B8F21004AB783 /* views */,
@@ -335,7 +349,9 @@
 				DF8E95B7246B8E8F004AB783 /* AppDelegate.swift in Sources */,
 				DF1CCDEF247FFBCB00E53F71 /* ViewRouter.swift in Sources */,
 				DF2A7D49246F2FC000140EDA /* HeaderView.swift in Sources */,
+				DF7744E624D5E4AB00A8B33B /* Theme.swift in Sources */,
 				DF8E95E0246B92F1004AB783 /* HistoryView.swift in Sources */,
+				DF7744E824D5E63900A8B33B /* Overwrites.swift in Sources */,
 				DF0A7A62246C6B760004D826 /* countmybreaths.xcdatamodeld in Sources */,
 				DF8E95B9246B8E8F004AB783 /* SceneDelegate.swift in Sources */,
 				DF8E95DC246B9086004AB783 /* CountView.swift in Sources */,
@@ -509,7 +525,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Count my breaths/Count my breaths.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 82;
 				DEVELOPMENT_ASSET_PATHS = "\"Count my breaths/Preview Content\"";
 				DEVELOPMENT_TEAM = Y259ZT3SQK;
 				ENABLE_PREVIEWS = YES;
@@ -537,7 +553,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Count my breaths/Count my breaths.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 82;
 				DEVELOPMENT_ASSET_PATHS = "\"Count my breaths/Preview Content\"";
 				DEVELOPMENT_TEAM = Y259ZT3SQK;
 				ENABLE_PREVIEWS = YES;
