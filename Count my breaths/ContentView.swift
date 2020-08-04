@@ -16,6 +16,8 @@ enum NavigationPage: Equatable, Identifiable {
     case none
     case counter
     case history
+    case pills
+    case tracking
     case how
     case info
     case about
@@ -41,66 +43,98 @@ struct ContentView: View {
             Theme.colors.text.edgesIgnoringSafeArea(.all)
             NavigationView {
                 List {
-                    NavigationLink(
-                        destination:
-                            CountView()
+                    Section (header: Text("Breathing Tracker")) {
+                        NavigationLink(
+                            destination:
+                                CountView()
+                                    .padding()
+                                    .padding(.top, 50)
+                                    .edgesIgnoringSafeArea(.all),
+                            tag: .counter,
+                            selection: $selected) {
+                            SideBarLabel("Counter", systemImage: "timer")
+                        }
+                        NavigationLink(
+                            destination:
+                                HistoryView()
                                 .padding()
                                 .padding(.top, 50)
                                 .edgesIgnoringSafeArea(.all),
-                        tag: .counter,
-                        selection: $selected) {
-                        SideBarLabel("Counter", systemImage: "timer")
+                            tag: .history,
+                            selection: $selected) {
+                            SideBarLabel("History", systemImage: "chart.bar.fill")
+                        }
                     }
-                    NavigationLink(
-                        destination:
-                            HistoryView()
-                            .padding()
-                            .padding(.top, 50)
-                            .edgesIgnoringSafeArea(.all),
-                        tag: .history,
-                        selection: $selected) {
-                        SideBarLabel("History", systemImage: "chart.bar.fill")
+                    Section (header: Text("Reminders")) {
+                        NavigationLink(
+                            destination:
+                                VStack {
+                                    Text("Medication").Heading(size: .H5)
+                                    Spacer()
+                                }
+                                .padding()
+                                .padding(.top, 50)
+                                .edgesIgnoringSafeArea(.all),
+                            tag: .pills,
+                            selection: $selected) {
+                            SideBarLabel("Medication", systemImage: "pills.fill")
+                        }
+                        NavigationLink(
+                            destination:
+                                VStack {
+                                    Text("Track breathing").Heading(size: .H5)
+                                    Spacer()
+                                }
+                                .padding()
+                                .padding(.top, 50)
+                                .edgesIgnoringSafeArea(.all),
+                            tag: .tracking,
+                            selection: $selected) {
+                            SideBarLabel("Track breathing", systemImage: "lungs.fill")
+                        }
                     }
-                    NavigationLink(
-                        destination:
-                            VStack {
-                                Text("How to use this app").Heading(size: .H5)
-                                HowToView()
-                            }
-                            .padding()
-                            .padding(.top, 50)
-                            .edgesIgnoringSafeArea(.all),
-                        tag: .how,
-                        selection: $selected) {
-                        SideBarLabel("How to use this App", systemImage: "info.circle.fill")
+                    Section(header: Text("Resources")){
+                        NavigationLink(
+                            destination:
+                                VStack {
+                                    Text("Using this app").Heading(size: .H5)
+                                    HowToView()
+                                }
+                                .padding()
+                                .padding(.top, 50)
+                                .edgesIgnoringSafeArea(.all),
+                            tag: .how,
+                            selection: $selected) {
+                            SideBarLabel("Using this App", systemImage: "info.circle.fill")
+                        }
+                        NavigationLink(
+                            destination:
+                                VStack {
+                                    Text("Pet health").Heading(size: .H5)
+                                    PetHealthView()
+                                }
+                                .padding()
+                                .padding(.top, 50)
+                                .edgesIgnoringSafeArea(.all),
+                            tag: .info,
+                            selection: $selected) {
+                            SideBarLabel("Pet health", systemImage: "heart.fill")
+                        }
+                        NavigationLink(
+                            destination:
+                                VStack {
+                                    Text("About us").Heading(size: .H5)
+                                    AboutUsView()
+                                }
+                                .padding()
+                                .padding(.top, 50)
+                                .edgesIgnoringSafeArea(.all),
+                            tag: .about,
+                            selection: $selected) {
+                            SideBarLabel("About us", systemImage: "face.smiling.fill")
+                        }
                     }
-                    NavigationLink(
-                        destination:
-                            VStack {
-                                Text("Pet health information").Heading(size: .H5)
-                                PetHealthView()
-                            }
-                            .padding()
-                            .padding(.top, 50)
-                            .edgesIgnoringSafeArea(.all),
-                        tag: .info,
-                        selection: $selected) {
-                        SideBarLabel("Pet health information", systemImage: "heart.fill")
-                    }
-                    NavigationLink(
-                        destination:
-                            VStack {
-                                Text("About us").Heading(size: .H5)
-                                AboutUsView()
-                            }
-                            .padding()
-                            .padding(.top, 50)
-                            .edgesIgnoringSafeArea(.all),
-                        tag: .about,
-                        selection: $selected) {
-                        SideBarLabel("About us", systemImage: "face.smiling.fill")
-                    }
-                }.listStyle(SidebarListStyle())
+                }.listStyle(GroupedListStyle())
             }
         }
     }
