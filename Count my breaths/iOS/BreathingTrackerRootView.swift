@@ -40,7 +40,7 @@ struct BreathingTrackerRootView: View {
                                 .aspectRatio(contentMode: .fit)
                                 .padding(20)
                                 .frame(width: geometry.size.width / 3, height: 75)
-                                .foregroundColor(self.viewRouter.currentView == "counter" ? Theme.colors.primary : Theme.colors.text)
+                            .foregroundColor(self.viewRouter.currentView == "counter" ? .blue : .gray)
                                 .onTapGesture {
                                     withAnimation{
                                         self.viewRouter.currentView = "counter"
@@ -51,7 +51,7 @@ struct BreathingTrackerRootView: View {
                                 .aspectRatio(contentMode: .fit)
                                 .padding(20)
                                 .frame(width: geometry.size.width / 3, height: 75)
-                                .foregroundColor(self.viewRouter.currentView == "history" ? Theme.colors.primary : Theme.colors.text)
+                            .foregroundColor(self.viewRouter.currentView == "history" ? .blue : .gray)
                                 .onTapGesture {
                                     withAnimation {
                                         self.viewRouter.currentView = "history"

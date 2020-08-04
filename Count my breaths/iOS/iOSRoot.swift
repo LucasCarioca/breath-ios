@@ -60,7 +60,7 @@ struct iOSRoot: View {
                     }) {
                         ZStack {
                             RoundedRectangle(cornerRadius: 2).foregroundColor(.clear).frame(width: 40, height: 40)
-                            Image(systemName: "line.horizontal.3").imageScale(.large).foregroundColor(Theme.colors.primary)
+                            Image(systemName: "line.horizontal.3").imageScale(.large)
                         }
                     }
                 ), trailing: (
@@ -71,7 +71,7 @@ struct iOSRoot: View {
                     }) {
                         ZStack {
                             RoundedRectangle(cornerRadius: 2).foregroundColor(.clear).frame(width: 40, height: 40)
-                            Image(systemName: "info").imageScale(.large).foregroundColor(Theme.colors.primary)
+                            Image(systemName: "info").imageScale(.large)
                         }
                     }
                 ))

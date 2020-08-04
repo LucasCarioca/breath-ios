@@ -29,7 +29,7 @@ struct InfoRootView: View {
                                 .aspectRatio(contentMode: .fit)
                                 .padding(20)
                                 .frame(width: geometry.size.width / 3, height: 75)
-                                .foregroundColor(self.viewRouter.currentView == "about" ? Theme.colors.primary : Theme.colors.text)
+                            .foregroundColor(self.viewRouter.currentView == "about" ? .blue : .gray)
                                 .onTapGesture {
                                     withAnimation {
                                         self.viewRouter.currentView = "about"
@@ -40,7 +40,7 @@ struct InfoRootView: View {
                                 .aspectRatio(contentMode: .fit)
                                 .padding(20)
                                 .frame(width: geometry.size.width / 3, height: 75)
-                                .foregroundColor(self.viewRouter.currentView == "health" ? Theme.colors.primary : Theme.colors.text)
+                            .foregroundColor(self.viewRouter.currentView == "health" ? .blue : .gray)
                                 .onTapGesture {
                                     withAnimation {
                                         self.viewRouter.currentView = "health"
