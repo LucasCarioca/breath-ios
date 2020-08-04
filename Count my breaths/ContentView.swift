@@ -11,72 +11,97 @@ import QuickComponents
 import StoreKit
 
 #if targetEnvironment(macCatalyst)
+
+enum NavigationPage: Equatable, Identifiable {
+    case none
+    case counter
+    case history
+    case how
+    case info
+    case about
+
+    var id: NavigationPage { self }
+}
+
 struct ContentView: View {
-    @State var selected: Int? = 0
-    
+    @State var selected: NavigationPage? = .counter
+    init() {
+        let userDefaults = UserDefaults.standard
+        let appRuns = userDefaults.integer(forKey: "appruns")
+        let countRuns = userDefaults.integer(forKey: "countruns")
+        let reviewShown = userDefaults.bool(forKey: "reviewshown")
+        if (appRuns >= 5 || countRuns >= 5) && !reviewShown {
+            SKStoreReviewController.requestReview()
+            userDefaults.set(true, forKey: "reviewshown")
+        }
+        UITableView.appearance().backgroundColor = UIColor(red: 78/255, green: 78/255, blue: 78/255, alpha: 0.2)
+    }
     var body: some View {
-        NavigationView {
-            List {
-                NavigationLink(
-                    destination:
-                        CountView()
+        ZStack {
+            Theme.colors.text.edgesIgnoringSafeArea(.all)
+            NavigationView {
+                List {
+                    NavigationLink(
+                        destination:
+                            CountView()
+                                .padding()
+                                .padding(.top, 50)
+                                .edgesIgnoringSafeArea(.all),
+                        tag: .counter,
+                        selection: $selected) {
+                        SideBarLabel("Counter", systemImage: "timer")
+                    }
+                    NavigationLink(
+                        destination:
+                            HistoryView()
                             .padding()
                             .padding(.top, 50)
                             .edgesIgnoringSafeArea(.all),
-                    tag: 0,
-                    selection: $selected) {
-                    SideBarLabel("Counter", systemImage: "info.circle.fill")
-                }
-                NavigationLink(
-                    destination:
-                        HistoryView()
-                        .padding()
-                        .padding(.top, 50)
-                        .edgesIgnoringSafeArea(.all),
-                    tag: 1,
-                    selection: $selected) {
-                    SideBarLabel("History", systemImage: "info.circle.fill")
-                }
-                NavigationLink(
-                    destination:
-                        VStack {
-                            Text("How to use this app").Heading(size: .H5)
-                            HowToView()
-                        }
-                        .padding()
-                        .padding(.top, 50)
-                        .edgesIgnoringSafeArea(.all),
-                    tag: 2,
-                    selection: $selected) {
-                    SideBarLabel("How to use this App", systemImage: "info.circle.fill")
-                }
-                NavigationLink(
-                    destination:
-                        VStack {
-                            Text("Pet health information").Heading(size: .H5)
-                            PetHealthView()
-                        }
-                        .padding()
-                        .padding(.top, 50)
-                        .edgesIgnoringSafeArea(.all),
-                    tag: 3,
-                    selection: $selected) {
-                    SideBarLabel("Pet health information", systemImage: "heart.fill")
-                }
-                NavigationLink(
-                    destination:
-                        VStack {
-                            Text("About us").Heading(size: .H5)
-                            AboutUsView()
-                        }
-                        .padding()
-                        .padding(.top, 50)
-                        .edgesIgnoringSafeArea(.all),
-                    tag: 4,
-                    selection: $selected) {
-                    SideBarLabel("About us", systemImage: "face.smiling.fill")
-                }
-            }.listStyle(SidebarListStyle())
+                        tag: .history,
+                        selection: $selected) {
+                        SideBarLabel("History", systemImage: "chart.bar.fill")
+                    }
+                    NavigationLink(
+                        destination:
+                            VStack {
+                                Text("How to use this app").Heading(size: .H5)
+                                HowToView()
+                            }
+                            .padding()
+                            .padding(.top, 50)
+                            .edgesIgnoringSafeArea(.all),
+                        tag: .how,
+                        selection: $selected) {
+                        SideBarLabel("How to use this App", systemImage: "info.circle.fill")
+                    }
+                    NavigationLink(
+                        destination:
+                            VStack {
+                                Text("Pet health information").Heading(size: .H5)
+                                PetHealthView()
+                            }
+                            .padding()
+                            .padding(.top, 50)
+                            .edgesIgnoringSafeArea(.all),
+                        tag: .info,
+                        selection: $selected) {
+                        SideBarLabel("Pet health information", systemImage: "heart.fill")
+                    }
+                    NavigationLink(
+                        destination:
+                            VStack {
+                                Text("About us").Heading(size: .H5)
+                                AboutUsView()
+                            }
+                            .padding()
+                            .padding(.top, 50)
+                            .edgesIgnoringSafeArea(.all),
+                        tag: .about,
+                        selection: $selected) {
+                        SideBarLabel("About us", systemImage: "face.smiling.fill")
+                    }
+                }.listStyle(SidebarListStyle())
+            }
         }
     }
 }
