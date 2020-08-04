@@ -45,7 +45,7 @@ struct iOSRoot: View {
                             .disabled(self.showMenu ? true : false)
                     }
                     if self.showMenu {
-                        MenuView(viewRouter: viewRouter, showMenu: self.$showMenu)
+                        MenuView(viewRouter: self.viewRouter, showMenu: self.$showMenu)
                             .frame(width: geometry.size.width*0.90)
                             .transition(.move(edge: .leading))
                     }
