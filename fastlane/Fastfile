@@ -35,7 +35,7 @@ platform :ios do
     add_git_tag(
         prefix: "v",
         postfix: "-beta#{build}",
-        build_number: "#{version}
+        build_number: "#{version}"
     )
     push_to_git_remote
   end
@@ -46,7 +46,7 @@ platform :ios do
     build_app(scheme: "Count my breaths")
     upload_to_testflight(
         skip_waiting_for_build_processing: true,
-        apple_id: '1513102381"
+        apple_id: "1513102381"
     )
     version = get_version_number()
     build = get_build_number()
@@ -57,7 +57,7 @@ platform :ios do
     )
     add_git_tag(
         prefix: "v",
-	build_number: "#{version}
+	build_number: "#{version}"
     )
     push_to_git_remote    
   end
