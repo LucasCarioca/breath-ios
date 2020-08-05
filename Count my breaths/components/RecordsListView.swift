@@ -8,18 +8,16 @@ import SwiftUI
 struct RecordsListView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
     @FetchRequest(fetchRequest: requestBuilder(limit: 100, sort: [NSSortDescriptor(keyPath: \CountRecord.time, ascending: false)])) var countRecords: FetchedResults<CountRecord>
-
-    init(){
-        UITableView.appearance().separatorStyle = .none
+    init() {
+        UITableView.appearance().backgroundColor = .clear
     }
-
     var body: some View {
         VStack {
             List {
                 ForEach(countRecords.indices, id: \.self) { record in
                     RecordView(beats: self.countRecords[record].beats, timeText: self.countRecords[record].timeText ?? "unknown")
                 }.onDelete(perform: delete)
-            }
+            }.listStyle(PlainListStyle())
             MailButtonView(csvData: getCsvData())
         }
     }
