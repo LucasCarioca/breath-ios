@@ -34,7 +34,7 @@ platform :ios do
     )
     add_git_tag(
         prefix: "v",
-        postfix: "-beta#{build}"
+        postfix: "-beta#{build}",
         build_number: "#{version}
     )
     push_to_git_remote
