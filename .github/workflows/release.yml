@@ -31,4 +31,4 @@ jobs:
           FASTLANE_SESSION: ${{ secrets.FASTLANE_SESSION }}
           FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
           FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT: 600
-        run: bundle exec fastlane release
+        run: bundle exec fastlane beta
