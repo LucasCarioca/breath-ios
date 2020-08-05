@@ -28,12 +28,12 @@ platform :ios do
     version = get_version_number()
     build = get_build_number()
     commit_version_bump(
-        message: "v#{version}-beta#{build}"
+        message: "v#{version}-beta#{build}",
         xcodeproj: "Count my breaths.xcodeproj",
         force: true
     )
     add_git_tag(
-        prefix: "v"
+        prefix: "v",
         postfix: "-beta#{build}"
         build_number: "#{version}
     )
@@ -51,12 +51,12 @@ platform :ios do
     version = get_version_number()
     build = get_build_number()
     commit_version_bump(
-        message: "v#{version}-release#{build}"
+        message: "v#{version}-release#{build}",
         xcodeproj: "Count my breaths.xcodeproj", 
         force: true
     )
     add_git_tag(
-        prefix: "v"
+        prefix: "v",
 	build_number: "#{version}
     )
     push_to_git_remote    
