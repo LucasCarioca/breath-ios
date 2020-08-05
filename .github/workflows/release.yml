@@ -1,10 +1,11 @@
 name: Release
 on:
-  release:
-    types: [published]
+  push:
+    branches:
+    - 'master'
 jobs:
   publish:
-    name: Publish to TestFlight
+    name: Publish to AppStore
     runs-on: macos-latest
     steps:
       - name: Checkout
@@ -31,4 +32,4 @@ jobs:
           FASTLANE_SESSION: ${{ secrets.FASTLANE_SESSION }}
           FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
           FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT: 600
-        run: bundle exec fastlane beta
+        run: bundle exec fastlane release
