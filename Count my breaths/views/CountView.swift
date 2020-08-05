@@ -155,7 +155,7 @@ struct TimerView: View {
         VStack{
             Text("Breaths: " + String(counter)).font(.title)
             .font(.subheadline)
-            BarView(value: CGFloat(time), max: CGFloat(max)).frame(height:50)
+            BarView(value: CGFloat(time), max: CGFloat(max), showLabel: false, color: Theme.colors.primary).frame(height:50)
             Text("Seconds remaining \(max-time)")
         }
     }

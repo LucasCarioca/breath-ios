@@ -1,7 +1,10 @@
 name: Beta
 on:
-  pull_request:
-    types: [opened, synchronize]
+  push:
+    branches:
+    - 'feat/*'
+    - 'fix/*'
+    - 'breaking/*'
 jobs:
   publish:
     name: Publish to TestFlight
