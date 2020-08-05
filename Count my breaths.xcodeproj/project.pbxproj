@@ -9,14 +9,21 @@
 /* Begin PBXBuildFile section */
 		DF0A7A62246C6B760004D826 /* countmybreaths.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DF0A7A60246C6B760004D826 /* countmybreaths.xcdatamodeld */; };
 		DF0A7A94246C6F900004D826 /* countmybreaths.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DF0A7A60246C6B760004D826 /* countmybreaths.xcdatamodeld */; };
-		DF1CCDEF247FFBCB00E53F71 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1CCDEE247FFBCB00E53F71 /* ViewRouter.swift */; };
+		DF1CCDEF247FFBCB00E53F71 /* BreathingTrackerViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1CCDEE247FFBCB00E53F71 /* BreathingTrackerViewRouter.swift */; };
 		DF1F9BF524AC5F4200D0D90D /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = DF12190A2471E0B500112F63 /* SwiftUICharts */; };
 		DF1F9BF624AC5F4200D0D90D /* QuickComponents in Frameworks */ = {isa = PBXBuildFile; productRef = DF8D99352479CD4C00824C52 /* QuickComponents */; };
 		DF1F9BF824B04E2400D0D90D /* HowToItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1F9BF724B04E2400D0D90D /* HowToItemView.swift */; };
 		DF2A7D49246F2FC000140EDA /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2A7D48246F2FC000140EDA /* HeaderView.swift */; };
+		DF58F23324DA136D00A5E23F /* RootViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF58F23224DA136D00A5E23F /* RootViewRouter.swift */; };
+		DF58F23524DA14EF00A5E23F /* InfoViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF58F23424DA14EF00A5E23F /* InfoViewRouter.swift */; };
 		DF6EEFE2247F5B9F00FC80D0 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF6EEFE1247F5B9F00FC80D0 /* CloudKit.framework */; };
 		DF7744E624D5E4AB00A8B33B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7744E524D5E4AB00A8B33B /* Theme.swift */; };
 		DF7744E824D5E63900A8B33B /* Overwrites.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7744E724D5E63900A8B33B /* Overwrites.swift */; };
+		DF7965BC24D9D11600B2D958 /* iOSRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7965BB24D9D11600B2D958 /* iOSRoot.swift */; };
+		DF7965BE24D9D14E00B2D958 /* RootViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7965BD24D9D14E00B2D958 /* RootViews.swift */; };
+		DF7965C024D9D24000B2D958 /* BreathingTrackerPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7965BF24D9D24000B2D958 /* BreathingTrackerPages.swift */; };
+		DF7965C224D9D6E900B2D958 /* BreathingTrackerRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7965C124D9D6E900B2D958 /* BreathingTrackerRootView.swift */; };
+		DF7965C424D9DBB700B2D958 /* InfoRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7965C324D9DBB700B2D958 /* InfoRootView.swift */; };
 		DF8E95B7246B8E8F004AB783 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95B6246B8E8F004AB783 /* AppDelegate.swift */; };
 		DF8E95B9246B8E8F004AB783 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95B8246B8E8F004AB783 /* SceneDelegate.swift */; };
 		DF8E95BB246B8E8F004AB783 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95BA246B8E8F004AB783 /* ContentView.swift */; };
@@ -27,6 +34,7 @@
 		DF8E95DC246B9086004AB783 /* CountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95DB246B9086004AB783 /* CountView.swift */; };
 		DF8E95DE246B927C004AB783 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95DD246B927C004AB783 /* AccountView.swift */; };
 		DF8E95E0246B92F1004AB783 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95DF246B92F1004AB783 /* HistoryView.swift */; };
+		DF99661D24DA00BD008C58D3 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF99661C24DA00BD008C58D3 /* MenuView.swift */; };
 		F8C4D05B47D43AAD9F7052D0 /* CoreDataUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DE596DF08528DE33AAED /* CoreDataUtilities.swift */; };
 		F8C4D288C2C6FBE421E45443 /* RecordsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D8FCBEA2568ED521A60B /* RecordsListView.swift */; };
 		F8C4D333D1DE85423E3CD95E /* PetHealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DBCAF760247815D3C4A8 /* PetHealthView.swift */; };
@@ -53,12 +61,19 @@
 
 /* Begin PBXFileReference section */
 		DF0A7A61246C6B760004D826 /* countmybreaths.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = countmybreaths.xcdatamodel; sourceTree = "<group>"; };
-		DF1CCDEE247FFBCB00E53F71 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		DF1CCDEE247FFBCB00E53F71 /* BreathingTrackerViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingTrackerViewRouter.swift; sourceTree = "<group>"; };
 		DF1F9BF724B04E2400D0D90D /* HowToItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToItemView.swift; sourceTree = "<group>"; };
 		DF2A7D48246F2FC000140EDA /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		DF58F23224DA136D00A5E23F /* RootViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewRouter.swift; sourceTree = "<group>"; };
+		DF58F23424DA14EF00A5E23F /* InfoViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewRouter.swift; sourceTree = "<group>"; };
 		DF6EEFE1247F5B9F00FC80D0 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		DF7744E524D5E4AB00A8B33B /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		DF7744E724D5E63900A8B33B /* Overwrites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overwrites.swift; sourceTree = "<group>"; };
+		DF7965BB24D9D11600B2D958 /* iOSRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSRoot.swift; sourceTree = "<group>"; };
+		DF7965BD24D9D14E00B2D958 /* RootViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViews.swift; sourceTree = "<group>"; };
+		DF7965BF24D9D24000B2D958 /* BreathingTrackerPages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingTrackerPages.swift; sourceTree = "<group>"; };
+		DF7965C124D9D6E900B2D958 /* BreathingTrackerRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingTrackerRootView.swift; sourceTree = "<group>"; };
+		DF7965C324D9DBB700B2D958 /* InfoRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoRootView.swift; sourceTree = "<group>"; };
 		DF8E95B3246B8E8F004AB783 /* Count my breaths.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Count my breaths.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF8E95B6246B8E8F004AB783 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF8E95B8246B8E8F004AB783 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +88,7 @@
 		DF8E95DB246B9086004AB783 /* CountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountView.swift; sourceTree = "<group>"; };
 		DF8E95DD246B927C004AB783 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		DF8E95DF246B92F1004AB783 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		DF99661C24DA00BD008C58D3 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		F8C4D3222819B96152879DDB /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		F8C4D649AE4E3C94E949A992 /* PetHealthDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetHealthDetailView.swift; sourceTree = "<group>"; };
 		F8C4D6D441FEDE02AA1D5356 /* AboutUsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsView.swift; sourceTree = "<group>"; };
@@ -116,7 +132,6 @@
 				F8C4DD068B5466C2E4DADF36 /* RecordView.swift */,
 				F8C4DBFEC4C3519C9527EF8B /* RecordsGraphView.swift */,
 				F8C4D8FCBEA2568ED521A60B /* RecordsListView.swift */,
-				DF1CCDEE247FFBCB00E53F71 /* ViewRouter.swift */,
 				F8C4D3222819B96152879DDB /* GraphView.swift */,
 				F8C4D649AE4E3C94E949A992 /* PetHealthDetailView.swift */,
 				DF1F9BF724B04E2400D0D90D /* HowToItemView.swift */,
@@ -141,6 +156,20 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		DF7965BA24D9D10000B2D958 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				DF7965BB24D9D11600B2D958 /* iOSRoot.swift */,
+				DF58F23224DA136D00A5E23F /* RootViewRouter.swift */,
+				DF7965C124D9D6E900B2D958 /* BreathingTrackerRootView.swift */,
+				DF7965C324D9DBB700B2D958 /* InfoRootView.swift */,
+				DF1CCDEE247FFBCB00E53F71 /* BreathingTrackerViewRouter.swift */,
+				DF58F23424DA14EF00A5E23F /* InfoViewRouter.swift */,
+				DF99661C24DA00BD008C58D3 /* MenuView.swift */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
 		DF8E95AA246B8E8E004AB783 = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +192,7 @@
 		DF8E95B5246B8E8F004AB783 /* Count my breaths */ = {
 			isa = PBXGroup;
 			children = (
+				DF7965BA24D9D10000B2D958 /* iOS */,
 				DF7744E424D5E48100A8B33B /* Common */,
 				DF2A7D47246F2FAC00140EDA /* components */,
 				DF8E95E2246B9311004AB783 /* models */,
@@ -177,6 +207,8 @@
 				DF0A7A60246C6B760004D826 /* countmybreaths.xcdatamodeld */,
 				F8C4D0BE08D3A0130BC9F441 /* services */,
 				F8C4D60E02C8E1AF93037F04 /* Utilities */,
+				DF7965BD24D9D14E00B2D958 /* RootViews.swift */,
+				DF7965BF24D9D24000B2D958 /* BreathingTrackerPages.swift */,
 			);
 			path = "Count my breaths";
 			sourceTree = "<group>";
@@ -344,27 +376,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF7965C224D9D6E900B2D958 /* BreathingTrackerRootView.swift in Sources */,
 				DF8E95B7246B8E8F004AB783 /* AppDelegate.swift in Sources */,
-				DF1CCDEF247FFBCB00E53F71 /* ViewRouter.swift in Sources */,
+				DF1CCDEF247FFBCB00E53F71 /* BreathingTrackerViewRouter.swift in Sources */,
 				DF2A7D49246F2FC000140EDA /* HeaderView.swift in Sources */,
 				DF7744E624D5E4AB00A8B33B /* Theme.swift in Sources */,
+				DF7965BE24D9D14E00B2D958 /* RootViews.swift in Sources */,
 				DF8E95E0246B92F1004AB783 /* HistoryView.swift in Sources */,
 				DF7744E824D5E63900A8B33B /* Overwrites.swift in Sources */,
 				DF0A7A62246C6B760004D826 /* countmybreaths.xcdatamodeld in Sources */,
 				DF8E95B9246B8E8F004AB783 /* SceneDelegate.swift in Sources */,
 				DF8E95DC246B9086004AB783 /* CountView.swift in Sources */,
 				DF8E95BB246B8E8F004AB783 /* ContentView.swift in Sources */,
+				DF7965C424D9DBB700B2D958 /* InfoRootView.swift in Sources */,
 				DF8E95DE246B927C004AB783 /* AccountView.swift in Sources */,
+				DF7965C024D9D24000B2D958 /* BreathingTrackerPages.swift in Sources */,
 				F8C4D7A6E2FCDE83C42D019A /* MailView.swift in Sources */,
 				F8C4D9FFF6E61BB0DA0B4806 /* RecordView.swift in Sources */,
 				F8C4DB9C1CC8882C5EFD1135 /* RecordsGraphView.swift in Sources */,
 				F8C4D288C2C6FBE421E45443 /* RecordsListView.swift in Sources */,
 				F8C4DB6730AA424BAD4DFA11 /* RecordService.swift in Sources */,
+				DF58F23324DA136D00A5E23F /* RootViewRouter.swift in Sources */,
 				F8C4D05B47D43AAD9F7052D0 /* CoreDataUtilities.swift in Sources */,
 				F8C4D6A4A4226575503A6234 /* GraphView.swift in Sources */,
+				DF58F23524DA14EF00A5E23F /* InfoViewRouter.swift in Sources */,
 				F8C4DD255AB44D86D6C9E81C /* InfoView.swift in Sources */,
 				F8C4D6B4C264F17C9679A7CA /* HowToView.swift in Sources */,
 				F8C4D333D1DE85423E3CD95E /* PetHealthView.swift in Sources */,
+				DF99661D24DA00BD008C58D3 /* MenuView.swift in Sources */,
+				DF7965BC24D9D11600B2D958 /* iOSRoot.swift in Sources */,
 				DF1F9BF824B04E2400D0D90D /* HowToItemView.swift in Sources */,
 				F8C4DF2423C3C601BD0686D9 /* AboutUsView.swift in Sources */,
 				F8C4D9A1E7EC0B7243A5CD8F /* PetHealthDetailView.swift in Sources */,
@@ -522,7 +562,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 82;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"Count my breaths/Preview Content\"";
 				DEVELOPMENT_TEAM = Y259ZT3SQK;
 				ENABLE_PREVIEWS = YES;
@@ -547,7 +587,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 82;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"Count my breaths/Preview Content\"";
 				DEVELOPMENT_TEAM = Y259ZT3SQK;
 				ENABLE_PREVIEWS = YES;
