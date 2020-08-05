@@ -12,7 +12,7 @@ import StoreKit
 
 struct ContentView: View {
 
-    @ObservedObject var viewRouter = ViewRouter()
+    @ObservedObject var viewRouter = BreathingTrackerViewRouter()
 
     @State var showPopUp = false
 

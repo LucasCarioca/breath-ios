@@ -23,3 +23,17 @@ class Colors {
     let textRaw = "#FEFAF9"
     let backgroundRaw = "#4E4E4E"
 }
+
+struct NavigationConfigurator: UIViewControllerRepresentable {
+    var configure: (UINavigationController) -> Void = { _ in }
+
+    func makeUIViewController(context: UIViewControllerRepresentableContext<NavigationConfigurator>) -> UIViewController {
+        UIViewController()
+    }
+    func updateUIViewController(_ uiViewController: UIViewController, context: UIViewControllerRepresentableContext<NavigationConfigurator>) {
+        if let nc = uiViewController.navigationController {
+            self.configure(nc)
+        }
+    }
+
+}
