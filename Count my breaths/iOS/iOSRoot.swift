@@ -38,19 +38,13 @@ struct iOSRoot: View {
                             .frame(width: geometry.size.width, height: geometry.size.height)
                             .offset(x: self.showMenu ? geometry.size.width/2 : 0)
                             .disabled(self.showMenu ? true : false).navigationBarTitle("Information", displayMode: .inline)
-                    } else {
-                        MainView(showMenu: self.$showMenu)
-                            .frame(width: geometry.size.width, height: geometry.size.height)
-                            .offset(x: self.showMenu ? geometry.size.width/2 : 0)
-                            .disabled(self.showMenu ? true : false)
                     }
                     if self.showMenu {
                         MenuView(viewRouter: self.viewRouter, showMenu: self.$showMenu)
                             .frame(width: geometry.size.width*0.90)
-                            .transition(.move(edge: .leading))
+                            .transition(.move(edge: .leading)).gesture(drag)
                     }
                 }
-                    .gesture(drag)
             }
                 .navigationBarItems(leading: (
                     Button(action: {
