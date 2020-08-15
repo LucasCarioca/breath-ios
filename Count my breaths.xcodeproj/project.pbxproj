@@ -697,8 +697,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/LucasCarioca/QuickComponents.git";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.1;
 			};
 		};
 		DFFC8DF824E86ADA006882B4 /* XCRemoteSwiftPackageReference "ToastUI" */ = {
