@@ -68,12 +68,24 @@ struct CountView: View {
             self.isCounting ? Button(action: self.reset){
                     Text("Reset")
             }.frame(height:50).buttonStyle(SecondaryButton()) : nil
-            Spacer()
-            
-        }.toast(isPresented: $showWarning, dismissAfter: 5.0, onDismiss: {
-            print("Dismissing")
-        }) {
-            ToastView(self.messageContent).toastViewStyle(WarningToastViewStyle())
+            Spacer().toast(isPresented: $showWarning) {
+                ToastView{
+                    VStack {
+                        Text(self.messageTitle).Heading(align: .center,size: .H6)
+                        HStack{
+                            Spacer()
+                            Image(systemName: "exclamationmark.triangle.fill").imageScale(.large).foregroundColor(.yellow)
+                            Spacer()
+                        }
+                        Text(self.messageContent).Paragraph(align: .center, size: .MD)
+                        Button(action: {
+                            self.showWarning = false
+                        }) {
+                            Text("OK")
+                        }.buttonStyle(PrimaryButton(variant: .contained)).frame(width: 100, height: 50)
+                    }
+                }
+            }
         }
     }
     
