@@ -697,8 +697,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/LucasCarioca/QuickComponents.git";
 			requirement = {
-				branch = fix/tabViewBuildError;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.7.2;
 			};
 		};
 		DFFC8DF824E86ADA006882B4 /* XCRemoteSwiftPackageReference "ToastUI" */ = {
