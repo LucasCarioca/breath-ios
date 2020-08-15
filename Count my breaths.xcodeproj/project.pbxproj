@@ -35,6 +35,7 @@
 		DF8E95DE246B927C004AB783 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95DD246B927C004AB783 /* AccountView.swift */; };
 		DF8E95E0246B92F1004AB783 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95DF246B92F1004AB783 /* HistoryView.swift */; };
 		DF99661D24DA00BD008C58D3 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF99661C24DA00BD008C58D3 /* MenuView.swift */; };
+		DFFC8DFA24E86ADA006882B4 /* ToastUI in Frameworks */ = {isa = PBXBuildFile; productRef = DFFC8DF924E86ADA006882B4 /* ToastUI */; };
 		F8C4D05B47D43AAD9F7052D0 /* CoreDataUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DE596DF08528DE33AAED /* CoreDataUtilities.swift */; };
 		F8C4D288C2C6FBE421E45443 /* RecordsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D8FCBEA2568ED521A60B /* RecordsListView.swift */; };
 		F8C4D333D1DE85423E3CD95E /* PetHealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DBCAF760247815D3C4A8 /* PetHealthView.swift */; };
@@ -108,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFFC8DFA24E86ADA006882B4 /* ToastUI in Frameworks */,
 				DF6EEFE2247F5B9F00FC80D0 /* CloudKit.framework in Frameworks */,
 				DF1F9BF524AC5F4200D0D90D /* SwiftUICharts in Frameworks */,
 				DF1F9BF624AC5F4200D0D90D /* QuickComponents in Frameworks */,
@@ -286,6 +288,7 @@
 			packageProductDependencies = (
 				DF12190A2471E0B500112F63 /* SwiftUICharts */,
 				DF8D99352479CD4C00824C52 /* QuickComponents */,
+				DFFC8DF924E86ADA006882B4 /* ToastUI */,
 			);
 			productName = "Count my breaths";
 			productReference = DF8E95B3246B8E8F004AB783 /* Count my breaths.app */;
@@ -340,6 +343,7 @@
 			packageReferences = (
 				DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference "ChartView" */,
 				DF8D99342479CD4C00824C52 /* XCRemoteSwiftPackageReference "QuickComponents" */,
+				DFFC8DF824E86ADA006882B4 /* XCRemoteSwiftPackageReference "ToastUI" */,
 			);
 			productRefGroup = DF8E95B4246B8E8F004AB783 /* Products */;
 			projectDirPath = "";
@@ -697,6 +701,14 @@
 				kind = branch;
 			};
 		};
+		DFFC8DF824E86ADA006882B4 /* XCRemoteSwiftPackageReference "ToastUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/quanshousio/ToastUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -709,6 +721,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DF8D99342479CD4C00824C52 /* XCRemoteSwiftPackageReference "QuickComponents" */;
 			productName = QuickComponents;
+		};
+		DFFC8DF924E86ADA006882B4 /* ToastUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DFFC8DF824E86ADA006882B4 /* XCRemoteSwiftPackageReference "ToastUI" */;
+			productName = ToastUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 
