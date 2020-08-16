@@ -81,6 +81,9 @@ struct CountView: View {
                     Text(self.messageContent).Paragraph(align: .center, size: .MD)
                     Button(action: {
                         self.showWarning = false
+                        let keyWindow = UIApplication.shared.windows.first { $0.isKeyWindow }
+                        let rootViewController = keyWindow?.rootViewController
+                        rootViewController?.dismiss(animated: true)
                     }) {
                         Text("OK")
                     }.buttonStyle(PrimaryButton(variant: .contained)).frame(width: 100, height: 50)
