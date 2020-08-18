@@ -8,6 +8,7 @@ import SwiftUI
 struct RecordsListView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
     @FetchRequest(fetchRequest: requestBuilder(limit: 100, sort: [NSSortDescriptor(keyPath: \CountRecord.time, ascending: false)])) var countRecords: FetchedResults<CountRecord>
+    let petProfile = PetProfileController.loadPetProfile()
     init() {
         UITableView.appearance().backgroundColor = .clear
     }
@@ -15,7 +16,7 @@ struct RecordsListView: View {
         VStack {
             List {
                 ForEach(countRecords.indices, id: \.self) { record in
-                    RecordView(beats: self.countRecords[record].beats, timeText: self.countRecords[record].timeText ?? "unknown")
+                    RecordView(beats: self.countRecords[record].beats, timeText: self.countRecords[record].timeText ?? "unknown", targetBpm: self.petProfile.targetBpm)
                 }.onDelete(perform: delete)
             }.listStyle(PlainListStyle())
             MailButtonView(csvData: getCsvData())

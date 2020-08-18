@@ -24,6 +24,9 @@
 		DF7965C024D9D24000B2D958 /* BreathingTrackerPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7965BF24D9D24000B2D958 /* BreathingTrackerPages.swift */; };
 		DF7965C224D9D6E900B2D958 /* BreathingTrackerRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7965C124D9D6E900B2D958 /* BreathingTrackerRootView.swift */; };
 		DF7965C424D9DBB700B2D958 /* InfoRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7965C324D9DBB700B2D958 /* InfoRootView.swift */; };
+		DF796B2824EC82210028357F /* PetProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF796B2724EC82210028357F /* PetProfile.swift */; };
+		DF796B2A24EC82C10028357F /* PetProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF796B2924EC82C10028357F /* PetProfileView.swift */; };
+		DF796B2C24EC86420028357F /* TargetBreathingRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF796B2B24EC86420028357F /* TargetBreathingRateView.swift */; };
 		DF8E95B7246B8E8F004AB783 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95B6246B8E8F004AB783 /* AppDelegate.swift */; };
 		DF8E95B9246B8E8F004AB783 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95B8246B8E8F004AB783 /* SceneDelegate.swift */; };
 		DF8E95BB246B8E8F004AB783 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95BA246B8E8F004AB783 /* ContentView.swift */; };
@@ -75,6 +78,9 @@
 		DF7965BF24D9D24000B2D958 /* BreathingTrackerPages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingTrackerPages.swift; sourceTree = "<group>"; };
 		DF7965C124D9D6E900B2D958 /* BreathingTrackerRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingTrackerRootView.swift; sourceTree = "<group>"; };
 		DF7965C324D9DBB700B2D958 /* InfoRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoRootView.swift; sourceTree = "<group>"; };
+		DF796B2724EC82210028357F /* PetProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProfile.swift; sourceTree = "<group>"; };
+		DF796B2924EC82C10028357F /* PetProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProfileView.swift; sourceTree = "<group>"; };
+		DF796B2B24EC86420028357F /* TargetBreathingRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetBreathingRateView.swift; sourceTree = "<group>"; };
 		DF8E95B3246B8E8F004AB783 /* Count my breaths.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Count my breaths.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF8E95B6246B8E8F004AB783 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF8E95B8246B8E8F004AB783 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +143,7 @@
 				F8C4D3222819B96152879DDB /* GraphView.swift */,
 				F8C4D649AE4E3C94E949A992 /* PetHealthDetailView.swift */,
 				DF1F9BF724B04E2400D0D90D /* HowToItemView.swift */,
+				DF796B2B24EC86420028357F /* TargetBreathingRateView.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -172,6 +179,14 @@
 			path = iOS;
 			sourceTree = "<group>";
 		};
+		DF796B2624EC820F0028357F /* settings */ = {
+			isa = PBXGroup;
+			children = (
+				DF796B2724EC82210028357F /* PetProfile.swift */,
+			);
+			path = settings;
+			sourceTree = "<group>";
+		};
 		DF8E95AA246B8E8E004AB783 = {
 			isa = PBXGroup;
 			children = (
@@ -194,10 +209,10 @@
 		DF8E95B5246B8E8F004AB783 /* Count my breaths */ = {
 			isa = PBXGroup;
 			children = (
+				DF796B2624EC820F0028357F /* settings */,
 				DF7965BA24D9D10000B2D958 /* iOS */,
 				DF7744E424D5E48100A8B33B /* Common */,
 				DF2A7D47246F2FAC00140EDA /* components */,
-				DF8E95E2246B9311004AB783 /* models */,
 				DF8E95D8246B8F21004AB783 /* views */,
 				DF8E95B6246B8E8F004AB783 /* AppDelegate.swift */,
 				DF8E95B8246B8E8F004AB783 /* SceneDelegate.swift */,
@@ -242,15 +257,9 @@
 				F8C4DE81C0A3624CDF2A6FF6 /* HowToView.swift */,
 				F8C4DBCAF760247815D3C4A8 /* PetHealthView.swift */,
 				F8C4D6D441FEDE02AA1D5356 /* AboutUsView.swift */,
+				DF796B2924EC82C10028357F /* PetProfileView.swift */,
 			);
 			path = views;
-			sourceTree = "<group>";
-		};
-		DF8E95E2246B9311004AB783 /* models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = models;
 			sourceTree = "<group>";
 		};
 		F8C4D0BE08D3A0130BC9F441 /* services */ = {
@@ -387,6 +396,8 @@
 				DF7744E624D5E4AB00A8B33B /* Theme.swift in Sources */,
 				DF7965BE24D9D14E00B2D958 /* RootViews.swift in Sources */,
 				DF8E95E0246B92F1004AB783 /* HistoryView.swift in Sources */,
+				DF796B2C24EC86420028357F /* TargetBreathingRateView.swift in Sources */,
+				DF796B2A24EC82C10028357F /* PetProfileView.swift in Sources */,
 				DF7744E824D5E63900A8B33B /* Overwrites.swift in Sources */,
 				DF0A7A62246C6B760004D826 /* countmybreaths.xcdatamodeld in Sources */,
 				DF8E95B9246B8E8F004AB783 /* SceneDelegate.swift in Sources */,
@@ -400,6 +411,7 @@
 				F8C4DB9C1CC8882C5EFD1135 /* RecordsGraphView.swift in Sources */,
 				F8C4D288C2C6FBE421E45443 /* RecordsListView.swift in Sources */,
 				F8C4DB6730AA424BAD4DFA11 /* RecordService.swift in Sources */,
+				DF796B2824EC82210028357F /* PetProfile.swift in Sources */,
 				DF58F23324DA136D00A5E23F /* RootViewRouter.swift in Sources */,
 				F8C4D05B47D43AAD9F7052D0 /* CoreDataUtilities.swift in Sources */,
 				F8C4D6A4A4226575503A6234 /* GraphView.swift in Sources */,

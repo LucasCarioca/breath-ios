@@ -30,7 +30,8 @@ struct CountView: View {
     let impactMed = UIImpactFeedbackGenerator(style: .medium)
     let impactHeavy = UIImpactFeedbackGenerator(style: .heavy)
     let hapticNotification = UINotificationFeedbackGenerator()
-    
+    let petProfile = PetProfileController.loadPetProfile()
+
     var body: some View {
         VStack {
             Text("Counter").Heading(size: .H5)
@@ -101,7 +102,7 @@ struct CountView: View {
     func finishCounting() {
         print("finished counting")
         self.bpm = self.counter * 2
-        if self.bpm >= 30 {
+        if self.bpm >= petProfile.targetBpm {
             highBreathing()
         } else {
             normalBreathing()
