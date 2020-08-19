@@ -27,10 +27,12 @@ struct CountView: View {
     @State var messageTitle: String = ""
     @State var messageContent: String = ""
     
+    @State var petProfile = PetProfileController.loadPetProfile()
+    
     let impactMed = UIImpactFeedbackGenerator(style: .medium)
     let impactHeavy = UIImpactFeedbackGenerator(style: .heavy)
     let hapticNotification = UINotificationFeedbackGenerator()
-    let petProfile = PetProfileController.loadPetProfile()
+    
 
     var body: some View {
         VStack {
@@ -90,7 +92,10 @@ struct CountView: View {
                     }.buttonStyle(PrimaryButton(variant: .contained)).frame(width: 100, height: 50)
                 }
             }
+        }.onAppear() {
+            self.petProfile = PetProfileController.loadPetProfile()
         }
+        
     }
     
     func reset() {

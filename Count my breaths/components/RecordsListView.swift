@@ -8,7 +8,7 @@ import SwiftUI
 struct RecordsListView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
     @FetchRequest(fetchRequest: requestBuilder(limit: 100, sort: [NSSortDescriptor(keyPath: \CountRecord.time, ascending: false)])) var countRecords: FetchedResults<CountRecord>
-    let petProfile = PetProfileController.loadPetProfile()
+    @State var petProfile = PetProfileController.loadPetProfile()
     init() {
         UITableView.appearance().backgroundColor = .clear
     }
@@ -20,6 +20,8 @@ struct RecordsListView: View {
                 }.onDelete(perform: delete)
             }.listStyle(PlainListStyle())
             MailButtonView(csvData: getCsvData())
+        }.onAppear() {
+            self.petProfile = PetProfileController.loadPetProfile()
         }
     }
 

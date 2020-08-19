@@ -12,41 +12,31 @@ import ToastUI
 
 struct TargetBreathingRateView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @State var petProfile = PetProfileController.loadPetProfile()
-    @State var targetBPM = 30
+    @State var targetBpm: Int
     @State var confirm = false
-    init() {
-        self.targetBPM = petProfile.targetBpm
-    }
+    var action: (Int) -> Void
     var body: some View {
         VStack {
             Text("Target breathing rate").Heading(size: .H5)
             
-            Picker("Target breathing rate", selection: $targetBPM) {
-                ForEach(2 ..< 100) {
+            Picker("Target breathing rate", selection: $targetBpm) {
+                ForEach(0 ..< 100) {
                     Text("\($0) breaths per minute")
                 }
                 }.padding().labelsHidden()
-            Spacer()
-            Button(action: self.updateBreathingRate) {
+            Button(action: {
+                print("clicked save")
+                print("\(self.targetBpm)")
+                self.action(self.targetBpm)
+                self.confirm = true
+            }) {
                 Text("Save")
             }.buttonStyle(PrimaryButton(variant: .contained)).frame(width: 100, height: 50)
+            Spacer()
         }.toast(isPresented: $confirm, dismissAfter: 2.0, onDismiss: {
             self.presentationMode.wrappedValue.dismiss()
         }) {
             ToastView("Target breathing rate saved").toastViewStyle(SuccessToastViewStyle())
         }
-    }
-    
-    func updateBreathingRate() {
-        petProfile.targetBpm = targetBPM
-        PetProfileController.savePetProfile(profile: petProfile)
-        confirm = true
-    }
-}
-
-struct TargetBreathingRateView_Previews: PreviewProvider {
-    static var previews: some View {
-        TargetBreathingRateView()
     }
 }
