@@ -38,6 +38,11 @@ struct iOSRoot: View {
                             .frame(width: geometry.size.width, height: geometry.size.height)
                             .offset(x: self.showMenu ? geometry.size.width/2 : 0)
                             .disabled(self.showMenu ? true : false).navigationBarTitle("Information", displayMode: .inline)
+                    } else if self.viewRouter.currentView == "petprofile" {
+                        PetProfileView()
+                            .frame(width: geometry.size.width, height: geometry.size.height)
+                            .offset(x: self.showMenu ? geometry.size.width/2 : 0)
+                            .disabled(self.showMenu ? true : false).navigationBarTitle("Information", displayMode: .inline)
                     }
                     if self.showMenu {
                         MenuView(viewRouter: self.viewRouter, showMenu: self.$showMenu)
