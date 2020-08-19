@@ -9,14 +9,15 @@ import QuickComponents
 struct RecordView: View {
     var beats: Int16
     var timeText: String
+    var targetBpm: Int
 
     var body: some View {
         VStack{
             BarView(
                 value: CGFloat(beats * 2),
-                max: 40,
+                max: CGFloat(targetBpm + 10),
                 showLabel: true,
-                color: ((beats * 2) >= 30) ? Theme.colors.secondary : Theme.colors.primary)
+                color: ((beats * 2) >= targetBpm) ? Theme.colors.secondary : Theme.colors.primary)
                 .padding(.top, 10)
                 .padding(.bottom, 35)
             HStack {
@@ -29,6 +30,6 @@ struct RecordView: View {
 
 struct RecordView_Previews: PreviewProvider {
     static var previews: some View {
-        RecordView(beats: 20, timeText: "HelloWorld")
+        RecordView(beats: 20, timeText: "HelloWorld", targetBpm: 30)
     }
 }

@@ -27,10 +27,13 @@ struct CountView: View {
     @State var messageTitle: String = ""
     @State var messageContent: String = ""
     
+    @State var petProfile = PetProfileController.loadPetProfile()
+    
     let impactMed = UIImpactFeedbackGenerator(style: .medium)
     let impactHeavy = UIImpactFeedbackGenerator(style: .heavy)
     let hapticNotification = UINotificationFeedbackGenerator()
     
+
     var body: some View {
         VStack {
             Text("Counter").Heading(size: .H5)
@@ -89,7 +92,10 @@ struct CountView: View {
                     }.buttonStyle(PrimaryButton(variant: .contained)).frame(width: 100, height: 50)
                 }
             }
+        }.onAppear() {
+            self.petProfile = PetProfileController.loadPetProfile()
         }
+        
     }
     
     func reset() {
@@ -101,7 +107,7 @@ struct CountView: View {
     func finishCounting() {
         print("finished counting")
         self.bpm = self.counter * 2
-        if self.bpm >= 30 {
+        if self.bpm >= petProfile.targetBpm {
             highBreathing()
         } else {
             normalBreathing()

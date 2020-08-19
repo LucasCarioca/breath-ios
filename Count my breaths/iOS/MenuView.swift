@@ -33,6 +33,16 @@ struct MenuView: View {
                 self.navigateTo(page: "info")
             }
                 .padding(.top, 30)
+            HStack {
+                Image(systemName: "heart.circle.fill").resizable().frame(width: 40, height: 40)
+                    .foregroundColor(self.viewRouter.currentView == "petprofile" ? Theme.colors.primary : Theme.colors.text)
+                Text("Pet Profile")
+                    .foregroundColor(self.viewRouter.currentView == "petprofile" ? Theme.colors.primary : Theme.colors.text)
+                    .font(.headline)
+            }.onTapGesture() {
+                self.navigateTo(page: "petprofile")
+            }
+                .padding(.top, 30)
             Spacer()
         }
         .padding()
