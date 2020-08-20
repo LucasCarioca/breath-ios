@@ -14,13 +14,7 @@ struct ListView: View {
     @Environment(\.managedObjectContext) var moc
     @State var petProfile = PetProfileController.loadPetProfile()
     @State var countRecords: [CountRecord] = []
-    var by: QueryBy
-    init () {
-        self.by = .MAX
-    }
-    init (by: QueryBy) {
-        self.by = by
-    }
+    @State var filter: QueryBy = .WEEK
     var body: some View {
         VStack {
             List {
@@ -29,9 +23,13 @@ struct ListView: View {
                 }.onDelete(perform: delete)
             }.listStyle(PlainListStyle())
             MailButtonView(csvData: getCsvData())
+            Picker(selection: self.$filter.onChange { by in self.countRecords = self.fetch(by: by)  }, label: Text("")) {
+                Text("1w").tag(QueryBy.WEEK)
+                Text("2w").tag(QueryBy.TWO_WEEKS)
+            }.pickerStyle(SegmentedPickerStyle())
         }.onAppear() {
             self.petProfile = PetProfileController.loadPetProfile()
-            self.fetch()
+            self.countRecords = self.fetch(by: self.filter)
         }
     }
 
@@ -42,7 +40,7 @@ struct ListView: View {
         }
         do {
             try moc.save()
-            self.fetch()
+            self.countRecords = self.fetch(by: self.filter)
         } catch {
             print("error occurred trying to save to core data")
         }
@@ -54,10 +52,10 @@ struct ListView: View {
         return recordService.exportCsvData()
     }
 
-    func fetch() {
+    func fetch(by: QueryBy) -> [CountRecord] {
         var countRecords: [CountRecord] = []
         let request = requestBuilder(sort: [NSSortDescriptor(keyPath: \CountRecord.time, ascending: false)])
-        switch self.by {
+        switch by {
         case .MAX:
             try? countRecords = self.moc.fetch(request)
         case .WEEK:
@@ -69,7 +67,7 @@ struct ListView: View {
         case .SIX_MONTHS:
             try? countRecords = self.moc.fetch(query(days: 180, request: request))
         }
-        self.countRecords = countRecords
+        return countRecords
     }
 
     func query(days: Int, request: NSFetchRequest<CountRecord> ) -> NSFetchRequest<CountRecord>  {
