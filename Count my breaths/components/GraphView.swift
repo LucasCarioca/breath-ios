@@ -9,7 +9,7 @@ import QuickComponents
 import SwiftUICharts
 import CoreData
 
-enum GraphBy {
+enum QueryBy {
     case MAX
     case WEEK
     case TWO_WEEKS
@@ -20,13 +20,13 @@ enum GraphBy {
 struct GraphView: View {
     @Environment(\.managedObjectContext) var moc
 
-    var by: GraphBy
+    var by: QueryBy
 
     init () {
         self.by = .MAX
     }
 
-    init (by: GraphBy) {
+    init (by: QueryBy) {
         self.by = by
     }
 

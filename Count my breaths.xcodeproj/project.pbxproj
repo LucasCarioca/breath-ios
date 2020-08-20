@@ -10,8 +10,6 @@
 		DF0A7A62246C6B760004D826 /* countmybreaths.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DF0A7A60246C6B760004D826 /* countmybreaths.xcdatamodeld */; };
 		DF0A7A94246C6F900004D826 /* countmybreaths.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DF0A7A60246C6B760004D826 /* countmybreaths.xcdatamodeld */; };
 		DF1CCDEF247FFBCB00E53F71 /* BreathingTrackerViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1CCDEE247FFBCB00E53F71 /* BreathingTrackerViewRouter.swift */; };
-		DF1F9BF524AC5F4200D0D90D /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = DF12190A2471E0B500112F63 /* SwiftUICharts */; };
-		DF1F9BF624AC5F4200D0D90D /* QuickComponents in Frameworks */ = {isa = PBXBuildFile; productRef = DF8D99352479CD4C00824C52 /* QuickComponents */; };
 		DF1F9BF824B04E2400D0D90D /* HowToItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1F9BF724B04E2400D0D90D /* HowToItemView.swift */; };
 		DF2A7D49246F2FC000140EDA /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2A7D48246F2FC000140EDA /* HeaderView.swift */; };
 		DF58F23324DA136D00A5E23F /* RootViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF58F23224DA136D00A5E23F /* RootViewRouter.swift */; };
@@ -38,9 +36,8 @@
 		DF8E95DE246B927C004AB783 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95DD246B927C004AB783 /* AccountView.swift */; };
 		DF8E95E0246B92F1004AB783 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95DF246B92F1004AB783 /* HistoryView.swift */; };
 		DF99661D24DA00BD008C58D3 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF99661C24DA00BD008C58D3 /* MenuView.swift */; };
-		DFFC8E1624E9DD08006882B4 /* ToastUI in Frameworks */ = {isa = PBXBuildFile; productRef = DFFC8E1524E9DD08006882B4 /* ToastUI */; };
 		F8C4D05B47D43AAD9F7052D0 /* CoreDataUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DE596DF08528DE33AAED /* CoreDataUtilities.swift */; };
-		F8C4D288C2C6FBE421E45443 /* RecordsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D8FCBEA2568ED521A60B /* RecordsListView.swift */; };
+		F8C4D16D110C5EFE777E85F1 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DC0344A919F923A5DD75 /* ListView.swift */; };
 		F8C4D333D1DE85423E3CD95E /* PetHealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DBCAF760247815D3C4A8 /* PetHealthView.swift */; };
 		F8C4D6A4A4226575503A6234 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D3222819B96152879DDB /* GraphView.swift */; };
 		F8C4D6B4C264F17C9679A7CA /* HowToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DE81C0A3624CDF2A6FF6 /* HowToView.swift */; };
@@ -48,7 +45,6 @@
 		F8C4D9A1E7EC0B7243A5CD8F /* PetHealthDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D649AE4E3C94E949A992 /* PetHealthDetailView.swift */; };
 		F8C4D9FFF6E61BB0DA0B4806 /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DD068B5466C2E4DADF36 /* RecordView.swift */; };
 		F8C4DB6730AA424BAD4DFA11 /* RecordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D99E15B371A2CD78632B /* RecordService.swift */; };
-		F8C4DB9C1CC8882C5EFD1135 /* RecordsGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DBFEC4C3519C9527EF8B /* RecordsGraphView.swift */; };
 		F8C4DD255AB44D86D6C9E81C /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DAD784B0480143B2FA99 /* InfoView.swift */; };
 		F8C4DF2423C3C601BD0686D9 /* AboutUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D6D441FEDE02AA1D5356 /* AboutUsView.swift */; };
 /* End PBXBuildFile section */
@@ -99,11 +95,10 @@
 		F8C4D3222819B96152879DDB /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		F8C4D649AE4E3C94E949A992 /* PetHealthDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetHealthDetailView.swift; sourceTree = "<group>"; };
 		F8C4D6D441FEDE02AA1D5356 /* AboutUsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsView.swift; sourceTree = "<group>"; };
-		F8C4D8FCBEA2568ED521A60B /* RecordsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordsListView.swift; sourceTree = "<group>"; };
 		F8C4D99E15B371A2CD78632B /* RecordService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordService.swift; sourceTree = "<group>"; };
 		F8C4DAD784B0480143B2FA99 /* InfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		F8C4DBCAF760247815D3C4A8 /* PetHealthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetHealthView.swift; sourceTree = "<group>"; };
-		F8C4DBFEC4C3519C9527EF8B /* RecordsGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordsGraphView.swift; sourceTree = "<group>"; };
+		F8C4DC0344A919F923A5DD75 /* ListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		F8C4DD068B5466C2E4DADF36 /* RecordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
 		F8C4DE596DF08528DE33AAED /* CoreDataUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataUtilities.swift; sourceTree = "<group>"; };
 		F8C4DE65EDFBCB8B01B277C4 /* MailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
@@ -115,10 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFFC8E1624E9DD08006882B4 /* ToastUI in Frameworks */,
 				DF6EEFE2247F5B9F00FC80D0 /* CloudKit.framework in Frameworks */,
-				DF1F9BF524AC5F4200D0D90D /* SwiftUICharts in Frameworks */,
-				DF1F9BF624AC5F4200D0D90D /* QuickComponents in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,12 +130,11 @@
 				DF2A7D48246F2FC000140EDA /* HeaderView.swift */,
 				F8C4DE65EDFBCB8B01B277C4 /* MailView.swift */,
 				F8C4DD068B5466C2E4DADF36 /* RecordView.swift */,
-				F8C4DBFEC4C3519C9527EF8B /* RecordsGraphView.swift */,
-				F8C4D8FCBEA2568ED521A60B /* RecordsListView.swift */,
 				F8C4D3222819B96152879DDB /* GraphView.swift */,
 				F8C4D649AE4E3C94E949A992 /* PetHealthDetailView.swift */,
 				DF1F9BF724B04E2400D0D90D /* HowToItemView.swift */,
 				DF796B2B24EC86420028357F /* TargetBreathingRateView.swift */,
+				F8C4DC0344A919F923A5DD75 /* ListView.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -295,9 +286,9 @@
 			);
 			name = "Count my breaths";
 			packageProductDependencies = (
-				DF12190A2471E0B500112F63 /* SwiftUICharts */,
-				DF8D99352479CD4C00824C52 /* QuickComponents */,
-				DFFC8E1524E9DD08006882B4 /* ToastUI */,
+				DF12190A2471E0B500112F63,
+				DF8D99352479CD4C00824C52,
+				DFFC8E1524E9DD08006882B4,
 			);
 			productName = "Count my breaths";
 			productReference = DF8E95B3246B8E8F004AB783 /* Count my breaths.app */;
@@ -350,9 +341,9 @@
 			);
 			mainGroup = DF8E95AA246B8E8E004AB783;
 			packageReferences = (
-				DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference "ChartView" */,
-				DF8D99342479CD4C00824C52 /* XCRemoteSwiftPackageReference "QuickComponents" */,
-				DFFC8E1424E9DD08006882B4 /* XCRemoteSwiftPackageReference "ToastUI" */,
+				DF1219092471E0B500112F63,
+				DF8D99342479CD4C00824C52,
+				DFFC8E1424E9DD08006882B4,
 			);
 			productRefGroup = DF8E95B4246B8E8F004AB783 /* Products */;
 			projectDirPath = "";
@@ -408,8 +399,6 @@
 				DF7965C024D9D24000B2D958 /* BreathingTrackerPages.swift in Sources */,
 				F8C4D7A6E2FCDE83C42D019A /* MailView.swift in Sources */,
 				F8C4D9FFF6E61BB0DA0B4806 /* RecordView.swift in Sources */,
-				F8C4DB9C1CC8882C5EFD1135 /* RecordsGraphView.swift in Sources */,
-				F8C4D288C2C6FBE421E45443 /* RecordsListView.swift in Sources */,
 				F8C4DB6730AA424BAD4DFA11 /* RecordService.swift in Sources */,
 				DF796B2824EC82210028357F /* PetProfile.swift in Sources */,
 				DF58F23324DA136D00A5E23F /* RootViewRouter.swift in Sources */,
@@ -424,6 +413,7 @@
 				DF1F9BF824B04E2400D0D90D /* HowToItemView.swift in Sources */,
 				F8C4DF2423C3C601BD0686D9 /* AboutUsView.swift in Sources */,
 				F8C4D9A1E7EC0B7243A5CD8F /* PetHealthDetailView.swift in Sources */,
+				F8C4D16D110C5EFE777E85F1 /* ListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,7 +568,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"Count my breaths/Preview Content\"";
 				DEVELOPMENT_TEAM = Y259ZT3SQK;
 				ENABLE_PREVIEWS = YES;
@@ -603,7 +593,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"Count my breaths/Preview Content\"";
 				DEVELOPMENT_TEAM = Y259ZT3SQK;
 				ENABLE_PREVIEWS = YES;
@@ -697,7 +687,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+		DF1219092471E0B500112F63 = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AppPear/ChartView.git";
 			requirement = {
@@ -705,7 +695,7 @@
 				minimumVersion = 1.5.0;
 			};
 		};
-		DF8D99342479CD4C00824C52 /* XCRemoteSwiftPackageReference "QuickComponents" */ = {
+		DF8D99342479CD4C00824C52 = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/LucasCarioca/QuickComponents.git";
 			requirement = {
@@ -713,7 +703,7 @@
 				minimumVersion = 0.7.2;
 			};
 		};
-		DFFC8E1424E9DD08006882B4 /* XCRemoteSwiftPackageReference "ToastUI" */ = {
+		DFFC8E1424E9DD08006882B4 = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/quanshousio/ToastUI.git";
 			requirement = {
@@ -724,19 +714,19 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		DF12190A2471E0B500112F63 /* SwiftUICharts */ = {
+		DF12190A2471E0B500112F63 = {
 			isa = XCSwiftPackageProductDependency;
-			package = DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference "ChartView" */;
+			package = DF1219092471E0B500112F63;
 			productName = SwiftUICharts;
 		};
-		DF8D99352479CD4C00824C52 /* QuickComponents */ = {
+		DF8D99352479CD4C00824C52 = {
 			isa = XCSwiftPackageProductDependency;
-			package = DF8D99342479CD4C00824C52 /* XCRemoteSwiftPackageReference "QuickComponents" */;
+			package = DF8D99342479CD4C00824C52;
 			productName = QuickComponents;
 		};
-		DFFC8E1524E9DD08006882B4 /* ToastUI */ = {
+		DFFC8E1524E9DD08006882B4 = {
 			isa = XCSwiftPackageProductDependency;
-			package = DFFC8E1424E9DD08006882B4 /* XCRemoteSwiftPackageReference "ToastUI" */;
+			package = DFFC8E1424E9DD08006882B4;
 			productName = ToastUI;
 		};
 /* End XCSwiftPackageProductDependency section */

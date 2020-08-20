@@ -17,8 +17,13 @@ struct HistoryView: View {
         VStack {
             Text("History").Heading(size: .H5)
             SwitcherView(pages: [
-                SwitcherPage(label: "List", view: RecordsListView()),
-                SwitcherPage(label: "Graph", view: RecordsGraphView())
+                SwitcherPage(label: "List", view: ListView()),
+                SwitcherPage(label: "Graph", view: SwitcherView(reverse:true, pages: [
+                    SwitcherPage(label: "1w", view: GraphView(by:.WEEK)),
+                    SwitcherPage(label: "2w", view: GraphView(by:.TWO_WEEKS)),
+                    SwitcherPage(label: "1m", view: GraphView(by:.MONTH)),
+                    SwitcherPage(label: "6m", view: GraphView(by:.SIX_MONTHS)),
+                ]))
             ])
         }
     }
