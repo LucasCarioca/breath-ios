@@ -8,7 +8,7 @@ import QuickComponents
 
 struct RecordView: View {
     var beats: Int16
-    var timeText: String
+    var time: Date
     var targetBpm: Int
 
     var body: some View {
@@ -18,18 +18,24 @@ struct RecordView: View {
                 max: CGFloat(targetBpm + 10),
                 showLabel: true,
                 color: ((beats * 2) >= targetBpm) ? Theme.colors.secondary : Theme.colors.primary)
-                .padding(.top, 10)
-                .padding(.bottom, 35)
+            .frame(height: 50)
             HStack {
-                Text(timeText).font(.subheadline)
+                Text(getDate()).font(.subheadline)
                 Spacer()
             }
         }
     }
+    
+    func getDate() -> String{
+        let dateFormatterPrint = DateFormatter()
+        dateFormatterPrint.dateFormat = "MMM dd,yyyy HH:mm"
+        return dateFormatterPrint.string(from: self.time)
+    }
+
 }
 
 struct RecordView_Previews: PreviewProvider {
     static var previews: some View {
-        RecordView(beats: 20, timeText: "HelloWorld", targetBpm: 30)
+        RecordView(beats: 20, time: Date(), targetBpm: 30)
     }
 }

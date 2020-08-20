@@ -19,7 +19,7 @@ struct ListView: View {
         VStack {
             List {
                 ForEach(self.countRecords.indices, id: \.self) { record in
-                    RecordView(beats: self.countRecords[record].beats, timeText: self.countRecords[record].timeText ?? "unknown", targetBpm: self.petProfile.targetBpm)
+                    RecordView(beats: self.countRecords[record].beats, time: self.countRecords[record].time ?? Date(), targetBpm: self.petProfile.targetBpm)
                 }.onDelete(perform: delete)
             }.listStyle(PlainListStyle())
             MailButtonView(csvData: getCsvData())
