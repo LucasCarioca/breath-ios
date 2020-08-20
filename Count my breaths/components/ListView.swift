@@ -26,6 +26,8 @@ struct ListView: View {
             Picker(selection: self.$filter.onChange { by in self.countRecords = self.fetch(by: by)  }, label: Text("")) {
                 Text("1w").tag(QueryBy.WEEK)
                 Text("2w").tag(QueryBy.TWO_WEEKS)
+                Text("1m").tag(QueryBy.MONTH)
+                Text("6m").tag(QueryBy.SIX_MONTHS)
             }.pickerStyle(SegmentedPickerStyle())
         }.onAppear() {
             self.petProfile = PetProfileController.loadPetProfile()
