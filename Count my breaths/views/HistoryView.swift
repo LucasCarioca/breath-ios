@@ -23,7 +23,8 @@ struct HistoryView: View {
                     SwitcherPage(label: "2w", view: GraphView(by:.TWO_WEEKS)),
                     SwitcherPage(label: "1m", view: GraphView(by:.MONTH)),
                     SwitcherPage(label: "6m", view: GraphView(by:.SIX_MONTHS)),
-                ]))
+                ])),
+                SwitcherPage(label: "Stats", view: StatsView())
             ])
         }
     }
