@@ -14,37 +14,46 @@ struct StatsView: View {
     @State var petProfile = PetProfileController.loadPetProfile()
     @State var filter: QueryBy = .WEEK
     var body: some View {
-        List {
-            HStack {
-                Text("Total records")
-                Spacer()
-                Text("\(self.fetch(by: self.filter).count)").fontWeight(.heavy)
+        VStack{
+            List {
+                HStack {
+                    Text("Total records")
+                    Spacer()
+                    Text("\(self.fetch(by: self.filter).count)").fontWeight(.heavy)
+                }
+                HStack {
+                    Text("Average")
+                    Spacer()
+                    Text("\(self.average())").fontWeight(.heavy)
+                }
+                HStack {
+                    Text("Highest")
+                    Spacer()
+                    Text("\(self.highest())").fontWeight(.heavy)
+                }
+                HStack {
+                    Text("Lowest")
+                    Spacer()
+                    Text("\(self.lowest())").fontWeight(.heavy)
+                }
+                HStack {
+                    Text("Median")
+                    Spacer()
+                    Text("\(self.median())").fontWeight(.heavy)
+                }
+                HStack {
+                    Text("Most common")
+                    Spacer()
+                    Text("\(self.mode())").fontWeight(.heavy)
+                }
             }
-            HStack {
-                Text("Average")
-                Spacer()
-                Text("\(self.average())").fontWeight(.heavy)
-            }
-            HStack {
-                Text("Highest")
-                Spacer()
-                Text("\(self.highest())").fontWeight(.heavy)
-            }
-            HStack {
-                Text("Lowest")
-                Spacer()
-                Text("\(self.lowest())").fontWeight(.heavy)
-            }
-            HStack {
-                Text("Median")
-                Spacer()
-                Text("\(self.median())").fontWeight(.heavy)
-            }
-            HStack {
-                Text("Most common")
-                Spacer()
-                Text("\(self.mode())").fontWeight(.heavy)
-            }
+            Spacer()
+            Picker(selection: self.$filter, label: Text("")) {
+                Text("1w").tag(QueryBy.WEEK)
+                Text("2w").tag(QueryBy.TWO_WEEKS)
+                Text("1m").tag(QueryBy.MONTH)
+                Text("6m").tag(QueryBy.SIX_MONTHS)
+            }.pickerStyle(SegmentedPickerStyle())
         }
     }
 
