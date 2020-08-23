@@ -47,6 +47,7 @@
 		F8C4DA8D276433420A2D89E0 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D3C2FDEF0B24243A39F1 /* StatsView.swift */; };
 		F8C4DB6730AA424BAD4DFA11 /* RecordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D99E15B371A2CD78632B /* RecordService.swift */; };
 		F8C4DD255AB44D86D6C9E81C /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DAD784B0480143B2FA99 /* InfoView.swift */; };
+		F8C4DD89B858D778EB1D2D0D /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DE83F4B45F263EC7017A /* Version.swift */; };
 		F8C4DF2423C3C601BD0686D9 /* AboutUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D6D441FEDE02AA1D5356 /* AboutUsView.swift */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +106,7 @@
 		F8C4DE596DF08528DE33AAED /* CoreDataUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataUtilities.swift; sourceTree = "<group>"; };
 		F8C4DE65EDFBCB8B01B277C4 /* MailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		F8C4DE81C0A3624CDF2A6FF6 /* HowToView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToView.swift; sourceTree = "<group>"; };
+		F8C4DE83F4B45F263EC7017A /* Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				DF796B2724EC82210028357F /* PetProfile.swift */,
+				F8C4DE83F4B45F263EC7017A /* Version.swift */,
 			);
 			path = settings;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 				F8C4D9A1E7EC0B7243A5CD8F /* PetHealthDetailView.swift in Sources */,
 				F8C4D16D110C5EFE777E85F1 /* ListView.swift in Sources */,
 				F8C4DA8D276433420A2D89E0 /* StatsView.swift in Sources */,
+				F8C4DD89B858D778EB1D2D0D /* Version.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
