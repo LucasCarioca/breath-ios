@@ -92,14 +92,11 @@ struct iOSRoot: View {
                 VStack {
                     Text("New Features in version \(self.version.version) 🎉").Heading(align: .center,size: .H6)
                     Text(self.version.description)
-                    UnorderedList(items: self.version.newFeatures)
+                    self.version.newFeatures.count >= 1 ? UnorderedList(items: self.version.newFeatures) : nil
                     Button(action: {
                         self.showNewVersion = false
                         self.version.isNew = false
                         VersionController.saveVersion(version: self.version)
-//                        let keyWindow = UIApplication.shared.windows.first { $0.isKeyWindow }
-//                        let rootViewController = keyWindow?.rootViewController
-//                        rootViewController?.dismiss(animated: true)
                     }) {
                         Text("OK")
                     }.buttonStyle(PrimaryButton(variant: .contained)).frame(width: 100, height: 50)

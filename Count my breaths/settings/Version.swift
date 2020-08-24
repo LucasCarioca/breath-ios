@@ -14,10 +14,10 @@ struct Version: Codable {
 
 class VersionController {
 
-    private static let VERSION_KEY = "version"
-    private static let CURRENT = "1.18.0"
-    private static let DESCRIPTION = "This is a small description of the changes"
-    private static let NEW_FEATURES = ["Something new", "Something else new"]
+    private static let VERSION_KEY: String = "version"
+    private static let CURRENT: String = "1.19.0"
+    private static let DESCRIPTION: String = "Small tweaks and improvements."
+    private static let NEW_FEATURES: [String] = []
 
     public static func saveVersion(version: Version){
         let encoder = JSONEncoder()
