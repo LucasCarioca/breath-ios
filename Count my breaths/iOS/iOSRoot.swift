@@ -8,12 +8,16 @@
 
 import SwiftUI
 import QuickComponents
+import ToastUI
 
 struct iOSRoot: View {
     
     @State var showMenu = false
     @State var showHelp = false
+    @State var showNewVersion = false
     @ObservedObject var viewRouter = RootViewRouter()
+    @State var version = VersionController.loadVersion()
+
     var body: some View {
         
         let drag = DragGesture()
@@ -83,6 +87,25 @@ struct iOSRoot: View {
                     Text("Close")
                 }.buttonStyle(SecondaryButton()).frame(width: 100, height: 50)
             }.padding()
+        }.toast(isPresented: $showNewVersion) {
+            ToastView{
+                VStack {
+                    Text("New Features in version \(self.version.version) 🎉").Heading(align: .center,size: .H6)
+                    Text(self.version.description)
+                    self.version.newFeatures.count >= 1 ? UnorderedList(items: self.version.newFeatures) : nil
+                    Button(action: {
+                        self.showNewVersion = false
+                        self.version.isNew = false
+                        VersionController.saveVersion(version: self.version)
+                    }) {
+                        Text("OK")
+                    }.buttonStyle(PrimaryButton(variant: .contained)).frame(width: 100, height: 50)
+                }
+            }
+        }.onAppear() {
+            if(self.version.isNew) {
+                self.showNewVersion = true
+            }
         }
     }
 }

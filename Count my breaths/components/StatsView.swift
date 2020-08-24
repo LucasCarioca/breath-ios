@@ -91,7 +91,7 @@ struct StatsView: View {
         let bpmList = getBpmList()
         var counts = [Int: Int]()
         bpmList.forEach { counts[$0] = (counts[$0] ?? 0) + 1 }
-        if let (value, count) = counts.max(by: {$0.1 < $1.1}) {
+        if let (value, _) = counts.max(by: {$0.1 < $1.1}) {
             return value
         }
         return 0
