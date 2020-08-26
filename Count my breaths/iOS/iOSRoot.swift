@@ -90,9 +90,15 @@ struct iOSRoot: View {
         }.toast(isPresented: $showNewVersion) {
             ToastView{
                 VStack {
-                    Text("New Features in version \(self.version.version) 🎉").Heading(align: .center,size: .H6)
-                    Text(self.version.description)
-                    self.version.newFeatures.count >= 1 ? UnorderedList(items: self.version.newFeatures) : nil
+                    Text("New Features v\(self.version.version) 🎉").Paragraph(align: .center, size: .LG)
+                    ScrollView {
+                        VStack {
+                            Text(self.version.description).Paragraph(align: .center)
+                            self.version.newFeatures.count >= 1 ? ForEach(0..<self.version.newFeatures.count) { index in
+                                Text(self.version.newFeatures[index]).Paragraph(align: .center)
+                            } : nil
+                        }
+                    }.frame(maxHeight: 150)
                     Button(action: {
                         self.showNewVersion = false
                         self.version.isNew = false
