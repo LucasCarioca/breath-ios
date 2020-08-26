@@ -15,9 +15,9 @@ struct Version: Codable {
 class VersionController {
 
     private static let VERSION_KEY: String = "version"
-    private static let CURRENT: String = "1.19.0"
-    private static let DESCRIPTION: String = "Small tweaks and improvements."
-    private static let NEW_FEATURES: [String] = []
+    private static let CURRENT: String = "1.20.0"
+    private static let DESCRIPTION: String = "Improved statistics."
+    private static let NEW_FEATURES: [String] = ["Added high breathing rate percentage"]
 
     public static func saveVersion(version: Version){
         let encoder = JSONEncoder()
