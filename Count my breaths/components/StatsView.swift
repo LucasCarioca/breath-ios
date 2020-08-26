@@ -22,6 +22,11 @@ struct StatsView: View {
                     Text("\(self.fetch(by: self.filter).count)").fontWeight(.heavy)
                 }
                 HStack {
+                    Text("Percent over target")
+                    Spacer()
+                    Text("\(self.percentOverTarget())%").fontWeight(.heavy)
+                }
+                HStack {
                     Text("Average")
                     Spacer()
                     Text("\(self.average())").fontWeight(.heavy)
@@ -54,6 +59,8 @@ struct StatsView: View {
                 Text("1m").tag(QueryBy.MONTH)
                 Text("6m").tag(QueryBy.SIX_MONTHS)
             }.pickerStyle(SegmentedPickerStyle())
+        }.onAppear() {
+            self.petProfile = PetProfileController.loadPetProfile()
         }
     }
 
@@ -138,6 +145,20 @@ struct StatsView: View {
                 total = total + (Int(record.beats) * 2)
             }
             return total/countRecords.count
+        }
+        return 0
+    }
+
+    func percentOverTarget() -> Int{
+        let countRecords = getBpmList()
+        if countRecords.count >= 1 {
+            var total = 0
+            for record in countRecords {
+                if record >= petProfile.targetBpm {
+                    total += 1
+                }
+            }
+            return Int((CGFloat(total)/CGFloat(countRecords.count)) * 100)
         }
         return 0
     }
