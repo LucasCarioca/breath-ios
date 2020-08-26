@@ -22,7 +22,7 @@ struct StatsView: View {
                     Text("\(self.fetch(by: self.filter).count)").fontWeight(.heavy)
                 }
                 HStack {
-                    Text("Percent over target")
+                    Text("High breathing rate")
                     Spacer()
                     Text("\(self.percentOverTarget())%").fontWeight(.heavy)
                 }
