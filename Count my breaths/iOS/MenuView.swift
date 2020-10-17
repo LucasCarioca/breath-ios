@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct MenuView: View {
-    @ObservedObject var viewRouter: RootViewRouter
+    @ObservedObject var viewRouter: RootRouterState
     @Binding var showMenu: Bool
     var body: some View {
         VStack(alignment: .leading) {

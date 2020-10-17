@@ -8,8 +8,14 @@
 
 import Foundation
 
+struct PetProfileDeprecated: Codable {
+    var targetBpm: Int
+}
+
 struct PetProfile: Codable {
     var targetBpm: Int
+    var name: String
+    var chipId: String
 }
 
 class PetProfileController {
@@ -31,15 +37,22 @@ class PetProfileController {
             let decoder = JSONDecoder()
             if let loadedPetProfile = try? decoder.decode(PetProfile.self, from: profile){
                 return loadedPetProfile
+            } else {
+                if let deprecatedProfile = try? decoder.decode(PetProfileDeprecated.self, from: profile){
+                    var newProfile = PetProfile(targetBpm: DEFAULT_TARGET_BPM, name:  "MyPet", chipId: "")
+                    newProfile.targetBpm = deprecatedProfile.targetBpm
+                    savePetProfile(profile: newProfile)
+                    return newProfile
+                }
             }
         }
-        let newProfile = PetProfile(targetBpm: DEFAULT_TARGET_BPM)
+        let newProfile = PetProfile(targetBpm: DEFAULT_TARGET_BPM, name:  "MyPet", chipId: "")
         savePetProfile(profile: newProfile)
         return newProfile
     }
 
     public static func resetDefaults() {
-        let newProfile = PetProfile(targetBpm: DEFAULT_TARGET_BPM)
+        let newProfile = PetProfile(targetBpm: DEFAULT_TARGET_BPM, name: "MyPet", chipId: "")
         savePetProfile(profile: newProfile)
     }
 }
