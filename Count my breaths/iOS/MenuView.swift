@@ -14,7 +14,7 @@ struct MenuView: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Image(systemName: "timer").resizable().frame(width: 40, height: 35)
+                Image(systemName: "lungs").resizable().frame(width: 40, height: 35)
                     .foregroundColor(self.viewRouter.currentView == "breathingTracker" ? Theme.colors.primary : Theme.colors.text)
                 Text("Breathing Tracker")
                     .foregroundColor(self.viewRouter.currentView == "breathingTracker" ? Theme.colors.primary : Theme.colors.text)
