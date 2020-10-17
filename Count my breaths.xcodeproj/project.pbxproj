@@ -17,7 +17,7 @@
 		DF45D011253B8B7200E6995E /* ToastUI in Frameworks */ = {isa = PBXBuildFile; productRef = DFFC8E1524E9DD08006882B4 /* ToastUI */; };
 		DF45D015253B931E00E6995E /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF45D014253B931E00E6995E /* RootRouter.swift */; };
 		DF45D01D253B944C00E6995E /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF45D01C253B944C00E6995E /* App.swift */; };
-		DF45D021253B973700E6995E /* PetNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF45D020253B973700E6995E /* PetNameView.swift */; };
+		DF45D021253B973700E6995E /* PetProfileTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF45D020253B973700E6995E /* PetProfileTextFieldView.swift */; };
 		DF58F23324DA136D00A5E23F /* RootRouterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF58F23224DA136D00A5E23F /* RootRouterState.swift */; };
 		DF58F23524DA14EF00A5E23F /* InfoViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF58F23424DA14EF00A5E23F /* InfoViewRouter.swift */; };
 		DF6EEFE2247F5B9F00FC80D0 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF6EEFE1247F5B9F00FC80D0 /* CloudKit.framework */; };
@@ -74,7 +74,7 @@
 		DF2A7D48246F2FC000140EDA /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		DF45D014253B931E00E6995E /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
 		DF45D01C253B944C00E6995E /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
-		DF45D020253B973700E6995E /* PetNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetNameView.swift; sourceTree = "<group>"; };
+		DF45D020253B973700E6995E /* PetProfileTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProfileTextFieldView.swift; sourceTree = "<group>"; };
 		DF58F23224DA136D00A5E23F /* RootRouterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouterState.swift; sourceTree = "<group>"; };
 		DF58F23424DA14EF00A5E23F /* InfoViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewRouter.swift; sourceTree = "<group>"; };
 		DF6EEFE1247F5B9F00FC80D0 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
@@ -150,7 +150,7 @@
 				F8C4D649AE4E3C94E949A992 /* PetHealthDetailView.swift */,
 				DF1F9BF724B04E2400D0D90D /* HowToItemView.swift */,
 				DF796B2B24EC86420028357F /* TargetBreathingRateView.swift */,
-				DF45D020253B973700E6995E /* PetNameView.swift */,
+				DF45D020253B973700E6995E /* PetProfileTextFieldView.swift */,
 				F8C4DC0344A919F923A5DD75 /* ListView.swift */,
 				F8C4D3C2FDEF0B24243A39F1 /* StatsView.swift */,
 			);
@@ -411,7 +411,7 @@
 				DF8E95E0246B92F1004AB783 /* HistoryView.swift in Sources */,
 				DF796B2C24EC86420028357F /* TargetBreathingRateView.swift in Sources */,
 				DF796B2A24EC82C10028357F /* PetProfileView.swift in Sources */,
-				DF45D021253B973700E6995E /* PetNameView.swift in Sources */,
+				DF45D021253B973700E6995E /* PetProfileTextFieldView.swift in Sources */,
 				DF7744E824D5E63900A8B33B /* Overwrites.swift in Sources */,
 				DF0A7A62246C6B760004D826 /* countmybreaths.xcdatamodeld in Sources */,
 				DF8E95B9246B8E8F004AB783 /* SceneDelegate.swift in Sources */,
@@ -599,7 +599,7 @@
 				DEVELOPMENT_TEAM = Y259ZT3SQK;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Count my breaths/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -625,7 +625,7 @@
 				DEVELOPMENT_TEAM = Y259ZT3SQK;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Count my breaths/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

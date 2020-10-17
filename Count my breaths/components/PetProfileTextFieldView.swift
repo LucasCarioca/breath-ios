@@ -34,7 +34,7 @@ struct PetProfileTextFieldView: View {
         }.toast(isPresented: $confirm, dismissAfter: 2.0, onDismiss: {
             self.presentationMode.wrappedValue.dismiss()
         }) {
-            ToastView("\(label) updated").toastViewStyle(SuccessToastViewStyle())
+            ToastView("\(self.label) updated").toastViewStyle(SuccessToastViewStyle())
         }
     }
 }
