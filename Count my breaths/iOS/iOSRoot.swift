@@ -20,7 +20,7 @@ struct iOSRoot: View {
         NavigationView {
             GeometryReader { geometry in
                 ZStack(alignment: .leading) {
-                    RootRouter(currentView: viewRouter.currentView, width: geometry.size.width, height: geometry.size.height, showMenu: showMenu)
+                    RootRouter(currentView: self.viewRouter.currentView, width: geometry.size.width, height: geometry.size.height, showMenu: self.showMenu)
                     if self.showMenu {
                         MenuView(viewRouter: self.viewRouter, showMenu: self.$showMenu)
                                 .frame(width: geometry.size.width * 0.90)
