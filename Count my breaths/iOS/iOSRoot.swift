@@ -27,7 +27,7 @@ struct iOSRoot: View {
                                 .transition(.move(edge: .leading))
                     }
                 }
-                        .sheet(isPresented: $showHelp) {
+                .sheet(isPresented: self.$showHelp) {
                             VStack {
                                 HowToView()
                                 Button(action: {
