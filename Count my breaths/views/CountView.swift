@@ -9,6 +9,7 @@
 import SwiftUI
 import CoreData
 import QuickComponents
+import ToastUI
 
 struct CountView: View {
     @Environment(\.colorScheme) var colorScheme
@@ -26,10 +27,13 @@ struct CountView: View {
     @State var messageTitle: String = ""
     @State var messageContent: String = ""
     
+    @State var petProfile = PetProfileController.loadPetProfile()
+    
     let impactMed = UIImpactFeedbackGenerator(style: .medium)
     let impactHeavy = UIImpactFeedbackGenerator(style: .heavy)
     let hapticNotification = UINotificationFeedbackGenerator()
     
+
     var body: some View {
         VStack {
             Text("Counter").Heading(size: .H5)
@@ -68,14 +72,30 @@ struct CountView: View {
                     Text("Reset")
             }.frame(height:50).buttonStyle(SecondaryButton()) : nil
             Spacer()
-            
-        }.alert(isPresented: self.$showWarning) {
-            Alert(
-                title: Text(self.messageTitle),
-                message: Text(self.messageContent),
-                dismissButton: .default(Text("Ok"))
-            )
+        }.toast(isPresented: $showWarning) {
+            ToastView{
+                VStack {
+                    Text(self.messageTitle).Heading(align: .center,size: .H6)
+                    HStack{
+                        Spacer()
+                        Image(systemName: "exclamationmark.triangle.fill").imageScale(.large).foregroundColor(.yellow)
+                        Spacer()
+                    }
+                    Text(self.messageContent).Paragraph(align: .center, size: .MD)
+                    Button(action: {
+                        self.showWarning = false
+                        let keyWindow = UIApplication.shared.windows.first { $0.isKeyWindow }
+                        let rootViewController = keyWindow?.rootViewController
+                        rootViewController?.dismiss(animated: true)
+                    }) {
+                        Text("OK")
+                    }.buttonStyle(PrimaryButton(variant: .contained)).frame(width: 100, height: 50)
+                }
+            }
+        }.onAppear() {
+            self.petProfile = PetProfileController.loadPetProfile()
         }
+        
     }
     
     func reset() {
@@ -85,8 +105,9 @@ struct CountView: View {
     }
     
     func finishCounting() {
+        print("finished counting")
         self.bpm = self.counter * 2
-        if self.bpm >= 30 {
+        if self.bpm >= petProfile.targetBpm {
             highBreathing()
         } else {
             normalBreathing()
@@ -132,6 +153,7 @@ struct CountView: View {
     }
     
     func breath() {
+        print("breath counted")
         self.impactMed.impactOccurred()
         if (!self.isCounting) {
             self.showResults = false

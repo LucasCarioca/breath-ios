@@ -8,12 +8,16 @@
 
 import SwiftUI
 import QuickComponents
+import ToastUI
 
 struct iOSRoot: View {
     
     @State var showMenu = false
     @State var showHelp = false
+    @State var showNewVersion = false
     @ObservedObject var viewRouter = RootViewRouter()
+    @State var version = VersionController.loadVersion()
+
     var body: some View {
         
         let drag = DragGesture()
@@ -38,19 +42,18 @@ struct iOSRoot: View {
                             .frame(width: geometry.size.width, height: geometry.size.height)
                             .offset(x: self.showMenu ? geometry.size.width/2 : 0)
                             .disabled(self.showMenu ? true : false).navigationBarTitle("Information", displayMode: .inline)
-                    } else {
-                        MainView(showMenu: self.$showMenu)
+                    } else if self.viewRouter.currentView == "petprofile" {
+                        PetProfileView()
                             .frame(width: geometry.size.width, height: geometry.size.height)
                             .offset(x: self.showMenu ? geometry.size.width/2 : 0)
-                            .disabled(self.showMenu ? true : false)
+                            .disabled(self.showMenu ? true : false).navigationBarTitle("Information", displayMode: .inline)
                     }
                     if self.showMenu {
                         MenuView(viewRouter: self.viewRouter, showMenu: self.$showMenu)
                             .frame(width: geometry.size.width*0.90)
-                            .transition(.move(edge: .leading))
+                            .transition(.move(edge: .leading)).gesture(drag)
                     }
                 }
-                    .gesture(drag)
             }
                 .navigationBarItems(leading: (
                     Button(action: {
@@ -84,6 +87,31 @@ struct iOSRoot: View {
                     Text("Close")
                 }.buttonStyle(SecondaryButton()).frame(width: 100, height: 50)
             }.padding()
+        }.toast(isPresented: $showNewVersion) {
+            ToastView{
+                VStack {
+                    Text("New Features v\(self.version.version) 🎉").Paragraph(align: .center, size: .LG)
+                    ScrollView {
+                        VStack {
+                            Text(self.version.description).Paragraph(align: .center)
+                            self.version.newFeatures.count >= 1 ? ForEach(0..<self.version.newFeatures.count) { index in
+                                Text(self.version.newFeatures[index]).Paragraph(align: .center)
+                            } : nil
+                        }
+                    }.frame(maxHeight: 150)
+                    Button(action: {
+                        self.showNewVersion = false
+                        self.version.isNew = false
+                        VersionController.saveVersion(version: self.version)
+                    }) {
+                        Text("OK")
+                    }.buttonStyle(PrimaryButton(variant: .contained)).frame(width: 100, height: 50)
+                }
+            }
+        }.onAppear() {
+            if(self.version.isNew) {
+                self.showNewVersion = true
+            }
         }
     }
 }
