@@ -15,9 +15,9 @@ struct ContentView: View {
     private var idiom : UIUserInterfaceIdiom { UIDevice.current.userInterfaceIdiom }
     var body: some View {
         if idiom == .pad {
-            macOSRoot()
+            return macOSRoot()
         } else {
-            iOSRoot()
+            return iOSRoot()
         }
     }
 }
