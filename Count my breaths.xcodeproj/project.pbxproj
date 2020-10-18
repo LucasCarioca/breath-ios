@@ -18,6 +18,8 @@
 		DF45D015253B931E00E6995E /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF45D014253B931E00E6995E /* RootRouter.swift */; };
 		DF45D01D253B944C00E6995E /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF45D01C253B944C00E6995E /* App.swift */; };
 		DF45D021253B973700E6995E /* PetProfileTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF45D020253B973700E6995E /* PetProfileTextFieldView.swift */; };
+		DF45D056253BD8FA00E6995E /* SideBarLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF45D055253BD8FA00E6995E /* SideBarLabel.swift */; };
+		DF45D05A253BD92B00E6995E /* MacOSRootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF45D059253BD92B00E6995E /* MacOSRootRouter.swift */; };
 		DF58F23324DA136D00A5E23F /* RootRouterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF58F23224DA136D00A5E23F /* RootRouterState.swift */; };
 		DF58F23524DA14EF00A5E23F /* InfoViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF58F23424DA14EF00A5E23F /* InfoViewRouter.swift */; };
 		DF5FB88624DA6B9600CF6ACE /* macOSRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5FB88524DA6B9600CF6ACE /* macOSRoot.swift */; };
@@ -76,6 +78,8 @@
 		DF45D014253B931E00E6995E /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
 		DF45D01C253B944C00E6995E /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		DF45D020253B973700E6995E /* PetProfileTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProfileTextFieldView.swift; sourceTree = "<group>"; };
+		DF45D055253BD8FA00E6995E /* SideBarLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarLabel.swift; sourceTree = "<group>"; };
+		DF45D059253BD92B00E6995E /* MacOSRootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacOSRootRouter.swift; sourceTree = "<group>"; };
 		DF58F23224DA136D00A5E23F /* RootRouterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouterState.swift; sourceTree = "<group>"; };
 		DF58F23424DA14EF00A5E23F /* InfoViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewRouter.swift; sourceTree = "<group>"; };
 		DF5FB88524DA6B9600CF6ACE /* macOSRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macOSRoot.swift; sourceTree = "<group>"; };
@@ -164,6 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				DF5FB88524DA6B9600CF6ACE /* macOSRoot.swift */,
+				DF45D055253BD8FA00E6995E /* SideBarLabel.swift */,
+				DF45D059253BD92B00E6995E /* MacOSRootRouter.swift */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
@@ -436,6 +442,7 @@
 				F8C4D7A6E2FCDE83C42D019A /* MailView.swift in Sources */,
 				F8C4D9FFF6E61BB0DA0B4806 /* RecordView.swift in Sources */,
 				F8C4DB6730AA424BAD4DFA11 /* RecordService.swift in Sources */,
+				DF45D05A253BD92B00E6995E /* MacOSRootRouter.swift in Sources */,
 				DF796B2824EC82210028357F /* PetProfile.swift in Sources */,
 				DF58F23324DA136D00A5E23F /* RootRouterState.swift in Sources */,
 				F8C4D05B47D43AAD9F7052D0 /* CoreDataUtilities.swift in Sources */,
@@ -450,6 +457,7 @@
 				DF1F9BF824B04E2400D0D90D /* HowToItemView.swift in Sources */,
 				F8C4DF2423C3C601BD0686D9 /* AboutUsView.swift in Sources */,
 				F8C4D9A1E7EC0B7243A5CD8F /* PetHealthDetailView.swift in Sources */,
+				DF45D056253BD8FA00E6995E /* SideBarLabel.swift in Sources */,
 				F8C4D16D110C5EFE777E85F1 /* ListView.swift in Sources */,
 				DF45D015253B931E00E6995E /* RootRouter.swift in Sources */,
 				F8C4DA8D276433420A2D89E0 /* StatsView.swift in Sources */,

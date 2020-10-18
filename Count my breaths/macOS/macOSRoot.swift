@@ -29,59 +29,7 @@ struct macOSRoot: View {
         ZStack {
             Theme.colors.text.edgesIgnoringSafeArea(.all)
             NavigationView {
-                List {
-                    Section (header: Text("Breathing Tracker")) {
-                        NavigationLink(
-                            destination:
-                                CountView()
-                                    .padding()
-                                    .padding(.top, 50)
-                                    .edgesIgnoringSafeArea(.all),
-                            tag: .counter,
-                            selection: $selected) {
-                            SideBarLabel("Counter", systemImage: "timer")
-                        }
-                        NavigationLink(
-                            destination:
-                                HistoryView()
-                                .padding()
-                                .padding(.top, 50)
-                                .edgesIgnoringSafeArea(.all),
-                            tag: .history,
-                            selection: $selected) {
-                            SideBarLabel("History", systemImage: "chart.bar.fill")
-                        }
-                    }
-                    Section(header: Text("Information")){
-                        NavigationLink(
-                            destination:
-                                VStack {
-                                    Text("Pet health").Heading(size: .H5)
-                                    PetHealthView()
-                                }
-                                .padding()
-                                .padding(.top, 50)
-                                .edgesIgnoringSafeArea(.all),
-                            tag: .info,
-                            selection: $selected) {
-                            SideBarLabel("Pet health", systemImage: "heart.fill")
-                        }
-                        NavigationLink(
-                            destination:
-                                VStack {
-                                    Text("Pet health").Heading(size: .H5)
-                                    AboutUsView()
-                                }
-                                .padding()
-                                .padding(.top, 50)
-                                .edgesIgnoringSafeArea(.all),
-                            tag: .about,
-                            selection: $selected) {
-                            SideBarLabel("Pet health", systemImage: "info.circle.fill")
-                        }
-                    }
-                }
-                .listStyle(GroupedListStyle())
+                MacOSRootRouter()
                 .navigationBarItems(trailing: (
                     Button(action: {
                         withAnimation {
@@ -105,32 +53,4 @@ struct macOSRoot: View {
     }
 }
 
-    enum NavigationPage: Equatable, Identifiable {
-        case none
-        case counter
-        case history
-        case pills
-        case tracking
-        case how
-        case info
-        case about
 
-        var id: NavigationPage { self }
-    }
-
-    struct SideBarLabel: View {
-        var text: String
-        var systemImage: String
-        
-        init(_ text: String, systemImage: String) {
-            self.text = text
-            self.systemImage = systemImage
-        }
-        
-        var body: some View {
-            HStack {
-                Image(systemName: systemImage).resizable().frame(width: 25, height: 25)
-                Text(text).Paragraph(size: .MD)
-            }
-        }
-    }
