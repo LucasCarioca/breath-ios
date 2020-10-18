@@ -1,6 +1,8 @@
 name: UniversalApp
 on:
   push:
+    branches:
+    - 'universalApp'
   
 jobs:
   cicd:
