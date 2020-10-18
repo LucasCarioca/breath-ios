@@ -49,8 +49,4 @@ jobs:
           FASTLANE_SESSION: ${{ secrets.FASTLANE_SESSION }}
           FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
           FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT: 600
-<<<<<<< HEAD:.github/workflows/cicd.yml
-        run: bundle exec fastlane major
-=======
         run: bundle exec fastlane bump_major
->>>>>>> master:.github/workflows/newBranch.yml
