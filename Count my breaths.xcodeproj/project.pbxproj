@@ -12,7 +12,13 @@
 		DF1CCDEF247FFBCB00E53F71 /* BreathingTrackerViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1CCDEE247FFBCB00E53F71 /* BreathingTrackerViewRouter.swift */; };
 		DF1F9BF824B04E2400D0D90D /* HowToItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1F9BF724B04E2400D0D90D /* HowToItemView.swift */; };
 		DF2A7D49246F2FC000140EDA /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2A7D48246F2FC000140EDA /* HeaderView.swift */; };
-		DF58F23324DA136D00A5E23F /* RootViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF58F23224DA136D00A5E23F /* RootViewRouter.swift */; };
+		DF45D00F253B8B7200E6995E /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = DF12190A2471E0B500112F63 /* SwiftUICharts */; };
+		DF45D010253B8B7200E6995E /* QuickComponents in Frameworks */ = {isa = PBXBuildFile; productRef = DF8D99352479CD4C00824C52 /* QuickComponents */; };
+		DF45D011253B8B7200E6995E /* ToastUI in Frameworks */ = {isa = PBXBuildFile; productRef = DFFC8E1524E9DD08006882B4 /* ToastUI */; };
+		DF45D015253B931E00E6995E /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF45D014253B931E00E6995E /* RootRouter.swift */; };
+		DF45D01D253B944C00E6995E /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF45D01C253B944C00E6995E /* App.swift */; };
+		DF45D021253B973700E6995E /* PetProfileTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF45D020253B973700E6995E /* PetProfileTextFieldView.swift */; };
+		DF58F23324DA136D00A5E23F /* RootRouterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF58F23224DA136D00A5E23F /* RootRouterState.swift */; };
 		DF58F23524DA14EF00A5E23F /* InfoViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF58F23424DA14EF00A5E23F /* InfoViewRouter.swift */; };
 		DF5FB88624DA6B9600CF6ACE /* macOSRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5FB88524DA6B9600CF6ACE /* macOSRoot.swift */; };
 		DF6EEFE2247F5B9F00FC80D0 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF6EEFE1247F5B9F00FC80D0 /* CloudKit.framework */; };
@@ -67,7 +73,10 @@
 		DF1CCDEE247FFBCB00E53F71 /* BreathingTrackerViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingTrackerViewRouter.swift; sourceTree = "<group>"; };
 		DF1F9BF724B04E2400D0D90D /* HowToItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToItemView.swift; sourceTree = "<group>"; };
 		DF2A7D48246F2FC000140EDA /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
-		DF58F23224DA136D00A5E23F /* RootViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewRouter.swift; sourceTree = "<group>"; };
+		DF45D014253B931E00E6995E /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		DF45D01C253B944C00E6995E /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		DF45D020253B973700E6995E /* PetProfileTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProfileTextFieldView.swift; sourceTree = "<group>"; };
+		DF58F23224DA136D00A5E23F /* RootRouterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouterState.swift; sourceTree = "<group>"; };
 		DF58F23424DA14EF00A5E23F /* InfoViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewRouter.swift; sourceTree = "<group>"; };
 		DF5FB88524DA6B9600CF6ACE /* macOSRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macOSRoot.swift; sourceTree = "<group>"; };
 		DF6EEFE1247F5B9F00FC80D0 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
@@ -117,7 +126,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF45D011253B8B7200E6995E /* ToastUI in Frameworks */,
 				DF6EEFE2247F5B9F00FC80D0 /* CloudKit.framework in Frameworks */,
+				DF45D00F253B8B7200E6995E /* SwiftUICharts in Frameworks */,
+				DF45D010253B8B7200E6995E /* QuickComponents in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +153,7 @@
 				F8C4D649AE4E3C94E949A992 /* PetHealthDetailView.swift */,
 				DF1F9BF724B04E2400D0D90D /* HowToItemView.swift */,
 				DF796B2B24EC86420028357F /* TargetBreathingRateView.swift */,
+				DF45D020253B973700E6995E /* PetProfileTextFieldView.swift */,
 				F8C4DC0344A919F923A5DD75 /* ListView.swift */,
 				F8C4D3C2FDEF0B24243A39F1 /* StatsView.swift */,
 			);
@@ -176,7 +189,8 @@
 			isa = PBXGroup;
 			children = (
 				DF7965BB24D9D11600B2D958 /* iOSRoot.swift */,
-				DF58F23224DA136D00A5E23F /* RootViewRouter.swift */,
+				DF58F23224DA136D00A5E23F /* RootRouterState.swift */,
+				DF45D014253B931E00E6995E /* RootRouter.swift */,
 				DF7965C124D9D6E900B2D958 /* BreathingTrackerRootView.swift */,
 				DF7965C324D9DBB700B2D958 /* InfoRootView.swift */,
 				DF1CCDEE247FFBCB00E53F71 /* BreathingTrackerViewRouter.swift */,
@@ -227,6 +241,7 @@
 				DF8E95B6246B8E8F004AB783 /* AppDelegate.swift */,
 				DF8E95B8246B8E8F004AB783 /* SceneDelegate.swift */,
 				DF8E95BA246B8E8F004AB783 /* ContentView.swift */,
+				DF45D01C253B944C00E6995E /* App.swift */,
 				DF8E95BC246B8E93004AB783 /* Assets.xcassets */,
 				DF8E95C1246B8E93004AB783 /* LaunchScreen.storyboard */,
 				DF8E95C4246B8E93004AB783 /* Info.plist */,
@@ -305,9 +320,9 @@
 			);
 			name = "Count my breaths";
 			packageProductDependencies = (
-				DF12190A2471E0B500112F63,
-				DF8D99352479CD4C00824C52,
-				DFFC8E1524E9DD08006882B4,
+				DF12190A2471E0B500112F63 /* SwiftUICharts */,
+				DF8D99352479CD4C00824C52 /* QuickComponents */,
+				DFFC8E1524E9DD08006882B4 /* ToastUI */,
 			);
 			productName = "Count my breaths";
 			productReference = DF8E95B3246B8E8F004AB783 /* Count my breaths.app */;
@@ -360,9 +375,9 @@
 			);
 			mainGroup = DF8E95AA246B8E8E004AB783;
 			packageReferences = (
-				DF1219092471E0B500112F63,
-				DF8D99342479CD4C00824C52,
-				DFFC8E1424E9DD08006882B4,
+				DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference "ChartView" */,
+				DF8D99342479CD4C00824C52 /* XCRemoteSwiftPackageReference "QuickComponents" */,
+				DFFC8E1424E9DD08006882B4 /* XCRemoteSwiftPackageReference "ToastUI" */,
 			);
 			productRefGroup = DF8E95B4246B8E8F004AB783 /* Products */;
 			projectDirPath = "";
@@ -402,12 +417,14 @@
 				DF7965C224D9D6E900B2D958 /* BreathingTrackerRootView.swift in Sources */,
 				DF8E95B7246B8E8F004AB783 /* AppDelegate.swift in Sources */,
 				DF1CCDEF247FFBCB00E53F71 /* BreathingTrackerViewRouter.swift in Sources */,
+				DF45D01D253B944C00E6995E /* App.swift in Sources */,
 				DF2A7D49246F2FC000140EDA /* HeaderView.swift in Sources */,
 				DF7744E624D5E4AB00A8B33B /* Theme.swift in Sources */,
 				DF7965BE24D9D14E00B2D958 /* RootViews.swift in Sources */,
 				DF8E95E0246B92F1004AB783 /* HistoryView.swift in Sources */,
 				DF796B2C24EC86420028357F /* TargetBreathingRateView.swift in Sources */,
 				DF796B2A24EC82C10028357F /* PetProfileView.swift in Sources */,
+				DF45D021253B973700E6995E /* PetProfileTextFieldView.swift in Sources */,
 				DF7744E824D5E63900A8B33B /* Overwrites.swift in Sources */,
 				DF0A7A62246C6B760004D826 /* countmybreaths.xcdatamodeld in Sources */,
 				DF8E95B9246B8E8F004AB783 /* SceneDelegate.swift in Sources */,
@@ -420,7 +437,7 @@
 				F8C4D9FFF6E61BB0DA0B4806 /* RecordView.swift in Sources */,
 				F8C4DB6730AA424BAD4DFA11 /* RecordService.swift in Sources */,
 				DF796B2824EC82210028357F /* PetProfile.swift in Sources */,
-				DF58F23324DA136D00A5E23F /* RootViewRouter.swift in Sources */,
+				DF58F23324DA136D00A5E23F /* RootRouterState.swift in Sources */,
 				F8C4D05B47D43AAD9F7052D0 /* CoreDataUtilities.swift in Sources */,
 				F8C4D6A4A4226575503A6234 /* GraphView.swift in Sources */,
 				DF5FB88624DA6B9600CF6ACE /* macOSRoot.swift in Sources */,
@@ -434,6 +451,7 @@
 				F8C4DF2423C3C601BD0686D9 /* AboutUsView.swift in Sources */,
 				F8C4D9A1E7EC0B7243A5CD8F /* PetHealthDetailView.swift in Sources */,
 				F8C4D16D110C5EFE777E85F1 /* ListView.swift in Sources */,
+				DF45D015253B931E00E6995E /* RootRouter.swift in Sources */,
 				F8C4DA8D276433420A2D89E0 /* StatsView.swift in Sources */,
 				F8C4DD89B858D778EB1D2D0D /* Version.swift in Sources */,
 			);
@@ -591,7 +609,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Count my breaths/Count my breaths.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Count my breaths/Preview Content\"";
 				DEVELOPMENT_TEAM = Y259ZT3SQK;
 				ENABLE_PREVIEWS = YES;
@@ -619,7 +637,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Count my breaths/Count my breaths.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Count my breaths/Preview Content\"";
 				DEVELOPMENT_TEAM = Y259ZT3SQK;
 				ENABLE_PREVIEWS = YES;
@@ -715,7 +733,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		DF1219092471E0B500112F63 = {
+		DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference "ChartView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AppPear/ChartView.git";
 			requirement = {
@@ -723,7 +741,7 @@
 				minimumVersion = 1.5.0;
 			};
 		};
-		DF8D99342479CD4C00824C52 = {
+		DF8D99342479CD4C00824C52 /* XCRemoteSwiftPackageReference "QuickComponents" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/LucasCarioca/QuickComponents.git";
 			requirement = {
@@ -731,7 +749,7 @@
 				minimumVersion = 0.7.2;
 			};
 		};
-		DFFC8E1424E9DD08006882B4 = {
+		DFFC8E1424E9DD08006882B4 /* XCRemoteSwiftPackageReference "ToastUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/quanshousio/ToastUI.git";
 			requirement = {
@@ -742,19 +760,19 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		DF12190A2471E0B500112F63 = {
+		DF12190A2471E0B500112F63 /* SwiftUICharts */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DF1219092471E0B500112F63;
+			package = DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference "ChartView" */;
 			productName = SwiftUICharts;
 		};
-		DF8D99352479CD4C00824C52 = {
+		DF8D99352479CD4C00824C52 /* QuickComponents */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DF8D99342479CD4C00824C52;
+			package = DF8D99342479CD4C00824C52 /* XCRemoteSwiftPackageReference "QuickComponents" */;
 			productName = QuickComponents;
 		};
-		DFFC8E1524E9DD08006882B4 = {
+		DFFC8E1524E9DD08006882B4 /* ToastUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DFFC8E1424E9DD08006882B4;
+			package = DFFC8E1424E9DD08006882B4 /* XCRemoteSwiftPackageReference "ToastUI" */;
 			productName = ToastUI;
 		};
 /* End XCSwiftPackageProductDependency section */
