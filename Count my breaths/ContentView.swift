@@ -12,12 +12,13 @@ import StoreKit
 
 
 struct ContentView: View {
+    private var idiom : UIUserInterfaceIdiom { UIDevice.current.userInterfaceIdiom }
     var body: some View {
-        #if targetEnvironment(macCatalyst)
-        macOSRoot()
-        #else
+        if idiom == .pad {
+         macOSRoot()
+        } else {
         iOSRoot()
-        #endif
+        }
     }
 }
 

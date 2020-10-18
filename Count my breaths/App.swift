@@ -16,7 +16,7 @@ struct App: View {
     @State var version = VersionController.loadVersion()
     
     var body: some View {
-        iOSRoot()
+        ContentView()
             .toast(isPresented: $showNewVersion) {
             ToastView {
                 VStack {
