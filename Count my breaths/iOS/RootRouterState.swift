@@ -10,7 +10,7 @@ import Foundation
 import SwiftUI
 import Combine
 
-class RootViewRouter: ObservableObject {
+class RootRouterState: ObservableObject {
     
     @Published var currentView = "breathingTracker"
     

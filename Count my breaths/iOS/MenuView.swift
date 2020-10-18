@@ -9,40 +9,22 @@
 import SwiftUI
 
 struct MenuView: View {
-    @ObservedObject var viewRouter: RootViewRouter
+    @ObservedObject var viewRouter: RootRouterState
     @Binding var showMenu: Bool
     var body: some View {
         VStack(alignment: .leading) {
-            HStack {
-                Image(systemName: "timer").resizable().frame(width: 40, height: 35)
-                    .foregroundColor(self.viewRouter.currentView == "breathingTracker" ? Theme.colors.primary : Theme.colors.text)
-                Text("Breathing Tracker")
-                    .foregroundColor(self.viewRouter.currentView == "breathingTracker" ? Theme.colors.primary : Theme.colors.text)
-                    .font(.headline)
-            }.onTapGesture() {
+            MenuItem(label: "Breathing Tracker", iconName: "lungs.fill", page: "breathingTracker", currentPage: viewRouter.currentView)
+            .onTapGesture() {
                 self.navigateTo(page: "breathingTracker")
-            }
-            .padding(.top, 100)
-            HStack {
-                Image(systemName: "info.circle").resizable().frame(width: 40, height: 40)
-                    .foregroundColor(self.viewRouter.currentView == "info" ? Theme.colors.primary : Theme.colors.text)
-                Text("Information")
-                    .foregroundColor(self.viewRouter.currentView == "info" ? Theme.colors.primary : Theme.colors.text)
-                    .font(.headline)
-            }.onTapGesture() {
+            }.padding(.top, 75)
+            MenuItem(label: "Information", iconName: "info.circle.fill", page: "info", currentPage: viewRouter.currentView)
+            .onTapGesture() {
                 self.navigateTo(page: "info")
             }
-                .padding(.top, 30)
-            HStack {
-                Image(systemName: "heart.circle.fill").resizable().frame(width: 40, height: 40)
-                    .foregroundColor(self.viewRouter.currentView == "petprofile" ? Theme.colors.primary : Theme.colors.text)
-                Text("Pet Profile")
-                    .foregroundColor(self.viewRouter.currentView == "petprofile" ? Theme.colors.primary : Theme.colors.text)
-                    .font(.headline)
-            }.onTapGesture() {
+            MenuItem(label: "Pet Profile", iconName: "heart.circle.fill", page: "petprofile", currentPage: viewRouter.currentView)
+            .onTapGesture() {
                 self.navigateTo(page: "petprofile")
             }
-                .padding(.top, 30)
             Spacer()
         }
         .padding()
@@ -56,6 +38,25 @@ struct MenuView: View {
             self.viewRouter.currentView = page
             self.showMenu.toggle()
         }
+    }
+}
+
+struct MenuItem: View {
+    var label: String
+    var iconName: String
+    var page: String
+    var currentPage: String
+    var body: some View {
+        HStack {
+            Image(systemName: iconName).resizable().frame(width: 40, height: 40)
+                .foregroundColor(buttonColor())
+            Text(label)
+                .foregroundColor(buttonColor())
+                .font(.headline)
+        }.padding(.top, 20)
+    }
+    func buttonColor() -> Color{
+        currentPage == page ? Theme.colors.primary : Theme.colors.text
     }
 }
 
