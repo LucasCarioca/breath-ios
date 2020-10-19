@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct MacOSRootRouter: View {
-    @State var selected: NavigationPage? = .counter
+    @Binding var selected: NavigationPage?
     var body: some View {
         List {
             Section (header: Text("Breathing Tracker")) {
@@ -62,7 +62,7 @@ struct MacOSRootRouter: View {
                     selection: self.$selected) {
                     SideBarLabel("Pet profile", systemImage: "person.crop.circle.fill")
                 }
-            }
+            }   
         }
         .listStyle(GroupedListStyle())
     }

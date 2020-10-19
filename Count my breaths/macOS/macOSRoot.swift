@@ -28,7 +28,7 @@ struct macOSRoot: View {
         ZStack {
             Theme.colors.text.edgesIgnoringSafeArea(.all)
             NavigationView {
-                MacOSRootRouter()
+                MacOSRootRouter(selected: $selected)
             }
         }
     }
