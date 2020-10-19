@@ -35,7 +35,7 @@ struct macOSRoot: View {
             }
         }.onAppear {
             if UIDevice.current.userInterfaceIdiom == .phone {
-                selected = .counter
+                self.selected = .counter
             }
         }
     }
