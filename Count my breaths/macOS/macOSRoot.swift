@@ -12,7 +12,7 @@ import StoreKit
 import QuickComponents
 
 struct macOSRoot: View {
-    @State var selected: NavigationPage? = .counter
+    @State var selected: NavigationPage?
     init() {
         let userDefaults = UserDefaults.standard
         let appRuns = userDefaults.integer(forKey: "appruns")
@@ -29,6 +29,9 @@ struct macOSRoot: View {
             Theme.colors.text.edgesIgnoringSafeArea(.all)
             NavigationView {
                 MacOSRootRouter(selected: $selected)
+                CountView()
+                    .padding()
+                    .navigationBarTitle("Counter")
             }
         }
     }

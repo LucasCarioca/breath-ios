@@ -77,8 +77,11 @@ struct CountView: View {
                             self.showHelp.toggle()
                         }
                     }) {
-                        Image(systemName: "info.circle").foregroundColor(.blue)
-                    }.buttonStyle(PlainButtonStyle())
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 2).foregroundColor(.clear).frame(width: 40, height: 40)
+                            Image(systemName: "info.circle.fill").imageScale(.large)
+                        }
+                    }
                 ))
         }.toast(isPresented: $showWarning) {
             ToastView{
