@@ -16,6 +16,7 @@ struct CountView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
     @FetchRequest(fetchRequest: requestBuilder(limit: 1, sort: [])) var countRecords: FetchedResults<CountRecord>
 
+    @State var showHelp: Bool = false
     @State var timePublisher = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @State var isCounting = false
     @State var counter = 0
@@ -35,9 +36,7 @@ struct CountView: View {
     
 
     var body: some View {
-        VStack {
-            Text("Counter").Heading(size: .H5)
-            
+        VStack {            
             self.showResults ?
                 Text("Counted " + String(self.bpm) + " beats per minute.")
                     .Paragraph(align: .center, size: .MD) : nil
@@ -72,6 +71,15 @@ struct CountView: View {
                     Text("Reset")
             }.frame(height:50).buttonStyle(SecondaryButton()) : nil
             Spacer()
+                .navigationBarItems(trailing: (
+                    Button(action: {
+                        withAnimation {
+                            self.showHelp.toggle()
+                        }
+                    }) {
+                        Image(systemName: "info.circle").foregroundColor(.blue)
+                    }.buttonStyle(PlainButtonStyle())
+                ))
         }.toast(isPresented: $showWarning) {
             ToastView{
                 VStack {
@@ -94,6 +102,15 @@ struct CountView: View {
             }
         }.onAppear() {
             self.petProfile = PetProfileController.loadPetProfile()
+        }.sheet(isPresented: $showHelp) {
+            VStack {
+                HowToView()
+                Button(action: {
+                    self.showHelp = false
+                }) {
+                    Text("Close")
+                }.buttonStyle(SecondaryButton()).frame(width: 100, height: 50)
+            }.padding()
         }
         
     }

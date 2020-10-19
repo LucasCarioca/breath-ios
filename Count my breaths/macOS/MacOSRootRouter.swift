@@ -17,8 +17,7 @@ struct MacOSRootRouter: View {
                     destination:
                         CountView()
                             .padding()
-                            .padding(.top, 50)
-                            .edgesIgnoringSafeArea(.all),
+                            .navigationBarTitle("Counter"),
                     tag: .counter,
                     selection: self.$selected) {
                     SideBarLabel("Counter", systemImage: "timer")
@@ -26,9 +25,8 @@ struct MacOSRootRouter: View {
                 NavigationLink(
                     destination:
                         HistoryView()
-                        .padding()
-                        .padding(.top, 50)
-                        .edgesIgnoringSafeArea(.all),
+                            .padding()
+                            .navigationBarTitle("History"),
                     tag: .history,
                     selection: self.$selected) {
                     SideBarLabel("History", systemImage: "chart.bar.fill")
@@ -37,29 +35,32 @@ struct MacOSRootRouter: View {
             Section(header: Text("Information")){
                 NavigationLink(
                     destination:
-                        VStack {
-                            Text("Pet health").Heading(size: .H5)
-                            PetHealthView()
-                        }
-                        .padding()
-                        .padding(.top, 50)
-                        .edgesIgnoringSafeArea(.all),
+                        PetHealthView()
+                            .padding()
+                            .navigationBarTitle("Pet health"),
                     tag: .info,
                     selection: self.$selected) {
                     SideBarLabel("Pet health", systemImage: "heart.fill")
                 }
                 NavigationLink(
                     destination:
-                        VStack {
-                            Text("Pet health").Heading(size: .H5)
-                            AboutUsView()
-                        }
-                        .padding()
-                        .padding(.top, 50)
-                        .edgesIgnoringSafeArea(.all),
+                        AboutUsView()
+                            .padding()
+                            .navigationBarTitle("About us"),
                     tag: .about,
                     selection: self.$selected) {
-                    SideBarLabel("Pet health", systemImage: "info.circle.fill")
+                    SideBarLabel("About us", systemImage: "info.circle.fill")
+                }
+            }
+            Section(header: Text("Settings")){
+                NavigationLink(
+                    destination:
+                        PetProfileView()
+                            .padding()
+                            .navigationBarTitle("Pet profile"),
+                    tag: .profile,
+                    selection: self.$selected) {
+                    SideBarLabel("Pet profile", systemImage: "person.crop.circle.fill")
                 }
             }
         }
@@ -76,6 +77,7 @@ enum NavigationPage: Equatable, Identifiable {
     case how
     case info
     case about
+    case profile
 
     var id: NavigationPage { self }
 }

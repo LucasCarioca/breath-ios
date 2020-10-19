@@ -61,6 +61,6 @@ struct iOSRoot: View {
                                 }
                             }
                     ))
-        }
+        }.navigationViewStyle(StackNavigationViewStyle())
     }
 }

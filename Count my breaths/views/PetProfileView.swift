@@ -12,7 +12,6 @@ struct PetProfileView: View {
     @State var petProfile = PetProfileController.loadPetProfile()
     var body: some View {
         VStack {
-            Text("Pet profile").Heading(size: .H5)
             List {
                 NavigationLink(destination: TargetBreathingRateView(targetBpm: petProfile.targetBpm, action: self.updateTargetBpm)) {
                     HStack {

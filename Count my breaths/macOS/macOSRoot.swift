@@ -13,7 +13,6 @@ import QuickComponents
 
 struct macOSRoot: View {
     @State var selected: NavigationPage? = .counter
-    @State var showHelp: Bool = false
     init() {
         let userDefaults = UserDefaults.standard
         let appRuns = userDefaults.integer(forKey: "appruns")
@@ -30,24 +29,6 @@ struct macOSRoot: View {
             Theme.colors.text.edgesIgnoringSafeArea(.all)
             NavigationView {
                 MacOSRootRouter()
-                .navigationBarItems(trailing: (
-                    Button(action: {
-                        withAnimation {
-                            self.showHelp.toggle()
-                        }
-                    }) {
-                        Image(systemName: "info.circle").foregroundColor(.blue)
-                    }.buttonStyle(PlainButtonStyle())
-                ))
-            }.sheet(isPresented: $showHelp) {
-                VStack {
-                    HowToView()
-                    Button(action: {
-                        self.showHelp = false
-                    }) {
-                        Text("Close")
-                    }.buttonStyle(SecondaryButton()).frame(width: 100, height: 50)
-                }.padding()
             }
         }
     }

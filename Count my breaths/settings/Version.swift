@@ -16,8 +16,8 @@ class VersionController {
 
     private static let VERSION_KEY: String = "version"
     private static let CURRENT: String = "1.20.0"
-    private static let DESCRIPTION: String = "Improved statistics."
-    private static let NEW_FEATURES: [String] = ["Added high breathing rate percentage"]
+    private static let DESCRIPTION: String = "Added support for iPads"
+    private static let NEW_FEATURES: [String] = []
 
     public static func saveVersion(version: Version){
         let encoder = JSONEncoder()

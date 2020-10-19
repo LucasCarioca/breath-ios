@@ -20,6 +20,7 @@
 		DF45D021253B973700E6995E /* PetProfileTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF45D020253B973700E6995E /* PetProfileTextFieldView.swift */; };
 		DF45D056253BD8FA00E6995E /* SideBarLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF45D055253BD8FA00E6995E /* SideBarLabel.swift */; };
 		DF45D05A253BD92B00E6995E /* MacOSRootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF45D059253BD92B00E6995E /* MacOSRootRouter.swift */; };
+		DF576C4A253D47E2008FFF3D /* iPadOSRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF576C49253D47E2008FFF3D /* iPadOSRoot.swift */; };
 		DF58F23324DA136D00A5E23F /* RootRouterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF58F23224DA136D00A5E23F /* RootRouterState.swift */; };
 		DF58F23524DA14EF00A5E23F /* InfoViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF58F23424DA14EF00A5E23F /* InfoViewRouter.swift */; };
 		DF5FB88624DA6B9600CF6ACE /* macOSRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5FB88524DA6B9600CF6ACE /* macOSRoot.swift */; };
@@ -80,6 +81,7 @@
 		DF45D020253B973700E6995E /* PetProfileTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProfileTextFieldView.swift; sourceTree = "<group>"; };
 		DF45D055253BD8FA00E6995E /* SideBarLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarLabel.swift; sourceTree = "<group>"; };
 		DF45D059253BD92B00E6995E /* MacOSRootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacOSRootRouter.swift; sourceTree = "<group>"; };
+		DF576C49253D47E2008FFF3D /* iPadOSRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPadOSRoot.swift; sourceTree = "<group>"; };
 		DF58F23224DA136D00A5E23F /* RootRouterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouterState.swift; sourceTree = "<group>"; };
 		DF58F23424DA14EF00A5E23F /* InfoViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewRouter.swift; sourceTree = "<group>"; };
 		DF5FB88524DA6B9600CF6ACE /* macOSRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macOSRoot.swift; sourceTree = "<group>"; };
@@ -164,6 +166,14 @@
 			path = components;
 			sourceTree = "<group>";
 		};
+		DF576C48253D47D0008FFF3D /* iPadOS */ = {
+			isa = PBXGroup;
+			children = (
+				DF576C49253D47E2008FFF3D /* iPadOSRoot.swift */,
+			);
+			path = iPadOS;
+			sourceTree = "<group>";
+		};
 		DF5FB88424DA6B7F00CF6ACE /* macOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +247,7 @@
 		DF8E95B5246B8E8F004AB783 /* Count my breaths */ = {
 			isa = PBXGroup;
 			children = (
+				DF576C48253D47D0008FFF3D /* iPadOS */,
 				DF5FB88424DA6B7F00CF6ACE /* macOS */,
 				DF7744E024D52EA000A8B33B /* Count my breaths.entitlements */,
 				DF796B2624EC820F0028357F /* settings */,
@@ -453,6 +464,7 @@
 				F8C4D6B4C264F17C9679A7CA /* HowToView.swift in Sources */,
 				F8C4D333D1DE85423E3CD95E /* PetHealthView.swift in Sources */,
 				DF99661D24DA00BD008C58D3 /* MenuView.swift in Sources */,
+				DF576C4A253D47E2008FFF3D /* iPadOSRoot.swift in Sources */,
 				DF7965BC24D9D11600B2D958 /* iOSRoot.swift in Sources */,
 				DF1F9BF824B04E2400D0D90D /* HowToItemView.swift in Sources */,
 				F8C4DF2423C3C601BD0686D9 /* AboutUsView.swift in Sources */,
@@ -622,7 +634,7 @@
 				DEVELOPMENT_TEAM = Y259ZT3SQK;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Count my breaths/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -650,7 +662,7 @@
 				DEVELOPMENT_TEAM = Y259ZT3SQK;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Count my breaths/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
