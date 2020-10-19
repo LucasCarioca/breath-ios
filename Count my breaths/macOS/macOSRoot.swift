@@ -33,6 +33,10 @@ struct macOSRoot: View {
                     .padding()
                     .navigationBarTitle("Counter")
             }
+        }.onAppear {
+            if UIDevice.current.userInterfaceIdiom == .phone {
+                selected = .counter
+            }
         }
     }
 }

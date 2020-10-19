@@ -11,6 +11,10 @@ import SwiftUI
 struct iPadOSRoot: View {
     @State var selected: NavigationPage = .counter
 
+    init() {
+            
+    }
+    
     var body: some View {
         NavigationView {
             SidebarView(selected: self.$selected)
@@ -91,21 +95,3 @@ struct MainView: View {
         }
     }
 }
-
-struct BackButton: View {
-    var presentationMode : Binding<PresentationMode>
-
-    var body: some View {
-        Button(action: {
-            self.presentationMode.wrappedValue.dismiss()
-        }) {
-            HStack {
-                Image(systemName: "line.horizontal.3")
-                    .aspectRatio(contentMode: .fit)
-                    .foregroundColor(.black)
-            }
-        }
-    }
-}
-
-
