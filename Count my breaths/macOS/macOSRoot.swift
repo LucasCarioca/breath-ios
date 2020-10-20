@@ -29,6 +29,8 @@ struct macOSRoot: View {
             Theme.colors.text.edgesIgnoringSafeArea(.all)
             NavigationView {
                 MacOSRootRouter(selected: $selected)
+                    .navigationBarTitle("Menu")
+                
                 CountView()
                     .padding()
                     .navigationBarTitle("Counter")
