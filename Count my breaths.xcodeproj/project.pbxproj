@@ -32,7 +32,6 @@
 		DF8E95DC246B9086004AB783 /* CountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95DB246B9086004AB783 /* CountView.swift */; };
 		DF8E95E0246B92F1004AB783 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95DF246B92F1004AB783 /* HistoryView.swift */; };
 		DFF402D2253FCB57007979E4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF402D1253FCB57007979E4 /* Router.swift */; };
-		DFF402D6253FCB60007979E4 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF402D5253FCB60007979E4 /* Navigation.swift */; };
 		F8C4D05B47D43AAD9F7052D0 /* CoreDataUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DE596DF08528DE33AAED /* CoreDataUtilities.swift */; };
 		F8C4D16D110C5EFE777E85F1 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DC0344A919F923A5DD75 /* ListView.swift */; };
 		F8C4D333D1DE85423E3CD95E /* PetHealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DBCAF760247815D3C4A8 /* PetHealthView.swift */; };
@@ -84,7 +83,6 @@
 		DF8E95DB246B9086004AB783 /* CountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountView.swift; sourceTree = "<group>"; };
 		DF8E95DF246B92F1004AB783 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		DFF402D1253FCB57007979E4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		DFF402D5253FCB60007979E4 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		F8C4D3222819B96152879DDB /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		F8C4D3C2FDEF0B24243A39F1 /* StatsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
 		F8C4D649AE4E3C94E949A992 /* PetHealthDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetHealthDetailView.swift; sourceTree = "<group>"; };
@@ -181,7 +179,7 @@
 			children = (
 				DF796B2624EC820F0028357F /* settings */,
 				DF7744E424D5E48100A8B33B /* common */,
-				DFF402CA253FCB18007979E4 /* navigation */,
+				DFF402CA253FCB18007979E4 /* router */,
 				DFF402C6253FCAF4007979E4 /* information */,
 				DFF402BE253FCA9B007979E4 /* breathCounter */,
 				DF8E95B6246B8E8F004AB783 /* AppDelegate.swift */,
@@ -300,14 +298,13 @@
 			path = components;
 			sourceTree = "<group>";
 		};
-		DFF402CA253FCB18007979E4 /* navigation */ = {
+		DFF402CA253FCB18007979E4 /* router */ = {
 			isa = PBXGroup;
 			children = (
 				DFF402D9253FCB9A007979E4 /* components */,
 				DFF402D1253FCB57007979E4 /* Router.swift */,
-				DFF402D5253FCB60007979E4 /* Navigation.swift */,
 			);
-			path = navigation;
+			path = router;
 			sourceTree = "<group>";
 		};
 		DFF402D9253FCB9A007979E4 /* components */ = {
@@ -441,7 +438,6 @@
 				DF0A7A62246C6B760004D826 /* countmybreaths.xcdatamodeld in Sources */,
 				DF8E95B9246B8E8F004AB783 /* SceneDelegate.swift in Sources */,
 				DF8E95DC246B9086004AB783 /* CountView.swift in Sources */,
-				DFF402D6253FCB60007979E4 /* Navigation.swift in Sources */,
 				F8C4D7A6E2FCDE83C42D019A /* MailButton.swift in Sources */,
 				F8C4D9FFF6E61BB0DA0B4806 /* RecordView.swift in Sources */,
 				DFF402D2253FCB57007979E4 /* Router.swift in Sources */,
