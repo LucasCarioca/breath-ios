@@ -37,7 +37,7 @@ struct App: View {
                         Text("OK")
                     }.buttonStyle(PrimaryButton(variant: .contained)).frame(width: 100, height: 50)
                 }
-            }
+            }.padding()
         }
         .onAppear() {
             if (self.version.isNew) {
