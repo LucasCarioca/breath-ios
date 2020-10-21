@@ -20,7 +20,7 @@ struct Router: View {
                             .navigationBarTitle("Counter"),
                     tag: .counter,
                     selection: self.$selected) {
-                    SideBarLabel("Counter", systemImage: "timer")
+                    SideBarLabel("Counter", systemImage: "lungs.fill")
                 }
                 NavigationLink(
                     destination:
