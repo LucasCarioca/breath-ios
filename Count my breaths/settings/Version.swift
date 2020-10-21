@@ -15,7 +15,7 @@ struct Version: Codable {
 class VersionController {
 
     private static let VERSION_KEY: String = "version"
-    private static let CURRENT: String = "1.20.0"
+    private static let CURRENT: String = "2.0.0"
     private static let DESCRIPTION: String = "Added support for iPads"
     private static let NEW_FEATURES: [String] = []
 

@@ -1,15 +1,15 @@
 //
-//  MacOSRootRouter.swift
+//  Router.swift
 //  Count my breaths
 //
-//  Created by Lucas Desouza on 10/17/20.
+//  Created by Lucas Desouza on 10/20/20.
 //  Copyright © 2020 Lucas Desouza. All rights reserved.
 //
 
 import SwiftUI
 
-struct MacOSRootRouter: View {
-    @Binding var selected: NavigationPage?
+struct Router: View {
+    @Binding var selected: Routes?
     var body: some View {
         List {
             Section (header: Text("Breathing Tracker")) {
@@ -62,13 +62,13 @@ struct MacOSRootRouter: View {
                     selection: self.$selected) {
                     SideBarLabel("Pet profile", systemImage: "person.crop.circle.fill")
                 }
-            }   
+            }
         }
         .listStyle(GroupedListStyle())
     }
 }
 
-enum NavigationPage: Equatable, Identifiable {
+enum Routes: Equatable, Identifiable {
     case none
     case counter
     case history
@@ -79,5 +79,6 @@ enum NavigationPage: Equatable, Identifiable {
     case about
     case profile
 
-    var id: NavigationPage { self }
+    var id: Routes
+    { self }
 }

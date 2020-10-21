@@ -1,18 +1,17 @@
 //
-//  macOSRootView.swift
+//  Navigation.swift
 //  Count my breaths
 //
-//  Created by Lucas Desouza on 8/4/20.
+//  Created by Lucas Desouza on 10/20/20.
 //  Copyright © 2020 Lucas Desouza. All rights reserved.
 //
 
-import Foundation
 import SwiftUI
 import StoreKit
 import QuickComponents
 
-struct macOSRoot: View {
-    @State var selected: NavigationPage?
+struct Navigation: View {
+    @State var selected: Routes?
     init() {
         let userDefaults = UserDefaults.standard
         let appRuns = userDefaults.integer(forKey: "appruns")
@@ -28,7 +27,7 @@ struct macOSRoot: View {
         ZStack {
             Theme.colors.text.edgesIgnoringSafeArea(.all)
             NavigationView {
-                MacOSRootRouter(selected: $selected)
+                Router(selected: $selected)
                     .navigationBarTitle("Menu")
                 
                 CountView()
@@ -42,5 +41,3 @@ struct macOSRoot: View {
         }
     }
 }
-
-
