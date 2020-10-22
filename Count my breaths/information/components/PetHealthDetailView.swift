@@ -23,12 +23,7 @@ struct PetHealthDetailView: View {
             item.sourceUrl != nil && item.sourceText != nil ?
                     HStack {
                         Text("Source").fontWeight(.heavy)
-                        Button(action: {
-                            let url: NSURL = URL(string: self.item.sourceUrl!)! as NSURL
-                            UIApplication.shared.open(url as URL)
-                        }) {
-                            Text(verbatim: self.item.sourceText!)
-                        }
+                        Link(self.item.sourceText!, destination: URL(string: self.item.sourceUrl!)!)
                         Spacer()
                     }.padding() : nil
             Spacer()
