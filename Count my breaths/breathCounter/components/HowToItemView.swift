@@ -13,7 +13,7 @@ struct HowToItemView: View {
     var text: String
     var body: some View {
         HStack{
-            Image(image).resizable().frame(width: 50, height: 50)
+            Image(systemName: image).font(.largeTitle).foregroundColor(Theme.colors.primary)
             Text(text).fontWeight(.heavy)
             Spacer()
         }.padding()

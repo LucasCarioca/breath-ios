@@ -16,15 +16,14 @@
 		DF45D011253B8B7200E6995E /* ToastUI in Frameworks */ = {isa = PBXBuildFile; productRef = DFFC8E1524E9DD08006882B4 /* ToastUI */; };
 		DF45D01D253B944C00E6995E /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF45D01C253B944C00E6995E /* App.swift */; };
 		DF45D021253B973700E6995E /* PetProfileTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF45D020253B973700E6995E /* PetProfileTextFieldView.swift */; };
-		DF45D056253BD8FA00E6995E /* SideBarLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF45D055253BD8FA00E6995E /* SideBarLabel.swift */; };
 		DF6EEFE2247F5B9F00FC80D0 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF6EEFE1247F5B9F00FC80D0 /* CloudKit.framework */; };
+		DF72CE0D2541147100AC077B /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF72CE0C2541147100AC077B /* Persistence.swift */; };
 		DF7744E624D5E4AB00A8B33B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7744E524D5E4AB00A8B33B /* Theme.swift */; };
 		DF7744E824D5E63900A8B33B /* Overwrites.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7744E724D5E63900A8B33B /* Overwrites.swift */; };
 		DF796B2824EC82210028357F /* PetProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF796B2724EC82210028357F /* PetProfile.swift */; };
 		DF796B2A24EC82C10028357F /* PetProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF796B2924EC82C10028357F /* PetProfileView.swift */; };
 		DF796B2C24EC86420028357F /* TargetBreathingRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF796B2B24EC86420028357F /* TargetBreathingRateView.swift */; };
-		DF8E95B7246B8E8F004AB783 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95B6246B8E8F004AB783 /* AppDelegate.swift */; };
-		DF8E95B9246B8E8F004AB783 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95B8246B8E8F004AB783 /* SceneDelegate.swift */; };
+		DF8517C32541220C0085DFFB /* UpdateChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8517C22541220C0085DFFB /* UpdateChangeView.swift */; };
 		DF8E95BD246B8E93004AB783 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF8E95BC246B8E93004AB783 /* Assets.xcassets */; };
 		DF8E95C0246B8E93004AB783 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF8E95BF246B8E93004AB783 /* Preview Assets.xcassets */; };
 		DF8E95C3246B8E93004AB783 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF8E95C1246B8E93004AB783 /* LaunchScreen.storyboard */; };
@@ -62,17 +61,16 @@
 		DF2B080C253FCED9000631D4 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		DF45D01C253B944C00E6995E /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		DF45D020253B973700E6995E /* PetProfileTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProfileTextFieldView.swift; sourceTree = "<group>"; };
-		DF45D055253BD8FA00E6995E /* SideBarLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarLabel.swift; sourceTree = "<group>"; };
 		DF6EEFE1247F5B9F00FC80D0 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		DF72CE0C2541147100AC077B /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		DF7744E024D52EA000A8B33B /* Count my breaths.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Count my breaths.entitlements"; sourceTree = "<group>"; };
 		DF7744E524D5E4AB00A8B33B /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		DF7744E724D5E63900A8B33B /* Overwrites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overwrites.swift; sourceTree = "<group>"; };
 		DF796B2724EC82210028357F /* PetProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProfile.swift; sourceTree = "<group>"; };
 		DF796B2924EC82C10028357F /* PetProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProfileView.swift; sourceTree = "<group>"; };
 		DF796B2B24EC86420028357F /* TargetBreathingRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetBreathingRateView.swift; sourceTree = "<group>"; };
+		DF8517C22541220C0085DFFB /* UpdateChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateChangeView.swift; sourceTree = "<group>"; };
 		DF8E95B3246B8E8F004AB783 /* Count my breaths.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Count my breaths.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DF8E95B6246B8E8F004AB783 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DF8E95B8246B8E8F004AB783 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DF8E95BC246B8E93004AB783 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF8E95BF246B8E93004AB783 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DF8E95C2246B8E93004AB783 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -151,6 +149,7 @@
 				DF2B0816253FD09B000631D4 /* services */,
 				DFF402C4253FCAE2007979E4 /* components */,
 				DFF402C3253FCAD8007979E4 /* pages */,
+				DF8517C22541220C0085DFFB /* UpdateChangeView.swift */,
 			);
 			path = settings;
 			sourceTree = "<group>";
@@ -179,12 +178,11 @@
 			children = (
 				DF796B2624EC820F0028357F /* settings */,
 				DF7744E424D5E48100A8B33B /* common */,
-				DFF402CA253FCB18007979E4 /* router */,
 				DFF402C6253FCAF4007979E4 /* information */,
 				DFF402BE253FCA9B007979E4 /* breathCounter */,
-				DF8E95B6246B8E8F004AB783 /* AppDelegate.swift */,
-				DF8E95B8246B8E8F004AB783 /* SceneDelegate.swift */,
 				DF45D01C253B944C00E6995E /* App.swift */,
+				DFF402D1253FCB57007979E4 /* Router.swift */,
+				DF72CE0C2541147100AC077B /* Persistence.swift */,
 				DF8E95BC246B8E93004AB783 /* Assets.xcassets */,
 				DF8E95C1246B8E93004AB783 /* LaunchScreen.storyboard */,
 				DF8E95C4246B8E93004AB783 /* Info.plist */,
@@ -294,23 +292,6 @@
 			isa = PBXGroup;
 			children = (
 				F8C4D649AE4E3C94E949A992 /* PetHealthDetailView.swift */,
-			);
-			path = components;
-			sourceTree = "<group>";
-		};
-		DFF402CA253FCB18007979E4 /* router */ = {
-			isa = PBXGroup;
-			children = (
-				DFF402D9253FCB9A007979E4 /* components */,
-				DFF402D1253FCB57007979E4 /* Router.swift */,
-			);
-			path = router;
-			sourceTree = "<group>";
-		};
-		DFF402D9253FCB9A007979E4 /* components */ = {
-			isa = PBXGroup;
-			children = (
-				DF45D055253BD8FA00E6995E /* SideBarLabel.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -426,17 +407,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF8E95B7246B8E8F004AB783 /* AppDelegate.swift in Sources */,
 				DF45D01D253B944C00E6995E /* App.swift in Sources */,
 				DF7744E624D5E4AB00A8B33B /* Theme.swift in Sources */,
 				DF2B080D253FCED9000631D4 /* MailView.swift in Sources */,
 				DF8E95E0246B92F1004AB783 /* HistoryView.swift in Sources */,
 				DF796B2C24EC86420028357F /* TargetBreathingRateView.swift in Sources */,
 				DF796B2A24EC82C10028357F /* PetProfileView.swift in Sources */,
+				DF8517C32541220C0085DFFB /* UpdateChangeView.swift in Sources */,
 				DF45D021253B973700E6995E /* PetProfileTextFieldView.swift in Sources */,
 				DF7744E824D5E63900A8B33B /* Overwrites.swift in Sources */,
 				DF0A7A62246C6B760004D826 /* countmybreaths.xcdatamodeld in Sources */,
-				DF8E95B9246B8E8F004AB783 /* SceneDelegate.swift in Sources */,
 				DF8E95DC246B9086004AB783 /* CountView.swift in Sources */,
 				F8C4D7A6E2FCDE83C42D019A /* MailButton.swift in Sources */,
 				F8C4D9FFF6E61BB0DA0B4806 /* RecordView.swift in Sources */,
@@ -450,10 +430,10 @@
 				DF1F9BF824B04E2400D0D90D /* HowToItemView.swift in Sources */,
 				F8C4DF2423C3C601BD0686D9 /* AboutUsView.swift in Sources */,
 				F8C4D9A1E7EC0B7243A5CD8F /* PetHealthDetailView.swift in Sources */,
-				DF45D056253BD8FA00E6995E /* SideBarLabel.swift in Sources */,
 				F8C4D16D110C5EFE777E85F1 /* ListView.swift in Sources */,
 				F8C4DA8D276433420A2D89E0 /* StatsView.swift in Sources */,
 				F8C4DD89B858D778EB1D2D0D /* Version.swift in Sources */,
+				DF72CE0D2541147100AC077B /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,7 +589,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Count my breaths/Count my breaths.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"Count my breaths/Preview Content\"";
 				DEVELOPMENT_TEAM = Y259ZT3SQK;
 				ENABLE_PREVIEWS = YES;
@@ -625,7 +605,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -637,7 +617,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Count my breaths/Count my breaths.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"Count my breaths/Preview Content\"";
 				DEVELOPMENT_TEAM = Y259ZT3SQK;
 				ENABLE_PREVIEWS = YES;
@@ -653,7 +633,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = countmybreaths;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;

@@ -20,7 +20,7 @@ struct Router: View {
                             .navigationBarTitle("Counter"),
                     tag: .counter,
                     selection: self.$selected) {
-                    SideBarLabel("Counter", systemImage: "lungs.fill")
+                    Label("Counter", systemImage: "lungs.fill")
                 }
                 NavigationLink(
                     destination:
@@ -29,7 +29,7 @@ struct Router: View {
                             .navigationBarTitle("History"),
                     tag: .history,
                     selection: self.$selected) {
-                    SideBarLabel("History", systemImage: "chart.bar.fill")
+                    Label("History", systemImage: "chart.bar.fill")
                 }
             }
             Section(header: Text("Information")){
@@ -40,7 +40,7 @@ struct Router: View {
                             .navigationBarTitle("Pet health"),
                     tag: .info,
                     selection: self.$selected) {
-                    SideBarLabel("Pet health", systemImage: "heart.fill")
+                    Label("Pet health", systemImage: "heart.fill")
                 }
                 NavigationLink(
                     destination:
@@ -49,7 +49,7 @@ struct Router: View {
                             .navigationBarTitle("About us"),
                     tag: .about,
                     selection: self.$selected) {
-                    SideBarLabel("About us", systemImage: "info.circle.fill")
+                    Label("About us", systemImage: "info.circle.fill")
                 }
             }
             Section(header: Text("Settings")){
@@ -60,7 +60,7 @@ struct Router: View {
                             .navigationBarTitle("Pet profile"),
                     tag: .profile,
                     selection: self.$selected) {
-                    SideBarLabel("Pet profile", systemImage: "person.crop.circle.fill")
+                    Label("Pet profile", systemImage: "person.crop.circle.fill")
                 }
             }
         }
