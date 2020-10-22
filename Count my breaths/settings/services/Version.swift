@@ -21,7 +21,7 @@ struct Change: Hashable, Codable {
 class VersionController {
 
     private static let VERSION_KEY: String = "version"
-    private static let CURRENT: String = "0.0.3"
+    private static let CURRENT: String = "2.0.1"
     private static let DESCRIPTION: String = "We have made some changes since you last used the app."
     private static let NEW_FEATURES: [Change] = [
         Change(title: "Adding a fresher look", description: "We are making small adjustments to the styling and getting the app more in line with the apple ecosystem", image: "paintbrush.fill")

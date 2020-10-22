@@ -36,12 +36,14 @@ struct UpdateChangeTitleCard: View {
                 .font(.title)
                 .foregroundColor(Theme.colors.text)
                 .padding(.top, 50)
+                .multilineTextAlignment(.center)
             Spacer()
             Image("icon")
             Spacer()
             Text(description)
                 .padding()
                 .foregroundColor(Theme.colors.text)
+                .multilineTextAlignment(.center)
             Spacer()
         }
     }
@@ -57,6 +59,7 @@ struct UpdateChangeCard: View {
                 .font(.title)
                 .foregroundColor(Theme.colors.text)
                 .padding(.top, 50)
+                .multilineTextAlignment(.center)
             Spacer()
             Image(systemName: image)
                 .resizable()
@@ -67,6 +70,7 @@ struct UpdateChangeCard: View {
             Text(description)
                 .padding()
                 .foregroundColor(Theme.colors.text)
+                .multilineTextAlignment(.center)
             Spacer()
         }
     }
@@ -79,10 +83,12 @@ struct UpdateChangeFinalCard: View {
             Text("All done")
                 .font(.title)
                 .foregroundColor(Theme.colors.text)
+                .multilineTextAlignment(.center)
                 .padding(.top, 50)
             Text("Lets get started!")
                 .font(.title)
                 .foregroundColor(Theme.colors.text)
+                .multilineTextAlignment(.center)
                 
             Spacer()
             Image("icon")
