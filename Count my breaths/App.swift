@@ -37,7 +37,7 @@ struct AppRoot: App {
                 Theme.colors.text.edgesIgnoringSafeArea(.all)
                 NavigationView {
                     Router(selected: $selected)
-                        .navigationBarTitle("Heyyyyoo")
+                        .navigationBarTitle("Menu")
                     
                     CountView()
                         .padding()
