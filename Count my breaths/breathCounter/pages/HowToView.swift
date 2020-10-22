@@ -16,11 +16,11 @@ struct HowToView: View {
             }.padding(.bottom).padding(.top)
             ScrollView {
                 VStack {
-                    HowToItemView(image: "one", text: "Wait for your pet to go to sleep")
-                    HowToItemView(image: "two", text: "Open the app to the counter page")
-                    HowToItemView(image: "three", text: "Click on the heart button to start counting")
-                    HowToItemView(image: "four", text: "Keep clicking the button for each breath until the timer ends (Be sure to count a full up and down chest movement as a breath)")
-                    HowToItemView(image: "five", text: "Once complete, the final count will appear on the screen and in the history page")
+                    HowToItemView(image: "1.circle.fill", text: "Wait for your pet to go to sleep")
+                    HowToItemView(image: "2.circle.fill", text: "Open the app to the counter page")
+                    HowToItemView(image: "3.circle.fill", text: "Click on the heart button to start counting")
+                    HowToItemView(image: "4.circle.fill", text: "Keep clicking the button for each breath until the timer ends (Be sure to count a full up and down chest movement as a breath)")
+                    HowToItemView(image: "5.circle.fill", text: "Once complete, the final count will appear on the screen and in the history page")
                 }
             }
         }

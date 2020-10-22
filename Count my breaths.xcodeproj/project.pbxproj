@@ -23,6 +23,7 @@
 		DF796B2824EC82210028357F /* PetProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF796B2724EC82210028357F /* PetProfile.swift */; };
 		DF796B2A24EC82C10028357F /* PetProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF796B2924EC82C10028357F /* PetProfileView.swift */; };
 		DF796B2C24EC86420028357F /* TargetBreathingRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF796B2B24EC86420028357F /* TargetBreathingRateView.swift */; };
+		DF8517C32541220C0085DFFB /* UpdateChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8517C22541220C0085DFFB /* UpdateChangeView.swift */; };
 		DF8E95BD246B8E93004AB783 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF8E95BC246B8E93004AB783 /* Assets.xcassets */; };
 		DF8E95C0246B8E93004AB783 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF8E95BF246B8E93004AB783 /* Preview Assets.xcassets */; };
 		DF8E95C3246B8E93004AB783 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF8E95C1246B8E93004AB783 /* LaunchScreen.storyboard */; };
@@ -68,6 +69,7 @@
 		DF796B2724EC82210028357F /* PetProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProfile.swift; sourceTree = "<group>"; };
 		DF796B2924EC82C10028357F /* PetProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProfileView.swift; sourceTree = "<group>"; };
 		DF796B2B24EC86420028357F /* TargetBreathingRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetBreathingRateView.swift; sourceTree = "<group>"; };
+		DF8517C22541220C0085DFFB /* UpdateChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateChangeView.swift; sourceTree = "<group>"; };
 		DF8E95B3246B8E8F004AB783 /* Count my breaths.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Count my breaths.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF8E95BC246B8E93004AB783 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF8E95BF246B8E93004AB783 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				DF2B0816253FD09B000631D4 /* services */,
 				DFF402C4253FCAE2007979E4 /* components */,
 				DFF402C3253FCAD8007979E4 /* pages */,
+				DF8517C22541220C0085DFFB /* UpdateChangeView.swift */,
 			);
 			path = settings;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				DF8E95E0246B92F1004AB783 /* HistoryView.swift in Sources */,
 				DF796B2C24EC86420028357F /* TargetBreathingRateView.swift in Sources */,
 				DF796B2A24EC82C10028357F /* PetProfileView.swift in Sources */,
+				DF8517C32541220C0085DFFB /* UpdateChangeView.swift in Sources */,
 				DF45D021253B973700E6995E /* PetProfileTextFieldView.swift in Sources */,
 				DF7744E824D5E63900A8B33B /* Overwrites.swift in Sources */,
 				DF0A7A62246C6B760004D826 /* countmybreaths.xcdatamodeld in Sources */,

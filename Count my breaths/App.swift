@@ -47,34 +47,23 @@ struct AppRoot: App {
                 if UIDevice.current.userInterfaceIdiom == .phone {
                     self.selected = .counter
                 }
-            }
-                .toast(isPresented: $showNewVersion) {
-                ToastView {
-                    VStack {
-                        Text("New Features v\(self.version.version) 🎉").Paragraph(align: .center, size: .LG)
-                        ScrollView {
-                            VStack {
-                                Text(self.version.description).Paragraph(align: .center)
-                                self.version.newFeatures.count >= 1 ? ForEach(0..<self.version.newFeatures.count) { index in
-                                    Text(self.version.newFeatures[index]).Paragraph(align: .center)
-                                } : nil
-                            }
-                        }.frame(maxHeight: 150)
-                        Button(action: {
-                            self.showNewVersion = false
-                            self.version.isNew = false
-                            VersionController.saveVersion(version: self.version)
-                        }) {
-                            Text("OK")
-                        }.buttonStyle(PrimaryButton(variant: .contained)).frame(width: 100, height: 50)
-                    }
-                }.padding()
-            }
-            .onAppear() {
                 if (self.version.isNew) {
                     self.showNewVersion = true
                 }
+            }.fullScreenCover(isPresented: self.$showNewVersion) {
+                UpdateChangeView(
+                    version: self.version.version,
+                    versionDescription: self.version.description,
+                    changes: self.version.newFeatures,
+                    action: self.dismissNewVersionPopup
+                )
             }.environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
+    }
+    
+    func dismissNewVersionPopup() {
+        self.showNewVersion = false
+        self.version.isNew = false
+        VersionController.saveVersion(version: self.version)
     }
 }

@@ -9,15 +9,23 @@ struct Version: Codable {
     var version: String
     var isNew: Bool
     var description: String
-    var newFeatures: [String]
+    var newFeatures: [Change]
+}
+
+struct Change: Hashable, Codable {
+    var title: String
+    var description: String
+    var image: String
 }
 
 class VersionController {
 
     private static let VERSION_KEY: String = "version"
-    private static let CURRENT: String = "2.0.0"
-    private static let DESCRIPTION: String = "Major update"
-    private static let NEW_FEATURES: [String] = ["Adds support for iPads", "Complete UI overhaul"]
+    private static let CURRENT: String = "0.0.3"
+    private static let DESCRIPTION: String = "We have made some changes since you last used the app."
+    private static let NEW_FEATURES: [Change] = [
+        Change(title: "Adding a fresher look", description: "We are making small adjustments to the styling and getting the app more in line with the apple ecosystem", image: "paintbrush.fill")
+    ]
 
     public static func saveVersion(version: Version){
         let encoder = JSONEncoder()
