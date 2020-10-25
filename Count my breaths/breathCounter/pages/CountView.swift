@@ -55,7 +55,7 @@ struct CountView: View {
                         .background(Color(red:78/255, green:78/255, blue:78/255))
                         .cornerRadius(20)
                 }
-            }.buttonStyle(PlainButtonStyle())
+            }.accessibility(label: Text("Start counting")).buttonStyle(PlainButtonStyle())
             .onReceive(self.timePublisher) { time in
                 if(self.isCounting) {
                     if (self.timer >= 30) {
