@@ -5,6 +5,7 @@ on:
     - 'chore/*'
 jobs:
   publish:
+    timeout-minutes: 20
     name: Basic checks
     runs-on: macos-latest
     steps:
