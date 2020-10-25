@@ -111,6 +111,7 @@ platform :ios do
       derived_data_path: "~/Library/Developer/Xcode/DerivedData",
       output_directory: "./test_results",
       scheme: "e2e")
+    ensure_git_status_clean
   end
 
 end
