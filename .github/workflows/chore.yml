@@ -35,3 +35,11 @@ jobs:
           FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
           FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT: 600
         run: bundle exec fastlane tests
+      - name: Publish Unit Test Results
+        uses: EnricoMi/publish-unit-test-result-action@v1.3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          check_name: Unit Test Results
+          files: test_results/**/*.xml
+          report_individual_runs: true
+          deduplicate_classes_by_file_name: false
