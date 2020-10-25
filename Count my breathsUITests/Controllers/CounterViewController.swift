@@ -9,10 +9,9 @@
 import XCTest
 
 public class CounterViewController: Controller {
-    var app: XCUIApplication
+    var app: XCUIApplication = XCUIApplication()
     
-    required init(app: XCUIApplication) {
-        self.app = app
+    required init() {
         setup()
     }
     

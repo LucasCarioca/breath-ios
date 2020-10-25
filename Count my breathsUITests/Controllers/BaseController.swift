@@ -10,7 +10,6 @@ import XCTest
 
 protocol Controller {
     var app: XCUIApplication { get set }
-    init(app: XCUIApplication)
     func skipNewVersionPopup() -> Void
     func viewDidLoad() -> Bool
     func openMenu() -> Void
@@ -19,7 +18,6 @@ protocol Controller {
 extension Controller {
 
     public func setup(){
-        self.app.launch()
         skipNewVersionPopup()
     }
     
