@@ -8,7 +8,7 @@
 
 import XCTest
 
-public class CounterViewController: Controller {
+public class CounterPageModel: PageModel {
     var app: XCUIApplication = XCUIApplication()
     
     required init() {

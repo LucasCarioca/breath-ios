@@ -8,7 +8,7 @@
 
 import XCTest
 
-public class HistoryViewController: Controller {
+public class HistoryPageModel: PageModel {
     var app: XCUIApplication = XCUIApplication()
     
     required init() {
