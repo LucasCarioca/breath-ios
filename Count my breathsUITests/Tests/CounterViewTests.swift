@@ -14,13 +14,18 @@ class CounterViewTests: XCTestCase {
         continueAfterFailure = false
     }
     
+    override func setUp() {
+        super.setUp()
+        XCUIApplication().launch()
+    }
+    
     func test_shouldLoad() throws {
-        let counterView = CounterViewController(app: XCUIApplication())
+        let counterView = CounterViewController()
         XCTAssert(counterView.viewDidLoad())
     }
     
     func test_shouldCountOnButtonTap() throws {
-        let counterView = CounterViewController(app: XCUIApplication())
+        let counterView = CounterViewController()
         counterView.clickCountBreathButton()
         XCTAssert(counterView.isCounter(at: 1))
         XCTAssert(counterView.isTimer(at: 30))
@@ -32,7 +37,7 @@ class CounterViewTests: XCTestCase {
     }
     
     func test_onCountReset_shouldStopCounting() throws {
-        let counterView = CounterViewController(app: XCUIApplication())
+        let counterView = CounterViewController()
         counterView.clickCountBreathButton()
         XCTAssert(counterView.isCounter(at: 1))
         counterView.clickResetButton()
@@ -41,7 +46,7 @@ class CounterViewTests: XCTestCase {
     }
     
     func test_onCountEnd_shouldShowResult() throws {
-        let counterView = CounterViewController(app: XCUIApplication())
+        let counterView = CounterViewController()
         counterView.clickCountBreathButton(times: 3)
         XCTAssert(counterView.isResult(at: 6, timeout: 35))
     }

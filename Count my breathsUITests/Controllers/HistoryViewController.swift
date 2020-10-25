@@ -9,10 +9,9 @@
 import XCTest
 
 public class HistoryViewController: Controller {
-    var app: XCUIApplication
+    var app: XCUIApplication = XCUIApplication()
     
-    required init(app: XCUIApplication) {
-        self.app = app
+    required init() {
         setup()
         openMenu()
         app.cells["History"].tap()
@@ -24,19 +23,18 @@ public class HistoryViewController: Controller {
             && app.buttons["Stats"].exists
     }
     
-    public func createRecord(at beats: Int) {
-        openMenu()
-        app.cells["Counter"].tap()
-        for _ in 0..<beats {
-            app.buttons["Start counting"].tap()
-        }
-        guard app.staticTexts["Counted \(beats * 2) beats per minute."].waitForExistence(timeout: 35) else { return }
-        openMenu()
-        app.cells["History"].tap()
-    }
-    
     public func recordExists(with value: Int) -> Bool {
         app.staticTexts["\(value).00"].exists
     }
     
+    public func getRecordsCount() -> Int {
+        app.tables.cells.count
+    }
+    
+    public func deleteRecord(at index: Int) {
+        let tablesQuery = app.tables.cells
+        tablesQuery.element(boundBy: index).swipeLeft()
+        tablesQuery.element(boundBy: index).buttons["Delete"].tap()
+    }
+ 
 }
