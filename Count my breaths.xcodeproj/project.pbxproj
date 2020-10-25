@@ -3,12 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		DF0A7A62246C6B760004D826 /* countmybreaths.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DF0A7A60246C6B760004D826 /* countmybreaths.xcdatamodeld */; };
-		DF0A7A94246C6F900004D826 /* countmybreaths.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DF0A7A60246C6B760004D826 /* countmybreaths.xcdatamodeld */; };
 		DF1F9BF824B04E2400D0D90D /* HowToItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1F9BF724B04E2400D0D90D /* HowToItemView.swift */; };
 		DF2B080D253FCED9000631D4 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2B080C253FCED9000631D4 /* MailView.swift */; };
 		DF45D00F253B8B7200E6995E /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = DF12190A2471E0B500112F63 /* SwiftUICharts */; };
@@ -27,9 +26,13 @@
 		DF8E95BD246B8E93004AB783 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF8E95BC246B8E93004AB783 /* Assets.xcassets */; };
 		DF8E95C0246B8E93004AB783 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF8E95BF246B8E93004AB783 /* Preview Assets.xcassets */; };
 		DF8E95C3246B8E93004AB783 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF8E95C1246B8E93004AB783 /* LaunchScreen.storyboard */; };
-		DF8E95CE246B8E93004AB783 /* Count_my_breathsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95CD246B8E93004AB783 /* Count_my_breathsTests.swift */; };
 		DF8E95DC246B9086004AB783 /* CountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95DB246B9086004AB783 /* CountView.swift */; };
 		DF8E95E0246B92F1004AB783 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E95DF246B92F1004AB783 /* HistoryView.swift */; };
+		DFA26AB3254525DF00E86B99 /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA26AB2254525DF00E86B99 /* CounterViewController.swift */; };
+		DFA26AB9254525ED00E86B99 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA26AB8254525ED00E86B99 /* BaseController.swift */; };
+		DFA26AC12545330400E86B99 /* HistoryViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA26AC02545330400E86B99 /* HistoryViewTests.swift */; };
+		DFA26AC92545333D00E86B99 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA26AC82545333D00E86B99 /* HistoryViewController.swift */; };
+		DFB21BD22544FB5A003CE2DB /* CounterViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB21BD12544FB5A003CE2DB /* CounterViewTests.swift */; };
 		DFF402D2253FCB57007979E4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF402D1253FCB57007979E4 /* Router.swift */; };
 		F8C4D05B47D43AAD9F7052D0 /* CoreDataUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DE596DF08528DE33AAED /* CoreDataUtilities.swift */; };
 		F8C4D16D110C5EFE777E85F1 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DC0344A919F923A5DD75 /* ListView.swift */; };
@@ -46,7 +49,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		DF8E95CA246B8E93004AB783 /* PBXContainerItemProxy */ = {
+		DFB21BD42544FB5A003CE2DB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DF8E95AB246B8E8E004AB783 /* Project object */;
 			proxyType = 1;
@@ -75,11 +78,15 @@
 		DF8E95BF246B8E93004AB783 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DF8E95C2246B8E93004AB783 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF8E95C4246B8E93004AB783 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DF8E95C9246B8E93004AB783 /* Count my breathsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Count my breathsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DF8E95CD246B8E93004AB783 /* Count_my_breathsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Count_my_breathsTests.swift; sourceTree = "<group>"; };
-		DF8E95CF246B8E93004AB783 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF8E95DB246B9086004AB783 /* CountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountView.swift; sourceTree = "<group>"; };
 		DF8E95DF246B92F1004AB783 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		DFA26AB2254525DF00E86B99 /* CounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
+		DFA26AB8254525ED00E86B99 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
+		DFA26AC02545330400E86B99 /* HistoryViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewTests.swift; sourceTree = "<group>"; };
+		DFA26AC82545333D00E86B99 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		DFB21BCF2544FB5A003CE2DB /* Count my breathsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Count my breathsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFB21BD12544FB5A003CE2DB /* CounterViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewTests.swift; sourceTree = "<group>"; };
+		DFB21BD32544FB5A003CE2DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFF402D1253FCB57007979E4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		F8C4D3222819B96152879DDB /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		F8C4D3C2FDEF0B24243A39F1 /* StatsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
@@ -107,7 +114,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DF8E95C6246B8E93004AB783 /* Frameworks */ = {
+		DFB21BCC2544FB5A003CE2DB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -158,7 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				DF8E95B5246B8E8F004AB783 /* Count my breaths */,
-				DF8E95CC246B8E93004AB783 /* Count my breathsTests */,
+				DFB21BD02544FB5A003CE2DB /* Count my breathsUITests */,
 				DF8E95B4246B8E8F004AB783 /* Products */,
 				DF6EEFE0247F5B9F00FC80D0 /* Frameworks */,
 			);
@@ -168,7 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				DF8E95B3246B8E8F004AB783 /* Count my breaths.app */,
-				DF8E95C9246B8E93004AB783 /* Count my breathsTests.xctest */,
+				DFB21BCF2544FB5A003CE2DB /* Count my breathsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -201,13 +208,33 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		DF8E95CC246B8E93004AB783 /* Count my breathsTests */ = {
+		DFA26ABE254532CD00E86B99 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DF8E95CD246B8E93004AB783 /* Count_my_breathsTests.swift */,
-				DF8E95CF246B8E93004AB783 /* Info.plist */,
+				DFA26AB2254525DF00E86B99 /* CounterViewController.swift */,
+				DFA26AB8254525ED00E86B99 /* BaseController.swift */,
+				DFA26AC82545333D00E86B99 /* HistoryViewController.swift */,
 			);
-			path = "Count my breathsTests";
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DFA26ABF254532DC00E86B99 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DFB21BD12544FB5A003CE2DB /* CounterViewTests.swift */,
+				DFA26AC02545330400E86B99 /* HistoryViewTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		DFB21BD02544FB5A003CE2DB /* Count my breathsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DFA26ABF254532DC00E86B99 /* Tests */,
+				DFA26ABE254532CD00E86B99 /* Controllers */,
+				DFB21BD32544FB5A003CE2DB /* Info.plist */,
+			);
+			path = "Count my breathsUITests";
 			sourceTree = "<group>";
 		};
 		DFF402BE253FCA9B007979E4 /* breathCounter */ = {
@@ -321,23 +348,24 @@
 			productReference = DF8E95B3246B8E8F004AB783 /* Count my breaths.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DF8E95C8246B8E93004AB783 /* Count my breathsTests */ = {
+		DFB21BCE2544FB5A003CE2DB /* Count my breathsUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DF8E95D5246B8E93004AB783 /* Build configuration list for PBXNativeTarget "Count my breathsTests" */;
+			buildConfigurationList = DFB21BD62544FB5A003CE2DB /* Build configuration list for PBXNativeTarget "Count my breathsUITests" */;
 			buildPhases = (
-				DF8E95C5246B8E93004AB783 /* Sources */,
-				DF8E95C6246B8E93004AB783 /* Frameworks */,
-				DF8E95C7246B8E93004AB783 /* Resources */,
+				DFB21BCB2544FB5A003CE2DB /* Sources */,
+				DFB21BCC2544FB5A003CE2DB /* Frameworks */,
+				DFB21BCD2544FB5A003CE2DB /* Resources */,
+				DFA26AAD25450DEF00E86B99 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DF8E95CB246B8E93004AB783 /* PBXTargetDependency */,
+				DFB21BD52544FB5A003CE2DB /* PBXTargetDependency */,
 			);
-			name = "Count my breathsTests";
-			productName = "Count my breathsTests";
-			productReference = DF8E95C9246B8E93004AB783 /* Count my breathsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
+			name = "Count my breathsUITests";
+			productName = "Count my breathsUITests";
+			productReference = DFB21BCF2544FB5A003CE2DB /* Count my breathsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -345,15 +373,15 @@
 		DF8E95AB246B8E8E004AB783 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
+				LastSwiftUpdateCheck = 1210;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Lucas Desouza";
 				TargetAttributes = {
 					DF8E95B2246B8E8E004AB783 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
-					DF8E95C8246B8E93004AB783 = {
-						CreatedOnToolsVersion = 11.3.1;
+					DFB21BCE2544FB5A003CE2DB = {
+						CreatedOnToolsVersion = 12.1;
 						TestTargetID = DF8E95B2246B8E8E004AB783;
 					};
 				};
@@ -377,7 +405,7 @@
 			projectRoot = "";
 			targets = (
 				DF8E95B2246B8E8E004AB783 /* Count my breaths */,
-				DF8E95C8246B8E93004AB783 /* Count my breathsTests */,
+				DFB21BCE2544FB5A003CE2DB /* Count my breathsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -393,7 +421,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DF8E95C7246B8E93004AB783 /* Resources */ = {
+		DFB21BCD2544FB5A003CE2DB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -401,6 +429,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DFA26AAD25450DEF00E86B99 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/bin/xcrun simctl uninstall booted com.lucasdesouza.countmybreaths || true\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DF8E95AF246B8E8E004AB783 /* Sources */ = {
@@ -437,22 +486,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DF8E95C5246B8E93004AB783 /* Sources */ = {
+		DFB21BCB2544FB5A003CE2DB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF8E95CE246B8E93004AB783 /* Count_my_breathsTests.swift in Sources */,
-				DF0A7A94246C6F900004D826 /* countmybreaths.xcdatamodeld in Sources */,
+				DFA26AB3254525DF00E86B99 /* CounterViewController.swift in Sources */,
+				DFB21BD22544FB5A003CE2DB /* CounterViewTests.swift in Sources */,
+				DFA26AB9254525ED00E86B99 /* BaseController.swift in Sources */,
+				DFA26AC92545333D00E86B99 /* HistoryViewController.swift in Sources */,
+				DFA26AC12545330400E86B99 /* HistoryViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		DF8E95CB246B8E93004AB783 /* PBXTargetDependency */ = {
+		DFB21BD52544FB5A003CE2DB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DF8E95B2246B8E8E004AB783 /* Count my breaths */;
-			targetProxy = DF8E95CA246B8E93004AB783 /* PBXContainerItemProxy */;
+			targetProxy = DFB21BD42544FB5A003CE2DB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -638,45 +690,45 @@
 			};
 			name = Release;
 		};
-		DF8E95D6246B8E93004AB783 /* Debug */ = {
+		DFB21BD72544FB5A003CE2DB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Count my breathsTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				DEVELOPMENT_TEAM = Y259ZT3SQK;
+				INFOPLIST_FILE = "Count my breathsUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "de.Count-my-breathsTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.lucasdesouza.Count-my-breathsUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Count my breaths.app/Count my breaths";
+				TEST_TARGET_NAME = "Count my breaths";
 			};
 			name = Debug;
 		};
-		DF8E95D7246B8E93004AB783 /* Release */ = {
+		DFB21BD82544FB5A003CE2DB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Count my breathsTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				DEVELOPMENT_TEAM = Y259ZT3SQK;
+				INFOPLIST_FILE = "Count my breathsUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "de.Count-my-breathsTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.lucasdesouza.Count-my-breathsUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Count my breaths.app/Count my breaths";
+				TEST_TARGET_NAME = "Count my breaths";
 			};
 			name = Release;
 		};
@@ -701,11 +753,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DF8E95D5246B8E93004AB783 /* Build configuration list for PBXNativeTarget "Count my breathsTests" */ = {
+		DFB21BD62544FB5A003CE2DB /* Build configuration list for PBXNativeTarget "Count my breathsUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DF8E95D6246B8E93004AB783 /* Debug */,
-				DF8E95D7246B8E93004AB783 /* Release */,
+				DFB21BD72544FB5A003CE2DB /* Debug */,
+				DFB21BD82544FB5A003CE2DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

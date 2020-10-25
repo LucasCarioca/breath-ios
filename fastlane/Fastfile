@@ -104,4 +104,16 @@ platform :ios do
     push_to_git_remote
   end
 
+  lane :tests do
+    run_tests(
+      devices: ["iPhone 12"],
+      buildlog_path: "./fastlane/fastlane-buildlog",
+      derived_data_path: "~/Library/Developer/Xcode/DerivedData",
+      output_directory: "./test_results",
+      scheme: "e2e")
+    git_add
+    git_commit(path: "*", message: "Test results")
+    ensure_git_status_clean
+  end
+
 end
