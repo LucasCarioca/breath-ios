@@ -1,0 +1,14 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -scheme e2e -project "./Count my breaths.xcodeproj" -derivedDataPath "~/Library/Developer/Xcode/DerivedData" -destination "platform=iOS Simulator,id=DF8605B8-A2D2-4F16-AB60-DCF85B5C8515" build test
+
+User defaults from command line:
+    IDEDerivedDataPathOverride = /var/root/Library/Developer/Xcode/DerivedData
+
+Resolve Package Graph
+
+Resolved source packages:
+  QuickComponents: https://github.com/LucasCarioca/QuickComponents.git @ 0.7.3
+  ToastUI: https://github.com/quanshousio/ToastUI.git @ 1.2.1
+  SwiftUICharts: https://github.com/AppPear/ChartView.git @ 1.5.4
+
+

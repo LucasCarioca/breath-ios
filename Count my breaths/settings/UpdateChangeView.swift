@@ -99,7 +99,7 @@ struct UpdateChangeFinalCard: View {
                     .foregroundColor(Theme.colors.background)
                     .background(Theme.colors.primary)
                     .clipShape(RoundedRectangle(cornerRadius: 25.0))
-            }
+            }.accessibility(label: Text("Continue to app"))
             Spacer()
         }
     }

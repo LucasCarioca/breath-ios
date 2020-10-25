@@ -21,6 +21,7 @@ struct Router: View {
                     tag: .counter,
                     selection: self.$selected) {
                     Label("Counter", systemImage: "lungs.fill")
+                        .accessibility(label: Text("Counter"))
                 }
                 NavigationLink(
                     destination:
@@ -30,6 +31,7 @@ struct Router: View {
                     tag: .history,
                     selection: self.$selected) {
                     Label("History", systemImage: "chart.bar.fill")
+                        .accessibility(label: Text("History"))
                 }
             }
             Section(header: Text("Information")){
