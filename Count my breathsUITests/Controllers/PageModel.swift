@@ -8,14 +8,14 @@
 
 import XCTest
 
-protocol Controller {
+protocol PageModel {
     var app: XCUIApplication { get set }
     func skipNewVersionPopup() -> Void
     func viewDidLoad() -> Bool
     func openMenu() -> Void
 }
 
-extension Controller {
+extension PageModel {
 
     public func setup(){
         skipNewVersionPopup()
