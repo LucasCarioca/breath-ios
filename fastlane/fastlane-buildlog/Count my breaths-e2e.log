@@ -7,28 +7,15 @@ User defaults from command line:
 Resolve Package Graph
 
 Resolved source packages:
-  ToastUI: https://github.com/quanshousio/ToastUI.git @ 1.2.1
-  QuickComponents: https://github.com/LucasCarioca/QuickComponents.git @ 0.7.3
   SwiftUICharts: https://github.com/AppPear/ChartView.git @ 1.5.4
+  QuickComponents: https://github.com/LucasCarioca/QuickComponents.git @ 0.7.3
+  ToastUI: https://github.com/quanshousio/ToastUI.git @ 1.2.1
 
 
 note: Using new build system
 note: Building targets in parallel
 note: Planning build
 note: Using build description from disk
-ProcessProductPackaging "" /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Count\ my\ breaths.app.xcent (in target 'Count my breaths' from project 'Count my breaths')
-    cd /Users/lucasdesouza/projects/breath-ios
-    
-
-Entitlements:
-
-{
-    "com.apple.security.get-task-allow" = 1;
-}
-
-
-    builtin-productPackagingUtility -entitlements -format xml -o /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Count\ my\ breaths.app.xcent
-
 ProcessProductPackaging "" /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Count\ my\ breaths.app-Simulated.xcent (in target 'Count my breaths' from project 'Count my breaths')
     cd /Users/lucasdesouza/projects/breath-ios
     
@@ -42,35 +29,18 @@ Entitlements:
 
     builtin-productPackagingUtility -entitlements -format xml -o /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Count\ my\ breaths.app-Simulated.xcent
 
-CompileSwiftSources normal x86_64 com.apple.xcode.tools.swift.compiler (in target 'Count my breaths' from project 'Count my breaths')
+ProcessProductPackaging "" /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Count\ my\ breaths.app.xcent (in target 'Count my breaths' from project 'Count my breaths')
     cd /Users/lucasdesouza/projects/breath-ios
-    export DEVELOPER_DIR\=/Applications/Xcode.app/Contents/Developer
-    export SDKROOT\=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.1.sdk
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -incremental -module-name Count_my_breaths -Onone -enable-batch-mode -enforce-exclusivity\=checked @/Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/Count\ my\ breaths.SwiftFileList -DDEBUG -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.1.sdk -target x86_64-apple-ios14.0-simulator -g -module-cache-path /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Index/DataStore -swift-version 5 -I /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator -F /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator -c -j12 -output-file-map /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/Count\ my\ breaths-OutputFileMap.json -parseable-output -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/Count_my_breaths.swiftmodule -Xcc -I/Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/swift-overrides.hmap -Xcc -iquote -Xcc /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Count\ my\ breaths-generated-files.hmap -Xcc -I/Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Count\ my\ breaths-own-target-headers.hmap -Xcc -I/Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Count\ my\ breaths-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/all-product-headers.yaml -Xcc -iquote -Xcc /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Count\ my\ breaths-project-headers.hmap -Xcc -I/Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/DerivedSources-normal/x86_64 -Xcc -I/Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/DerivedSources/x86_64 -Xcc -I/Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/Count_my_breaths-Swift.h -working-directory /Users/lucasdesouza/projects/breath-ios
+    
 
-CompileSwift normal x86_64 /Users/lucasdesouza/projects/breath-ios/Count\ my\ breaths/Router.swift (in target 'Count my breaths' from project 'Count my breaths')
-    cd /Users/lucasdesouza/projects/breath-ios
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift -frontend -c /Users/lucasdesouza/projects/breath-ios/Count\ my\ breaths/App.swift /Users/lucasdesouza/projects/breath-ios/Count\ my\ breaths/common/Theme.swift /Users/lucasdesouza/projects/breath-ios/Count\ my\ breaths/breathCounter/pages/MailView.swift /Users/lucasdesouza/projects/breath-ios/Count\ my\ breaths/breathCounter/pages/HistoryView.swift /Users/lucasdesouza/projects/breath-ios/Count\ my\ breaths/settings/components/TargetBreathingRateView.swift /Users/lucasdesouza/projects/breath-ios/Count\ my\ breaths/settings/pages/PetProfileView.swift /Users/lucasdesouza/projects/breath-ios/Count\ my\ breaths/settings/UpdateChangeView.swift /Users/lucasdesouza/projects/breath-ios/Count\ my\ breaths/settings/components/PetProfileTextFieldView.swift /Users/lucasdesouza/projects/breath-ios/Count\ my\ breaths/common/Overwrites.swift /Users/lucasdesouza/projects/breath-ios/Count\ my\ breaths/breathCounter/pages/CountView.swift /Users/lucasdesouza/projects/breath-ios/Count\ my\ breaths/breathCounter/components/MailButton.swift /Users/lucasdesouza/projects/breath-ios/Count\ my\ breaths/breathCounter/components/RecordView.swift -primary-file /Users/lucasdesouza/projects/breath-ios/Count\ my\ breaths/Router.swift /Users/lucasdesouza/projects/breath-ios/Count\ my\ breaths/breathCounter/services/RecordService.swift /Users/lucasdesouza/projects/breath-ios/Count\ my\ breaths/settings/services/PetProfile.swift /Users/lucasdesouza/projects/breath-ios/Count\ my\ breaths/breathCounter/services/CoreDataUtilities.swift /Users/lucasdesouza/projects/breath-ios/Count\ my\ breaths/breathCounter/pages/GraphView.swift /Users/lucasdesouza/projects/breath-ios/Count\ my\ breaths/breathCounter/pages/HowToView.swift /Users/lucasdesouza/projects/breath-ios/Count\ my\ breaths/information/pages/PetHealthView.swift /Users/lucasdesouza/projects/breath-ios/Count\ my\ breaths/breathCounter/components/HowToItemView.swift /Users/lucasdesouza/projects/breath-ios/Count\ my\ breaths/information/pages/AboutUsView.swift /Users/lucasdesouza/projects/breath-ios/Count\ my\ breaths/information/components/PetHealthDetailView.swift /Users/lucasdesouza/projects/breath-ios/Count\ my\ breaths/breathCounter/pages/ListView.swift /Users/lucasdesouza/projects/breath-ios/Count\ my\ breaths/breathCounter/pages/StatsView.swift /Users/lucasdesouza/projects/breath-ios/Count\ my\ breaths/settings/services/Version.swift /Users/lucasdesouza/projects/breath-ios/Count\ my\ breaths/Persistence.swift /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/DerivedSources/CoreDataGenerated/countmybreaths/CountRecord+CoreDataClass.swift /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/DerivedSources/CoreDataGenerated/countmybreaths/CountRecord+CoreDataProperties.swift /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/DerivedSources/CoreDataGenerated/countmybreaths/countmybreaths+CoreDataModel.swift -emit-module-path /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/Router\~partial.swiftmodule -emit-module-doc-path /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/Router\~partial.swiftdoc -emit-module-source-info-path /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/Router\~partial.swiftsourceinfo -serialize-diagnostics-path /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/Router.dia -emit-dependencies-path /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/Router.d -emit-reference-dependencies-path /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/Router.swiftdeps -target x86_64-apple-ios14.0-simulator -enable-objc-interop -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.1.sdk -I /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator -F /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator -enable-testing -g -module-cache-path /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -swift-version 5 -enforce-exclusivity\=checked -Onone -D DEBUG -serialize-debugging-options -Xcc -working-directory -Xcc /Users/lucasdesouza/projects/breath-ios -enable-anonymous-context-mangled-names -Xcc -I/Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/swift-overrides.hmap -Xcc -iquote -Xcc /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Count\ my\ breaths-generated-files.hmap -Xcc -I/Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Count\ my\ breaths-own-target-headers.hmap -Xcc -I/Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Count\ my\ breaths-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/all-product-headers.yaml -Xcc -iquote -Xcc /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Count\ my\ breaths-project-headers.hmap -Xcc -I/Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/DerivedSources-normal/x86_64 -Xcc -I/Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/DerivedSources/x86_64 -Xcc -I/Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/DerivedSources -Xcc -DDEBUG\=1 -target-sdk-version 14.1 -module-name Count_my_breaths -o /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/Router.o -index-store-path /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Index/DataStore -index-system-modules
+Entitlements:
 
-MergeSwiftModule normal x86_64 (in target 'Count my breaths' from project 'Count my breaths')
-    cd /Users/lucasdesouza/projects/breath-ios
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift -frontend -merge-modules -emit-module /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/App\~partial.swiftmodule /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/Theme\~partial.swiftmodule /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/MailView\~partial.swiftmodule /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/HistoryView\~partial.swiftmodule /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/TargetBreathingRateView\~partial.swiftmodule /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/PetProfileView\~partial.swiftmodule /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/UpdateChangeView\~partial.swiftmodule /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/PetProfileTextFieldView\~partial.swiftmodule /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/Overwrites\~partial.swiftmodule /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/CountView\~partial.swiftmodule /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/MailButton\~partial.swiftmodule /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/RecordView\~partial.swiftmodule /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/Router\~partial.swiftmodule /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/RecordService\~partial.swiftmodule /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/PetProfile\~partial.swiftmodule /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/CoreDataUtilities\~partial.swiftmodule /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/GraphView\~partial.swiftmodule /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/HowToView\~partial.swiftmodule /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/PetHealthView\~partial.swiftmodule /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/HowToItemView\~partial.swiftmodule /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/AboutUsView\~partial.swiftmodule /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/PetHealthDetailView\~partial.swiftmodule /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/ListView\~partial.swiftmodule /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/StatsView\~partial.swiftmodule /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/Version\~partial.swiftmodule /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/Persistence\~partial.swiftmodule /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/CountRecord+CoreDataClass\~partial.swiftmodule /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/CountRecord+CoreDataProperties\~partial.swiftmodule /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/countmybreaths+CoreDataModel\~partial.swiftmodule -parse-as-library -sil-merge-partial-modules -disable-diagnostic-passes -disable-sil-perf-optzns -target x86_64-apple-ios14.0-simulator -enable-objc-interop -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.1.sdk -I /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator -F /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator -enable-testing -g -module-cache-path /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -swift-version 5 -enforce-exclusivity\=checked -Onone -D DEBUG -serialize-debugging-options -Xcc -working-directory -Xcc /Users/lucasdesouza/projects/breath-ios -enable-anonymous-context-mangled-names -Xcc -I/Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/swift-overrides.hmap -Xcc -iquote -Xcc /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Count\ my\ breaths-generated-files.hmap -Xcc -I/Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Count\ my\ breaths-own-target-headers.hmap -Xcc -I/Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Count\ my\ breaths-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/all-product-headers.yaml -Xcc -iquote -Xcc /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Count\ my\ breaths-project-headers.hmap -Xcc -I/Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/DerivedSources-normal/x86_64 -Xcc -I/Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/DerivedSources/x86_64 -Xcc -I/Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/DerivedSources -Xcc -DDEBUG\=1 -target-sdk-version 14.1 -emit-module-doc-path /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/Count_my_breaths.swiftdoc -emit-module-source-info-path /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/Count_my_breaths.swiftsourceinfo -emit-objc-header-path /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/Count_my_breaths-Swift.h -module-name Count_my_breaths -o /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/Count_my_breaths.swiftmodule
+{
+    "com.apple.security.get-task-allow" = 1;
+}
 
-Ditto /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator/Count_my_breaths.swiftmodule/x86_64-apple-ios-simulator.swiftmodule /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/Count_my_breaths.swiftmodule (in target 'Count my breaths' from project 'Count my breaths')
-    cd /Users/lucasdesouza/projects/breath-ios
-    /usr/bin/ditto -rsrc /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/Count_my_breaths.swiftmodule /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator/Count_my_breaths.swiftmodule/x86_64-apple-ios-simulator.swiftmodule
 
-Ditto /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator/Count_my_breaths.swiftmodule/x86_64.swiftmodule /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/Count_my_breaths.swiftmodule (in target 'Count my breaths' from project 'Count my breaths')
-    cd /Users/lucasdesouza/projects/breath-ios
-    /usr/bin/ditto -rsrc /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/Count_my_breaths.swiftmodule /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator/Count_my_breaths.swiftmodule/x86_64.swiftmodule
-
-Ditto /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator/Count_my_breaths.swiftmodule/Project/x86_64.swiftsourceinfo /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/Count_my_breaths.swiftsourceinfo (in target 'Count my breaths' from project 'Count my breaths')
-    cd /Users/lucasdesouza/projects/breath-ios
-    /usr/bin/ditto -rsrc /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/Count_my_breaths.swiftsourceinfo /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator/Count_my_breaths.swiftmodule/Project/x86_64.swiftsourceinfo
-
-Ditto /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator/Count_my_breaths.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/Count_my_breaths.swiftsourceinfo (in target 'Count my breaths' from project 'Count my breaths')
-    cd /Users/lucasdesouza/projects/breath-ios
-    /usr/bin/ditto -rsrc /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Objects-normal/x86_64/Count_my_breaths.swiftsourceinfo /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator/Count_my_breaths.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo
+    builtin-productPackagingUtility -entitlements -format xml -o /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breaths.build/Count\ my\ breaths.app.xcent
 
 Ld /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator/Count\ my\ breaths.app/Count\ my\ breaths normal (in target 'Count my breaths' from project 'Count my breaths')
     cd /Users/lucasdesouza/projects/breath-ios
@@ -135,6 +105,10 @@ CompileSwiftSources normal x86_64 com.apple.xcode.tools.swift.compiler (in targe
 CompileSwift normal x86_64 /Users/lucasdesouza/projects/breath-ios/Count\ my\ breathsUITests/Controllers/PetHealthPageModel.swift (in target 'Count my breathsUITests' from project 'Count my breaths')
     cd /Users/lucasdesouza/projects/breath-ios
     /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift -frontend -c -primary-file /Users/lucasdesouza/projects/breath-ios/Count\ my\ breathsUITests/Controllers/PetHealthPageModel.swift /Users/lucasdesouza/projects/breath-ios/Count\ my\ breathsUITests/Controllers/CounterPageModel.swift /Users/lucasdesouza/projects/breath-ios/Count\ my\ breathsUITests/Tests/PetHealthPageTests.swift /Users/lucasdesouza/projects/breath-ios/Count\ my\ breathsUITests/Controllers/PetProfilePageModel.swift /Users/lucasdesouza/projects/breath-ios/Count\ my\ breathsUITests/Tests/CounterPageTests.swift /Users/lucasdesouza/projects/breath-ios/Count\ my\ breathsUITests/Controllers/PageModel.swift /Users/lucasdesouza/projects/breath-ios/Count\ my\ breathsUITests/Controllers/HistoryPageModel.swift /Users/lucasdesouza/projects/breath-ios/Count\ my\ breathsUITests/Tests/HistoryPageTests.swift /Users/lucasdesouza/projects/breath-ios/Count\ my\ breathsUITests/Tests/PetProfilePageTests.swift -emit-module-path /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breathsUITests.build/Objects-normal/x86_64/PetHealthPageModel\~partial.swiftmodule -emit-module-doc-path /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breathsUITests.build/Objects-normal/x86_64/PetHealthPageModel\~partial.swiftdoc -emit-module-source-info-path /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breathsUITests.build/Objects-normal/x86_64/PetHealthPageModel\~partial.swiftsourceinfo -serialize-diagnostics-path /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breathsUITests.build/Objects-normal/x86_64/PetHealthPageModel.dia -emit-dependencies-path /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breathsUITests.build/Objects-normal/x86_64/PetHealthPageModel.d -emit-reference-dependencies-path /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breathsUITests.build/Objects-normal/x86_64/PetHealthPageModel.swiftdeps -target x86_64-apple-ios14.1-simulator -enable-objc-interop -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.1.sdk -I /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator -I /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.1.sdk/Developer/Library/Frameworks -enable-testing -g -module-cache-path /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -swift-version 5 -enforce-exclusivity\=checked -Onone -D DEBUG -serialize-debugging-options -serialize-debugging-options -Xcc -working-directory -Xcc /Users/lucasdesouza/projects/breath-ios -enable-anonymous-context-mangled-names -Xcc -I/Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breathsUITests.build/swift-overrides.hmap -Xcc -iquote -Xcc /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breathsUITests.build/Count\ my\ breathsUITests-generated-files.hmap -Xcc -I/Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breathsUITests.build/Count\ my\ breathsUITests-own-target-headers.hmap -Xcc -I/Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breathsUITests.build/Count\ my\ breathsUITests-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breathsUITests.build/all-product-headers.yaml -Xcc -iquote -Xcc /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breathsUITests.build/Count\ my\ breathsUITests-project-headers.hmap -Xcc -I/Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breathsUITests.build/DerivedSources-normal/x86_64 -Xcc -I/Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breathsUITests.build/DerivedSources/x86_64 -Xcc -I/Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breathsUITests.build/DerivedSources -Xcc -DDEBUG\=1 -target-sdk-version 14.1 -module-name Count_my_breathsUITests -o /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breathsUITests.build/Objects-normal/x86_64/PetHealthPageModel.o -index-store-path /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Index/DataStore -index-system-modules
+
+CompileSwift normal x86_64 /Users/lucasdesouza/projects/breath-ios/Count\ my\ breathsUITests/Tests/PetHealthPageTests.swift (in target 'Count my breathsUITests' from project 'Count my breaths')
+    cd /Users/lucasdesouza/projects/breath-ios
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift -frontend -c /Users/lucasdesouza/projects/breath-ios/Count\ my\ breathsUITests/Controllers/PetHealthPageModel.swift /Users/lucasdesouza/projects/breath-ios/Count\ my\ breathsUITests/Controllers/CounterPageModel.swift -primary-file /Users/lucasdesouza/projects/breath-ios/Count\ my\ breathsUITests/Tests/PetHealthPageTests.swift /Users/lucasdesouza/projects/breath-ios/Count\ my\ breathsUITests/Controllers/PetProfilePageModel.swift /Users/lucasdesouza/projects/breath-ios/Count\ my\ breathsUITests/Tests/CounterPageTests.swift /Users/lucasdesouza/projects/breath-ios/Count\ my\ breathsUITests/Controllers/PageModel.swift /Users/lucasdesouza/projects/breath-ios/Count\ my\ breathsUITests/Controllers/HistoryPageModel.swift /Users/lucasdesouza/projects/breath-ios/Count\ my\ breathsUITests/Tests/HistoryPageTests.swift /Users/lucasdesouza/projects/breath-ios/Count\ my\ breathsUITests/Tests/PetProfilePageTests.swift -emit-module-path /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breathsUITests.build/Objects-normal/x86_64/PetHealthPageTests\~partial.swiftmodule -emit-module-doc-path /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breathsUITests.build/Objects-normal/x86_64/PetHealthPageTests\~partial.swiftdoc -emit-module-source-info-path /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breathsUITests.build/Objects-normal/x86_64/PetHealthPageTests\~partial.swiftsourceinfo -serialize-diagnostics-path /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breathsUITests.build/Objects-normal/x86_64/PetHealthPageTests.dia -emit-dependencies-path /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breathsUITests.build/Objects-normal/x86_64/PetHealthPageTests.d -emit-reference-dependencies-path /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breathsUITests.build/Objects-normal/x86_64/PetHealthPageTests.swiftdeps -target x86_64-apple-ios14.1-simulator -enable-objc-interop -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.1.sdk -I /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator -I /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.1.sdk/Developer/Library/Frameworks -enable-testing -g -module-cache-path /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -swift-version 5 -enforce-exclusivity\=checked -Onone -D DEBUG -serialize-debugging-options -serialize-debugging-options -Xcc -working-directory -Xcc /Users/lucasdesouza/projects/breath-ios -enable-anonymous-context-mangled-names -Xcc -I/Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breathsUITests.build/swift-overrides.hmap -Xcc -iquote -Xcc /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breathsUITests.build/Count\ my\ breathsUITests-generated-files.hmap -Xcc -I/Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breathsUITests.build/Count\ my\ breathsUITests-own-target-headers.hmap -Xcc -I/Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breathsUITests.build/Count\ my\ breathsUITests-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breathsUITests.build/all-product-headers.yaml -Xcc -iquote -Xcc /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breathsUITests.build/Count\ my\ breathsUITests-project-headers.hmap -Xcc -I/Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breathsUITests.build/DerivedSources-normal/x86_64 -Xcc -I/Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breathsUITests.build/DerivedSources/x86_64 -Xcc -I/Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breathsUITests.build/DerivedSources -Xcc -DDEBUG\=1 -target-sdk-version 14.1 -module-name Count_my_breathsUITests -o /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Count\ my\ breaths.build/Debug-iphonesimulator/Count\ my\ breathsUITests.build/Objects-normal/x86_64/PetHealthPageTests.o -index-store-path /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Index/DataStore -index-system-modules
 
 MergeSwiftModule normal x86_64 (in target 'Count my breathsUITests' from project 'Count my breaths')
     cd /Users/lucasdesouza/projects/breath-ios
@@ -646,234 +620,216 @@ Signing Identity:     "-"
     /usr/bin/codesign --force --sign - --timestamp\=none /Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator/Count\ my\ breathsUITests-Runner.app/PlugIns/Count\ my\ breathsUITests.xctest
 
 Testing started
-2020-10-25 02:32:13.095389-0500 Count my breathsUITests-Runner[3015:1551149] Running tests...
-Test Suite 'All tests' started at 2020-10-25 02:32:13.171
-Test Suite 'Count my breathsUITests.xctest' started at 2020-10-25 02:32:13.172
-Test Suite 'CounterPageTests' started at 2020-10-25 02:32:13.172
+2020-10-25 02:34:46.617770-0500 Count my breathsUITests-Runner[3431:1569125] Running tests...
+Test Suite 'All tests' started at 2020-10-25 02:34:46.694
+Test Suite 'Count my breathsUITests.xctest' started at 2020-10-25 02:34:46.695
+Test Suite 'CounterPageTests' started at 2020-10-25 02:34:46.695
 Test Case '-[Count_my_breathsUITests.CounterPageTests test_onCountEnd_shouldShowResult]' started.
-    t =     0.00s Start Test at 2020-10-25 02:32:13.173
-    t =     0.10s Set Up
+    t =     0.00s Start Test at 2020-10-25 02:34:46.696
+    t =     0.09s Set Up
     t =     0.10s     Open com.lucasdesouza.countmybreaths
-    t =     0.18s         Launch com.lucasdesouza.countmybreaths
-    t =     1.62s             Setting up automation session
-    t =     1.79s             Wait for com.lucasdesouza.countmybreaths to idle
-    t =     2.99s Checking existence of `"We have made some changes since you last used the app." StaticText`
-    t =     3.06s Swipe left Target Application 'com.lucasdesouza.countmybreaths'
-    t =     3.06s     Wait for com.lucasdesouza.countmybreaths to idle
-    t =     3.12s     Find the Target Application 'com.lucasdesouza.countmybreaths'
-    t =     3.13s     Check for interrupting elements affecting "Count my breaths" Application
-    t =     3.15s     Synthesize event
-    t =     3.38s     Wait for com.lucasdesouza.countmybreaths to idle
-    t =     3.68s Swipe left Target Application 'com.lucasdesouza.countmybreaths'
-    t =     3.68s     Wait for com.lucasdesouza.countmybreaths to idle
-    t =     3.73s     Find the Target Application 'com.lucasdesouza.countmybreaths'
-    t =     3.75s     Check for interrupting elements affecting "Count my breaths" Application
-    t =     3.77s     Synthesize event
-    t =     3.99s     Wait for com.lucasdesouza.countmybreaths to idle
-    t =     4.31s Tap "Continue to app" Button
-    t =     4.31s     Wait for com.lucasdesouza.countmybreaths to idle
-    t =     4.36s     Find the "Continue to app" Button
-    t =     4.38s     Check for interrupting elements affecting "Continue to app" Button
-    t =     4.39s     Synthesize event
-    t =     4.49s     Wait for com.lucasdesouza.countmybreaths to idle
-    t =     5.01s Tap "Start counting" Button
-    t =     5.01s     Wait for com.lucasdesouza.countmybreaths to idle
-    t =     5.07s     Find the "Start counting" Button
-    t =     5.08s     Check for interrupting elements affecting "Start counting" Button
-    t =     5.10s     Synthesize event
-    t =     5.21s     Wait for com.lucasdesouza.countmybreaths to idle
-    t =     5.29s Tap "Start counting" Button
-    t =     5.29s     Wait for com.lucasdesouza.countmybreaths to idle
-    t =     5.36s     Find the "Start counting" Button
-    t =     5.38s     Check for interrupting elements affecting "Start counting" Button
-    t =     5.40s     Synthesize event
-    t =     5.51s     Wait for com.lucasdesouza.countmybreaths to idle
-    t =     5.57s Tap "Start counting" Button
-    t =     5.57s     Wait for com.lucasdesouza.countmybreaths to idle
-    t =     5.63s     Find the "Start counting" Button
-    t =     5.65s     Check for interrupting elements affecting "Start counting" Button
-    t =     5.67s     Synthesize event
-    t =     5.78s     Wait for com.lucasdesouza.countmybreaths to idle
-    t =     5.84s Waiting 35.0s for "Counted 6 beats per minute." StaticText to exist
-    t =     6.86s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
-    t =     6.86s         Checking existence of `"Counted 6 beats per minute." StaticText`
-    t =     6.87s         Capturing element debug description
-    t =     7.88s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
-    t =     7.88s         Checking existence of `"Counted 6 beats per minute." StaticText`
-    t =     7.89s         Capturing element debug description
-    t =     8.90s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
-    t =     8.90s         Checking existence of `"Counted 6 beats per minute." StaticText`
-    t =     8.91s         Capturing element debug description
-    t =     9.92s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
-    t =     9.92s         Checking existence of `"Counted 6 beats per minute." StaticText`
-    t =     9.94s         Capturing element debug description
-    t =    10.96s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
-    t =    10.96s         Checking existence of `"Counted 6 beats per minute." StaticText`
-    t =    10.97s         Capturing element debug description
-    t =    12.00s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
-    t =    12.00s         Checking existence of `"Counted 6 beats per minute." StaticText`
-    t =    12.01s         Capturing element debug description
-    t =    13.04s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
-    t =    13.04s         Checking existence of `"Counted 6 beats per minute." StaticText`
-    t =    13.06s         Capturing element debug description
-    t =    14.08s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
-    t =    14.08s         Checking existence of `"Counted 6 beats per minute." StaticText`
-    t =    14.10s         Capturing element debug description
-    t =    15.11s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
-    t =    15.11s         Checking existence of `"Counted 6 beats per minute." StaticText`
-    t =    15.13s         Capturing element debug description
-    t =    16.15s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
-    t =    16.15s         Checking existence of `"Counted 6 beats per minute." StaticText`
-    t =    16.16s         Capturing element debug description
-    t =    17.18s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
-    t =    17.18s         Checking existence of `"Counted 6 beats per minute." StaticText`
-    t =    17.19s         Capturing element debug description
-    t =    18.21s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
-    t =    18.22s         Checking existence of `"Counted 6 beats per minute." StaticText`
-    t =    18.24s         Capturing element debug description
-    t =    19.26s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
-    t =    19.26s         Checking existence of `"Counted 6 beats per minute." StaticText`
-    t =    19.28s         Capturing element debug description
-    t =    20.30s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
-    t =    20.30s         Checking existence of `"Counted 6 beats per minute." StaticText`
-    t =    20.31s         Capturing element debug description
-    t =    21.34s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
-    t =    21.34s         Checking existence of `"Counted 6 beats per minute." StaticText`
-    t =    21.35s         Capturing element debug description
-    t =    22.39s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
-    t =    22.39s         Checking existence of `"Counted 6 beats per minute." StaticText`
-    t =    22.41s         Capturing element debug description
-    t =    23.43s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
-    t =    23.43s         Checking existence of `"Counted 6 beats per minute." StaticText`
-    t =    23.45s         Capturing element debug description
-    t =    24.47s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
-    t =    24.48s         Checking existence of `"Counted 6 beats per minute." StaticText`
-    t =    24.49s         Capturing element debug description
-    t =    25.52s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
-    t =    25.53s         Checking existence of `"Counted 6 beats per minute." StaticText`
-    t =    25.54s         Capturing element debug description
-    t =    26.56s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
-    t =    26.56s         Checking existence of `"Counted 6 beats per minute." StaticText`
-    t =    26.58s         Capturing element debug description
-    t =    27.59s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
-    t =    27.59s         Checking existence of `"Counted 6 beats per minute." StaticText`
-    t =    27.61s         Capturing element debug description
-    t =    28.63s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
-    t =    28.63s         Checking existence of `"Counted 6 beats per minute." StaticText`
-    t =    28.65s         Capturing element debug description
-    t =    29.67s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
-    t =    29.68s         Checking existence of `"Counted 6 beats per minute." StaticText`
-    t =    29.69s         Capturing element debug description
-    t =    30.72s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
-    t =    30.72s         Checking existence of `"Counted 6 beats per minute." StaticText`
-    t =    30.73s         Capturing element debug description
-    t =    31.76s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
-    t =    31.76s         Checking existence of `"Counted 6 beats per minute." StaticText`
-    t =    31.78s         Capturing element debug description
-    t =    32.80s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
-    t =    32.80s         Checking existence of `"Counted 6 beats per minute." StaticText`
-    t =    32.81s         Capturing element debug description
-    t =    33.83s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
-    t =    33.83s         Checking existence of `"Counted 6 beats per minute." StaticText`
-    t =    33.85s         Capturing element debug description
-    t =    34.85s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
-    t =    34.85s         Checking existence of `"Counted 6 beats per minute." StaticText`
-    t =    34.86s         Capturing element debug description
-    t =    35.88s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
-    t =    35.88s         Checking existence of `"Counted 6 beats per minute." StaticText`
-    t =    35.89s         Capturing element debug description
-    t =    36.91s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
-    t =    36.91s         Checking existence of `"Counted 6 beats per minute." StaticText`
-    t =    36.93s Tear Down
-Test Case '-[Count_my_breathsUITests.CounterPageTests test_onCountEnd_shouldShowResult]' passed (37.136 seconds).
+    t =     0.17s         Launch com.lucasdesouza.countmybreaths
+    t =     0.79s             Setting up automation session
+    t =     0.94s             Wait for com.lucasdesouza.countmybreaths to idle
+    t =     2.12s Checking existence of `"We have made some changes since you last used the app." StaticText`
+    t =     2.15s Tap "Start counting" Button
+    t =     2.15s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =     2.20s     Find the "Start counting" Button
+    t =     2.21s     Check for interrupting elements affecting "Start counting" Button
+    t =     2.23s     Synthesize event
+    t =     2.34s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =     2.40s Tap "Start counting" Button
+    t =     2.40s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =     2.45s     Find the "Start counting" Button
+    t =     2.47s     Check for interrupting elements affecting "Start counting" Button
+    t =     2.48s     Synthesize event
+    t =     2.59s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =     2.65s Tap "Start counting" Button
+    t =     2.65s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =     2.70s     Find the "Start counting" Button
+    t =     2.72s     Check for interrupting elements affecting "Start counting" Button
+    t =     2.73s     Synthesize event
+    t =     2.84s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =     2.90s Waiting 35.0s for "Counted 6 beats per minute." StaticText to exist
+    t =     3.92s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
+    t =     3.92s         Checking existence of `"Counted 6 beats per minute." StaticText`
+    t =     3.93s         Capturing element debug description
+    t =     4.95s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
+    t =     4.95s         Checking existence of `"Counted 6 beats per minute." StaticText`
+    t =     4.97s         Capturing element debug description
+    t =     5.99s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
+    t =     5.99s         Checking existence of `"Counted 6 beats per minute." StaticText`
+    t =     6.00s         Capturing element debug description
+    t =     7.02s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
+    t =     7.02s         Checking existence of `"Counted 6 beats per minute." StaticText`
+    t =     7.04s         Capturing element debug description
+    t =     8.05s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
+    t =     8.06s         Checking existence of `"Counted 6 beats per minute." StaticText`
+    t =     8.07s         Capturing element debug description
+    t =     9.09s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
+    t =     9.09s         Checking existence of `"Counted 6 beats per minute." StaticText`
+    t =     9.10s         Capturing element debug description
+    t =    10.12s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
+    t =    10.12s         Checking existence of `"Counted 6 beats per minute." StaticText`
+    t =    10.14s         Capturing element debug description
+    t =    11.17s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
+    t =    11.17s         Checking existence of `"Counted 6 beats per minute." StaticText`
+    t =    11.19s         Capturing element debug description
+    t =    12.22s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
+    t =    12.22s         Checking existence of `"Counted 6 beats per minute." StaticText`
+    t =    12.23s         Capturing element debug description
+    t =    13.25s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
+    t =    13.26s         Checking existence of `"Counted 6 beats per minute." StaticText`
+    t =    13.27s         Capturing element debug description
+    t =    14.30s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
+    t =    14.31s         Checking existence of `"Counted 6 beats per minute." StaticText`
+    t =    14.32s         Capturing element debug description
+    t =    15.35s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
+    t =    15.35s         Checking existence of `"Counted 6 beats per minute." StaticText`
+    t =    15.37s         Capturing element debug description
+    t =    16.40s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
+    t =    16.40s         Checking existence of `"Counted 6 beats per minute." StaticText`
+    t =    16.42s         Capturing element debug description
+    t =    17.45s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
+    t =    17.46s         Checking existence of `"Counted 6 beats per minute." StaticText`
+    t =    17.47s         Capturing element debug description
+    t =    18.50s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
+    t =    18.51s         Checking existence of `"Counted 6 beats per minute." StaticText`
+    t =    18.52s         Capturing element debug description
+    t =    19.55s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
+    t =    19.55s         Checking existence of `"Counted 6 beats per minute." StaticText`
+    t =    19.57s         Capturing element debug description
+    t =    20.60s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
+    t =    20.60s         Checking existence of `"Counted 6 beats per minute." StaticText`
+    t =    20.62s         Capturing element debug description
+    t =    21.65s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
+    t =    21.66s         Checking existence of `"Counted 6 beats per minute." StaticText`
+    t =    21.67s         Capturing element debug description
+    t =    22.70s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
+    t =    22.71s         Checking existence of `"Counted 6 beats per minute." StaticText`
+    t =    22.72s         Capturing element debug description
+    t =    23.75s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
+    t =    23.76s         Checking existence of `"Counted 6 beats per minute." StaticText`
+    t =    23.77s         Capturing element debug description
+    t =    24.80s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
+    t =    24.81s         Checking existence of `"Counted 6 beats per minute." StaticText`
+    t =    24.82s         Capturing element debug description
+    t =    25.85s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
+    t =    25.86s         Checking existence of `"Counted 6 beats per minute." StaticText`
+    t =    25.87s         Capturing element debug description
+    t =    26.90s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
+    t =    26.91s         Checking existence of `"Counted 6 beats per minute." StaticText`
+    t =    26.92s         Capturing element debug description
+    t =    27.95s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
+    t =    27.96s         Checking existence of `"Counted 6 beats per minute." StaticText`
+    t =    27.97s         Capturing element debug description
+    t =    29.00s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
+    t =    29.00s         Checking existence of `"Counted 6 beats per minute." StaticText`
+    t =    29.02s         Capturing element debug description
+    t =    30.05s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
+    t =    30.05s         Checking existence of `"Counted 6 beats per minute." StaticText`
+    t =    30.07s         Capturing element debug description
+    t =    31.09s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
+    t =    31.09s         Checking existence of `"Counted 6 beats per minute." StaticText`
+    t =    31.11s         Capturing element debug description
+    t =    32.12s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
+    t =    32.12s         Checking existence of `"Counted 6 beats per minute." StaticText`
+    t =    32.14s         Capturing element debug description
+    t =    33.15s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
+    t =    33.15s         Checking existence of `"Counted 6 beats per minute." StaticText`
+    t =    33.17s         Capturing element debug description
+    t =    34.20s     Checking `Expect predicate `exists == 1` for object "Counted 6 beats per minute." StaticText`
+    t =    34.20s         Checking existence of `"Counted 6 beats per minute." StaticText`
+    t =    34.22s Tear Down
+Test Case '-[Count_my_breathsUITests.CounterPageTests test_onCountEnd_shouldShowResult]' passed (34.422 seconds).
 Test Case '-[Count_my_breathsUITests.CounterPageTests test_onCountReset_shouldStopCounting]' started.
-    t =     0.00s Start Test at 2020-10-25 02:32:50.309
+    t =     0.00s Start Test at 2020-10-25 02:35:21.119
     t =     0.06s Set Up
     t =     0.06s     Open com.lucasdesouza.countmybreaths
     t =     0.11s         Launch com.lucasdesouza.countmybreaths
-    t =     0.11s             Terminate com.lucasdesouza.countmybreaths:3025
+    t =     0.11s             Terminate com.lucasdesouza.countmybreaths:3437
     t =     1.41s             Setting up automation session
-    t =     1.43s             Wait for com.lucasdesouza.countmybreaths to idle
-    t =     2.58s Checking existence of `"We have made some changes since you last used the app." StaticText`
-    t =     2.60s Tap "Start counting" Button
-    t =     2.60s     Wait for com.lucasdesouza.countmybreaths to idle
-    t =     2.66s     Find the "Start counting" Button
-    t =     2.68s     Check for interrupting elements affecting "Start counting" Button
-    t =     2.69s     Synthesize event
-    t =     2.81s     Wait for com.lucasdesouza.countmybreaths to idle
-    t =     2.86s Checking existence of `"Breaths: 1" StaticText`
-    t =     2.88s Tap "Reset" Button
-    t =     2.88s     Wait for com.lucasdesouza.countmybreaths to idle
-    t =     2.93s     Find the "Reset" Button
-    t =     2.94s     Check for interrupting elements affecting "Reset" Button
-    t =     2.95s     Synthesize event
-    t =     3.05s     Wait for com.lucasdesouza.countmybreaths to idle
-    t =     3.10s Checking existence of `"Breaths: 1" StaticText`
-    t =     3.12s Checking existence of `"Reset" Button`
-    t =     3.13s Tear Down
-Test Case '-[Count_my_breathsUITests.CounterPageTests test_onCountReset_shouldStopCounting]' passed (3.331 seconds).
+    t =     1.46s             Wait for com.lucasdesouza.countmybreaths to idle
+    t =     2.63s Checking existence of `"We have made some changes since you last used the app." StaticText`
+    t =     2.66s Tap "Start counting" Button
+    t =     2.66s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =     2.71s     Find the "Start counting" Button
+    t =     2.73s     Check for interrupting elements affecting "Start counting" Button
+    t =     2.74s     Synthesize event
+    t =     2.85s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =     2.90s Checking existence of `"Breaths: 1" StaticText`
+    t =     2.92s Tap "Reset" Button
+    t =     2.92s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =     2.96s     Find the "Reset" Button
+    t =     2.98s     Check for interrupting elements affecting "Reset" Button
+    t =     2.99s     Synthesize event
+    t =     3.09s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =     3.14s Checking existence of `"Breaths: 1" StaticText`
+    t =     3.15s Checking existence of `"Reset" Button`
+    t =     3.17s Tear Down
+Test Case '-[Count_my_breathsUITests.CounterPageTests test_onCountReset_shouldStopCounting]' passed (3.371 seconds).
 Test Case '-[Count_my_breathsUITests.CounterPageTests test_shouldCountOnButtonTap]' started.
-    t =     0.00s Start Test at 2020-10-25 02:32:53.642
+    t =     0.00s Start Test at 2020-10-25 02:35:24.490
     t =     0.06s Set Up
     t =     0.06s     Open com.lucasdesouza.countmybreaths
-    t =     0.12s         Launch com.lucasdesouza.countmybreaths
-    t =     0.12s             Terminate com.lucasdesouza.countmybreaths:3049
+    t =     0.11s         Launch com.lucasdesouza.countmybreaths
+    t =     0.11s             Terminate com.lucasdesouza.countmybreaths:3450
     t =     1.40s             Setting up automation session
     t =     1.43s             Wait for com.lucasdesouza.countmybreaths to idle
-    t =     2.59s Checking existence of `"We have made some changes since you last used the app." StaticText`
+    t =     2.60s Checking existence of `"We have made some changes since you last used the app." StaticText`
     t =     2.62s Tap "Start counting" Button
     t =     2.62s     Wait for com.lucasdesouza.countmybreaths to idle
     t =     2.67s     Find the "Start counting" Button
     t =     2.69s     Check for interrupting elements affecting "Start counting" Button
     t =     2.70s     Synthesize event
-    t =     2.82s     Wait for com.lucasdesouza.countmybreaths to idle
-    t =     2.88s Checking existence of `"Breaths: 1" StaticText`
+    t =     2.81s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =     2.87s Checking existence of `"Breaths: 1" StaticText`
     t =     2.89s Checking existence of `"Seconds remaining 30" StaticText`
-    t =     2.91s Checking existence of `"Reset" Button`
-    t =     2.92s Tap "Start counting" Button
-    t =     2.92s     Wait for com.lucasdesouza.countmybreaths to idle
-    t =     2.97s     Find the "Start counting" Button
-    t =     2.99s     Check for interrupting elements affecting "Start counting" Button
-    t =     3.00s     Synthesize event
-    t =     3.11s     Wait for com.lucasdesouza.countmybreaths to idle
-    t =     3.17s Checking existence of `"Breaths: 2" StaticText`
-    t =     3.18s Tap "Start counting" Button
-    t =     3.18s     Wait for com.lucasdesouza.countmybreaths to idle
-    t =     3.23s     Find the "Start counting" Button
-    t =     3.24s     Check for interrupting elements affecting "Start counting" Button
-    t =     3.26s     Synthesize event
-    t =     3.36s     Wait for com.lucasdesouza.countmybreaths to idle
-    t =     3.42s Checking existence of `"Breaths: 3" StaticText`
-    t =     3.43s Tear Down
-Test Case '-[Count_my_breathsUITests.CounterPageTests test_shouldCountOnButtonTap]' passed (3.636 seconds).
+    t =     2.90s Checking existence of `"Reset" Button`
+    t =     2.91s Tap "Start counting" Button
+    t =     2.91s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =     2.96s     Find the "Start counting" Button
+    t =     2.97s     Check for interrupting elements affecting "Start counting" Button
+    t =     2.99s     Synthesize event
+    t =     3.09s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =     3.14s Checking existence of `"Breaths: 2" StaticText`
+    t =     3.16s Tap "Start counting" Button
+    t =     3.16s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =     3.20s     Find the "Start counting" Button
+    t =     3.22s     Check for interrupting elements affecting "Start counting" Button
+    t =     3.23s     Synthesize event
+    t =     3.33s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =     3.40s Checking existence of `"Breaths: 3" StaticText`
+    t =     3.41s Tear Down
+Test Case '-[Count_my_breathsUITests.CounterPageTests test_shouldCountOnButtonTap]' passed (3.615 seconds).
 Test Case '-[Count_my_breathsUITests.CounterPageTests test_shouldLoad]' started.
-    t =     0.00s Start Test at 2020-10-25 02:32:57.278
+    t =     0.00s Start Test at 2020-10-25 02:35:28.106
     t =     0.05s Set Up
     t =     0.05s     Open com.lucasdesouza.countmybreaths
     t =     0.10s         Launch com.lucasdesouza.countmybreaths
-    t =     0.10s             Terminate com.lucasdesouza.countmybreaths:3050
-    t =     1.38s             Setting up automation session
-    t =     1.39s             Wait for com.lucasdesouza.countmybreaths to idle
-    t =     2.56s Checking existence of `"We have made some changes since you last used the app." StaticText`
-    t =     2.58s Checking existence of `"Start counting" Button`
-    t =     2.59s Checking existence of `"Click on the heart below to start counting" StaticText`
-    t =     2.61s Tear Down
-Test Case '-[Count_my_breathsUITests.CounterPageTests test_shouldLoad]' passed (2.810 seconds).
-Test Suite 'CounterPageTests' passed at 2020-10-25 02:33:00.088.
-	 Executed 4 tests, with 0 failures (0 unexpected) in 46.913 (46.916) seconds
-Test Suite 'HistoryPageTests' started at 2020-10-25 02:33:00.089
+    t =     0.10s             Terminate com.lucasdesouza.countmybreaths:3451
+    t =     1.39s             Setting up automation session
+    t =     1.41s             Wait for com.lucasdesouza.countmybreaths to idle
+    t =     2.58s Checking existence of `"We have made some changes since you last used the app." StaticText`
+    t =     2.60s Checking existence of `"Start counting" Button`
+    t =     2.62s Checking existence of `"Click on the heart below to start counting" StaticText`
+    t =     2.63s Tear Down
+Test Case '-[Count_my_breathsUITests.CounterPageTests test_shouldLoad]' passed (2.833 seconds).
+Test Suite 'CounterPageTests' passed at 2020-10-25 02:35:30.940.
+	 Executed 4 tests, with 0 failures (0 unexpected) in 44.242 (44.245) seconds
+Test Suite 'HistoryPageTests' started at 2020-10-25 02:35:30.940
 Test Case '-[Count_my_breathsUITests.HistoryPageTests test_shouldCreateARecord]' started.
-    t =     0.00s Start Test at 2020-10-25 02:33:00.090
+    t =     0.00s Start Test at 2020-10-25 02:35:30.941
     t =     0.06s Set Up
     t =     0.06s     Open com.lucasdesouza.countmybreaths
     t =     0.11s         Launch com.lucasdesouza.countmybreaths
-    t =     0.11s             Terminate com.lucasdesouza.countmybreaths:3051
-    t =     1.39s             Setting up automation session
-    t =     1.43s             Wait for com.lucasdesouza.countmybreaths to idle
-    t =     2.59s Checking existence of `"We have made some changes since you last used the app." StaticText`
-    t =     2.62s Tap "Start counting" Button
-    t =     2.62s     Wait for com.lucasdesouza.countmybreaths to idle
-    t =     2.67s     Find the "Start counting" Button
+    t =     0.11s             Terminate com.lucasdesouza.countmybreaths:3452
+    t =     1.40s             Setting up automation session
+    t =     1.42s             Wait for com.lucasdesouza.countmybreaths to idle
+    t =     2.60s Checking existence of `"We have made some changes since you last used the app." StaticText`
+    t =     2.63s Tap "Start counting" Button
+    t =     2.63s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =     2.68s     Find the "Start counting" Button
     t =     2.69s     Check for interrupting elements affecting "Start counting" Button
     t =     2.70s     Synthesize event
     t =     2.82s     Wait for com.lucasdesouza.countmybreaths to idle
@@ -886,151 +842,359 @@ Test Case '-[Count_my_breathsUITests.HistoryPageTests test_shouldCreateARecord]'
     t =     3.11s Tap "Start counting" Button
     t =     3.11s     Wait for com.lucasdesouza.countmybreaths to idle
     t =     3.16s     Find the "Start counting" Button
-    t =     3.17s     Check for interrupting elements affecting "Start counting" Button
-    t =     3.18s     Synthesize event
-    t =     3.28s     Wait for com.lucasdesouza.countmybreaths to idle
-    t =     3.34s Tap "Start counting" Button
-    t =     3.34s     Wait for com.lucasdesouza.countmybreaths to idle
-    t =     3.38s     Find the "Start counting" Button
-    t =     3.40s     Check for interrupting elements affecting "Start counting" Button
-    t =     3.41s     Synthesize event
-    t =     3.51s     Wait for com.lucasdesouza.countmybreaths to idle
-    t =     3.57s Tap "Start counting" Button
-    t =     3.57s     Wait for com.lucasdesouza.countmybreaths to idle
-    t =     3.61s     Find the "Start counting" Button
-    t =     3.63s     Check for interrupting elements affecting "Start counting" Button
-    t =     3.64s     Synthesize event
-    t =     3.74s     Wait for com.lucasdesouza.countmybreaths to idle
-    t =     3.80s Waiting 35.0s for "Counted 10 beats per minute." StaticText to exist
-    t =     4.82s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
-    t =     4.83s         Checking existence of `"Counted 10 beats per minute." StaticText`
-    t =     4.85s         Capturing element debug description
-    t =     5.86s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
-    t =     5.87s         Checking existence of `"Counted 10 beats per minute." StaticText`
-    t =     5.88s         Capturing element debug description
-    t =     6.91s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
-    t =     6.91s         Checking existence of `"Counted 10 beats per minute." StaticText`
-    t =     6.93s         Capturing element debug description
-    t =     7.96s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
-    t =     7.96s         Checking existence of `"Counted 10 beats per minute." StaticText`
-    t =     7.97s         Capturing element debug description
-    t =     8.99s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
-    t =     8.99s         Checking existence of `"Counted 10 beats per minute." StaticText`
-    t =     9.01s         Capturing element debug description
-    t =    10.03s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
-    t =    10.03s         Checking existence of `"Counted 10 beats per minute." StaticText`
-    t =    10.05s         Capturing element debug description
-    t =    11.07s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
-    t =    11.07s         Checking existence of `"Counted 10 beats per minute." StaticText`
-    t =    11.09s         Capturing element debug description
-    t =    12.11s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
-    t =    12.11s         Checking existence of `"Counted 10 beats per minute." StaticText`
-    t =    12.13s         Capturing element debug description
-    t =    13.15s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
-    t =    13.15s         Checking existence of `"Counted 10 beats per minute." StaticText`
-    t =    13.17s         Capturing element debug description
-    t =    14.18s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
-    t =    14.18s         Checking existence of `"Counted 10 beats per minute." StaticText`
-    t =    14.20s         Capturing element debug description
-    t =    15.21s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
-    t =    15.21s         Checking existence of `"Counted 10 beats per minute." StaticText`
-    t =    15.23s         Capturing element debug description
-    t =    16.24s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
-    t =    16.24s         Checking existence of `"Counted 10 beats per minute." StaticText`
-    t =    16.26s         Capturing element debug description
-    t =    17.26s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
-    t =    17.27s         Checking existence of `"Counted 10 beats per minute." StaticText`
-    t =    17.28s         Capturing element debug description
-    t =    18.30s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
-    t =    18.30s         Checking existence of `"Counted 10 beats per minute." StaticText`
-    t =    18.31s         Capturing element debug description
-    t =    19.32s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
-    t =    19.32s         Checking existence of `"Counted 10 beats per minute." StaticText`
-    t =    19.34s         Capturing element debug description
-    t =    20.37s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
-    t =    20.37s         Checking existence of `"Counted 10 beats per minute." StaticText`
-    t =    20.38s         Capturing element debug description
-    t =    21.40s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
-    t =    21.40s         Checking existence of `"Counted 10 beats per minute." StaticText`
-    t =    21.41s         Capturing element debug description
-    t =    22.43s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
-    t =    22.43s         Checking existence of `"Counted 10 beats per minute." StaticText`
-    t =    22.45s         Capturing element debug description
-    t =    23.46s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
-    t =    23.47s         Checking existence of `"Counted 10 beats per minute." StaticText`
-    t =    23.48s         Capturing element debug description
-    t =    24.50s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
-    t =    24.50s         Checking existence of `"Counted 10 beats per minute." StaticText`
-    t =    24.51s         Capturing element debug description
-    t =    25.54s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
-    t =    25.54s         Checking existence of `"Counted 10 beats per minute." StaticText`
-    t =    26.55s         Checking existence of `"Counted 10 beats per minute." StaticText` (retry 1)
-    t =    27.55s         Checking existence of `"Counted 10 beats per minute." StaticText` (retry 2)
-/Users/lucasdesouza/projects/breath-ios/Count my breathsUITests/Controllers/CounterPageModel.swift:43: error: -[Count_my_breathsUITests.HistoryPageTests test_shouldCreateARecord] : Failed to get matching snapshots: Lost connection to the application (pid 3052). (Underlying Error: Couldn’t communicate with a helper application. Try your operation again. If that fails, quit and relaunch the application and try again. The connection to service on pid 0 created from an endpoint was invalidated.)
-    t =    27.71s         Capturing element debug description
-    t =    27.71s Tear Down
-    t =    27.72s Checking for crash reports corresponding to unexpected termination of com.lucasdesouza.countmybreaths
-Test Case '-[Count_my_breathsUITests.HistoryPageTests test_shouldCreateARecord]' failed (27.717 seconds).
-Test Case '-[Count_my_breathsUITests.HistoryPageTests test_shouldDeleteARecord]' started.
-    t =     0.00s Start Test at 2020-10-25 02:33:27.807
-    t =     0.08s Set Up
-    t =     0.08s     Open com.lucasdesouza.countmybreaths
-    t =     0.15s         Launch com.lucasdesouza.countmybreaths
-    t =     1.57s             Setting up automation session
-    t =     1.59s             Wait for com.lucasdesouza.countmybreaths to idle
-    t =     2.77s Checking existence of `"We have made some changes since you last used the app." StaticText`
-    t =     2.84s Swipe left Target Application 'com.lucasdesouza.countmybreaths'
-    t =     2.84s     Wait for com.lucasdesouza.countmybreaths to idle
-    t =     2.89s     Find the Target Application 'com.lucasdesouza.countmybreaths'
-    t =     2.91s     Check for interrupting elements affecting "Count my breaths" Application
-    t =     2.92s     Synthesize event
-    t =     3.14s     Wait for com.lucasdesouza.countmybreaths to idle
-    t =     3.46s Swipe left Target Application 'com.lucasdesouza.countmybreaths'
-    t =     3.46s     Wait for com.lucasdesouza.countmybreaths to idle
-    t =     3.51s     Find the Target Application 'com.lucasdesouza.countmybreaths'
-    t =     3.53s     Check for interrupting elements affecting "Count my breaths" Application
-    t =     3.55s     Synthesize event
+    t =     3.18s     Check for interrupting elements affecting "Start counting" Button
+    t =     3.19s     Synthesize event
+    t =     3.29s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =     3.35s Tap "Start counting" Button
+    t =     3.35s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =     3.40s     Find the "Start counting" Button
+    t =     3.42s     Check for interrupting elements affecting "Start counting" Button
+    t =     3.43s     Synthesize event
+    t =     3.53s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =     3.59s Tap "Start counting" Button
+    t =     3.59s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =     3.64s     Find the "Start counting" Button
+    t =     3.66s     Check for interrupting elements affecting "Start counting" Button
+    t =     3.67s     Synthesize event
     t =     3.77s     Wait for com.lucasdesouza.countmybreaths to idle
-    t =     4.09s Tap "Continue to app" Button
-    t =     4.09s     Wait for com.lucasdesouza.countmybreaths to idle
-    t =     4.13s     Find the "Continue to app" Button
-    t =     4.15s     Check for interrupting elements affecting "Continue to app" Button
-    t =     4.16s     Synthesize event
-    t =     4.26s     Wait for com.lucasdesouza.countmybreaths to idle
-    t =     4.77s Tap "Start counting" Button
-    t =     4.77s     Wait for com.lucasdesouza.countmybreaths to idle
-    t =     4.82s     Find the "Start counting" Button
-    t =     4.84s     Check for interrupting elements affecting "Start counting" Button
-    t =     4.85s     Synthesize event
-    t =     4.96s     Wait for com.lucasdesouza.countmybreaths to idle
-    t =     5.01s Tap "Start counting" Button
-    t =     5.01s     Wait for com.lucasdesouza.countmybreaths to idle
-    t =     5.05s     Find the "Start counting" Button
-    t =     5.07s     Check for interrupting elements affecting "Start counting" Button
-    t =     5.08s     Synthesize event
-    t =     5.19s     Wait for com.lucasdesouza.countmybreaths to idle
-    t =     5.23s Waiting 35.0s for "Counted 4 beats per minute." StaticText to exist
-    t =     6.23s     Checking `Expect predicate `exists == 1` for object "Counted 4 beats per minute." StaticText`
+    t =     3.83s Waiting 35.0s for "Counted 10 beats per minute." StaticText to exist
+    t =     4.86s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
+    t =     4.86s         Checking existence of `"Counted 10 beats per minute." StaticText`
+    t =     4.87s         Capturing element debug description
+    t =     5.90s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
+    t =     5.90s         Checking existence of `"Counted 10 beats per minute." StaticText`
+    t =     5.91s         Capturing element debug description
+    t =     6.94s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
+    t =     6.94s         Checking existence of `"Counted 10 beats per minute." StaticText`
+    t =     6.96s         Capturing element debug description
+    t =     7.98s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
+    t =     7.98s         Checking existence of `"Counted 10 beats per minute." StaticText`
+    t =     8.00s         Capturing element debug description
+    t =     9.03s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
+    t =     9.03s         Checking existence of `"Counted 10 beats per minute." StaticText`
+    t =     9.05s         Capturing element debug description
+    t =    10.06s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
+    t =    10.07s         Checking existence of `"Counted 10 beats per minute." StaticText`
+    t =    10.08s         Capturing element debug description
+    t =    11.10s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
+    t =    11.10s         Checking existence of `"Counted 10 beats per minute." StaticText`
+    t =    11.12s         Capturing element debug description
+    t =    12.13s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
+    t =    12.13s         Checking existence of `"Counted 10 beats per minute." StaticText`
+    t =    12.15s         Capturing element debug description
+    t =    13.18s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
+    t =    13.18s         Checking existence of `"Counted 10 beats per minute." StaticText`
+    t =    13.19s         Capturing element debug description
+    t =    14.22s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
+    t =    14.22s         Checking existence of `"Counted 10 beats per minute." StaticText`
+    t =    14.23s         Capturing element debug description
+    t =    15.25s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
+    t =    15.25s         Checking existence of `"Counted 10 beats per minute." StaticText`
+    t =    15.27s         Capturing element debug description
+    t =    16.28s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
+    t =    16.28s         Checking existence of `"Counted 10 beats per minute." StaticText`
+    t =    16.30s         Capturing element debug description
+    t =    17.32s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
+    t =    17.32s         Checking existence of `"Counted 10 beats per minute." StaticText`
+    t =    17.33s         Capturing element debug description
+    t =    18.35s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
+    t =    18.35s         Checking existence of `"Counted 10 beats per minute." StaticText`
+    t =    18.37s         Capturing element debug description
+    t =    19.38s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
+    t =    19.38s         Checking existence of `"Counted 10 beats per minute." StaticText`
+    t =    19.39s         Capturing element debug description
+    t =    20.42s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
+    t =    20.42s         Checking existence of `"Counted 10 beats per minute." StaticText`
+    t =    20.43s         Capturing element debug description
+    t =    21.45s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
+    t =    21.45s         Checking existence of `"Counted 10 beats per minute." StaticText`
+    t =    21.47s         Capturing element debug description
+    t =    22.48s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
+    t =    22.48s         Checking existence of `"Counted 10 beats per minute." StaticText`
+    t =    22.50s         Capturing element debug description
+    t =    23.51s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
+    t =    23.51s         Checking existence of `"Counted 10 beats per minute." StaticText`
+    t =    23.53s         Capturing element debug description
+    t =    24.54s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
+    t =    24.54s         Checking existence of `"Counted 10 beats per minute." StaticText`
+    t =    24.56s         Capturing element debug description
+    t =    25.59s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
+    t =    25.59s         Checking existence of `"Counted 10 beats per minute." StaticText`
+    t =    25.61s         Capturing element debug description
+    t =    26.63s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
+    t =    26.63s         Checking existence of `"Counted 10 beats per minute." StaticText`
+    t =    26.64s         Capturing element debug description
+    t =    27.65s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
+    t =    27.65s         Checking existence of `"Counted 10 beats per minute." StaticText`
+    t =    27.67s         Capturing element debug description
+    t =    28.69s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
+    t =    28.69s         Checking existence of `"Counted 10 beats per minute." StaticText`
+    t =    28.71s         Capturing element debug description
+    t =    29.73s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
+    t =    29.73s         Checking existence of `"Counted 10 beats per minute." StaticText`
+    t =    29.75s         Capturing element debug description
+    t =    30.77s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
+    t =    30.77s         Checking existence of `"Counted 10 beats per minute." StaticText`
+    t =    30.78s         Capturing element debug description
+    t =    31.81s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
+    t =    31.81s         Checking existence of `"Counted 10 beats per minute." StaticText`
+    t =    31.83s         Capturing element debug description
+    t =    32.86s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
+    t =    32.86s         Checking existence of `"Counted 10 beats per minute." StaticText`
+    t =    32.88s         Capturing element debug description
+    t =    33.88s     Checking `Expect predicate `exists == 1` for object "Counted 10 beats per minute." StaticText`
+    t =    33.88s         Checking existence of `"Counted 10 beats per minute." StaticText`
+    t =    33.90s Checking existence of `"We have made some changes since you last used the app." StaticText`
+    t =    33.91s Tap Button
+    t =    33.91s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =    33.96s     Find the Button
+    t =    33.98s     Check for interrupting elements affecting "Menu" Button
+    t =    33.99s     Synthesize event
+    t =    34.09s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =    34.63s Tap "History" Cell
+    t =    34.63s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =    34.68s     Find the "History" Cell
+    t =    34.72s     Check for interrupting elements affecting "History" Cell
+    t =    34.74s     Synthesize event
+    t =    34.85s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =    34.98s Checking existence of `"10.00" StaticText`
+    t =    35.02s Tear Down
+Test Case '-[Count_my_breathsUITests.HistoryPageTests test_shouldCreateARecord]' passed (35.224 seconds).
+Test Case '-[Count_my_breathsUITests.HistoryPageTests test_shouldDeleteARecord]' started.
+    t =     0.00s Start Test at 2020-10-25 02:36:06.165
+    t =     0.06s Set Up
+    t =     0.06s     Open com.lucasdesouza.countmybreaths
+    t =     0.11s         Launch com.lucasdesouza.countmybreaths
+    t =     0.11s             Terminate com.lucasdesouza.countmybreaths:3453
+    t =     1.40s             Setting up automation session
+    t =     1.41s             Wait for com.lucasdesouza.countmybreaths to idle
+    t =     2.59s Checking existence of `"We have made some changes since you last used the app." StaticText`
+    t =     2.62s Tap "Start counting" Button
+    t =     2.62s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =     2.67s     Find the "Start counting" Button
+    t =     2.69s     Check for interrupting elements affecting "Start counting" Button
+    t =     2.69s     Synthesize event
+    t =     2.81s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =     2.87s Tap "Start counting" Button
+    t =     2.87s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =     2.91s     Find the "Start counting" Button
+    t =     2.93s     Check for interrupting elements affecting "Start counting" Button
+    t =     2.95s     Synthesize event
+    t =     3.05s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =     3.11s Waiting 35.0s for "Counted 4 beats per minute." StaticText to exist
+    t =     4.14s     Checking `Expect predicate `exists == 1` for object "Counted 4 beats per minute." StaticText`
+    t =     4.14s         Checking existence of `"Counted 4 beats per minute." StaticText`
+    t =     4.16s         Capturing element debug description
+    t =     5.19s     Checking `Expect predicate `exists == 1` for object "Counted 4 beats per minute." StaticText`
+    t =     5.19s         Checking existence of `"Counted 4 beats per minute." StaticText`
+    t =     5.21s         Capturing element debug description
+    t =     6.24s     Checking `Expect predicate `exists == 1` for object "Counted 4 beats per minute." StaticText`
     t =     6.24s         Checking existence of `"Counted 4 beats per minute." StaticText`
-    t =     6.25s         Capturing element debug description
-    t =     7.27s     Checking `Expect predicate `exists == 1` for object "Counted 4 beats per minute." StaticText`
-    t =     7.27s         Checking existence of `"Counted 4 beats per minute." StaticText`
-    t =     7.29s         Capturing element debug description
-    t =     8.32s     Checking `Expect predicate `exists == 1` for object "Counted 4 beats per minute." StaticText`
-    t =     8.32s         Checking existence of `"Counted 4 beats per minute." StaticText`
-    t =     8.33s         Capturing element debug description
-    t =     9.35s     Checking `Expect predicate `exists == 1` for object "Counted 4 beats per minute." StaticText`
-    t =     9.35s         Checking existence of `"Counted 4 beats per minute." StaticText`
-    t =     9.37s         Capturing element debug description
-    t =    10.40s     Checking `Expect predicate `exists == 1` for object "Counted 4 beats per minute." StaticText`
-    t =    10.40s         Checking existence of `"Counted 4 beats per minute." StaticText`
-    t =    10.41s         Capturing element debug description
-    t =    11.43s     Checking `Expect predicate `exists == 1` for object "Counted 4 beats per minute." StaticText`
-    t =    11.43s         Checking existence of `"Counted 4 beats per minute." StaticText`
-    t =    11.45s         Capturing element debug description
-    t =    12.45s     Checking `Expect predicate `exists == 1` for object "Counted 4 beats per minute." StaticText`
-    t =    12.45s         Checking existence of `"Counted 4 beats per minute." StaticText`
-    t =    12.47s         Capturing element debug description
-    t =    13.48s     Checking `Expect predicate `exists == 1` for object "Counted 4 beats per minute." StaticText`
-    t =    13.49s         Checking existence of `"Counted 4 beats per minute." StaticText`
-    t =    13.50s         Capturing element debug description
+    t =     6.26s         Capturing element debug description
+    t =     7.29s     Checking `Expect predicate `exists == 1` for object "Counted 4 beats per minute." StaticText`
+    t =     7.29s         Checking existence of `"Counted 4 beats per minute." StaticText`
+    t =     7.31s         Capturing element debug description
+    t =     8.34s     Checking `Expect predicate `exists == 1` for object "Counted 4 beats per minute." StaticText`
+    t =     8.34s         Checking existence of `"Counted 4 beats per minute." StaticText`
+    t =     8.35s         Capturing element debug description
+    t =     9.39s     Checking `Expect predicate `exists == 1` for object "Counted 4 beats per minute." StaticText`
+    t =     9.39s         Checking existence of `"Counted 4 beats per minute." StaticText`
+    t =     9.40s         Capturing element debug description
+    t =    10.42s     Checking `Expect predicate `exists == 1` for object "Counted 4 beats per minute." StaticText`
+    t =    10.42s         Checking existence of `"Counted 4 beats per minute." StaticText`
+    t =    10.44s         Capturing element debug description
+    t =    11.47s     Checking `Expect predicate `exists == 1` for object "Counted 4 beats per minute." StaticText`
+    t =    11.47s         Checking existence of `"Counted 4 beats per minute." StaticText`
+    t =    11.49s         Capturing element debug description
+    t =    12.51s     Checking `Expect predicate `exists == 1` for object "Counted 4 beats per minute." StaticText`
+    t =    12.51s         Checking existence of `"Counted 4 beats per minute." StaticText`
+    t =    12.52s         Capturing element debug description
+    t =    13.56s     Checking `Expect predicate `exists == 1` for object "Counted 4 beats per minute." StaticText`
+    t =    13.56s         Checking existence of `"Counted 4 beats per minute." StaticText`
+    t =    13.57s         Capturing element debug description
+    t =    14.61s     Checking `Expect predicate `exists == 1` for object "Counted 4 beats per minute." StaticText`
+    t =    14.61s         Checking existence of `"Counted 4 beats per minute." StaticText`
+    t =    14.62s         Capturing element debug description
+    t =    15.64s     Checking `Expect predicate `exists == 1` for object "Counted 4 beats per minute." StaticText`
+    t =    15.64s         Checking existence of `"Counted 4 beats per minute." StaticText`
+    t =    15.66s         Capturing element debug description
+    t =    16.69s     Checking `Expect predicate `exists == 1` for object "Counted 4 beats per minute." StaticText`
+    t =    16.69s         Checking existence of `"Counted 4 beats per minute." StaticText`
+    t =    16.71s         Capturing element debug description
+    t =    17.74s     Checking `Expect predicate `exists == 1` for object "Counted 4 beats per minute." StaticText`
+    t =    17.74s         Checking existence of `"Counted 4 beats per minute." StaticText`
+    t =    17.75s         Capturing element debug description
+    t =    18.77s     Checking `Expect predicate `exists == 1` for object "Counted 4 beats per minute." StaticText`
+    t =    18.77s         Checking existence of `"Counted 4 beats per minute." StaticText`
+    t =    18.78s         Capturing element debug description
+    t =    19.81s     Checking `Expect predicate `exists == 1` for object "Counted 4 beats per minute." StaticText`
+    t =    19.81s         Checking existence of `"Counted 4 beats per minute." StaticText`
+    t =    19.83s         Capturing element debug description
+    t =    20.86s     Checking `Expect predicate `exists == 1` for object "Counted 4 beats per minute." StaticText`
+    t =    20.86s         Checking existence of `"Counted 4 beats per minute." StaticText`
+    t =    20.87s         Capturing element debug description
+    t =    21.89s     Checking `Expect predicate `exists == 1` for object "Counted 4 beats per minute." StaticText`
+    t =    21.89s         Checking existence of `"Counted 4 beats per minute." StaticText`
+    t =    21.91s         Capturing element debug description
+    t =    22.92s     Checking `Expect predicate `exists == 1` for object "Counted 4 beats per minute." StaticText`
+    t =    22.92s         Checking existence of `"Counted 4 beats per minute." StaticText`
+    t =    22.94s         Capturing element debug description
+    t =    23.96s     Checking `Expect predicate `exists == 1` for object "Counted 4 beats per minute." StaticText`
+    t =    23.96s         Checking existence of `"Counted 4 beats per minute." StaticText`
+    t =    23.97s         Capturing element debug description
+    t =    25.01s     Checking `Expect predicate `exists == 1` for object "Counted 4 beats per minute." StaticText`
+    t =    25.01s         Checking existence of `"Counted 4 beats per minute." StaticText`
+    t =    25.02s         Capturing element debug description
+    t =    26.04s     Checking `Expect predicate `exists == 1` for object "Counted 4 beats per minute." StaticText`
+    t =    26.04s         Checking existence of `"Counted 4 beats per minute." StaticText`
+    t =    26.06s         Capturing element debug description
+    t =    27.08s     Checking `Expect predicate `exists == 1` for object "Counted 4 beats per minute." StaticText`
+    t =    27.08s         Checking existence of `"Counted 4 beats per minute." StaticText`
+    t =    27.10s         Capturing element debug description
+    t =    28.12s     Checking `Expect predicate `exists == 1` for object "Counted 4 beats per minute." StaticText`
+    t =    28.12s         Checking existence of `"Counted 4 beats per minute." StaticText`
+    t =    28.14s         Capturing element debug description
+    t =    29.14s     Checking `Expect predicate `exists == 1` for object "Counted 4 beats per minute." StaticText`
+    t =    29.14s         Checking existence of `"Counted 4 beats per minute." StaticText`
+    t =    29.16s         Capturing element debug description
+    t =    30.17s     Checking `Expect predicate `exists == 1` for object "Counted 4 beats per minute." StaticText`
+    t =    30.17s         Checking existence of `"Counted 4 beats per minute." StaticText`
+    t =    30.19s         Capturing element debug description
+    t =    31.22s     Checking `Expect predicate `exists == 1` for object "Counted 4 beats per minute." StaticText`
+    t =    31.22s         Checking existence of `"Counted 4 beats per minute." StaticText`
+    t =    31.24s         Capturing element debug description
+    t =    32.26s     Checking `Expect predicate `exists == 1` for object "Counted 4 beats per minute." StaticText`
+    t =    32.26s         Checking existence of `"Counted 4 beats per minute." StaticText`
+    t =    32.27s         Capturing element debug description
+    t =    33.29s     Checking `Expect predicate `exists == 1` for object "Counted 4 beats per minute." StaticText`
+    t =    33.29s         Checking existence of `"Counted 4 beats per minute." StaticText`
+    t =    33.31s         Capturing element debug description
+    t =    34.32s     Checking `Expect predicate `exists == 1` for object "Counted 4 beats per minute." StaticText`
+    t =    34.32s         Checking existence of `"Counted 4 beats per minute." StaticText`
+    t =    34.34s Checking existence of `"We have made some changes since you last used the app." StaticText`
+    t =    34.36s Tap Button
+    t =    34.36s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =    34.41s     Find the Button
+    t =    34.43s     Check for interrupting elements affecting "Menu" Button
+    t =    34.44s     Synthesize event
+    t =    34.55s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =    35.09s Tap "History" Cell
+    t =    35.09s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =    35.15s     Find the "History" Cell
+    t =    35.18s     Check for interrupting elements affecting "History" Cell
+    t =    35.20s     Synthesize event
+    t =    35.31s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =    35.43s Get number of matches for: Descendants matching type Cell
+2
+    t =    35.52s Swipe left Cell
+    t =    35.52s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =    35.93s     Find the Cell
+    t =    35.97s     Check for interrupting elements affecting "Oct 25,2020 02:36, 4.00" Cell
+    t =    35.98s     Synthesize event
+    t =    36.26s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =    37.19s Tap "Delete" Button
+    t =    37.19s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =    37.25s     Find the "Delete" Button
+    t =    37.28s     Check for interrupting elements affecting "Delete" Button
+    t =    37.30s     Synthesize event
+    t =    37.42s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =    37.84s Get number of matches for: Descendants matching type Cell
+    t =    37.92s Tear Down
+Test Case '-[Count_my_breathsUITests.HistoryPageTests test_shouldDeleteARecord]' passed (38.120 seconds).
+Test Case '-[Count_my_breathsUITests.HistoryPageTests test_shouldLoad]' started.
+    t =     0.00s Start Test at 2020-10-25 02:36:44.286
+    t =     0.06s Set Up
+    t =     0.06s     Open com.lucasdesouza.countmybreaths
+    t =     0.12s         Launch com.lucasdesouza.countmybreaths
+    t =     0.12s             Terminate com.lucasdesouza.countmybreaths:3458
+    t =     1.43s             Setting up automation session
+    t =     1.44s             Wait for com.lucasdesouza.countmybreaths to idle
+    t =     2.62s Checking existence of `"We have made some changes since you last used the app." StaticText`
+    t =     2.64s Tap Button
+    t =     2.64s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =     2.70s     Find the Button
+    t =     2.71s     Check for interrupting elements affecting "Menu" Button
+    t =     2.72s     Synthesize event
+    t =     2.84s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =     3.38s Tap "History" Cell
+    t =     3.38s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =     3.44s     Find the "History" Cell
+    t =     3.47s     Check for interrupting elements affecting "History" Cell
+    t =     3.49s     Synthesize event
+    t =     3.60s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =     3.72s Checking existence of `"List" Button`
+    t =     3.76s Checking existence of `"Graph" Button`
+    t =     3.79s Checking existence of `"Stats" Button`
+    t =     3.83s Tear Down
+Test Case '-[Count_my_breathsUITests.HistoryPageTests test_shouldLoad]' passed (4.032 seconds).
+Test Suite 'HistoryPageTests' passed at 2020-10-25 02:36:48.318.
+	 Executed 3 tests, with 0 failures (0 unexpected) in 77.376 (77.378) seconds
+Test Suite 'PetHealthPageTests' started at 2020-10-25 02:36:48.319
+Test Case '-[Count_my_breathsUITests.PetHealthPageTests test_shouldLoad]' started.
+    t =     0.00s Start Test at 2020-10-25 02:36:48.319
+    t =     0.06s Set Up
+    t =     0.06s     Open com.lucasdesouza.countmybreaths
+    t =     0.11s         Launch com.lucasdesouza.countmybreaths
+    t =     0.11s             Terminate com.lucasdesouza.countmybreaths:3460
+    t =     1.40s             Setting up automation session
+    t =     1.42s             Wait for com.lucasdesouza.countmybreaths to idle
+    t =     2.60s Checking existence of `"We have made some changes since you last used the app." StaticText`
+    t =     2.62s Tap Button
+    t =     2.62s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =     2.68s     Find the Button
+    t =     2.69s     Check for interrupting elements affecting "Menu" Button
+    t =     2.70s     Synthesize event
+    t =     2.82s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =     3.36s Tap "Pet health" Cell
+    t =     3.36s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =     3.41s     Find the "Pet health" Cell
+    t =     3.45s     Check for interrupting elements affecting "Pet health" Cell
+    t =     3.47s     Synthesize event
+    t =     3.58s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =     3.65s Checking existence of `"Why count breaths" StaticText`
+    t =     3.68s Checking existence of `"Dog Heart disease" StaticText`
+    t =     3.72s Tear Down
+Test Case '-[Count_my_breathsUITests.PetHealthPageTests test_shouldLoad]' passed (3.919 seconds).
+Test Suite 'PetHealthPageTests' passed at 2020-10-25 02:36:52.238.
+	 Executed 1 test, with 0 failures (0 unexpected) in 3.919 (3.919) seconds
+Test Suite 'PetProfilePageTests' started at 2020-10-25 02:36:52.239
+Test Case '-[Count_my_breathsUITests.PetProfilePageTests test_shouldLoad]' started.
+    t =     0.00s Start Test at 2020-10-25 02:36:52.239
+    t =     0.06s Set Up
+    t =     0.06s     Open com.lucasdesouza.countmybreaths
+    t =     0.11s         Launch com.lucasdesouza.countmybreaths
+    t =     0.11s             Terminate com.lucasdesouza.countmybreaths:3461
+    t =     1.39s             Setting up automation session
+    t =     1.41s             Wait for com.lucasdesouza.countmybreaths to idle
+    t =     2.58s Checking existence of `"We have made some changes since you last used the app." StaticText`
+    t =     2.61s Tap Button
+    t =     2.61s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =     2.66s     Find the Button
+    t =     2.67s     Check for interrupting elements affecting "Menu" Button
+    t =     2.68s     Synthesize event
+    t =     2.80s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =     3.34s Tap "Pet profile" Cell
+    t =     3.34s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =     3.40s     Find the "Pet profile" Cell
+    t =     3.44s     Check for interrupting elements affecting "Pet profile" Cell
+    t =     3.46s     Synthesize event
+    t =     3.57s     Wait for com.lucasdesouza.countmybreaths to idle
+    t =     3.66s Checking existence of `"Target breathing rate: 
+30" Button`
+    t =     3.70s Checking existence of `"Pet name: 
+MyPet" Button`
+    t =     3.73s Checking existence of `"Chip Id: " Button`
+    t =     3.77s Tear Down
+Test Case '-[Count_my_breathsUITests.PetProfilePageTests test_shouldLoad]' passed (3.970 seconds).
+Test Suite 'PetProfilePageTests' passed at 2020-10-25 02:36:56.210.
+	 Executed 1 test, with 0 failures (0 unexpected) in 3.970 (3.971) seconds
+Test Suite 'Count my breathsUITests.xctest' passed at 2020-10-25 02:36:56.210.
+	 Executed 9 tests, with 0 failures (0 unexpected) in 129.506 (129.516) seconds
+Test Suite 'All tests' passed at 2020-10-25 02:36:56.211.
+	 Executed 9 tests, with 0 failures (0 unexpected) in 129.506 (129.517) seconds
+
+Test session results, code coverage, and logs:
+	/Users/lucasdesouza/Library/Developer/Xcode/DerivedData/Logs/Test/Run-e2e-2020.10.25_02-34-36--0500.xcresult
+
+** TEST SUCCEEDED **
+
