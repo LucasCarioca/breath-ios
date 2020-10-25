@@ -5,6 +5,7 @@ on:
     - 'master'
 jobs:
   publish:
+    timeout-minutes: 20
     name: Publish to AppStore
     runs-on: macos-latest
     steps:

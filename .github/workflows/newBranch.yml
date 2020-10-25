@@ -3,6 +3,7 @@ on:
   create
 jobs:
   publish:
+    timeout-minutes: 20
     name: SEMVER
     runs-on: macos-latest
     steps:
