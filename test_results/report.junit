@@ -1,9 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testsuites name='Count my breathsUITests.xctest' tests='4' failures='0'>
+<testsuites name='Count my breathsUITests.xctest' tests='6' failures='0'>
   <testsuite name='Count_my_breathsUITests.CounterViewTests' tests='4' failures='0'>
-    <testcase classname='Count_my_breathsUITests.CounterViewTests' name='test_onCountEnd_shouldShowResult' time='37.835'/>
-    <testcase classname='Count_my_breathsUITests.CounterViewTests' name='test_onCountReset_shouldStopCounting' time='6.653'/>
-    <testcase classname='Count_my_breathsUITests.CounterViewTests' name='test_onCountStart_shouldShowBreathsAndTime' time='6.509'/>
-    <testcase classname='Count_my_breathsUITests.CounterViewTests' name='test_onLoad_shouldShowCounterPage' time='5.664'/>
+    <testcase classname='Count_my_breathsUITests.CounterViewTests' name='test_onCountEnd_shouldShowResult' time='34.338'/>
+    <testcase classname='Count_my_breathsUITests.CounterViewTests' name='test_onCountReset_shouldStopCounting' time='3.711'/>
+    <testcase classname='Count_my_breathsUITests.CounterViewTests' name='test_shouldCountOnButtonTap' time='3.917'/>
+    <testcase classname='Count_my_breathsUITests.CounterViewTests' name='test_shouldLoad' time='3.040'/>
+  </testsuite>
+  <testsuite name='Count_my_breathsUITests.HistoryViewTests' tests='2' failures='0'>
+    <testcase classname='Count_my_breathsUITests.HistoryViewTests' name='test_shouldCreateARecord' time='38.660'/>
+    <testcase classname='Count_my_breathsUITests.HistoryViewTests' name='test_shouldLoad' time='4.646'/>
   </testsuite>
 </testsuites>
