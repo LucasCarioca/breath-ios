@@ -1,19 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testsuites name='Count my breathsUITests.xctest' tests='8' failures='1'>
+<testsuites name='Count my breathsUITests.xctest' tests='9' failures='0'>
   <testsuite name='Count_my_breathsUITests.CounterPageTests' tests='4' failures='0'>
-    <testcase classname='Count_my_breathsUITests.CounterPageTests' name='test_onCountEnd_shouldShowResult' time='34.183'/>
+    <testcase classname='Count_my_breathsUITests.CounterPageTests' name='test_onCountEnd_shouldShowResult' time='34.422'/>
     <testcase classname='Count_my_breathsUITests.CounterPageTests' name='test_onCountReset_shouldStopCounting' time='3.371'/>
-    <testcase classname='Count_my_breathsUITests.CounterPageTests' name='test_shouldCountOnButtonTap' time='3.549'/>
-    <testcase classname='Count_my_breathsUITests.CounterPageTests' name='test_shouldLoad' time='2.803'/>
+    <testcase classname='Count_my_breathsUITests.CounterPageTests' name='test_shouldCountOnButtonTap' time='3.615'/>
+    <testcase classname='Count_my_breathsUITests.CounterPageTests' name='test_shouldLoad' time='2.833'/>
   </testsuite>
   <testsuite name='Count_my_breathsUITests.HistoryPageTests' tests='3' failures='0'>
-    <testcase classname='Count_my_breathsUITests.HistoryPageTests' name='test_shouldCreateARecord' time='35.322'/>
-    <testcase classname='Count_my_breathsUITests.HistoryPageTests' name='test_shouldDeleteARecord' time='37.976'/>
-    <testcase classname='Count_my_breathsUITests.HistoryPageTests' name='test_shouldLoad' time='4.258'/>
+    <testcase classname='Count_my_breathsUITests.HistoryPageTests' name='test_shouldCreateARecord' time='35.224'/>
+    <testcase classname='Count_my_breathsUITests.HistoryPageTests' name='test_shouldDeleteARecord' time='38.120'/>
+    <testcase classname='Count_my_breathsUITests.HistoryPageTests' name='test_shouldLoad' time='4.032'/>
   </testsuite>
-  <testsuite name='Count_my_breathsUITests.PetProfilePageTests' tests='1' failures='1'>
-    <testcase classname='Count_my_breathsUITests.PetProfilePageTests' name='test_shouldLoad'>
-      <failure message='XCTAssertTrue failed'>Count my breathsUITests/Tests/PetProfilePageTests.swift:24</failure>
-    </testcase>
+  <testsuite name='Count_my_breathsUITests.PetHealthPageTests' tests='1' failures='0'>
+    <testcase classname='Count_my_breathsUITests.PetHealthPageTests' name='test_shouldLoad' time='3.919'/>
+  </testsuite>
+  <testsuite name='Count_my_breathsUITests.PetProfilePageTests' tests='1' failures='0'>
+    <testcase classname='Count_my_breathsUITests.PetProfilePageTests' name='test_shouldLoad' time='3.970'/>
   </testsuite>
 </testsuites>
