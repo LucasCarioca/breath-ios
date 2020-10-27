@@ -28,14 +28,14 @@ jobs:
         env:
           IOS_KEYS: ${{ secrets.IOS_KEYS }}
         run: sh -x ./.github/secrets/decrypt_secrets.sh
-      # - name: run tests
-      #   env:
-      #     FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
-      #     FASTLANE_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
-      #     FASTLANE_SESSION: ${{ secrets.FASTLANE_SESSION }}
-      #     FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
-      #     FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT: 600
-      #   run: bundle exec fastlane tests
+      - name: run tests
+        env:
+          FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
+          FASTLANE_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
+          FASTLANE_SESSION: ${{ secrets.FASTLANE_SESSION }}
+          FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
+          FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT: 600
+        run: bundle exec fastlane tests
       - name: build
         env:
           FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
