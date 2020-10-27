@@ -22,4 +22,12 @@ class PetHealthPageTests: XCTestCase {
         let petHealthModel = PetHealthPageModel()
         XCTAssert(petHealthModel.viewDidLoad())
     }
+    
+    func test_shouldOpenPages() {
+        let petHealthModel = PetHealthPageModel()
+        petHealthModel.openMenuOption("Why count breaths")
+        XCTAssert(petHealthModel.isCloseButtonVisible())
+        petHealthModel.clickCloseButton()
+        XCTAssert(petHealthModel.viewDidLoad())
+    }
 }
