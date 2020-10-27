@@ -13,7 +13,12 @@ public class PetProfilePageModel: PageModel {
     
     init() {
         setup()
-        clickBackButton()
+        openMenu()
+        app.cells["Pet profile"].tap()
+    }
+    
+    func backToPetProfiles() {
+        openMenu()
         app.cells["Pet profile"].tap()
     }
     
@@ -51,20 +56,20 @@ public class PetProfilePageModel: PageModel {
         findElementWith("Target breathing rate", in: app.tables.buttons).tap()
         app.pickerWheels.element.adjust(toPickerWheelValue: bpm)
         app.buttons["Save target breathing rate"].tap()
-        clickBackButton()
+        backToPetProfiles()
     }
     
     func setPetName(to name: String) {
         findElementWith("Pet name", in: app.tables.buttons).tap()
         app.textFields["Pet name"].clearAndEnterText(text: name)
         app.buttons["Save pet name"].tap()
-        clickBackButton()
+        backToPetProfiles()
     }
     
     func setChipId(to id: String) {
         findElementWith("Chip Id", in: app.tables.buttons).tap()
         app.textFields["Chip Id"].clearAndEnterText(text: id)
         app.buttons["Save chip id"].tap()
-        clickBackButton()
+        backToPetProfiles()
     }
 }
