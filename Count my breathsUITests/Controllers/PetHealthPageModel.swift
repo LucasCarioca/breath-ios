@@ -13,7 +13,7 @@ public class PetHealthPageModel: PageModel {
     
     init() {
         setup()
-        clickBackButton()
+        openMenu()
         app.cells["Pet health"].tap()
     }
     

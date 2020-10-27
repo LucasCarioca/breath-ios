@@ -12,7 +12,7 @@ protocol PageModel {
     var app: XCUIApplication { get set }
     func skipNewVersionPopup() -> Void
     func viewDidLoad() -> Bool
-    func clickBackButton() -> Void
+    func openMenu() -> Void
 }
 
 extension PageModel {
@@ -21,7 +21,7 @@ extension PageModel {
         skipNewVersionPopup()
     }
     
-    public func clickBackButton() {
+    public func openMenu() {
         self.app.navigationBars.buttons.element(boundBy: 0).tap()
     }
     
