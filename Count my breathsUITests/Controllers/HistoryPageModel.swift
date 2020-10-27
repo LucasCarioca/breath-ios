@@ -13,7 +13,7 @@ public class HistoryPageModel: PageModel {
     
     required init() {
         setup()
-        openMenu()
+        clickBackButton()
         app.cells["History"].tap()
     }
     

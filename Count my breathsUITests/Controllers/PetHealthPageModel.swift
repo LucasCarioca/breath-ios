@@ -13,12 +13,24 @@ public class PetHealthPageModel: PageModel {
     
     init() {
         setup()
-        openMenu()
+        clickBackButton()
         app.cells["Pet health"].tap()
     }
     
     func viewDidLoad() -> Bool {
         app.tables.staticTexts["Why count breaths"].exists
             && app.tables.staticTexts["Dog Heart disease"].exists
+    }
+    
+    func isCloseButtonVisible() -> Bool {
+        app.buttons["Close"].exists
+    }
+    
+    func openMenuOption(_ option: String) {
+        findElementWith(option, in: app.tables.staticTexts).tap()
+    }
+    
+    func clickCloseButton() {
+        app.buttons["Close"].tap()
     }
 }

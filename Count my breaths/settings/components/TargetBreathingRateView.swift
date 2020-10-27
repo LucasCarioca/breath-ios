@@ -21,17 +21,16 @@ struct TargetBreathingRateView: View {
             
             Picker("Target breathing rate", selection: $targetBpm) {
                 ForEach(0 ..< 100) {
-                    Text("\($0) breaths per minute")
+                    Text("\($0)")
                 }
                 }.padding().labelsHidden()
             Button(action: {
-                print("clicked save")
-                print("\(self.targetBpm)")
                 self.action(self.targetBpm)
                 self.confirm = true
             }) {
                 Text("Save")
             }.buttonStyle(PrimaryButton(variant: .contained)).frame(width: 100, height: 50)
+            .accessibility(label: Text("Save target breathing rate"))
             Spacer()
         }.toast(isPresented: $confirm, dismissAfter: 2.0, onDismiss: {
             self.presentationMode.wrappedValue.dismiss()

@@ -23,13 +23,12 @@ struct PetProfileTextFieldView: View {
                 .padding()
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             Button(action: {
-                print("clicked save")
-                print("\(self.name)")
                 self.action(self.name)
                 self.confirm = true
             }) {
                 Text("Save")
             }.buttonStyle(PrimaryButton(variant: .contained)).frame(width: 100, height: 50)
+            .accessibility(label: Text("Save \(self.label.lowercased())"))
             Spacer()
         }.toast(isPresented: $confirm, dismissAfter: 2.0, onDismiss: {
             self.presentationMode.wrappedValue.dismiss()

@@ -36,6 +36,7 @@
 		DFA26ADD25455C5D00E86B99 /* PetProfilePageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA26ADC25455C5D00E86B99 /* PetProfilePageTests.swift */; };
 		DFA26AE925455FD500E86B99 /* PetHealthPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA26AE825455FD500E86B99 /* PetHealthPageModel.swift */; };
 		DFA26AEF2545602700E86B99 /* PetHealthPageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA26AEE2545602700E86B99 /* PetHealthPageTests.swift */; };
+		DFA26AF42547A13900E86B99 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA26AF32547A13900E86B99 /* extensions.swift */; };
 		DFB21BD22544FB5A003CE2DB /* CounterPageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB21BD12544FB5A003CE2DB /* CounterPageTests.swift */; };
 		DFF402D2253FCB57007979E4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF402D1253FCB57007979E4 /* Router.swift */; };
 		F8C4D05B47D43AAD9F7052D0 /* CoreDataUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DE596DF08528DE33AAED /* CoreDataUtilities.swift */; };
@@ -92,6 +93,7 @@
 		DFA26ADC25455C5D00E86B99 /* PetProfilePageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProfilePageTests.swift; sourceTree = "<group>"; };
 		DFA26AE825455FD500E86B99 /* PetHealthPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetHealthPageModel.swift; sourceTree = "<group>"; };
 		DFA26AEE2545602700E86B99 /* PetHealthPageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetHealthPageTests.swift; sourceTree = "<group>"; };
+		DFA26AF32547A13900E86B99 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		DFB21BCF2544FB5A003CE2DB /* Count my breathsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Count my breathsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB21BD12544FB5A003CE2DB /* CounterPageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterPageTests.swift; sourceTree = "<group>"; };
 		DFB21BD32544FB5A003CE2DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -239,9 +241,18 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
+		DFA26AF22547A12D00E86B99 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				DFA26AF32547A13900E86B99 /* extensions.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		DFB21BD02544FB5A003CE2DB /* Count my breathsUITests */ = {
 			isa = PBXGroup;
 			children = (
+				DFA26AF22547A12D00E86B99 /* Utilities */,
 				DFA26ABF254532DC00E86B99 /* Tests */,
 				DFA26ABE254532CD00E86B99 /* Controllers */,
 				DFB21BD32544FB5A003CE2DB /* Info.plist */,
@@ -507,6 +518,7 @@
 				DFA26AEF2545602700E86B99 /* PetHealthPageTests.swift in Sources */,
 				DFA26AD525455B0000E86B99 /* PetProfilePageModel.swift in Sources */,
 				DFB21BD22544FB5A003CE2DB /* CounterPageTests.swift in Sources */,
+				DFA26AF42547A13900E86B99 /* extensions.swift in Sources */,
 				DFA26AB9254525ED00E86B99 /* PageModel.swift in Sources */,
 				DFA26AC92545333D00E86B99 /* HistoryPageModel.swift in Sources */,
 				DFA26AC12545330400E86B99 /* HistoryPageTests.swift in Sources */,
