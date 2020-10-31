@@ -111,9 +111,6 @@ platform :ios do
       derived_data_path: "~/Library/Developer/Xcode/DerivedData",
       output_directory: "./test_results",
       scheme: "e2e")
-    git_add
-    git_commit(path: "*", message: "Test results")
-    ensure_git_status_clean
   end
 
 end
