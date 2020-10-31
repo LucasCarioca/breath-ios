@@ -21,10 +21,10 @@ struct Change: Hashable, Codable {
 class VersionController {
 
     private static let VERSION_KEY: String = "version"
-    private static let CURRENT: String = "2.0.1"
-    private static let DESCRIPTION: String = "We have made some changes since you last used the app."
+    private static let CURRENT: String = "2.1.0"
+    private static let DESCRIPTION: String = "We have made some updates to the app."
     private static let NEW_FEATURES: [Change] = [
-        Change(title: "Adding a fresher look", description: "We are making small adjustments to the styling and getting the app more in line with the apple ecosystem", image: "paintbrush.fill")
+        Change(title: "Enhanced pet profile", description: "We have been enhancing the pet profile. You can now save record your pets name, chip id, date of birth, and  personalize the target breathing rate.", image: "dog")
     ]
 
     public static func saveVersion(version: Version){

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		DF0A7A62246C6B760004D826 /* countmybreaths.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DF0A7A60246C6B760004D826 /* countmybreaths.xcdatamodeld */; };
+		DF1B247D254DE9560072164B /* rocket.json in Resources */ = {isa = PBXBuildFile; fileRef = DF1B247B254DE9560072164B /* rocket.json */; };
+		DF1B247E254DE9560072164B /* box.json in Resources */ = {isa = PBXBuildFile; fileRef = DF1B247C254DE9560072164B /* box.json */; };
+		DF1B2488254DEB5E0072164B /* dog.json in Resources */ = {isa = PBXBuildFile; fileRef = DF1B2487254DEB5E0072164B /* dog.json */; };
 		DF1F9BF824B04E2400D0D90D /* HowToItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1F9BF724B04E2400D0D90D /* HowToItemView.swift */; };
 		DF2B080D253FCED9000631D4 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2B080C253FCED9000631D4 /* MailView.swift */; };
 		DF45D00F253B8B7200E6995E /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = DF12190A2471E0B500112F63 /* SwiftUICharts */; };
@@ -38,6 +41,8 @@
 		DFA26AEF2545602700E86B99 /* PetHealthPageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA26AEE2545602700E86B99 /* PetHealthPageTests.swift */; };
 		DFA26AF42547A13900E86B99 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA26AF32547A13900E86B99 /* extensions.swift */; };
 		DFB21BD22544FB5A003CE2DB /* CounterPageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB21BD12544FB5A003CE2DB /* CounterPageTests.swift */; };
+		DFEA3705254DE126002752C7 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = DFEA3704254DE126002752C7 /* Lottie */; };
+		DFEA3718254DE26B002752C7 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEA3717254DE26B002752C7 /* LottieView.swift */; };
 		DFF402D2253FCB57007979E4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF402D1253FCB57007979E4 /* Router.swift */; };
 		F8C4D05B47D43AAD9F7052D0 /* CoreDataUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DE596DF08528DE33AAED /* CoreDataUtilities.swift */; };
 		F8C4D16D110C5EFE777E85F1 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DC0344A919F923A5DD75 /* ListView.swift */; };
@@ -65,6 +70,9 @@
 
 /* Begin PBXFileReference section */
 		DF0A7A61246C6B760004D826 /* countmybreaths.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = countmybreaths.xcdatamodel; sourceTree = "<group>"; };
+		DF1B247B254DE9560072164B /* rocket.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = rocket.json; sourceTree = "<group>"; };
+		DF1B247C254DE9560072164B /* box.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = box.json; sourceTree = "<group>"; };
+		DF1B2487254DEB5E0072164B /* dog.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dog.json; sourceTree = "<group>"; };
 		DF1F9BF724B04E2400D0D90D /* HowToItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToItemView.swift; sourceTree = "<group>"; };
 		DF2B080C253FCED9000631D4 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		DF45D01C253B944C00E6995E /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
@@ -97,6 +105,7 @@
 		DFB21BCF2544FB5A003CE2DB /* Count my breathsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Count my breathsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB21BD12544FB5A003CE2DB /* CounterPageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterPageTests.swift; sourceTree = "<group>"; };
 		DFB21BD32544FB5A003CE2DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFEA3717254DE26B002752C7 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		DFF402D1253FCB57007979E4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		F8C4D3222819B96152879DDB /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		F8C4D3C2FDEF0B24243A39F1 /* StatsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
@@ -117,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFEA3705254DE126002752C7 /* Lottie in Frameworks */,
 				DF45D011253B8B7200E6995E /* ToastUI in Frameworks */,
 				DF6EEFE2247F5B9F00FC80D0 /* CloudKit.framework in Frameworks */,
 				DF45D00F253B8B7200E6995E /* SwiftUICharts in Frameworks */,
@@ -156,6 +166,7 @@
 			children = (
 				DF7744E524D5E4AB00A8B33B /* Theme.swift */,
 				DF7744E724D5E63900A8B33B /* Overwrites.swift */,
+				DFEA3717254DE26B002752C7 /* LottieView.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -166,7 +177,6 @@
 				DF2B0816253FD09B000631D4 /* services */,
 				DFF402C4253FCAE2007979E4 /* components */,
 				DFF402C3253FCAD8007979E4 /* pages */,
-				DF8517C22541220C0085DFFB /* UpdateChangeView.swift */,
 			);
 			path = settings;
 			sourceTree = "<group>";
@@ -193,6 +203,7 @@
 		DF8E95B5246B8E8F004AB783 /* Count my breaths */ = {
 			isa = PBXGroup;
 			children = (
+				DFEA370C254DE1F9002752C7 /* animations */,
 				DF796B2624EC820F0028357F /* settings */,
 				DF7744E424D5E48100A8B33B /* common */,
 				DFF402C6253FCAF4007979E4 /* information */,
@@ -260,6 +271,16 @@
 			path = "Count my breathsUITests";
 			sourceTree = "<group>";
 		};
+		DFEA370C254DE1F9002752C7 /* animations */ = {
+			isa = PBXGroup;
+			children = (
+				DF1B2487254DEB5E0072164B /* dog.json */,
+				DF1B247C254DE9560072164B /* box.json */,
+				DF1B247B254DE9560072164B /* rocket.json */,
+			);
+			path = animations;
+			sourceTree = "<group>";
+		};
 		DFF402BE253FCA9B007979E4 /* breathCounter */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +327,7 @@
 		DFF402C3253FCAD8007979E4 /* pages */ = {
 			isa = PBXGroup;
 			children = (
+				DF8517C22541220C0085DFFB /* UpdateChangeView.swift */,
 				DF796B2924EC82C10028357F /* PetProfileView.swift */,
 			);
 			path = pages;
@@ -366,6 +388,7 @@
 				DF12190A2471E0B500112F63 /* SwiftUICharts */,
 				DF8D99352479CD4C00824C52 /* QuickComponents */,
 				DFFC8E1524E9DD08006882B4 /* ToastUI */,
+				DFEA3704254DE126002752C7 /* Lottie */,
 			);
 			productName = "Count my breaths";
 			productReference = DF8E95B3246B8E8F004AB783 /* Count my breaths.app */;
@@ -422,6 +445,7 @@
 				DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference "ChartView" */,
 				DF8D99342479CD4C00824C52 /* XCRemoteSwiftPackageReference "QuickComponents" */,
 				DFFC8E1424E9DD08006882B4 /* XCRemoteSwiftPackageReference "ToastUI" */,
+				DFEA3703254DE126002752C7 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = DF8E95B4246B8E8F004AB783 /* Products */;
 			projectDirPath = "";
@@ -440,7 +464,10 @@
 			files = (
 				DF8E95C3246B8E93004AB783 /* LaunchScreen.storyboard in Resources */,
 				DF8E95C0246B8E93004AB783 /* Preview Assets.xcassets in Resources */,
+				DF1B2488254DEB5E0072164B /* dog.json in Resources */,
 				DF8E95BD246B8E93004AB783 /* Assets.xcassets in Resources */,
+				DF1B247E254DE9560072164B /* box.json in Resources */,
+				DF1B247D254DE9560072164B /* rocket.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,6 +517,7 @@
 				DF7744E824D5E63900A8B33B /* Overwrites.swift in Sources */,
 				DF0A7A62246C6B760004D826 /* countmybreaths.xcdatamodeld in Sources */,
 				DF8E95DC246B9086004AB783 /* CountView.swift in Sources */,
+				DFEA3718254DE26B002752C7 /* LottieView.swift in Sources */,
 				F8C4D7A6E2FCDE83C42D019A /* MailButton.swift in Sources */,
 				F8C4D9FFF6E61BB0DA0B4806 /* RecordView.swift in Sources */,
 				DFF402D2253FCB57007979E4 /* Router.swift in Sources */,
@@ -809,6 +837,14 @@
 				minimumVersion = 0.7.2;
 			};
 		};
+		DFEA3703254DE126002752C7 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.8;
+			};
+		};
 		DFFC8E1424E9DD08006882B4 /* XCRemoteSwiftPackageReference "ToastUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/quanshousio/ToastUI.git";
@@ -829,6 +865,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DF8D99342479CD4C00824C52 /* XCRemoteSwiftPackageReference "QuickComponents" */;
 			productName = QuickComponents;
+		};
+		DFEA3704254DE126002752C7 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DFEA3703254DE126002752C7 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 		DFFC8E1524E9DD08006882B4 /* ToastUI */ = {
 			isa = XCSwiftPackageProductDependency;

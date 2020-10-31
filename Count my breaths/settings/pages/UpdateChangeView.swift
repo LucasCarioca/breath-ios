@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Lottie
 
 struct UpdateChangeView: View {
     var version: String
@@ -38,12 +39,12 @@ struct UpdateChangeTitleCard: View {
                 .padding(.top, 50)
                 .multilineTextAlignment(.center)
             Spacer()
-            Image("icon")
-            Spacer()
+            LottieView(filename: "box")
             Text(description)
                 .padding()
                 .foregroundColor(Theme.colors.text)
                 .multilineTextAlignment(.center)
+                .padding(.bottom, 100)
             Spacer()
         }
     }
@@ -61,16 +62,13 @@ struct UpdateChangeCard: View {
                 .padding(.top, 50)
                 .multilineTextAlignment(.center)
             Spacer()
-            Image(systemName: image)
-                .resizable()
-                .frame(width: 150, height: 150)
-                .foregroundColor(Theme.colors.primary)
-                
+            LottieView(filename: self.image)
             Spacer()
             Text(description)
                 .padding()
                 .foregroundColor(Theme.colors.text)
                 .multilineTextAlignment(.center)
+                .padding(.bottom, 100)
             Spacer()
         }
     }
@@ -91,16 +89,15 @@ struct UpdateChangeFinalCard: View {
                 .multilineTextAlignment(.center)
                 
             Spacer()
-            Image("icon")
-            Spacer()
+            LottieView(filename: "rocket")
             Button(action: self.action) {
                 Text("Continue to app")
                     .padding()
                     .foregroundColor(Theme.colors.background)
                     .background(Theme.colors.primary)
                     .clipShape(RoundedRectangle(cornerRadius: 25.0))
+                    .padding(.bottom, 100)
             }.accessibility(label: Text("Continue to app"))
-            Spacer()
         }
     }
 }
