@@ -26,7 +26,7 @@ extension PageModel {
     }
     
     public func skipNewVersionPopup() {
-        if(app.staticTexts["We have made some changes since you last used the app."].exists) {
+        if(app.staticTexts["We have made some updates to the app."].exists) {
             app.swipeLeft(velocity: .fast)
             app.swipeLeft(velocity: .fast)
             app.buttons["Continue to app"].tap()
