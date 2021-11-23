@@ -17,16 +17,16 @@ protocol PageModel {
 
 extension PageModel {
 
-    public func setup(){
+    public func setup() {
         skipNewVersionPopup()
     }
-    
+
     public func openMenu() {
         self.app.navigationBars.buttons.element(boundBy: 0).tap()
     }
-    
+
     public func skipNewVersionPopup() {
-        if(app.staticTexts["We have made some changes since you last used the app."].exists) {
+        if (app.staticTexts["We have made some changes since you last used the app."].exists) {
             app.swipeLeft(velocity: .fast)
             app.swipeLeft(velocity: .fast)
             app.buttons["Continue to app"].tap()

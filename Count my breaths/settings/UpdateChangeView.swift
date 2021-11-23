@@ -14,9 +14,9 @@ struct UpdateChangeView: View {
     var changes: [Change]
     var action: () -> Void
     var body: some View {
-        ZStack{
+        ZStack {
             Theme.colors.background.edgesIgnoringSafeArea(.all)
-            TabView{
+            TabView {
                 UpdateChangeTitleCard(version: version, description: versionDescription)
                 ForEach(changes, id: \.self) { change in
                     UpdateChangeCard(title: change.title, description: change.description, image: change.image)
@@ -33,17 +33,17 @@ struct UpdateChangeTitleCard: View {
     var body: some View {
         VStack {
             Text("Version \(version) is here!")
-                .font(.title)
-                .foregroundColor(Theme.colors.text)
-                .padding(.top, 50)
-                .multilineTextAlignment(.center)
+                    .font(.title)
+                    .foregroundColor(Theme.colors.text)
+                    .padding(.top, 50)
+                    .multilineTextAlignment(.center)
             Spacer()
             Image("icon")
             Spacer()
             Text(description)
-                .padding()
-                .foregroundColor(Theme.colors.text)
-                .multilineTextAlignment(.center)
+                    .padding()
+                    .foregroundColor(Theme.colors.text)
+                    .multilineTextAlignment(.center)
             Spacer()
         }
     }
@@ -56,21 +56,21 @@ struct UpdateChangeCard: View {
     var body: some View {
         VStack {
             Text(title)
-                .font(.title)
-                .foregroundColor(Theme.colors.text)
-                .padding(.top, 50)
-                .multilineTextAlignment(.center)
+                    .font(.title)
+                    .foregroundColor(Theme.colors.text)
+                    .padding(.top, 50)
+                    .multilineTextAlignment(.center)
             Spacer()
             Image(systemName: image)
-                .resizable()
-                .frame(width: 150, height: 150)
-                .foregroundColor(Theme.colors.primary)
-                
+                    .resizable()
+                    .frame(width: 150, height: 150)
+                    .foregroundColor(Theme.colors.primary)
+
             Spacer()
             Text(description)
-                .padding()
-                .foregroundColor(Theme.colors.text)
-                .multilineTextAlignment(.center)
+                    .padding()
+                    .foregroundColor(Theme.colors.text)
+                    .multilineTextAlignment(.center)
             Spacer()
         }
     }
@@ -81,24 +81,24 @@ struct UpdateChangeFinalCard: View {
     var body: some View {
         VStack {
             Text("All done")
-                .font(.title)
-                .foregroundColor(Theme.colors.text)
-                .multilineTextAlignment(.center)
-                .padding(.top, 50)
+                    .font(.title)
+                    .foregroundColor(Theme.colors.text)
+                    .multilineTextAlignment(.center)
+                    .padding(.top, 50)
             Text("Lets get started!")
-                .font(.title)
-                .foregroundColor(Theme.colors.text)
-                .multilineTextAlignment(.center)
-                
+                    .font(.title)
+                    .foregroundColor(Theme.colors.text)
+                    .multilineTextAlignment(.center)
+
             Spacer()
             Image("icon")
             Spacer()
             Button(action: self.action) {
                 Text("Continue to app")
-                    .padding()
-                    .foregroundColor(Theme.colors.background)
-                    .background(Theme.colors.primary)
-                    .clipShape(RoundedRectangle(cornerRadius: 25.0))
+                        .padding()
+                        .foregroundColor(Theme.colors.background)
+                        .background(Theme.colors.primary)
+                        .clipShape(RoundedRectangle(cornerRadius: 25.0))
             }.accessibility(label: Text("Continue to app"))
             Spacer()
         }
@@ -107,7 +107,7 @@ struct UpdateChangeFinalCard: View {
 
 struct UpdateChangeFinalCard_Previews: PreviewProvider {
     static var previews: some View {
-        ZStack{
+        ZStack {
             Theme.colors.background.edgesIgnoringSafeArea(.all)
             UpdateChangeFinalCard(action: {})
         }
@@ -117,18 +117,18 @@ struct UpdateChangeFinalCard_Previews: PreviewProvider {
 
 struct UpdateChangeCard_Previews: PreviewProvider {
     static var previews: some View {
-        ZStack{
+        ZStack {
             Theme.colors.background.edgesIgnoringSafeArea(.all)
-        UpdateChangeCard(title:"Cool new feature!", description: "New version has been released with adjustments to general style.", image: "paintbrush.fill")
+            UpdateChangeCard(title: "Cool new feature!", description: "New version has been released with adjustments to general style.", image: "paintbrush.fill")
         }
     }
 }
 
 struct UpdateChangeTitleCard_Previews: PreviewProvider {
     static var previews: some View {
-        ZStack{
+        ZStack {
             Theme.colors.background.edgesIgnoringSafeArea(.all)
-        UpdateChangeTitleCard(version:"1.0.0", description: "New version has been released with adjustments to general style.")
+            UpdateChangeTitleCard(version: "1.0.0", description: "New version has been released with adjustments to general style.")
         }
     }
 }

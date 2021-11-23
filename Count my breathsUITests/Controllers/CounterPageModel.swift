@@ -10,49 +10,49 @@ import XCTest
 
 public class CounterPageModel: PageModel {
     var app: XCUIApplication = XCUIApplication()
-    
+
     required init() {
         setup()
     }
-    
+
     public func viewDidLoad() -> Bool {
         isCounterButtonVisible() && isInitialInstructionVisible()
     }
-    
+
     public func isInitialInstructionVisible() -> Bool {
         app.staticTexts["Click on the heart below to start counting"].exists
     }
-    
-    public func isCounterButtonVisible() -> Bool{
+
+    public func isCounterButtonVisible() -> Bool {
         app.buttons["Start counting"].exists
     }
-    
+
     public func isResetButtonVisible() -> Bool {
         app.buttons["Reset"].exists
     }
-    
+
     public func isCounter(at value: Int) -> Bool {
         app.staticTexts["Breaths: \(value)"].exists
     }
-    
+
     public func isTimer(at value: Int) -> Bool {
         app.staticTexts["Seconds remaining \(value)"].exists
     }
-    
+
     public func isResult(at value: Int, timeout: Double) -> Bool {
         app.staticTexts["Counted \(value) beats per minute."].waitForExistence(timeout: timeout)
     }
-    
+
     public func clickCountBreathButton() {
         app.buttons["Start counting"].tap()
     }
-    
+
     public func clickCountBreathButton(times: Int) {
         for _ in 0..<times {
             clickCountBreathButton()
         }
     }
-    
+
     public func clickResetButton() {
         app.buttons["Reset"].tap()
     }

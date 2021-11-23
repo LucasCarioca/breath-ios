@@ -13,17 +13,17 @@ class HistoryPageTests: XCTestCase {
     override func setUpWithError() throws {
         continueAfterFailure = false
     }
-    
+
     override func setUp() {
         super.setUp()
         XCUIApplication().launch()
     }
-    
+
     func test_shouldLoad() throws {
         let historyPage = HistoryPageModel()
         XCTAssert(historyPage.viewDidLoad())
     }
-    
+
     func test_shouldCreateARecord() throws {
         let counterPage = CounterPageModel()
         counterPage.clickCountBreathButton(times: 5)
@@ -31,13 +31,13 @@ class HistoryPageTests: XCTestCase {
         let historyPage = HistoryPageModel()
         XCTAssert(historyPage.recordExists(with: 10))
     }
-    
+
     func test_shouldDeleteARecord() throws {
         let counterPage = CounterPageModel()
         counterPage.clickCountBreathButton(times: 2)
         XCTAssert(counterPage.isResult(at: 4, timeout: 35))
         let historyPage = HistoryPageModel()
-        let expectedRowCount = historyPage.getRecordsCount()-6
+        let expectedRowCount = historyPage.getRecordsCount() - 6
         print(expectedRowCount)
         historyPage.deleteRecord(at: 0)
         XCTAssert(historyPage.getRecordsCount() == expectedRowCount, "Expect \(historyPage.getRecordsCount()) to be \(expectedRowCount)")

@@ -12,17 +12,17 @@ class PetHealthPageTests: XCTestCase {
     override func setUpWithError() throws {
         continueAfterFailure = false
     }
-    
+
     override func setUp() {
         super.setUp()
         XCUIApplication().launch()
     }
-    
+
     func test_shouldLoad() {
         let petHealthModel = PetHealthPageModel()
         XCTAssert(petHealthModel.viewDidLoad())
     }
-    
+
     func test_shouldOpenPages() {
         let petHealthModel = PetHealthPageModel()
         petHealthModel.openMenuOption("Why count breaths")

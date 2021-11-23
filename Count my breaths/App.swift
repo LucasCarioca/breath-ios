@@ -14,11 +14,11 @@ import QuickComponents
 @main
 struct AppRoot: App {
     let persistenceController = PersistenceController.shared
-    
+
     @State var showNewVersion = false
     @State var version = VersionController.loadVersion()
     @State var selected: Routes?
-    
+
     init() {
         let userDefaults = UserDefaults.standard
         let appRuns = userDefaults.integer(forKey: "appruns")
@@ -28,20 +28,20 @@ struct AppRoot: App {
             SKStoreReviewController.requestReview()
             userDefaults.set(true, forKey: "reviewshown")
         }
-        UITableView.appearance().backgroundColor = UIColor(red: 78/255, green: 78/255, blue: 78/255, alpha: 0.2)
+        UITableView.appearance().backgroundColor = UIColor(red: 78 / 255, green: 78 / 255, blue: 78 / 255, alpha: 0.2)
     }
-    
-    var body: some Scene{
+
+    var body: some Scene {
         WindowGroup {
             ZStack {
                 Theme.colors.text.edgesIgnoringSafeArea(.all)
                 NavigationView {
                     Router(selected: $selected)
-                        .navigationBarTitle("Menu")
-                    
+                            .navigationBarTitle("Menu")
+
                     CountView()
-                        .padding()
-                        .navigationBarTitle("Counter")
+                            .padding()
+                            .navigationBarTitle("Counter")
                 }
             }.onAppear {
                 if UIDevice.current.userInterfaceIdiom == .phone {
@@ -52,15 +52,15 @@ struct AppRoot: App {
                 }
             }.fullScreenCover(isPresented: self.$showNewVersion) {
                 UpdateChangeView(
-                    version: self.version.version,
-                    versionDescription: self.version.description,
-                    changes: self.version.newFeatures,
-                    action: self.dismissNewVersionPopup
+                        version: self.version.version,
+                        versionDescription: self.version.description,
+                        changes: self.version.newFeatures,
+                        action: self.dismissNewVersionPopup
                 )
             }.environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
-    
+
     func dismissNewVersionPopup() {
         self.showNewVersion = false
         self.version.isNew = false

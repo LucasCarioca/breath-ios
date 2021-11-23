@@ -18,7 +18,7 @@ struct MailButtonView: View {
             if MFMailComposeViewController.canSendMail() {
                 Button("Email records") {
                     self.isShowingMailView.toggle()
-                }.frame(width:150, height:50).buttonStyle(PrimaryButton(variant: .empty))
+                }.frame(width: 150, height: 50).buttonStyle(PrimaryButton(variant: .empty))
             }
         }.sheet(isPresented: $isShowingMailView) {
             MailView(isShowing: self.$isShowingMailView, result: self.$result, csv: self.$csvData)
