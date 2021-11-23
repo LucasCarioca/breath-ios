@@ -12,59 +12,56 @@ struct Router: View {
     @Binding var selected: Routes?
     var body: some View {
         List {
-            Section (header: Text("Breathing Tracker")) {
+            Section(header: Text("Breathing Tracker")) {
                 NavigationLink(
-                    destination:
+                        destination:
                         CountView()
-                            .padding()
-                            .navigationBarTitle("Counter"),
-                    tag: .counter,
-                    selection: self.$selected) {
+                                .padding()
+                                .navigationBarTitle("Counter"),
+                        tag: .counter,
+                        selection: self.$selected) {
                     Label("Counter", systemImage: "lungs.fill")
                 }
                 NavigationLink(
-                    destination:
+                        destination:
                         HistoryView()
-                            .padding()
-                            .navigationBarTitle("History"),
-                    tag: .history,
-                    selection: self.$selected) {
+                                .padding()
+                                .navigationBarTitle("History"),
+                        tag: .history,
+                        selection: self.$selected) {
                     Label("History", systemImage: "chart.bar.fill")
                 }
             }
-            Section(header: Text("Information")){
+            Section(header: Text("Information")) {
                 NavigationLink(
-                    destination:
+                        destination:
                         PetHealthView()
-                            .padding()
-                            .navigationBarTitle("Pet health"),
-                    tag: .info,
-                    selection: self.$selected) {
+                                .navigationBarTitle("Pet health"),
+                        tag: .info,
+                        selection: self.$selected) {
                     Label("Pet health", systemImage: "heart.fill")
                 }
                 NavigationLink(
-                    destination:
+                        destination:
                         AboutUsView()
-                            .padding()
-                            .navigationBarTitle("About us"),
-                    tag: .about,
-                    selection: self.$selected) {
+                                .navigationBarTitle("About us"),
+                        tag: .about,
+                        selection: self.$selected) {
                     Label("About us", systemImage: "info.circle.fill")
                 }
             }
-            Section(header: Text("Settings")){
+            Section(header: Text("Settings")) {
                 NavigationLink(
-                    destination:
+                        destination:
                         PetProfileView()
-                            .padding()
-                            .navigationBarTitle("Pet profile"),
-                    tag: .profile,
-                    selection: self.$selected) {
+                                .navigationBarTitle("Pet profile"),
+                        tag: .profile,
+                        selection: self.$selected) {
                     Label("Pet profile", systemImage: "person.crop.circle.fill")
                 }
             }
         }
-        .listStyle(GroupedListStyle())
+                .listStyle(GroupedListStyle())
     }
 }
 
@@ -79,6 +76,7 @@ enum Routes: Equatable, Identifiable {
     case about
     case profile
 
-    var id: Routes
-    { self }
+    var id: Routes {
+        self
+    }
 }
