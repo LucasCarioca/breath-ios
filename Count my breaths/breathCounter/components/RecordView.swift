@@ -12,21 +12,21 @@ struct RecordView: View {
     var targetBpm: Int
 
     var body: some View {
-        VStack{
+        VStack {
             HStack {
                 Text(getDate()).font(.custom("", size: 18))
                 Spacer()
             }
             BarView(
-                value: CGFloat(beats * 2),
-                max: CGFloat(targetBpm + 10),
-                showLabel: true,
-                color: ((beats * 2) >= targetBpm) ? Theme.colors.secondary : Theme.colors.primary)
-            .frame(height: 50)
+                    value: CGFloat(beats * 2),
+                    max: CGFloat(targetBpm + 10),
+                    showLabel: true,
+                    color: ((beats * 2) >= targetBpm) ? Theme.colors.secondary : Theme.colors.primary)
+                    .frame(height: 50)
         }
     }
-    
-    func getDate() -> String{
+
+    func getDate() -> String {
         let dateFormatterPrint = DateFormatter()
         dateFormatterPrint.dateFormat = "MMM dd,yyyy HH:mm"
         return dateFormatterPrint.string(from: self.time)

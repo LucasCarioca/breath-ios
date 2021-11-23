@@ -27,9 +27,9 @@ class VersionController {
         Change(title: "Adding a fresher look", description: "We are making small adjustments to the styling and getting the app more in line with the apple ecosystem", image: "paintbrush.fill")
     ]
 
-    public static func saveVersion(version: Version){
+    public static func saveVersion(version: Version) {
         let encoder = JSONEncoder()
-        if let encoded = try? encoder.encode(version){
+        if let encoded = try? encoder.encode(version) {
             let defaults = UserDefaults.standard
             defaults.set(encoded, forKey: VERSION_KEY)
         }
@@ -37,10 +37,10 @@ class VersionController {
 
     public static func loadVersion() -> Version {
         let defaults = UserDefaults.standard
-        if let version = defaults.object(forKey: VERSION_KEY) as? Data{
+        if let version = defaults.object(forKey: VERSION_KEY) as? Data {
             let decoder = JSONDecoder()
-            if let loadedVersion = try? decoder.decode(Version.self, from: version){
-                if(loadedVersion.version == CURRENT) {
+            if let loadedVersion = try? decoder.decode(Version.self, from: version) {
+                if (loadedVersion.version == CURRENT) {
                     return loadedVersion
                 }
             }

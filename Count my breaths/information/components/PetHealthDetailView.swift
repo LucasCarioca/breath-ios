@@ -32,8 +32,8 @@ struct PetHealthDetailView: View {
             }) {
                 Text("Close").Paragraph(align: .center, size: .LG)
             }.frame(width: 150, height: 75, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-            .padding()
-            .buttonStyle(SecondaryButton(variant: .empty))
+                    .padding()
+                    .buttonStyle(SecondaryButton(variant: .empty))
         }
     }
 }

@@ -14,7 +14,7 @@ struct StatsView: View {
     @State var petProfile = PetProfileController.loadPetProfile()
     @State var filter: QueryBy = .WEEK
     var body: some View {
-        VStack{
+        VStack {
             List {
                 HStack {
                     Text("Total records")
@@ -82,7 +82,7 @@ struct StatsView: View {
         return countRecords
     }
 
-    func query(days: Int, request: NSFetchRequest<CountRecord> ) -> NSFetchRequest<CountRecord>  {
+    func query(days: Int, request: NSFetchRequest<CountRecord>) -> NSFetchRequest<CountRecord> {
         let toDate = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM-dd-yyyy hh:mm:ss"
@@ -97,8 +97,10 @@ struct StatsView: View {
     func mode() -> Int {
         let bpmList = getBpmList()
         var counts = [Int: Int]()
-        bpmList.forEach { counts[$0] = (counts[$0] ?? 0) + 1 }
-        if let (value, _) = counts.max(by: {$0.1 < $1.1}) {
+        bpmList.forEach {
+            counts[$0] = (counts[$0] ?? 0) + 1
+        }
+        if let (value, _) = counts.max(by: { $0.1 < $1.1 }) {
             return value
         }
         return 0
@@ -113,7 +115,7 @@ struct StatsView: View {
         return bpmList.sorted()
     }
 
-    func median() -> Int{
+    func median() -> Int {
         let bpmList = getBpmList()
         if bpmList.count >= 1 {
             return bpmList.sorted(by: <)[bpmList.count / 2]
@@ -121,35 +123,35 @@ struct StatsView: View {
         return 0
     }
 
-    func lowest() -> Int{
+    func lowest() -> Int {
         let bpmList = getBpmList()
-        if bpmList.count >= 1{
+        if bpmList.count >= 1 {
             return bpmList[0]
         }
         return 0
     }
 
-    func highest() -> Int{
+    func highest() -> Int {
         let bpmList = getBpmList()
-        if bpmList.count >= 1{
-            return bpmList[bpmList.count-1]
+        if bpmList.count >= 1 {
+            return bpmList[bpmList.count - 1]
         }
         return 0
     }
 
-    func average() -> Int{
+    func average() -> Int {
         let countRecords = fetch(by: filter)
         if countRecords.count >= 1 {
             var total = 0
             for record in countRecords {
                 total = total + (Int(record.beats) * 2)
             }
-            return total/countRecords.count
+            return total / countRecords.count
         }
         return 0
     }
 
-    func percentOverTarget() -> Int{
+    func percentOverTarget() -> Int {
         let countRecords = getBpmList()
         if countRecords.count >= 1 {
             var total = 0
@@ -158,7 +160,7 @@ struct StatsView: View {
                     total += 1
                 }
             }
-            return Int((CGFloat(total)/CGFloat(countRecords.count)) * 100)
+            return Int((CGFloat(total) / CGFloat(countRecords.count)) * 100)
         }
         return 0
     }

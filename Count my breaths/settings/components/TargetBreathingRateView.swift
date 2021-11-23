@@ -18,19 +18,19 @@ struct TargetBreathingRateView: View {
     var body: some View {
         VStack {
             Text("Target breathing rate").Heading(size: .H5)
-            
+
             Picker("Target breathing rate", selection: $targetBpm) {
-                ForEach(0 ..< 100) {
+                ForEach(0..<100) {
                     Text("\($0)")
                 }
-                }.padding().labelsHidden()
+            }.padding().labelsHidden()
             Button(action: {
                 self.action(self.targetBpm)
                 self.confirm = true
             }) {
                 Text("Save")
             }.buttonStyle(PrimaryButton(variant: .contained)).frame(width: 100, height: 50)
-            .accessibility(label: Text("Save target breathing rate"))
+                    .accessibility(label: Text("Save target breathing rate"))
             Spacer()
         }.toast(isPresented: $confirm, dismissAfter: 2.0, onDismiss: {
             self.presentationMode.wrappedValue.dismiss()

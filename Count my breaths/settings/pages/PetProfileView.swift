@@ -10,6 +10,7 @@ import SwiftUI
 
 struct PetProfileView: View {
     @State var petProfile = PetProfileController.loadPetProfile()
+
     var body: some View {
         VStack {
             List {
@@ -39,14 +40,17 @@ struct PetProfileView: View {
             Spacer()
         }
     }
+
     func updateTargetBpm(newTarget: Int) {
         petProfile.targetBpm = newTarget
         PetProfileController.savePetProfile(profile: petProfile)
     }
+
     func updateName(newName: String) {
         petProfile.name = newName
         PetProfileController.savePetProfile(profile: petProfile)
     }
+
     func updateChipId(newChipId: String) {
         petProfile.chipId = newChipId
         PetProfileController.savePetProfile(profile: petProfile)

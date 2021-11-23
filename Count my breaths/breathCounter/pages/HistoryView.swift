@@ -17,11 +17,11 @@ struct HistoryView: View {
         VStack {
             SwitcherView(pages: [
                 SwitcherPage(label: "List", view: ListView()),
-                SwitcherPage(label: "Graph", view: SwitcherView(reverse:true, pages: [
-                    SwitcherPage(label: "1w", view: GraphView(by:.WEEK)),
-                    SwitcherPage(label: "2w", view: GraphView(by:.TWO_WEEKS)),
-                    SwitcherPage(label: "1m", view: GraphView(by:.MONTH)),
-                    SwitcherPage(label: "6m", view: GraphView(by:.SIX_MONTHS)),
+                SwitcherPage(label: "Graph", view: SwitcherView(reverse: true, pages: [
+                    SwitcherPage(label: "1w", view: GraphView(by: .WEEK)),
+                    SwitcherPage(label: "2w", view: GraphView(by: .TWO_WEEKS)),
+                    SwitcherPage(label: "1m", view: GraphView(by: .MONTH)),
+                    SwitcherPage(label: "6m", view: GraphView(by: .SIX_MONTHS)),
                 ])),
                 SwitcherPage(label: "Stats", view: StatsView())
             ])

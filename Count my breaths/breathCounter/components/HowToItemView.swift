@@ -12,7 +12,7 @@ struct HowToItemView: View {
     var image: String
     var text: String
     var body: some View {
-        HStack{
+        HStack {
             Image(systemName: image).font(.largeTitle).foregroundColor(Theme.colors.primary)
             Text(text).fontWeight(.heavy)
             Spacer()

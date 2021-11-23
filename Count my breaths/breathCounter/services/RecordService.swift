@@ -25,7 +25,7 @@ public class RecordService {
 
     public func buildCsv() -> String {
         var csvString = createHeader()
-        for record in records{
+        for record in records {
             csvString = csvString + createRow(record: record)
         }
         return csvString

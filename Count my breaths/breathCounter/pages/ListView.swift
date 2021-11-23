@@ -23,7 +23,9 @@ struct ListView: View {
                 }.onDelete(perform: delete)
             }.listStyle(PlainListStyle())
             MailButtonView(csvData: getCsvData())
-            Picker(selection: self.$filter.onChange { by in self.countRecords = self.fetch(by: by)  }, label: Text("")) {
+            Picker(selection: self.$filter.onChange { by in
+                self.countRecords = self.fetch(by: by)
+            }, label: Text("")) {
                 Text("1w").tag(QueryBy.WEEK)
                 Text("2w").tag(QueryBy.TWO_WEEKS)
                 Text("1m").tag(QueryBy.MONTH)
@@ -49,7 +51,9 @@ struct ListView: View {
     }
 
     func getCsvData() -> Data? {
-        let records = self.countRecords.sorted { a, b in return a.time! > b.time! }
+        let records = self.countRecords.sorted { a, b in
+            return a.time! > b.time!
+        }
         let recordService = RecordService(records: records)
         return recordService.exportCsvData()
     }
@@ -72,7 +76,7 @@ struct ListView: View {
         return countRecords
     }
 
-    func query(days: Int, request: NSFetchRequest<CountRecord> ) -> NSFetchRequest<CountRecord>  {
+    func query(days: Int, request: NSFetchRequest<CountRecord>) -> NSFetchRequest<CountRecord> {
         let toDate = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM-dd-yyyy hh:mm:ss"

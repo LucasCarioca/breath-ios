@@ -22,11 +22,11 @@ struct GraphView: View {
 
     var by: QueryBy
 
-    init () {
+    init() {
         self.by = .MAX
     }
 
-    init (by: QueryBy) {
+    init(by: QueryBy) {
         self.by = by
     }
 
@@ -38,21 +38,21 @@ struct GraphView: View {
         var countRecords: [CountRecord]
         let request = requestBuilder(sort: [NSSortDescriptor(keyPath: \CountRecord.time, ascending: false)])
         switch self.by {
-            case .MAX:
-                try! countRecords = self.moc.fetch(request)
-            case .WEEK:
-                try! countRecords = self.moc.fetch(query(days: 7, request: request))
-            case .TWO_WEEKS:
-                try! countRecords = self.moc.fetch(query(days: 14, request: request))
-            case .MONTH:
-                try! countRecords = self.moc.fetch(query(days: 30, request: request))
-            case .SIX_MONTHS:
-                try! countRecords = self.moc.fetch(query(days: 180, request: request))
+        case .MAX:
+            try! countRecords = self.moc.fetch(request)
+        case .WEEK:
+            try! countRecords = self.moc.fetch(query(days: 7, request: request))
+        case .TWO_WEEKS:
+            try! countRecords = self.moc.fetch(query(days: 14, request: request))
+        case .MONTH:
+            try! countRecords = self.moc.fetch(query(days: 30, request: request))
+        case .SIX_MONTHS:
+            try! countRecords = self.moc.fetch(query(days: 180, request: request))
         }
         return countRecords
     }
 
-    func query(days: Int, request: NSFetchRequest<CountRecord> ) -> NSFetchRequest<CountRecord>  {
+    func query(days: Int, request: NSFetchRequest<CountRecord>) -> NSFetchRequest<CountRecord> {
         let toDate = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM-dd-yyyy hh:mm:ss"
@@ -67,7 +67,7 @@ struct GraphView: View {
     func getBpmList() -> [Double] {
 
         var list: [Double] = []
-        for record in fetch(){
+        for record in fetch() {
             list.append(Double(record.beats * 2))
         }
         return list.reversed()
