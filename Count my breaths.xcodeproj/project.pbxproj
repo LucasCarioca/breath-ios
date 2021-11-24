@@ -433,9 +433,9 @@
 			);
 			mainGroup = DF8E95AA246B8E8E004AB783;
 			packageReferences = (
-				DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference "ChartView.git" */,
-				DF8D99342479CD4C00824C52 /* XCRemoteSwiftPackageReference "QuickComponents.git" */,
-				DFFC8E1424E9DD08006882B4 /* XCRemoteSwiftPackageReference "ToastUI.git" */,
+				DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference "ChartView" */,
+				DF8D99342479CD4C00824C52 /* XCRemoteSwiftPackageReference "QuickComponents" */,
+				DFFC8E1424E9DD08006882B4 /* XCRemoteSwiftPackageReference "ToastUI" */,
 			);
 			productRefGroup = DF8E95B4246B8E8F004AB783 /* Products */;
 			projectDirPath = "";
@@ -685,7 +685,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Count my breaths/Count my breaths.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Count my breaths/Preview Content\"";
 				DEVELOPMENT_TEAM = Y259ZT3SQK;
 				ENABLE_PREVIEWS = YES;
@@ -699,7 +699,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucasdesouza.countmybreaths;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -713,9 +713,9 @@
 				CODE_SIGN_ENTITLEMENTS = "Count my breaths/Count my breaths.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Count my breaths/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = Y259ZT3SQK;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Count my breaths/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -727,7 +727,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucasdesouza.countmybreaths;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -809,7 +809,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference "ChartView.git" */ = {
+		DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference "ChartView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AppPear/ChartView.git";
 			requirement = {
@@ -817,7 +817,7 @@
 				minimumVersion = 1.5.0;
 			};
 		};
-		DF8D99342479CD4C00824C52 /* XCRemoteSwiftPackageReference "QuickComponents.git" */ = {
+		DF8D99342479CD4C00824C52 /* XCRemoteSwiftPackageReference "QuickComponents" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/LucasCarioca/QuickComponents.git";
 			requirement = {
@@ -825,7 +825,7 @@
 				minimumVersion = 0.7.2;
 			};
 		};
-		DFFC8E1424E9DD08006882B4 /* XCRemoteSwiftPackageReference "ToastUI.git" */ = {
+		DFFC8E1424E9DD08006882B4 /* XCRemoteSwiftPackageReference "ToastUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/quanshousio/ToastUI.git";
 			requirement = {
@@ -838,17 +838,17 @@
 /* Begin XCSwiftPackageProductDependency section */
 		DF12190A2471E0B500112F63 /* SwiftUICharts */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference "ChartView.git" */;
+			package = DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference "ChartView" */;
 			productName = SwiftUICharts;
 		};
 		DF8D99352479CD4C00824C52 /* QuickComponents */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DF8D99342479CD4C00824C52 /* XCRemoteSwiftPackageReference "QuickComponents.git" */;
+			package = DF8D99342479CD4C00824C52 /* XCRemoteSwiftPackageReference "QuickComponents" */;
 			productName = QuickComponents;
 		};
 		DFFC8E1524E9DD08006882B4 /* ToastUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DFFC8E1424E9DD08006882B4 /* XCRemoteSwiftPackageReference "ToastUI.git" */;
+			package = DFFC8E1424E9DD08006882B4 /* XCRemoteSwiftPackageReference "ToastUI" */;
 			productName = ToastUI;
 		};
 /* End XCSwiftPackageProductDependency section */
