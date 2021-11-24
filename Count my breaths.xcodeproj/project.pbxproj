@@ -16,7 +16,6 @@
 		DF45D01D253B944C00E6995E /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF45D01C253B944C00E6995E /* App.swift */; };
 		DF45D021253B973700E6995E /* PetProfileTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF45D020253B973700E6995E /* PetProfileTextFieldView.swift */; };
 		DF6EEFE2247F5B9F00FC80D0 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF6EEFE1247F5B9F00FC80D0 /* CloudKit.framework */; };
-		DF72CE0D2541147100AC077B /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF72CE0C2541147100AC077B /* Persistence.swift */; };
 		DF7744E624D5E4AB00A8B33B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7744E524D5E4AB00A8B33B /* Theme.swift */; };
 		DF7744E824D5E63900A8B33B /* Overwrites.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7744E724D5E63900A8B33B /* Overwrites.swift */; };
 		DF796B2824EC82210028357F /* PetProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF796B2724EC82210028357F /* PetProfile.swift */; };
@@ -51,6 +50,7 @@
 		F8C4DA8D276433420A2D89E0 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D3C2FDEF0B24243A39F1 /* StatsView.swift */; };
 		F8C4DB6730AA424BAD4DFA11 /* RecordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D99E15B371A2CD78632B /* RecordService.swift */; };
 		F8C4DD89B858D778EB1D2D0D /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DE83F4B45F263EC7017A /* Version.swift */; };
+		F8C4DED039852712587213CC /* CountRecordRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D78E12CB49FCBD800D6B /* CountRecordRepository.swift */; };
 		F8C4DF2423C3C601BD0686D9 /* AboutUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D6D441FEDE02AA1D5356 /* AboutUsView.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,7 +71,6 @@
 		DF45D01C253B944C00E6995E /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		DF45D020253B973700E6995E /* PetProfileTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProfileTextFieldView.swift; sourceTree = "<group>"; };
 		DF6EEFE1247F5B9F00FC80D0 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		DF72CE0C2541147100AC077B /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		DF7744E024D52EA000A8B33B /* Count my breaths.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Count my breaths.entitlements"; sourceTree = "<group>"; };
 		DF7744E524D5E4AB00A8B33B /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		DF7744E724D5E63900A8B33B /* Overwrites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overwrites.swift; sourceTree = "<group>"; };
@@ -103,6 +102,7 @@
 		F8C4D3C2FDEF0B24243A39F1 /* StatsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
 		F8C4D649AE4E3C94E949A992 /* PetHealthDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetHealthDetailView.swift; sourceTree = "<group>"; };
 		F8C4D6D441FEDE02AA1D5356 /* AboutUsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsView.swift; sourceTree = "<group>"; };
+		F8C4D78E12CB49FCBD800D6B /* CountRecordRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountRecordRepository.swift; sourceTree = "<group>"; };
 		F8C4D99E15B371A2CD78632B /* RecordService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordService.swift; sourceTree = "<group>"; };
 		F8C4DBCAF760247815D3C4A8 /* PetHealthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetHealthView.swift; sourceTree = "<group>"; };
 		F8C4DC0344A919F923A5DD75 /* ListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
@@ -201,7 +201,6 @@
 				DFF402BE253FCA9B007979E4 /* breathCounter */,
 				DF45D01C253B944C00E6995E /* App.swift */,
 				DFF402D1253FCB57007979E4 /* Router.swift */,
-				DF72CE0C2541147100AC077B /* Persistence.swift */,
 				DF8E95BC246B8E93004AB783 /* Assets.xcassets */,
 				DF8E95C1246B8E93004AB783 /* LaunchScreen.storyboard */,
 				DF8E95C4246B8E93004AB783 /* Info.plist */,
@@ -209,6 +208,7 @@
 				DF7744E024D52EA000A8B33B /* Count my breaths.entitlements */,
 				DF8E95BE246B8E93004AB783 /* Preview Content */,
 				F8C4DF78CCA66B667B6AE4D4 /* Datasource.swift */,
+				F8C4D45E00097F2F6449C326 /* repositories */,
 			);
 			path = "Count my breaths";
 			sourceTree = "<group>";
@@ -349,6 +349,14 @@
 			path = components;
 			sourceTree = "<group>";
 		};
+		F8C4D45E00097F2F6449C326 /* repositories */ = {
+			isa = PBXGroup;
+			children = (
+				F8C4D78E12CB49FCBD800D6B /* CountRecordRepository.swift */,
+			);
+			path = repositories;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -422,9 +430,9 @@
 			);
 			mainGroup = DF8E95AA246B8E8E004AB783;
 			packageReferences = (
-				DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference "ChartView" */,
-				DF8D99342479CD4C00824C52 /* XCRemoteSwiftPackageReference "QuickComponents" */,
-				DFFC8E1424E9DD08006882B4 /* XCRemoteSwiftPackageReference "ToastUI" */,
+				DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference "ChartView.git" */,
+				DF8D99342479CD4C00824C52 /* XCRemoteSwiftPackageReference "QuickComponents.git" */,
+				DFFC8E1424E9DD08006882B4 /* XCRemoteSwiftPackageReference "ToastUI.git" */,
 			);
 			productRefGroup = DF8E95B4246B8E8F004AB783 /* Products */;
 			projectDirPath = "";
@@ -508,8 +516,8 @@
 				F8C4D16D110C5EFE777E85F1 /* ListView.swift in Sources */,
 				F8C4DA8D276433420A2D89E0 /* StatsView.swift in Sources */,
 				F8C4DD89B858D778EB1D2D0D /* Version.swift in Sources */,
-				DF72CE0D2541147100AC077B /* Persistence.swift in Sources */,
 				F8C4D0B79ABF58502F8DB064 /* Datasource.swift in Sources */,
+				F8C4DED039852712587213CC /* CountRecordRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -797,7 +805,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+		DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference "ChartView.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AppPear/ChartView.git";
 			requirement = {
@@ -805,7 +813,7 @@
 				minimumVersion = 1.5.0;
 			};
 		};
-		DF8D99342479CD4C00824C52 /* XCRemoteSwiftPackageReference "QuickComponents" */ = {
+		DF8D99342479CD4C00824C52 /* XCRemoteSwiftPackageReference "QuickComponents.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/LucasCarioca/QuickComponents.git";
 			requirement = {
@@ -813,7 +821,7 @@
 				minimumVersion = 0.7.2;
 			};
 		};
-		DFFC8E1424E9DD08006882B4 /* XCRemoteSwiftPackageReference "ToastUI" */ = {
+		DFFC8E1424E9DD08006882B4 /* XCRemoteSwiftPackageReference "ToastUI.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/quanshousio/ToastUI.git";
 			requirement = {
@@ -826,17 +834,17 @@
 /* Begin XCSwiftPackageProductDependency section */
 		DF12190A2471E0B500112F63 /* SwiftUICharts */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference "ChartView" */;
+			package = DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference "ChartView.git" */;
 			productName = SwiftUICharts;
 		};
 		DF8D99352479CD4C00824C52 /* QuickComponents */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DF8D99342479CD4C00824C52 /* XCRemoteSwiftPackageReference "QuickComponents" */;
+			package = DF8D99342479CD4C00824C52 /* XCRemoteSwiftPackageReference "QuickComponents.git" */;
 			productName = QuickComponents;
 		};
 		DFFC8E1524E9DD08006882B4 /* ToastUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DFFC8E1424E9DD08006882B4 /* XCRemoteSwiftPackageReference "ToastUI" */;
+			package = DFFC8E1424E9DD08006882B4 /* XCRemoteSwiftPackageReference "ToastUI.git" */;
 			productName = ToastUI;
 		};
 /* End XCSwiftPackageProductDependency section */

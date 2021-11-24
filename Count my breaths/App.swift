@@ -13,7 +13,8 @@ import QuickComponents
 
 @main
 struct AppRoot: App {
-    let dataSource: Datasource
+    let datasource: Datasource
+    let countRecordRepository: CountRecordRepository
     @State var showNewVersion = false
     @State var version = VersionController.loadVersion()
     @State var selected: Routes?
@@ -23,10 +24,11 @@ struct AppRoot: App {
             UserDefaults.standard.register(defaults: [
                 "0001": true
             ])
-            dataSource = Datasource(inMemory: true)
+            datasource = Datasource(inMemory: true)
         } else {
-            dataSource = Datasource(inMemory: false)
+            datasource = Datasource(inMemory: false)
         }
+        countRecordRepository = CountRecordRepository(ctx: datasource.getContainer().viewContext)
 
         let userDefaults = UserDefaults.standard
         let appRuns = userDefaults.integer(forKey: "appruns")
@@ -65,7 +67,8 @@ struct AppRoot: App {
                         changes: version.newFeatures,
                         action: dismissNewVersionPopup
                 )
-            }.environment(\.managedObjectContext, dataSource.getContainer().viewContext)
+            }.environment(\.managedObjectContext, datasource.getContainer().viewContext)
+            .environment(\.countRecordRepository, countRecordRepository)
         }
     }
 
