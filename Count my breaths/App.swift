@@ -54,21 +54,21 @@ struct AppRoot: App {
                             .navigationBarTitle("Counter")
                 }
             }.onAppear {
-                if UIDevice.current.userInterfaceIdiom == .phone {
-                    self.selected = .counter
-                }
-                if (version.isNew) {
-                    self.showNewVersion = true
-                }
-            }.fullScreenCover(isPresented: self.$showNewVersion) {
-                UpdateChangeView(
-                        version: version.version,
-                        versionDescription: version.description,
-                        changes: version.newFeatures,
-                        action: dismissNewVersionPopup
-                )
-            }.environment(\.managedObjectContext, datasource.getContainer().viewContext)
-            .environment(\.countRecordRepository, countRecordRepository)
+                        if UIDevice.current.userInterfaceIdiom == .phone {
+                            self.selected = .counter
+                        }
+                        if (version.isNew) {
+                            self.showNewVersion = true
+                        }
+                    }.fullScreenCover(isPresented: self.$showNewVersion) {
+                        UpdateChangeView(
+                                version: version.version,
+                                versionDescription: version.description,
+                                changes: version.newFeatures,
+                                action: dismissNewVersionPopup
+                        )
+                    }.environment(\.managedObjectContext, datasource.getContainer().viewContext)
+                    .environment(\.countRecordRepository, countRecordRepository)
         }
     }
 
