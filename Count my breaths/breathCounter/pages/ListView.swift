@@ -12,47 +12,51 @@ import CoreData
 
 struct ListView: View {
     @Environment(\.managedObjectContext) var moc
+    @Environment(\.countRecordRepository) var countRecordRepository: CountRecordRepository
+
     @State var petProfile = PetProfileController.loadPetProfile()
     @State var countRecords: [CountRecord] = []
     @State var filter: QueryBy = .WEEK
+
     var body: some View {
         VStack {
             List {
-                ForEach(self.countRecords.indices, id: \.self) { record in
-                    RecordView(beats: self.countRecords[record].beats, time: self.countRecords[record].time ?? Date(), targetBpm: self.petProfile.targetBpm)
+                ForEach(countRecords.indices, id: \.self) { record in
+                    RecordView(beats: countRecords[record].beats, time: countRecords[record].time ?? Date(), targetBpm: petProfile.targetBpm)
                 }.onDelete(perform: delete)
             }.listStyle(PlainListStyle())
             MailButtonView(csvData: getCsvData())
             Picker(selection: self.$filter.onChange { by in
-                self.countRecords = self.fetch(by: by)
+                self.countRecords = fetch(by: by)
             }, label: Text("")) {
                 Text("1w").tag(QueryBy.WEEK)
                 Text("2w").tag(QueryBy.TWO_WEEKS)
                 Text("1m").tag(QueryBy.MONTH)
                 Text("6m").tag(QueryBy.SIX_MONTHS)
             }.pickerStyle(SegmentedPickerStyle())
-        }.onAppear() {
+        }.onAppear {
             self.petProfile = PetProfileController.loadPetProfile()
-            self.countRecords = self.fetch(by: self.filter)
+            countRecords = countRecordRepository.getAllBreathRecords()
+//            self.countRecords = fetch(by: filter)
         }
     }
 
     func delete(at offsets: IndexSet) {
         print("deleting \(offsets.first!)")
         if let index = offsets.first {
-            moc.delete(self.countRecords[index])
+            moc.delete(countRecords[index])
         }
         do {
             try moc.save()
-            self.countRecords = self.fetch(by: self.filter)
+            self.countRecords = fetch(by: filter)
         } catch {
             print("error occurred trying to save to core data")
         }
     }
 
     func getCsvData() -> Data? {
-        let records = self.countRecords.sorted { a, b in
-            return a.time! > b.time!
+        let records = countRecords.sorted { a, b in
+            a.time! > b.time!
         }
         let recordService = RecordService(records: records)
         return recordService.exportCsvData()
@@ -63,15 +67,15 @@ struct ListView: View {
         let request = requestBuilder(sort: [NSSortDescriptor(keyPath: \CountRecord.time, ascending: false)])
         switch by {
         case .MAX:
-            try? countRecords = self.moc.fetch(request)
+            try? countRecords = moc.fetch(request)
         case .WEEK:
-            try? countRecords = self.moc.fetch(query(days: 7, request: request))
+            try? countRecords = moc.fetch(query(days: 7, request: request))
         case .TWO_WEEKS:
-            try? countRecords = self.moc.fetch(query(days: 14, request: request))
+            try? countRecords = moc.fetch(query(days: 14, request: request))
         case .MONTH:
-            try? countRecords = self.moc.fetch(query(days: 30, request: request))
+            try? countRecords = moc.fetch(query(days: 30, request: request))
         case .SIX_MONTHS:
-            try? countRecords = self.moc.fetch(query(days: 180, request: request))
+            try? countRecords = moc.fetch(query(days: 180, request: request))
         }
         return countRecords
     }
