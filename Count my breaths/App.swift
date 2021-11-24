@@ -13,13 +13,21 @@ import QuickComponents
 
 @main
 struct AppRoot: App {
-    let persistenceController = PersistenceController.shared
-
+    let dataSource: Datasource
     @State var showNewVersion = false
     @State var version = VersionController.loadVersion()
     @State var selected: Routes?
 
     init() {
+        if CommandLine.arguments.contains("-test-data") {
+            UserDefaults.standard.register(defaults: [
+                "0001": true
+            ])
+            dataSource = Datasource(inMemory: true)
+        } else {
+            dataSource = Datasource(inMemory: false)
+        }
+
         let userDefaults = UserDefaults.standard
         let appRuns = userDefaults.integer(forKey: "appruns")
         let countRuns = userDefaults.integer(forKey: "countruns")
@@ -47,17 +55,17 @@ struct AppRoot: App {
                 if UIDevice.current.userInterfaceIdiom == .phone {
                     self.selected = .counter
                 }
-                if (self.version.isNew) {
+                if (version.isNew) {
                     self.showNewVersion = true
                 }
             }.fullScreenCover(isPresented: self.$showNewVersion) {
                 UpdateChangeView(
-                        version: self.version.version,
-                        versionDescription: self.version.description,
-                        changes: self.version.newFeatures,
-                        action: self.dismissNewVersionPopup
+                        version: version.version,
+                        versionDescription: version.description,
+                        changes: version.newFeatures,
+                        action: dismissNewVersionPopup
                 )
-            }.environment(\.managedObjectContext, persistenceController.container.viewContext)
+            }.environment(\.managedObjectContext, dataSource.getContainer().viewContext)
         }
     }
 
