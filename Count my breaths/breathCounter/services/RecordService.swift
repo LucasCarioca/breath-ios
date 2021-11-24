@@ -32,7 +32,7 @@ public class RecordService {
     }
 
     public func exportCsvData() -> Data? {
-        return buildCsv().data(using: String.Encoding.utf8)
+        buildCsv().data(using: String.Encoding.utf8)
     }
 
 }

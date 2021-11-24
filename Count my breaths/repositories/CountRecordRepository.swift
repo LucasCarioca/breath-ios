@@ -13,15 +13,20 @@ struct CountRecordRepositoryKey: EnvironmentKey {
 
 extension EnvironmentValues {
     var countRecordRepository: CountRecordRepository {
-        get { self[CountRecordRepositoryKey.self] }
-        set { self[CountRecordRepositoryKey.self] = newValue }
+        get {
+            self[CountRecordRepositoryKey.self]
+        }
+        set {
+            self[CountRecordRepositoryKey.self] = newValue
+        }
     }
 }
 
 class CountRecordRepository {
     private var ctx: NSManagedObjectContext?
 
-    init() {}
+    init() {
+    }
 
     init(ctx: NSManagedObjectContext) {
         self.ctx = ctx
@@ -31,11 +36,25 @@ class CountRecordRepository {
         self.ctx = ctx
     }
 
+    public func delete(_ item: CountRecord) {
+        do {
+            guard let ctx = ctx else {
+                throw NSError()
+            }
+            ctx.delete(item)
+            try ctx.save()
+        } catch {
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
+    }
 
-    public func getAllBreathRecords() -> [CountRecord] {
+    public func getAllCountRecords() -> [CountRecord] {
         let request = CountRecord.fetchRequest()
         do {
-            guard let ctx = ctx else { throw NSError()}
+            guard let ctx = ctx else {
+                throw NSError()
+            }
             return try ctx.fetch(request)
         } catch {
             let nsError = error as NSError
@@ -43,10 +62,13 @@ class CountRecordRepository {
         }
     }
 
-    public func queryBreathRecords(_ query: NSFetchRequest<CountRecord>) -> [CountRecord] {
+    public func getAllCountRecords(from: Date, to: Date) -> [CountRecord] {
         let request = CountRecord.fetchRequest()
+        request.predicate = NSPredicate(format: "(time >= %@) AND (time <= %@)", from as NSDate, to as NSDate)
         do {
-            guard let ctx = ctx else { throw NSError()}
+            guard let ctx = ctx else {
+                throw NSError()
+            }
             return try ctx.fetch(request)
         } catch {
             let nsError = error as NSError
