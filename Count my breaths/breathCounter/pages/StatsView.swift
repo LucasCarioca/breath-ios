@@ -10,7 +10,7 @@ import SwiftUICharts
 import CoreData
 
 struct StatsView: View {
-    @Environment(\.managedObjectContext) var moc
+    @Environment(\.countRecordRepository) var countRecordRepository: CountRecordRepository
     @State var petProfile = PetProfileController.loadPetProfile()
     @State var filter: QueryBy = .WEEK
     var body: some View {
@@ -19,37 +19,37 @@ struct StatsView: View {
                 HStack {
                     Text("Total records")
                     Spacer()
-                    Text("\(self.fetch(by: self.filter).count)").fontWeight(.heavy)
+                    Text("\(fetch().count)").fontWeight(.heavy)
                 }
                 HStack {
                     Text("High breathing rate")
                     Spacer()
-                    Text("\(self.percentOverTarget())%").fontWeight(.heavy)
+                    Text("\(percentOverTarget())%").fontWeight(.heavy)
                 }
                 HStack {
                     Text("Average")
                     Spacer()
-                    Text("\(self.average())").fontWeight(.heavy)
+                    Text("\(average())").fontWeight(.heavy)
                 }
                 HStack {
                     Text("Highest")
                     Spacer()
-                    Text("\(self.highest())").fontWeight(.heavy)
+                    Text("\(highest())").fontWeight(.heavy)
                 }
                 HStack {
                     Text("Lowest")
                     Spacer()
-                    Text("\(self.lowest())").fontWeight(.heavy)
+                    Text("\(lowest())").fontWeight(.heavy)
                 }
                 HStack {
                     Text("Median")
                     Spacer()
-                    Text("\(self.median())").fontWeight(.heavy)
+                    Text("\(median())").fontWeight(.heavy)
                 }
                 HStack {
                     Text("Most common")
                     Spacer()
-                    Text("\(self.mode())").fontWeight(.heavy)
+                    Text("\(mode())").fontWeight(.heavy)
                 }
             }
             Spacer()
@@ -64,34 +64,9 @@ struct StatsView: View {
         }
     }
 
-    func fetch(by: QueryBy) -> [CountRecord] {
-        var countRecords: [CountRecord] = []
-        let request = requestBuilder(sort: [NSSortDescriptor(keyPath: \CountRecord.time, ascending: false)])
-        switch by {
-        case .MAX:
-            try? countRecords = self.moc.fetch(request)
-        case .WEEK:
-            try? countRecords = self.moc.fetch(query(days: 7, request: request))
-        case .TWO_WEEKS:
-            try? countRecords = self.moc.fetch(query(days: 14, request: request))
-        case .MONTH:
-            try? countRecords = self.moc.fetch(query(days: 30, request: request))
-        case .SIX_MONTHS:
-            try? countRecords = self.moc.fetch(query(days: 180, request: request))
-        }
-        return countRecords
-    }
-
-    func query(days: Int, request: NSFetchRequest<CountRecord>) -> NSFetchRequest<CountRecord> {
-        let toDate = Date()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM-dd-yyyy hh:mm:ss"
-        let dayComp = DateComponents(day: -days)
-        let fromDate = Calendar.current.date(byAdding: dayComp, to: toDate)!
-        print(fromDate)
-        print(toDate)
-        request.predicate = NSPredicate(format: "(time >= %@) AND (time <= %@)", fromDate as NSDate, toDate as NSDate)
-        return request
+    func fetch() -> [CountRecord] {
+        let range = getRange(filter)
+        return countRecordRepository.getAllCountRecords(from: range.from, to: range.to)
     }
 
     func mode() -> Int {
@@ -107,7 +82,7 @@ struct StatsView: View {
     }
 
     func getBpmList() -> [Int] {
-        let countRecords = fetch(by: filter)
+        let countRecords = fetch()
         var bpmList: [Int] = []
         for record in countRecords {
             bpmList.append(Int(record.beats) * 2)
@@ -140,7 +115,7 @@ struct StatsView: View {
     }
 
     func average() -> Int {
-        let countRecords = fetch(by: filter)
+        let countRecords = fetch()
         if countRecords.count >= 1 {
             var total = 0
             for record in countRecords {
