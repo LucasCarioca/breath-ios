@@ -35,7 +35,7 @@ struct AppRoot: App {
         let countRuns = userDefaults.integer(forKey: "countruns")
         let reviewShown = userDefaults.bool(forKey: "reviewshown")
         if (appRuns >= 5 || countRuns >= 5) && !reviewShown {
-            SKStoreReviewController.requestReview()
+            SKStoreReviewController.requestReviewInCurrentScene()
             userDefaults.set(true, forKey: "reviewshown")
         }
         UITableView.appearance().backgroundColor = UIColor(red: 78 / 255, green: 78 / 255, blue: 78 / 255, alpha: 0.2)
