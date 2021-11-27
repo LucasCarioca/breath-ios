@@ -8,7 +8,7 @@ import SwiftUI
 import ToastUI
 import QuickComponents
 
-struct CountWarningToast: View{
+struct CountWarningToast: View {
     var messageTitle: String
     var messageContent: String
     var action: () -> Void
