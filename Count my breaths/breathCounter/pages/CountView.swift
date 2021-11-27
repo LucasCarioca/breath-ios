@@ -13,7 +13,7 @@ import ToastUI
 
 struct CountView: View {
     @Environment(\.colorScheme) var colorScheme
-    @Environment(\.managedObjectContext) var managedObjectContext
+    @Environment(\.countRecordRepository) var countRecordRepository: CountRecordRepository
     @FetchRequest(fetchRequest: requestBuilder(limit: 1, sort: [])) var countRecords: FetchedResults<CountRecord>
 
     @State var showHelp: Bool = false
@@ -37,87 +37,53 @@ struct CountView: View {
 
     var body: some View {
         VStack {
-            self.showResults ?
-                    Text("Counted " + String(self.bpm) + " beats per minute.")
-                            .Paragraph(align: .center, size: .MD) : nil
+            showResults ?
+                    CountResults(bpm: bpm) : nil
 
-            if (self.isCounting) {
-                TimerView(counter: self.counter, time: self.timer, max: 30)
-            } else {
-                Text("Click on the heart below to start counting").Paragraph(align: .center, size: .MD)
-            }
+            isCounting ?
+                    AnyView(TimerView(counter: counter, time: timer, max: 30)) : AnyView(CountInstructions())
             Spacer()
-
-            Button(action: self.breath) {
-                GeometryReader { geometry in
-                    Image("icon")
-                            .frame(width: geometry.size.width, height: geometry.size.height)
-                            .background(Color(red: 78 / 255, green: 78 / 255, blue: 78 / 255))
-                            .cornerRadius(20)
-                }
-            }.accessibility(label: Text("Start counting")).buttonStyle(PlainButtonStyle())
-                    .onReceive(self.timePublisher) { time in
-                        if (self.isCounting) {
-                            if (self.timer >= 30) {
+            CountButton(action: breath)
+                    .onReceive(timePublisher) { time in
+                        if (isCounting) {
+                            if (timer >= 30) {
                                 self.saveRecord(timeInterval: time.timeIntervalSinceReferenceDate)
-                                self.finishCounting()
+                                finishCounting()
                             } else {
                                 self.timer += 1
                             }
                         }
                     }
 
-            self.isCounting ? Button(action: self.reset) {
-                Text("Reset")
-            }.frame(height: 50).buttonStyle(SecondaryButton()) : nil
-            Spacer()
-                    .navigationBarItems(trailing: (
-                            Button(action: {
-                                withAnimation {
-                                    self.showHelp.toggle()
-                                }
-                            }) {
-                                ZStack {
-                                    RoundedRectangle(cornerRadius: 2).foregroundColor(.clear).frame(width: 40, height: 40)
-                                    Image(systemName: "info.circle.fill").imageScale(.large)
-                                }
-                            }
-                    ))
+            isCounting ? CountResetButton(action: reset) : nil
+            Spacer().navigationBarItems(trailing: CountShowHelpButton(action: toggleHelp))
         }.toast(isPresented: $showWarning) {
-            ToastView {
-                VStack {
-                    Text(self.messageTitle).Heading(align: .center, size: .H6)
-                    HStack {
-                        Spacer()
-                        Image(systemName: "exclamationmark.triangle.fill").imageScale(.large).foregroundColor(.yellow)
-                        Spacer()
-                    }
-                    Text(self.messageContent).Paragraph(align: .center, size: .MD)
-                    Button(action: {
-                        self.showWarning = false
-                        let keyWindow = UIApplication.shared.windows.first {
-                            $0.isKeyWindow
-                        }
-                        let rootViewController = keyWindow?.rootViewController
-                        rootViewController?.dismiss(animated: true)
-                    }) {
-                        Text("OK")
-                    }.buttonStyle(PrimaryButton(variant: .contained)).frame(width: 100, height: 50)
-                }
-            }
+            CountWarningToast(messageTitle: messageTitle, messageContent: messageContent, action: dismissToast)
         }.onAppear() {
             self.petProfile = PetProfileController.loadPetProfile()
         }.sheet(isPresented: $showHelp) {
-            VStack {
-                HowToView()
-                Button(action: {
-                    self.showHelp = false
-                }) {
-                    Text("Close")
-                }.buttonStyle(SecondaryButton()).frame(width: 100, height: 50)
-            }.padding()
+            CountHowTowPopOver(action: helpOff)
         }
 
+    }
+
+    func dismissToast() {
+        self.showWarning = false
+        let keyWindow = UIApplication.shared.windows.first {
+            $0.isKeyWindow
+        }
+        let rootViewController = keyWindow?.rootViewController
+        rootViewController?.dismiss(animated: true)
+    }
+
+    func toggleHelp() {
+        withAnimation {
+            self.showHelp.toggle()
+        }
+    }
+
+    func helpOff() {
+        showHelp = false
     }
 
     func reset() {
@@ -127,9 +93,8 @@ struct CountView: View {
     }
 
     func finishCounting() {
-        print("finished counting")
-        self.bpm = self.counter * 2
-        if self.bpm >= petProfile.targetBpm {
+        self.bpm = counter * 2
+        if bpm >= petProfile.targetBpm {
             highBreathing()
         } else {
             normalBreathing()
@@ -139,18 +104,10 @@ struct CountView: View {
     }
 
     func saveRecord(timeInterval: TimeInterval) {
-        let record = CountRecord(context: self.managedObjectContext)
-        record.elapsedTime = Int16(self.timer)
-        record.beats = Int16(self.counter)
-        record.time = Date(timeIntervalSinceReferenceDate: timeInterval)
-        let df = DateFormatter()
-        df.dateFormat = "MM-dd-yyyy hh:mm:ss"
-        record.timeText = df.string(from: record.time ?? Date())
-        do {
-            try self.managedObjectContext.save()
-        } catch {
-            print("Failed to save")
-        }
+        countRecordRepository.create(
+                elapsedTime: Int16(timer),
+                beats: Int16(counter),
+                time: Date(timeIntervalSinceReferenceDate: timeInterval))
     }
 
     func trackRuns() {
@@ -160,7 +117,7 @@ struct CountView: View {
     }
 
     func highBreathing() {
-        self.hapticNotification.notificationOccurred(.error)
+        hapticNotification.notificationOccurred(.error)
         self.messageTitle = "Your pets breathing is high"
         self.messageContent = "Your pets breathing rate is \(String(self.bpm)). Please contact your veterinarian."
         self.showResults = true
@@ -168,16 +125,15 @@ struct CountView: View {
     }
 
     func normalBreathing() {
-        self.hapticNotification.notificationOccurred(.success)
+        hapticNotification.notificationOccurred(.success)
         self.messageTitle = "Your pets breathing is normal"
         self.messageContent = "Your pets breathing rate is \(String(self.bpm))."
         self.showResults = true
     }
 
     func breath() {
-        print("breath counted")
-        self.impactMed.impactOccurred()
-        if (!self.isCounting) {
+        impactMed.impactOccurred()
+        if (!isCounting) {
             self.showResults = false
             self.timePublisher = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
             self.counter = 1
