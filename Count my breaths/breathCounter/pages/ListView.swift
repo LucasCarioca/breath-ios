@@ -50,6 +50,6 @@ struct ListView: View {
 
     func fetch() -> [CountRecord] {
         let range = getRange(filter)
-        return countRecordRepository.getAllCountRecords(from: range.from, to: range.to)
+        return countRecordRepository.getAllCountRecords(from: range.from, to: range.to).reversed()
     }
 }

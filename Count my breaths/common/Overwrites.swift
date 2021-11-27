@@ -9,6 +9,7 @@
 import Foundation
 import SwiftUI
 import UIKit
+import StoreKit
 
 struct CustomText: View {
     var content: String
@@ -61,5 +62,13 @@ extension Binding {
                     self.wrappedValue = selection
                     handler(selection)
                 })
+    }
+}
+
+extension SKStoreReviewController {
+    public static func requestReviewInCurrentScene() {
+        if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
+            requestReview(in: scene)
+        }
     }
 }
