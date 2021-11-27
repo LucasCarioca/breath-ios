@@ -49,6 +49,26 @@ class CountRecordRepository {
         }
     }
 
+    public func create(elapsedTime: Int16, beats: Int16, time: Date) -> CountRecord {
+        do {
+            guard let ctx = ctx else {
+                throw NSError()
+            }
+            let record = CountRecord(context: ctx)
+            record.elapsedTime = elapsedTime
+            record.beats = beats
+            record.time = time
+            let df = DateFormatter()
+            df.dateFormat = "MM-dd-yyyy hh:mm:ss"
+            record.timeText = df.string(from: record.time ?? Date())
+            try ctx.save()
+            return record
+        } catch {
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
+    }
+
     public func getAllCountRecords() -> [CountRecord] {
         let request = CountRecord.fetchRequest()
         do {
