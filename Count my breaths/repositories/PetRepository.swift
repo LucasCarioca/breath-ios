@@ -134,4 +134,18 @@ class PetRepository {
             fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
         }
     }
+
+    public func getCurrentPet() -> Pet {
+        do {
+            let petProfile = PetProfileController.loadPetProfile()
+            let pet = findByName(petProfile.name)
+            guard let pet = pet else {
+                throw NSError()
+            }
+            return pet
+        } catch {
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
+    }
 }

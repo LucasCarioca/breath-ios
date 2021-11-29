@@ -14,6 +14,7 @@ import ToastUI
 struct CountView: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.countRecordRepository) var countRecordRepository: CountRecordRepository
+    @Environment(\.petRepository) var petRepository: PetRepository
     @FetchRequest(fetchRequest: requestBuilder(limit: 1, sort: [])) var countRecords: FetchedResults<CountRecord>
 
     @State var showHelp: Bool = false
@@ -59,7 +60,7 @@ struct CountView: View {
             Spacer().navigationBarItems(trailing: CountShowHelpButton(action: toggleHelp))
         }.toast(isPresented: $showWarning) {
             CountWarningToast(messageTitle: messageTitle, messageContent: messageContent, action: dismissToast)
-        }.onAppear() {
+        }.onAppear {
             self.petProfile = PetProfileController.loadPetProfile()
         }.sheet(isPresented: $showHelp) {
             CountHowTowPopOver(action: helpOff)
@@ -107,7 +108,8 @@ struct CountView: View {
         countRecordRepository.create(
                 elapsedTime: Int16(timer),
                 beats: Int16(counter),
-                time: Date(timeIntervalSinceReferenceDate: timeInterval))
+                time: Date(timeIntervalSinceReferenceDate: timeInterval),
+                pet: petRepository.getCurrentPet())
     }
 
     func trackRuns() {
@@ -119,7 +121,7 @@ struct CountView: View {
     func highBreathing() {
         hapticNotification.notificationOccurred(.error)
         self.messageTitle = "Your pets breathing is high"
-        self.messageContent = "Your pets breathing rate is \(String(self.bpm)). Please contact your veterinarian."
+        self.messageContent = "Your pets breathing rate is \(String(bpm)). Please contact your veterinarian."
         self.showResults = true
         self.showWarning = true
     }
@@ -127,7 +129,7 @@ struct CountView: View {
     func normalBreathing() {
         hapticNotification.notificationOccurred(.success)
         self.messageTitle = "Your pets breathing is normal"
-        self.messageContent = "Your pets breathing rate is \(String(self.bpm))."
+        self.messageContent = "Your pets breathing rate is \(String(bpm))."
         self.showResults = true
     }
 
