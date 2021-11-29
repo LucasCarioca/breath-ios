@@ -15,6 +15,7 @@ import QuickComponents
 struct AppRoot: App {
     let datasource: Datasource
     let countRecordRepository: CountRecordRepository
+    let petRepository: PetRepository
     @State var showNewVersion = false
     @State var version = VersionController.loadVersion()
     @State var selected: Routes?
@@ -29,6 +30,10 @@ struct AppRoot: App {
             datasource = Datasource(inMemory: false)
         }
         countRecordRepository = CountRecordRepository(ctx: datasource.getContainer().viewContext)
+        petRepository = PetRepository(ctx: datasource.getContainer().viewContext)
+
+        //temporary to migrate data from user defaults to core data
+        petRepository.createFromDefault()
 
         let userDefaults = UserDefaults.standard
         let appRuns = userDefaults.integer(forKey: "appruns")
@@ -69,12 +74,13 @@ struct AppRoot: App {
                         )
                     }.environment(\.managedObjectContext, datasource.getContainer().viewContext)
                     .environment(\.countRecordRepository, countRecordRepository)
+                    .environment(\.petRepository, petRepository)
         }
     }
 
     func dismissNewVersionPopup() {
         self.showNewVersion = false
         self.version.isNew = false
-        VersionController.saveVersion(version: self.version)
+        VersionController.saveVersion(version: version)
     }
 }

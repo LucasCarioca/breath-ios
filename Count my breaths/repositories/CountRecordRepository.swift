@@ -96,4 +96,22 @@ class CountRecordRepository {
         }
     }
 
+    public func getAllByPet(_ pet: Pet? = nil) -> [CountRecord] {
+        let request = CountRecord.fetchRequest()
+        do {
+            if let pet = pet {
+                request.predicate = NSPredicate(format: "pet == %@", pet)
+            } else {
+                request.predicate = NSPredicate(format: "pet == nil")
+            }
+            guard let ctx = ctx else {
+                throw NSError()
+            }
+            return try ctx.fetch(request)
+        } catch {
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
+    }
+
 }

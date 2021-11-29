@@ -59,6 +59,7 @@
 		F8C4DE76A0C943FC5A808882 /* CountResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D00CA5B9AF6C13FD2695 /* CountResults.swift */; };
 		F8C4DED039852712587213CC /* CountRecordRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D78E12CB49FCBD800D6B /* CountRecordRepository.swift */; };
 		F8C4DF2423C3C601BD0686D9 /* AboutUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D6D441FEDE02AA1D5356 /* AboutUsView.swift */; };
+		F8C4DF76C2551EBB4A95E165 /* PetRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DF03F809185BC94A80D5 /* PetRepository.swift */; };
 		F8C4DFE4FB933128A929CEFE /* CountResetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D6A6601655C7A4EB9A90 /* CountResetButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -125,6 +126,7 @@
 		F8C4DE65EDFBCB8B01B277C4 /* MailButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailButton.swift; sourceTree = "<group>"; };
 		F8C4DE81C0A3624CDF2A6FF6 /* HowToView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToView.swift; sourceTree = "<group>"; };
 		F8C4DE83F4B45F263EC7017A /* Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
+		F8C4DF03F809185BC94A80D5 /* PetRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetRepository.swift; sourceTree = "<group>"; };
 		F8C4DF5A2465D5FACC847374 /* CountButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountButton.swift; sourceTree = "<group>"; };
 		F8C4DF78CCA66B667B6AE4D4 /* Datasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Datasource.swift; sourceTree = "<group>"; };
 		F8C4DF960ABFB062D3F0BAB3 /* CountHowTowPopOver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountHowTowPopOver.swift; sourceTree = "<group>"; };
@@ -377,6 +379,7 @@
 			isa = PBXGroup;
 			children = (
 				F8C4D78E12CB49FCBD800D6B /* CountRecordRepository.swift */,
+				F8C4DF03F809185BC94A80D5 /* PetRepository.swift */,
 			);
 			path = repositories;
 			sourceTree = "<group>";
@@ -550,6 +553,7 @@
 				F8C4D415D89239E4496F3F02 /* CountShowHelpButton.swift in Sources */,
 				F8C4DD83FFB8CF9C848F9051 /* CountWarningToast.swift in Sources */,
 				F8C4D998B9EA0424E9F7B07D /* CountHowTowPopOver.swift in Sources */,
+				F8C4DF76C2551EBB4A95E165 /* PetRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -715,7 +719,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Count my breaths/Count my breaths.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"Count my breaths/Preview Content\"";
 				DEVELOPMENT_TEAM = Y259ZT3SQK;
 				ENABLE_PREVIEWS = YES;
@@ -743,7 +747,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Count my breaths/Count my breaths.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"Count my breaths/Preview Content\"";
 				DEVELOPMENT_TEAM = Y259ZT3SQK;
 				ENABLE_PREVIEWS = YES;
