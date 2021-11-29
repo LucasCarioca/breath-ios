@@ -49,7 +49,7 @@ class CountRecordRepository {
         }
     }
 
-    public func create(elapsedTime: Int16, beats: Int16, time: Date) -> CountRecord {
+    public func create(elapsedTime: Int16, beats: Int16, time: Date, pet: Pet) -> CountRecord {
         do {
             guard let ctx = ctx else {
                 throw NSError()
