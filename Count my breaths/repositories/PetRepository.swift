@@ -161,4 +161,16 @@ class PetRepository {
             fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
         }
     }
+
+    public func save() {
+        do {
+            guard let ctx = ctx else {
+                throw NSError()
+            }
+            try ctx.save()
+        } catch {
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
+    }
 }

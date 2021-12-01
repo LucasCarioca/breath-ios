@@ -12,20 +12,19 @@ import ToastUI
 
 struct TargetBreathingRateView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @State var targetBpm: Int
+    @State var targetBpm: Double
     @State var confirm = false
-    var action: (Int) -> Void
+    var action: (Double) -> Void
     var body: some View {
         VStack {
             Text("Target breathing rate").Heading(size: .H5)
-
             Picker("Target breathing rate", selection: $targetBpm) {
                 ForEach(0..<100) {
                     Text("\($0)")
                 }
             }.padding().labelsHidden()
             Button(action: {
-                self.action(self.targetBpm)
+                action(targetBpm)
                 self.confirm = true
             }) {
                 Text("Save")
@@ -33,7 +32,7 @@ struct TargetBreathingRateView: View {
                     .accessibility(label: Text("Save target breathing rate"))
             Spacer()
         }.toast(isPresented: $confirm, dismissAfter: 2.0, onDismiss: {
-            self.presentationMode.wrappedValue.dismiss()
+            presentationMode.wrappedValue.dismiss()
         }) {
             ToastView("Target breathing rate saved").toastViewStyle(SuccessToastViewStyle())
         }

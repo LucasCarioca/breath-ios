@@ -23,17 +23,17 @@ struct PetProfileTextFieldView: View {
                     .padding()
                     .textFieldStyle(RoundedBorderTextFieldStyle())
             Button(action: {
-                self.action(self.name)
+                action(name)
                 self.confirm = true
             }) {
                 Text("Save")
             }.buttonStyle(PrimaryButton(variant: .contained)).frame(width: 100, height: 50)
-                    .accessibility(label: Text("Save \(self.label.lowercased())"))
+                    .accessibility(label: Text("Save \(label.lowercased())"))
             Spacer()
         }.toast(isPresented: $confirm, dismissAfter: 2.0, onDismiss: {
-            self.presentationMode.wrappedValue.dismiss()
+            presentationMode.wrappedValue.dismiss()
         }) {
-            ToastView("\(self.label) updated").toastViewStyle(SuccessToastViewStyle())
+            ToastView("\(label) updated").toastViewStyle(SuccessToastViewStyle())
         }
     }
 }
