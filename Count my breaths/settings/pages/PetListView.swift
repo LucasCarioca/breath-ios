@@ -12,7 +12,7 @@ struct PetListView: View {
     var body: some View {
         List {
             ForEach(pets) { pet in
-                NavigationLink(destination: PetProfileView().navigationTitle(pet.name ?? "Missing name")) {
+                NavigationLink(destination: PetProfileView(pet: pet).navigationTitle(pet.name ?? "Missing name")) {
                     Text(pet.name ?? "Missing name")
                 }
             }
