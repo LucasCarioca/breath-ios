@@ -44,6 +44,8 @@ struct AppRoot: App {
             userDefaults.set(true, forKey: "reviewshown")
         }
         UITableView.appearance().backgroundColor = UIColor(red: 78 / 255, green: 78 / 255, blue: 78 / 255, alpha: 0.2)
+
+        #if DEBUG
         let path = FileManager
                 .default
                 .urls(for: .applicationSupportDirectory, in: .userDomainMask)
@@ -51,8 +53,8 @@ struct AppRoot: App {
                 .absoluteString
                 .replacingOccurrences(of: "file://", with: "")
                 .removingPercentEncoding
-
         print("Core Data DB Path :: \(path ?? "Not found")")
+        #endif
     }
 
     var body: some Scene {
