@@ -10,29 +10,29 @@ import SwiftUI
 
 struct PetProfileView: View {
     @State var petProfile = PetProfileController.loadPetProfile()
-
+    @State var pet: Pet
     var body: some View {
         VStack {
             List {
-                NavigationLink(destination: TargetBreathingRateView(targetBpm: petProfile.targetBpm, action: self.updateTargetBpm)) {
+                NavigationLink(destination: TargetBreathingRateView(targetBpm: petProfile.targetBpm, action: updateTargetBpm)) {
                     HStack {
                         Image(systemName: "timer")
                         Text("Target breathing rate: ")
-                        Text("\(petProfile.targetBpm)").fontWeight(.heavy)
+                        Text("\(String(format: "%.0f", pet.targetBreathing ?? 30))").fontWeight(.heavy)
                         Spacer()
                     }
                 }
-                NavigationLink(destination: PetProfileTextFieldView(label: "Pet name", name: petProfile.name, action: self.updateName)) {
+                NavigationLink(destination: PetProfileTextFieldView(label: "Pet name", name: petProfile.name, action: updateName)) {
                     HStack {
                         Text("Pet name: ")
-                        Text("\(petProfile.name)").fontWeight(.heavy)
+                        Text(pet.name ?? "Missing pet name").fontWeight(.heavy)
                         Spacer()
                     }
                 }
-                NavigationLink(destination: PetProfileTextFieldView(label: "Chip Id", name: petProfile.chipId, action: self.updateChipId)) {
+                NavigationLink(destination: PetProfileTextFieldView(label: "Chip Id", name: petProfile.chipId, action: updateChipId)) {
                     HStack {
                         Text("Chip Id: ")
-                        Text("\(petProfile.chipId)").fontWeight(.heavy)
+                        Text(pet.chipId ?? "Missing chip id").fontWeight(.heavy)
                         Spacer()
                     }
                 }
@@ -54,11 +54,5 @@ struct PetProfileView: View {
     func updateChipId(newChipId: String) {
         petProfile.chipId = newChipId
         PetProfileController.savePetProfile(profile: petProfile)
-    }
-}
-
-struct PetProfile_Previews: PreviewProvider {
-    static var previews: some View {
-        PetProfileView()
     }
 }

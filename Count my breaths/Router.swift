@@ -61,7 +61,6 @@ struct Router: View {
                 }
             }
         }
-                .listStyle(GroupedListStyle())
     }
 }
 
