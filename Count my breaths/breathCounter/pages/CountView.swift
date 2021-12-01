@@ -12,10 +12,8 @@ import QuickComponents
 import ToastUI
 
 struct CountView: View {
-    @Environment(\.colorScheme) var colorScheme
     @Environment(\.countRecordRepository) var countRecordRepository: CountRecordRepository
     @Environment(\.petRepository) var petRepository: PetRepository
-    @FetchRequest(fetchRequest: requestBuilder(limit: 1, sort: [])) var countRecords: FetchedResults<CountRecord>
 
     @State var showHelp: Bool = false
     @State var timePublisher = Timer.publish(every: 1, on: .main, in: .common).autoconnect()

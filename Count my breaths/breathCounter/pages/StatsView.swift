@@ -51,7 +51,7 @@ struct StatsView: View {
                     Spacer()
                     Text("\(mode())").fontWeight(.heavy)
                 }
-            }
+            }.listStyle(PlainListStyle())
             Spacer()
             Picker(selection: self.$filter, label: Text("")) {
                 Text("1w").tag(QueryBy.WEEK)
@@ -59,7 +59,7 @@ struct StatsView: View {
                 Text("1m").tag(QueryBy.MONTH)
                 Text("6m").tag(QueryBy.SIX_MONTHS)
             }.pickerStyle(SegmentedPickerStyle())
-        }.onAppear() {
+        }.onAppear {
             self.petProfile = PetProfileController.loadPetProfile()
         }
     }
