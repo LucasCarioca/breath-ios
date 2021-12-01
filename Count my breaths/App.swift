@@ -48,16 +48,12 @@ struct AppRoot: App {
 
     var body: some Scene {
         WindowGroup {
-            ZStack {
-                Theme.colors.text.edgesIgnoringSafeArea(.all)
-                NavigationView {
-                    Router(selected: $selected)
-                            .navigationBarTitle("Menu")
-
-                    CountView()
-                            .padding()
-                            .navigationBarTitle("Counter")
-                }
+            NavigationView {
+                Router(selected: $selected)
+                        .navigationBarTitle("Menu")
+                CountView()
+                        .padding()
+                        .navigationBarTitle("Counter")
             }.onAppear {
                         if UIDevice.current.userInterfaceIdiom == .phone {
                             self.selected = .counter
