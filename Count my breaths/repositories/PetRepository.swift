@@ -135,6 +135,19 @@ class PetRepository {
         }
     }
 
+    public func getAllPets() -> [Pet] {
+        let request = Pet.fetchRequest()
+        do {
+            guard let ctx = ctx else {
+                throw NSError()
+            }
+            return try ctx.fetch(request)
+        } catch {
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
+    }
+
     public func getCurrentPet() -> Pet {
         do {
             let petProfile = PetProfileController.loadPetProfile()

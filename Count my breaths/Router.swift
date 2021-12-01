@@ -53,11 +53,11 @@ struct Router: View {
             Section(header: Text("Settings")) {
                 NavigationLink(
                         destination:
-                        PetProfileView()
-                                .navigationBarTitle("Pet profile"),
+                        PetListView()
+                                .navigationBarTitle("Pets"),
                         tag: .profile,
                         selection: self.$selected) {
-                    Label("Pet profile", systemImage: "person.crop.circle.fill")
+                    Label("Pets", systemImage: "person.crop.circle.fill")
                 }
             }
         }
