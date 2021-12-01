@@ -13,7 +13,9 @@ struct PetListView: View {
         List {
             ForEach(pets) { pet in
                 NavigationLink(destination: PetProfileView(pet: pet).navigationTitle(pet.name ?? "Missing name")) {
-                    Text(pet.name ?? "Missing name")
+                    VStack {
+                        Text(pet.name ?? "Missing name")
+                    }
                 }
             }
         }.onAppear {
