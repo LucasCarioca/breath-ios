@@ -77,6 +77,8 @@ class PetRepository {
             }
             try ctx.save()
             print("new pet created and records associated")
+            let defaults = UserDefaults.standard
+            defaults.set(pet.name, forKey: "CURRENT_PET")
             return pet
         } catch {
             let nsError = error as NSError
