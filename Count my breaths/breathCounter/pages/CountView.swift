@@ -27,7 +27,7 @@ struct CountView: View {
     @State var messageTitle: String = ""
     @State var messageContent: String = ""
 
-    @State var petProfile = PetProfileController.loadPetProfile()
+    @State var pet: Pet?
 
     let impactMed = UIImpactFeedbackGenerator(style: .medium)
     let impactHeavy = UIImpactFeedbackGenerator(style: .heavy)
@@ -59,7 +59,8 @@ struct CountView: View {
         }.toast(isPresented: $showWarning) {
             CountWarningToast(messageTitle: messageTitle, messageContent: messageContent, action: dismissToast)
         }.onAppear {
-            self.petProfile = PetProfileController.loadPetProfile()
+            let name = UserDefaults.standard.string(forKey: "CURRENT_PET") ?? "MyPet"
+            pet = petRepository.findByName(name)
         }.sheet(isPresented: $showHelp) {
             CountHowTowPopOver(action: helpOff)
         }
@@ -93,7 +94,8 @@ struct CountView: View {
 
     func finishCounting() {
         self.bpm = counter * 2
-        if bpm >= petProfile.targetBpm {
+        let targetBreathing = Int(pet?.targetBreathing ?? 30)
+        if bpm >= targetBreathing {
             highBreathing()
         } else {
             normalBreathing()
@@ -103,11 +105,17 @@ struct CountView: View {
     }
 
     func saveRecord(timeInterval: TimeInterval) {
-        countRecordRepository.create(
-                elapsedTime: Int16(timer),
-                beats: Int16(counter),
-                time: Date(timeIntervalSinceReferenceDate: timeInterval),
-                pet: petRepository.getCurrentPet())
+        if let pet = pet {
+            countRecordRepository.create(
+                    elapsedTime: Int16(timer),
+                    beats: Int16(counter),
+                    time: Date(timeIntervalSinceReferenceDate: timeInterval),
+                    pet: pet)
+        } else {
+            self.messageTitle = "Not able to save record"
+            self.messageContent = "No pet currently setup. Please register a pet before continuing."
+            self.showWarning = true
+        }
     }
 
     func trackRuns() {
