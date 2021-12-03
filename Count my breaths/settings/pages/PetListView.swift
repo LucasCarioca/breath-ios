@@ -9,17 +9,24 @@ import SwiftUI
 struct PetListView: View {
     @Environment(\.petRepository) var petRepository: PetRepository
     @State var pets: [Pet] = []
+    @State private var refreshID = UUID()
     var body: some View {
         List {
-            ForEach(pets) { pet in
-                NavigationLink(destination: PetProfileView(pet: pet).navigationTitle(pet.name ?? "Missing name")) {
+            ForEach(pets.indices, id: \.self) { index in
+                NavigationLink(destination: PetProfileView(pet: pets[index]).navigationTitle(pets[index].name ?? "Missing name")) {
                     VStack {
-                        Text(pet.name ?? "Missing name")
+                        Text(pets[index].name ?? "Missing name")
                     }
                 }
             }
-        }.onAppear {
-            pets = petRepository.getAllPets()
         }
+                .onAppear {
+                    pets = petRepository.getAllPets()
+                }.id(refreshID)
+                .toolbar {
+                    NavigationLink(destination: NewPetProfileView()) {
+                        Image(systemName: "plus")
+                    }
+                }
     }
 }
