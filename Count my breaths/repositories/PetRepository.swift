@@ -94,11 +94,6 @@ class PetRepository {
             chipId: String? = nil,
             breathRecords: [CountRecord]? = [],
             targetBreathing: Double = 30)-> Pet {
-        let petProfile = PetProfileController.loadPetProfile()
-        let pet = findByName(petProfile.name)
-        if let pet = pet {
-            return pet
-        }
         do {
             guard let ctx = ctx else {
                 throw NSError()
