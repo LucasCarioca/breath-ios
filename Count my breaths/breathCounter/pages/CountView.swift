@@ -15,6 +15,7 @@ struct CountView: View {
     @Environment(\.countRecordRepository) var countRecordRepository: CountRecordRepository
     @Environment(\.petRepository) var petRepository: PetRepository
 
+    @State var refreshId = UUID()
     @State var showHelp: Bool = false
     @State var timePublisher = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @State var isCounting = false
@@ -36,6 +37,9 @@ struct CountView: View {
 
     var body: some View {
         VStack {
+            CurrentPetView(onRefresh: { refreshId = UUID() }, label: { name in
+                AnyView(Label("Selected pet: \(name)", systemImage: "checkmark.circle.fill"))
+            })
             showResults ?
                     CountResults(bpm: bpm) : nil
 
@@ -63,7 +67,7 @@ struct CountView: View {
             pet = petRepository.findByName(name)
         }.sheet(isPresented: $showHelp) {
             CountHowTowPopOver(action: helpOff)
-        }
+        }.id(refreshId)
 
     }
 
