@@ -58,6 +58,7 @@ class CountRecordRepository {
             record.elapsedTime = elapsedTime
             record.beats = beats
             record.time = time
+            record.pet = pet
             let df = DateFormatter()
             df.dateFormat = "MM-dd-yyyy hh:mm:ss"
             record.timeText = df.string(from: record.time ?? Date())
@@ -88,6 +89,24 @@ class CountRecordRepository {
         do {
             guard let ctx = ctx else {
                 throw NSError()
+            }
+            return try ctx.fetch(request)
+        } catch {
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
+    }
+
+    public func getAllCountRecordsByPet(from: Date, to: Date, pet: Pet? = nil) -> [CountRecord] {
+        let request = CountRecord.fetchRequest()
+        do {
+            guard let ctx = ctx else {
+                throw NSError()
+            }
+            if let pet = pet {
+                request.predicate = NSPredicate(format: "(time >= %@) AND (time <= %@) AND pet == %@", from as NSDate, to as NSDate, pet)
+            } else {
+                request.predicate = NSPredicate(format: "(time >= %@) AND (time <= %@)", from as NSDate, to as NSDate)
             }
             return try ctx.fetch(request)
         } catch {

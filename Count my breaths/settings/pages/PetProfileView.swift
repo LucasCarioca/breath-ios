@@ -36,7 +36,14 @@ struct PetProfileView: View {
                     Spacer()
                 }
             }
-        }.id(refreshID)
+            Button(action: selectPet) {
+                HStack {
+                    Text("Selected")
+                    Spacer()
+                    UserDefaults.standard.string(forKey: "CURRENT_PET") == pet.name ? Image(systemName: "checkmark.circle.fill") : Image(systemName: "checkmark.circle")
+                }
+            }
+        }.id(refreshID).navigationTitle(pet.name ?? "Missing name")
     }
 
     func updateTargetBpm(newTarget: String) {
@@ -54,5 +61,10 @@ struct PetProfileView: View {
     func updateChipId(newChipId: String) {
         pet.chipId = newChipId
         petRepository.save()
+    }
+
+    func selectPet() {
+        UserDefaults.standard.set(pet.name, forKey: "CURRENT_PET")
+        refreshID = UUID()
     }
 }

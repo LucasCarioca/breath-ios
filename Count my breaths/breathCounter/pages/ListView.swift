@@ -13,16 +13,17 @@ import CoreData
 struct ListView: View {
     @Environment(\.managedObjectContext) var moc
     @Environment(\.countRecordRepository) var countRecordRepository: CountRecordRepository
+    @Environment(\.petRepository) var petRepository: PetRepository
 
-    @State var petProfile = PetProfileController.loadPetProfile()
     @State var countRecords: [CountRecord] = []
     @State var filter: QueryBy = .WEEK
+    @State var pet: Pet? = nil
 
     var body: some View {
         VStack {
             List {
                 ForEach(countRecords.indices, id: \.self) { record in
-                    RecordView(beats: countRecords[record].beats, time: countRecords[record].time ?? Date(), targetBpm: petProfile.targetBpm)
+                    RecordView(beats: countRecords[record].beats, time: countRecords[record].time ?? Date(), targetBpm: getTargetBreathingRate())
                 }.onDelete(perform: delete)
             }.listStyle(PlainListStyle())
             MailButtonView(csvData: getCsvData(countRecords: countRecords))
@@ -35,7 +36,8 @@ struct ListView: View {
                 Text("6m").tag(QueryBy.SIX_MONTHS)
             }.pickerStyle(SegmentedPickerStyle())
         }.onAppear {
-            self.petProfile = PetProfileController.loadPetProfile()
+            let name = UserDefaults.standard.string(forKey: "CURRENT_PET") ?? "MyPet"
+            pet = petRepository.findByName(name)
             self.countRecords = fetch()
         }
     }
@@ -50,6 +52,13 @@ struct ListView: View {
 
     func fetch() -> [CountRecord] {
         let range = getRange(filter)
-        return countRecordRepository.getAllCountRecords(from: range.from, to: range.to).reversed()
+        return countRecordRepository.getAllCountRecordsByPet(from: range.from, to: range.to, pet: pet).reversed()
+    }
+
+    func getTargetBreathingRate() -> Int {
+        if let pet = pet {
+            return Int(pet.targetBreathing)
+        }
+        return 30
     }
 }

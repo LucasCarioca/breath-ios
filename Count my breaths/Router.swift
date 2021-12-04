@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct Router: View {
+    @State var refreshId = UUID()
     @Binding var selected: Routes?
     var body: some View {
         List {
@@ -59,6 +60,9 @@ struct Router: View {
                         selection: self.$selected) {
                     Label("Pets", systemImage: "person.crop.circle.fill")
                 }
+                CurrentPetView(onRefresh: { refreshId = UUID() }, label: { name in
+                    AnyView(Label("Selected pet: \(name)", systemImage: "checkmark.circle.fill"))
+                })
             }
         }
     }
