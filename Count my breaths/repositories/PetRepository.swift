@@ -57,8 +57,10 @@ class PetRepository {
         print("creating pet from defaults")
         let petProfile = PetProfileController.loadPetProfile()
         let pet = findByName(petProfile.name)
+        let defaults = UserDefaults.standard
         if let pet = pet {
             print("pet already exists, skipping ...")
+            defaults.set(1, forKey: "SCHEMA_VERSION")
             return pet
         }
         do {
@@ -77,8 +79,8 @@ class PetRepository {
             }
             try ctx.save()
             print("new pet created and records associated")
-            let defaults = UserDefaults.standard
             defaults.set(pet.name, forKey: "CURRENT_PET")
+            defaults.set(1, forKey: "SCHEMA_VERSION")
             return pet
         } catch {
             let nsError = error as NSError

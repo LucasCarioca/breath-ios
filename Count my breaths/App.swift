@@ -33,7 +33,10 @@ struct AppRoot: App {
         petRepository = PetRepository(ctx: datasource.getContainer().viewContext)
 
         //temporary to migrate data from user defaults to core data
-        petRepository.createFromDefault()
+        let schemaVersion = UserDefaults.standard.integer(forKey: "SCHEMA_VERSION")
+        if schemaVersion < 1 {
+            petRepository.createFromDefault()
+        }
 
         let userDefaults = UserDefaults.standard
         let appRuns = userDefaults.integer(forKey: "appruns")
