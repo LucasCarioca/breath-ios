@@ -18,7 +18,7 @@ struct PetProfileView: View {
                 HStack {
                     Image(systemName: "timer")
                     Text("Target breathing rate: ")
-                    Text("\(String(format: "%.0f", pet.targetBreathing ?? 30))").fontWeight(.heavy)
+                    Text("\(String(format: "%.0f", pet.targetBreathing))").fontWeight(.heavy)
                     Spacer()
                 }
             }
@@ -36,11 +36,13 @@ struct PetProfileView: View {
                     Spacer()
                 }
             }
-            Button(action: selectPet) {
-                HStack {
-                    Text("Selected")
-                    Spacer()
-                    UserDefaults.standard.string(forKey: "CURRENT_PET") == pet.name ? Image(systemName: "checkmark.circle.fill") : Image(systemName: "checkmark.circle")
+            if UserDefaults.standard.bool(forKey: StoreManager.productKey) {
+                Button(action: selectPet) {
+                    HStack {
+                        Text("Selected")
+                        Spacer()
+                        UserDefaults.standard.string(forKey: "CURRENT_PET") == pet.name ? Image(systemName: "checkmark.circle.fill") : Image(systemName: "checkmark.circle")
+                    }
                 }
             }
         }.id(refreshID).navigationTitle(pet.name ?? "Missing name")

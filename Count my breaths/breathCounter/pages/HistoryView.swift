@@ -15,9 +15,11 @@ struct HistoryView: View {
     @State var pickerSelectedItem = 0
     var body: some View {
         VStack {
-            CurrentPetView(onRefresh: { refreshId = UUID() }, label: { name in
-                AnyView(Label("Selected pet: \(name)", systemImage: "checkmark.circle.fill"))
-            })
+            if UserDefaults.standard.bool(forKey: StoreManager.productKey) {
+                CurrentPetView(onRefresh: { refreshId = UUID() }, label: { name in
+                    AnyView(Label("Selected pet: \(name)", systemImage: "checkmark.circle.fill"))
+                })
+            }
             SwitcherView(pages: [
                 SwitcherPage(label: "List", view: ListView()),
                 SwitcherPage(label: "Graph", view: SwitcherView(reverse: true, pages: [

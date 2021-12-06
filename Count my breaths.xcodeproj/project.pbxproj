@@ -15,6 +15,13 @@
 		DF45D011253B8B7200E6995E /* ToastUI in Frameworks */ = {isa = PBXBuildFile; productRef = DFFC8E1524E9DD08006882B4 /* ToastUI */; };
 		DF45D01D253B944C00E6995E /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF45D01C253B944C00E6995E /* App.swift */; };
 		DF45D021253B973700E6995E /* PetProfileTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF45D020253B973700E6995E /* PetProfileTextFieldView.swift */; };
+		DF662B00275DDD1C00ED536D /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = DF662AFF275DDD1C00ED536D /* Lottie */; };
+		DF662B06275DE20800ED536D /* empty.json in Resources */ = {isa = PBXBuildFile; fileRef = DF662B01275DE20800ED536D /* empty.json */; };
+		DF662B07275DE20800ED536D /* payment-loading.json in Resources */ = {isa = PBXBuildFile; fileRef = DF662B02275DE20800ED536D /* payment-loading.json */; };
+		DF662B08275DE20800ED536D /* payment-error.json in Resources */ = {isa = PBXBuildFile; fileRef = DF662B03275DE20800ED536D /* payment-error.json */; };
+		DF662B09275DE20800ED536D /* payment-confirmation.json in Resources */ = {isa = PBXBuildFile; fileRef = DF662B04275DE20800ED536D /* payment-confirmation.json */; };
+		DF662B0A275DE20800ED536D /* rocket.json in Resources */ = {isa = PBXBuildFile; fileRef = DF662B05275DE20800ED536D /* rocket.json */; };
+		DF662B0C275DE40500ED536D /* dog.json in Resources */ = {isa = PBXBuildFile; fileRef = DF662B0B275DE40500ED536D /* dog.json */; };
 		DF6EEFE2247F5B9F00FC80D0 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF6EEFE1247F5B9F00FC80D0 /* CloudKit.framework */; };
 		DF7744E624D5E4AB00A8B33B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7744E524D5E4AB00A8B33B /* Theme.swift */; };
 		DF7744E824D5E63900A8B33B /* Overwrites.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7744E724D5E63900A8B33B /* Overwrites.swift */; };
@@ -45,14 +52,17 @@
 		F8C4D333D1DE85423E3CD95E /* PetHealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DBCAF760247815D3C4A8 /* PetHealthView.swift */; };
 		F8C4D415D89239E4496F3F02 /* CountShowHelpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D55D009A6C724A2F66C8 /* CountShowHelpButton.swift */; };
 		F8C4D6A4A4226575503A6234 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D3222819B96152879DDB /* GraphView.swift */; };
+		F8C4D6ABF7E2663F3D67188F /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DCBBFE2DE17C8028C6B9 /* StoreManager.swift */; };
 		F8C4D6B4C264F17C9679A7CA /* HowToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DE81C0A3624CDF2A6FF6 /* HowToView.swift */; };
 		F8C4D7A6E2FCDE83C42D019A /* MailButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DE65EDFBCB8B01B277C4 /* MailButton.swift */; };
+		F8C4D80825BA6BF747B6322C /* DevTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DD1CCFF1DC2EE430F99B /* DevTools.swift */; };
 		F8C4D855376A8C793203D8EE /* PetSelectionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D6EB8335DEA24BC42419 /* PetSelectionListView.swift */; };
 		F8C4D893CF27D17B084057CB /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D8AF7B37FD409F27E0B1 /* Utilities.swift */; };
 		F8C4D998B9EA0424E9F7B07D /* CountHowTowPopOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DF960ABFB062D3F0BAB3 /* CountHowTowPopOver.swift */; };
 		F8C4D9A1E7EC0B7243A5CD8F /* PetHealthDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D649AE4E3C94E949A992 /* PetHealthDetailView.swift */; };
 		F8C4D9FDCCA66BDE24C4AA15 /* PetListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DE5B65273DD0291B1891 /* PetListView.swift */; };
 		F8C4D9FFF6E61BB0DA0B4806 /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DD068B5466C2E4DADF36 /* RecordView.swift */; };
+		F8C4DA634382B5688793C12C /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D3A93FCBB9B1A2FC3C56 /* LottieView.swift */; };
 		F8C4DA8D276433420A2D89E0 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D3C2FDEF0B24243A39F1 /* StatsView.swift */; };
 		F8C4DB2E0C3B19E070EDF203 /* CountInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DCFA800F958DDAEDA9BE /* CountInstructions.swift */; };
 		F8C4DB6730AA424BAD4DFA11 /* RecordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D99E15B371A2CD78632B /* RecordService.swift */; };
@@ -64,6 +74,7 @@
 		F8C4DED039852712587213CC /* CountRecordRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D78E12CB49FCBD800D6B /* CountRecordRepository.swift */; };
 		F8C4DF2423C3C601BD0686D9 /* AboutUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D6D441FEDE02AA1D5356 /* AboutUsView.swift */; };
 		F8C4DF76C2551EBB4A95E165 /* PetRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DF03F809185BC94A80D5 /* PetRepository.swift */; };
+		F8C4DF9137B103FF71B1A078 /* ProFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D0E2EA905326DA8BB69C /* ProFeatures.swift */; };
 		F8C4DFE4FB933128A929CEFE /* CountResetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D6A6601655C7A4EB9A90 /* CountResetButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +94,12 @@
 		DF2B080C253FCED9000631D4 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		DF45D01C253B944C00E6995E /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		DF45D020253B973700E6995E /* PetProfileTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProfileTextFieldView.swift; sourceTree = "<group>"; };
+		DF662B01275DE20800ED536D /* empty.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = empty.json; sourceTree = "<group>"; };
+		DF662B02275DE20800ED536D /* payment-loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "payment-loading.json"; sourceTree = "<group>"; };
+		DF662B03275DE20800ED536D /* payment-error.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "payment-error.json"; sourceTree = "<group>"; };
+		DF662B04275DE20800ED536D /* payment-confirmation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "payment-confirmation.json"; sourceTree = "<group>"; };
+		DF662B05275DE20800ED536D /* rocket.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = rocket.json; sourceTree = "<group>"; };
+		DF662B0B275DE40500ED536D /* dog.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dog.json; sourceTree = "<group>"; };
 		DF6EEFE1247F5B9F00FC80D0 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		DF7744E024D52EA000A8B33B /* Count my breaths.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Count my breaths.entitlements"; sourceTree = "<group>"; };
 		DF7744E524D5E4AB00A8B33B /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -112,7 +129,9 @@
 		DFB21BD32544FB5A003CE2DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFF402D1253FCB57007979E4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		F8C4D00CA5B9AF6C13FD2695 /* CountResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountResults.swift; sourceTree = "<group>"; };
+		F8C4D0E2EA905326DA8BB69C /* ProFeatures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProFeatures.swift; sourceTree = "<group>"; };
 		F8C4D3222819B96152879DDB /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		F8C4D3A93FCBB9B1A2FC3C56 /* LottieView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		F8C4D3C2FDEF0B24243A39F1 /* StatsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
 		F8C4D40885946CD5958CD19F /* CurrentPetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentPetView.swift; sourceTree = "<group>"; };
 		F8C4D55D009A6C724A2F66C8 /* CountShowHelpButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountShowHelpButton.swift; sourceTree = "<group>"; };
@@ -127,8 +146,10 @@
 		F8C4DA2E6338862605EAB236 /* CountWarningToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountWarningToast.swift; sourceTree = "<group>"; };
 		F8C4DBCAF760247815D3C4A8 /* PetHealthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetHealthView.swift; sourceTree = "<group>"; };
 		F8C4DC0344A919F923A5DD75 /* ListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		F8C4DCBBFE2DE17C8028C6B9 /* StoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 		F8C4DCFA800F958DDAEDA9BE /* CountInstructions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountInstructions.swift; sourceTree = "<group>"; };
 		F8C4DD068B5466C2E4DADF36 /* RecordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
+		F8C4DD1CCFF1DC2EE430F99B /* DevTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevTools.swift; sourceTree = "<group>"; };
 		F8C4DE596DF08528DE33AAED /* CoreDataUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataUtilities.swift; sourceTree = "<group>"; };
 		F8C4DE5B65273DD0291B1891 /* PetListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetListView.swift; sourceTree = "<group>"; };
 		F8C4DE65EDFBCB8B01B277C4 /* MailButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailButton.swift; sourceTree = "<group>"; };
@@ -145,6 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF662B00275DDD1C00ED536D /* Lottie in Frameworks */,
 				DF45D011253B8B7200E6995E /* ToastUI in Frameworks */,
 				DF6EEFE2247F5B9F00FC80D0 /* CloudKit.framework in Frameworks */,
 				DF45D00F253B8B7200E6995E /* SwiftUICharts in Frameworks */,
@@ -167,6 +189,7 @@
 			children = (
 				DF796B2724EC82210028357F /* PetProfile.swift */,
 				F8C4DE83F4B45F263EC7017A /* Version.swift */,
+				F8C4DCBBFE2DE17C8028C6B9 /* StoreManager.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -185,6 +208,7 @@
 				DF7744E524D5E4AB00A8B33B /* Theme.swift */,
 				DF7744E724D5E63900A8B33B /* Overwrites.swift */,
 				F8C4D8AF7B37FD409F27E0B1 /* Utilities.swift */,
+				F8C4D3A93FCBB9B1A2FC3C56 /* LottieView.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -236,6 +260,7 @@
 				DF8E95BE246B8E93004AB783 /* Preview Content */,
 				F8C4DF78CCA66B667B6AE4D4 /* Datasource.swift */,
 				F8C4D45E00097F2F6449C326 /* repositories */,
+				F8C4D84BFB8C12F736FD201F /* animations */,
 			);
 			path = "Count my breaths";
 			sourceTree = "<group>";
@@ -348,6 +373,8 @@
 				F8C4D5CED1196CF2B1B2EBA2 /* NewPetProfileView.swift */,
 				F8C4D40885946CD5958CD19F /* CurrentPetView.swift */,
 				F8C4D6EB8335DEA24BC42419 /* PetSelectionListView.swift */,
+				F8C4D0E2EA905326DA8BB69C /* ProFeatures.swift */,
+				F8C4DD1CCFF1DC2EE430F99B /* DevTools.swift */,
 			);
 			path = pages;
 			sourceTree = "<group>";
@@ -396,6 +423,19 @@
 			path = repositories;
 			sourceTree = "<group>";
 		};
+		F8C4D84BFB8C12F736FD201F /* animations */ = {
+			isa = PBXGroup;
+			children = (
+				DF662B01275DE20800ED536D /* empty.json */,
+				DF662B04275DE20800ED536D /* payment-confirmation.json */,
+				DF662B03275DE20800ED536D /* payment-error.json */,
+				DF662B02275DE20800ED536D /* payment-loading.json */,
+				DF662B05275DE20800ED536D /* rocket.json */,
+				DF662B0B275DE40500ED536D /* dog.json */,
+			);
+			path = animations;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -416,6 +456,7 @@
 				DF12190A2471E0B500112F63 /* SwiftUICharts */,
 				DF8D99352479CD4C00824C52 /* QuickComponents */,
 				DFFC8E1524E9DD08006882B4 /* ToastUI */,
+				DF662AFF275DDD1C00ED536D /* Lottie */,
 			);
 			productName = "Count my breaths";
 			productReference = DF8E95B3246B8E8F004AB783 /* Count my breaths.app */;
@@ -472,6 +513,7 @@
 				DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference "ChartView" */,
 				DF8D99342479CD4C00824C52 /* XCRemoteSwiftPackageReference "QuickComponents" */,
 				DFFC8E1424E9DD08006882B4 /* XCRemoteSwiftPackageReference "ToastUI" */,
+				DF662AFE275DDD1C00ED536D /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = DF8E95B4246B8E8F004AB783 /* Products */;
 			projectDirPath = "";
@@ -489,8 +531,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF8E95C3246B8E93004AB783 /* LaunchScreen.storyboard in Resources */,
+				DF662B06275DE20800ED536D /* empty.json in Resources */,
+				DF662B0C275DE40500ED536D /* dog.json in Resources */,
+				DF662B07275DE20800ED536D /* payment-loading.json in Resources */,
+				DF662B0A275DE20800ED536D /* rocket.json in Resources */,
 				DF8E95C0246B8E93004AB783 /* Preview Assets.xcassets in Resources */,
 				DF8E95BD246B8E93004AB783 /* Assets.xcassets in Resources */,
+				DF662B08275DE20800ED536D /* payment-error.json in Resources */,
+				DF662B09275DE20800ED536D /* payment-confirmation.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,6 +618,10 @@
 				F8C4DC9E64220F3AC89ED398 /* NewPetProfileView.swift in Sources */,
 				F8C4D11001D8EDB994409EE8 /* CurrentPetView.swift in Sources */,
 				F8C4D855376A8C793203D8EE /* PetSelectionListView.swift in Sources */,
+				F8C4D6ABF7E2663F3D67188F /* StoreManager.swift in Sources */,
+				F8C4DF9137B103FF71B1A078 /* ProFeatures.swift in Sources */,
+				F8C4DA634382B5688793C12C /* LottieView.swift in Sources */,
+				F8C4D80825BA6BF747B6322C /* DevTools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -867,6 +919,14 @@
 				minimumVersion = 1.5.0;
 			};
 		};
+		DF662AFE275DDD1C00ED536D /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 		DF8D99342479CD4C00824C52 /* XCRemoteSwiftPackageReference "QuickComponents" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/LucasCarioca/QuickComponents.git";
@@ -890,6 +950,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference "ChartView" */;
 			productName = SwiftUICharts;
+		};
+		DF662AFF275DDD1C00ED536D /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF662AFE275DDD1C00ED536D /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 		DF8D99352479CD4C00824C52 /* QuickComponents */ = {
 			isa = XCSwiftPackageProductDependency;

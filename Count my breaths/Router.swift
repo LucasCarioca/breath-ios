@@ -11,6 +11,8 @@ import SwiftUI
 struct Router: View {
     @State var refreshId = UUID()
     @Binding var selected: Routes?
+    @StateObject var storeManager: StoreManager
+
     var body: some View {
         List {
             Section(header: Text("Breathing Tracker")) {
@@ -60,10 +62,23 @@ struct Router: View {
                         selection: self.$selected) {
                     Label("Pets", systemImage: "person.crop.circle.fill")
                 }
-                CurrentPetView(onRefresh: { refreshId = UUID() }, label: { name in
-                    AnyView(Label("Selected pet: \(name)", systemImage: "checkmark.circle.fill"))
-                })
+                if !UserDefaults.standard.bool(forKey: StoreManager.productKey) {
+                    NavigationLink(destination: ProFeatures(storeManager: storeManager)) {
+                        Label("Upgrade to Pro", systemImage: "star")
+                    }
+                } else {
+                    CurrentPetView(onRefresh: { refreshId = UUID() }, label: { name in
+                        AnyView(Label("Selected pet: \(name)", systemImage: "checkmark.circle.fill"))
+                    })
+                }
             }
+            #if DEBUG
+            Section(header: Text("Hidden Settings")) {
+                NavigationLink(destination: DevTools()) {
+                    Label("Dev Tools", systemImage: "chevron.left.slash.chevron.right")
+                }
+            }
+            #endif
         }
     }
 }

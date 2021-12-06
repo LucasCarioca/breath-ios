@@ -17,7 +17,9 @@ struct PetListView: View {
                     HStack {
                         Text(pets[index].name ?? "Missing name")
                         Spacer()
-                        UserDefaults.standard.string(forKey: "CURRENT_PET") == pets[index].name ? Image(systemName: "checkmark.circle.fill") : Image(systemName: "checkmark.circle")
+                        if UserDefaults.standard.bool(forKey: StoreManager.productKey) {
+                            UserDefaults.standard.string(forKey: "CURRENT_PET") == pets[index].name ? Image(systemName: "checkmark.circle.fill") : Image(systemName: "checkmark.circle")
+                        }
                     }
                 }
             }
