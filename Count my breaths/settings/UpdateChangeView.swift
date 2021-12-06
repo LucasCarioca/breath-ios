@@ -93,7 +93,7 @@ struct UpdateChangeFinalCard: View {
             Spacer()
             Image("icon")
             Spacer()
-            Button(action: self.action) {
+            Button(action: action) {
                 Text("Continue to app")
                         .padding()
                         .foregroundColor(Theme.colors.background)

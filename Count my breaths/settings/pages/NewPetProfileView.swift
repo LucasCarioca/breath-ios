@@ -30,14 +30,14 @@ struct NewPetProfileView: View {
                 NavigationLink(destination: PetProfileTextFieldView(label: "Pet name", name: name, action: updateName)) {
                     HStack {
                         Text("Pet name: ")
-                        Text(name ?? "Missing pet name").fontWeight(.heavy)
+                        Text(name).fontWeight(.heavy)
                         Spacer()
                     }
                 }
-                NavigationLink(destination: PetProfileTextFieldView(label: "Chip Id", name: chipId ?? "", action: updateChipId)) {
+                NavigationLink(destination: PetProfileTextFieldView(label: "Chip Id", name: chipId, action: updateChipId)) {
                     HStack {
                         Text("Chip Id: ")
-                        Text(chipId ?? "Missing chip id").fontWeight(.heavy)
+                        Text(chipId).fontWeight(.heavy)
                         Spacer()
                     }
                 }
@@ -62,7 +62,7 @@ struct NewPetProfileView: View {
     }
 
     func save() {
-        petRepository.create(name: name, chipId: chipId, targetBreathing: targetBreathing)
+        let _ = petRepository.create(name: name, chipId: chipId, targetBreathing: targetBreathing)
         refreshID = UUID()
         presentationMode.wrappedValue.dismiss()
     }

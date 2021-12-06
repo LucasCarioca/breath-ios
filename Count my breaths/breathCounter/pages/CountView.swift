@@ -37,9 +37,11 @@ struct CountView: View {
 
     var body: some View {
         VStack {
-            CurrentPetView(onRefresh: { refreshId = UUID() }, label: { name in
-                AnyView(Label("Selected pet: \(name)", systemImage: "checkmark.circle.fill"))
-            })
+            if UserDefaults.standard.bool(forKey: StoreManager.productKey) {
+                CurrentPetView(onRefresh: { refreshId = UUID() }, label: { name in
+                    AnyView(Label("Selected pet: \(name)", systemImage: "checkmark.circle.fill"))
+                })
+            }
             showResults ?
                     CountResults(bpm: bpm) : nil
 
@@ -110,7 +112,7 @@ struct CountView: View {
 
     func saveRecord(timeInterval: TimeInterval) {
         if let pet = pet {
-            countRecordRepository.create(
+            let _ = countRecordRepository.create(
                     elapsedTime: Int16(timer),
                     beats: Int16(counter),
                     time: Date(timeIntervalSinceReferenceDate: timeInterval),

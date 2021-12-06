@@ -19,6 +19,7 @@ struct AppRoot: App {
     @State var showNewVersion = false
     @State var version = VersionController.loadVersion()
     @State var selected: Routes?
+    @StateObject var storeManager = StoreManager()
 
     init() {
         if CommandLine.arguments.contains("-test-data") {
@@ -35,7 +36,7 @@ struct AppRoot: App {
         //temporary to migrate data from user defaults to core data
         let schemaVersion = UserDefaults.standard.integer(forKey: "SCHEMA_VERSION")
         if schemaVersion < 1 {
-            petRepository.createFromDefault()
+            let _ = petRepository.createFromDefault()
         }
 
         let userDefaults = UserDefaults.standard
@@ -63,18 +64,21 @@ struct AppRoot: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                Router(selected: $selected)
+                Router(selected: $selected, storeManager: storeManager)
                         .navigationBarTitle("Menu")
                 CountView()
                         .padding()
                         .navigationBarTitle("Counter")
-            }.onAppear {
+            }
+                    .onAppear {
                         if UIDevice.current.userInterfaceIdiom == .phone {
                             self.selected = .counter
                         }
                         if (version.isNew) {
                             self.showNewVersion = true
                         }
+                        SKPaymentQueue.default().add(storeManager)
+                        storeManager.getProducts(productIDs: ["0001"])
                     }.fullScreenCover(isPresented: self.$showNewVersion) {
                         UpdateChangeView(
                                 version: version.version,
@@ -85,6 +89,7 @@ struct AppRoot: App {
                     }.environment(\.managedObjectContext, datasource.getContainer().viewContext)
                     .environment(\.countRecordRepository, countRecordRepository)
                     .environment(\.petRepository, petRepository)
+                    .environmentObject(storeManager)
         }
     }
 
