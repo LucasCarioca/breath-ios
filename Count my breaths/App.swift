@@ -64,7 +64,7 @@ struct AppRoot: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                Router(selected: $selected, storeManager: storeManager)
+                Router(selected: $selected)
                         .navigationBarTitle("Menu")
                 CountView()
                         .padding()
@@ -78,7 +78,7 @@ struct AppRoot: App {
                             self.showNewVersion = true
                         }
                         SKPaymentQueue.default().add(storeManager)
-                        storeManager.getProducts(productIDs: ["0001"])
+                        storeManager.loadProducts(productIDs: [StoreManager.productKey])
                     }.fullScreenCover(isPresented: self.$showNewVersion) {
                         UpdateChangeView(
                                 version: version.version,
@@ -89,7 +89,7 @@ struct AppRoot: App {
                     }.environment(\.managedObjectContext, datasource.getContainer().viewContext)
                     .environment(\.countRecordRepository, countRecordRepository)
                     .environment(\.petRepository, petRepository)
-                    .environmentObject(storeManager)
+                    .environment(\.storeManager, storeManager)
         }
     }
 
