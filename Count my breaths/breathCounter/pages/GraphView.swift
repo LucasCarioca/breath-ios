@@ -31,7 +31,15 @@ struct GraphView: View {
     }
 
     var body: some View {
-        LineView(data: getBpmList())
+        let records = getBpmList()
+        if records.count > 1 {
+            return AnyView(LineView(data: records))
+        }
+        return AnyView(VStack {
+            Text("Before we can chart some graphs we need at least two measurements. Come back after you have taken some.").Paragraph(align: .center, size: .MD)
+            LottieView(filename: "empty")
+        })
+
     }
 
     func fetch() -> [CountRecord] {
