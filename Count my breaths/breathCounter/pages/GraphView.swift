@@ -19,7 +19,9 @@ enum QueryBy: Int {
 
 struct GraphView: View {
     @Environment(\.countRecordRepository) var countRecordRepository: CountRecordRepository
-
+    @Environment(\.petRepository) var petRepository: PetRepository
+    @State var pet: Pet? = nil
+    @State var countRecords: [CountRecord] = []
     var filter: QueryBy
 
     init() {
@@ -31,25 +33,29 @@ struct GraphView: View {
     }
 
     var body: some View {
-        let records = getBpmList()
-        if records.count > 1 {
-            return AnyView(LineView(data: records))
+        VStack {
+            if countRecords.count > 1 {
+                LineView(data: getBpmList())
+            } else {
+                Text("Before we can chart some graphs we need at least two measurements. Come back after you have taken some.").Paragraph(align: .center, size: .MD)
+                LottieView(filename: "empty")
+            }
+        }.onAppear {
+            let name = UserDefaults.standard.string(forKey: "CURRENT_PET") ?? "MyPet"
+            pet = petRepository.findByName(name)
+            self.countRecords = fetch()
         }
-        return AnyView(VStack {
-            Text("Before we can chart some graphs we need at least two measurements. Come back after you have taken some.").Paragraph(align: .center, size: .MD)
-            LottieView(filename: "empty")
-        })
 
     }
 
     func fetch() -> [CountRecord] {
         let range = getRange(filter)
-        return countRecordRepository.getAllCountRecords(from: range.from, to: range.to).reversed()
+        return countRecordRepository.getAllCountRecordsByPet(from: range.from, to: range.to, pet: pet).reversed()
     }
 
     func getBpmList() -> [Double] {
         var list: [Double] = []
-        for record in fetch() {
+        for record in countRecords {
             list.append(Double(record.beats * 2))
         }
         return list.reversed()
