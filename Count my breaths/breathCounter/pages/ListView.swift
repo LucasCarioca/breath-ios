@@ -27,19 +27,19 @@ struct ListView: View {
                         RecordView(beats: countRecords[record].beats, time: countRecords[record].time ?? Date(), targetBpm: getTargetBreathingRate())
                     }.onDelete(perform: delete)
                 }.listStyle(PlainListStyle())
-                MailButtonView(csvData: getCsvData(countRecords: countRecords))
-                Picker(selection: self.$filter.onChange { by in
-                    self.countRecords = fetch()
-                }, label: Text("")) {
-                    Text("1w").tag(QueryBy.WEEK)
-                    Text("2w").tag(QueryBy.TWO_WEEKS)
-                    Text("1m").tag(QueryBy.MONTH)
-                    Text("6m").tag(QueryBy.SIX_MONTHS)
-                }.pickerStyle(SegmentedPickerStyle())
             } else {
                 Text("Breathing records are currently empty. Come back after you have taken some measurements.").Paragraph(align: .center, size: .MD)
                 LottieView(filename: "empty")
             }
+            MailButtonView(csvData: getCsvData(countRecords: countRecords))
+            Picker(selection: self.$filter.onChange { by in
+                self.countRecords = fetch()
+            }, label: Text("")) {
+                Text("1w").tag(QueryBy.WEEK)
+                Text("2w").tag(QueryBy.TWO_WEEKS)
+                Text("1m").tag(QueryBy.MONTH)
+                Text("6m").tag(QueryBy.SIX_MONTHS)
+            }.pickerStyle(SegmentedPickerStyle())
         }.onAppear {
             let name = UserDefaults.standard.string(forKey: "CURRENT_PET") ?? "MyPet"
             pet = petRepository.findByName(name)
