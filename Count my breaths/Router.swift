@@ -11,7 +11,7 @@ import SwiftUI
 struct Router: View {
     @State var refreshId = UUID()
     @Binding var selected: Routes?
-    @StateObject var storeManager: StoreManager
+    @Environment(\.storeManager) var storeManager: StoreManager
 
     var body: some View {
         List {

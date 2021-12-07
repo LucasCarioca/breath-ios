@@ -5,12 +5,28 @@
 
 import Foundation
 import StoreKit
+import SwiftUI
+
+struct StoreManagerKey: EnvironmentKey {
+    static let defaultValue = StoreManager()
+}
+
+extension EnvironmentValues {
+    var storeManager: StoreManager {
+        get {
+            self[StoreManagerKey.self]
+        }
+        set {
+            self[StoreManagerKey.self] = newValue
+        }
+    }
+}
 
 class StoreManager: NSObject, ObservableObject, SKProductsRequestDelegate, SKPaymentTransactionObserver {
     @Published var myProducts = [SKProduct]()
     @Published var transactionState: SKPaymentTransactionState?
     var request: SKProductsRequest!
-    static let productKey = "0001"
+    static let productKey = "1001"
 
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
         for transaction in transactions {
@@ -61,7 +77,7 @@ class StoreManager: NSObject, ObservableObject, SKProductsRequestDelegate, SKPay
         // TODO: should handle when payment fails here
     }
 
-    func getProducts(productIDs: [String]) {
+    func loadProducts(productIDs: [String]) {
         let request = SKProductsRequest(productIdentifiers: Set(productIDs))
         request.delegate = self
         request.start()

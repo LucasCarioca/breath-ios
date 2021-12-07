@@ -82,6 +82,10 @@ struct ProFeaturesiOSTabView: View {
                     title: "Multiple pets",
                     text: "Pro users will now have the ability to add multiple pet profiles to track the health individually.",
                     lottieAnimation: "dog")
+            ProFeaturesPage(
+                    title: "Members only features",
+                    text: "Help fund additional member's only features.",
+                    lottieAnimation: "application")
             ProFeaturesCallToAction(action: action)
         }.tabViewStyle(PageTabViewStyle())
                 .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
@@ -99,11 +103,11 @@ struct ProFeaturesMacOSTabView: View {
                         text: "Pro users will now have the ability to add multiple pet profiles to track the health individually.",
                         lottieAnimation: "dog")
             } else if page == 1 {
-//                ProFeaturesPage(
-//                        title: "Track your collection",
-//                        text: "Adds functionality to track bottles and manage a inventory of your collection through the Collection view.",
-//                        lottieAnimation: "wine-loading")
-//            } else if page == 2 {
+                ProFeaturesPage(
+                        title: "Members only features",
+                        text: "Help fund additional member's only features.",
+                        lottieAnimation: "application")
+            } else if page == 2 {
                 ProFeaturesCallToAction(action: action)
             }
 
