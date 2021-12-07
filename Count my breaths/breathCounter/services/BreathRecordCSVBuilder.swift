@@ -7,12 +7,13 @@ import Foundation
 import CoreData
 import MessageUI
 
-public class RecordService {
+public class BreathRecordCSVBuilder {
 
-    private let records: [CountRecord];
+    private var records: [CountRecord] = [];
 
-    init(records: [CountRecord]) {
+    public func with(records: [CountRecord]) -> BreathRecordCSVBuilder {
         self.records = records
+        return self
     }
 
     private func createHeader() -> String {
@@ -31,7 +32,7 @@ public class RecordService {
         return csvString
     }
 
-    public func exportCsvData() -> Data? {
+    public func build() -> Data? {
         buildCsv().data(using: String.Encoding.utf8)
     }
 
