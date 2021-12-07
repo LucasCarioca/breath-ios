@@ -16,6 +16,7 @@ func getCsvData(countRecords: [CountRecord]) -> Data? {
     let records = countRecords.sorted { a, b in
         a.time! > b.time!
     }
-    let recordService = RecordService(records: records)
-    return recordService.exportCsvData()
+    return BreathRecordCSVBuilder()
+            .with(records: records)
+            .build()
 }
