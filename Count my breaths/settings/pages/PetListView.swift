@@ -13,7 +13,13 @@ struct PetListView: View {
     var body: some View {
         List {
             ForEach(pets.indices, id: \.self) { index in
-                NavigationLink(destination: PetProfileView(pet: pets[index]).onDisappear {refreshID = UUID()}) {
+                NavigationLink(destination: PetProfileView(
+                        pet: pets[index],
+                        name: pets[index].name ?? "",
+                        targetBreathing: String(pets[index].targetBreathing),
+                        chipId: pets[index].chipId ?? "").onDisappear {
+                    refreshID = UUID()
+                }) {
                     HStack {
                         Text(pets[index].name ?? "Missing name")
                         Spacer()
@@ -28,8 +34,10 @@ struct PetListView: View {
                     pets = petRepository.getAllPets()
                 }.id(refreshID)
                 .toolbar {
-                    NavigationLink(destination: NewPetProfileView()) {
-                        Image(systemName: "plus")
+                    if UserDefaults.standard.bool(forKey: StoreManager.productKey) {
+                        NavigationLink(destination: NewPetProfileView()) {
+                            Image(systemName: "plus")
+                        }
                     }
                 }
     }

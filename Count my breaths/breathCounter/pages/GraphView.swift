@@ -39,6 +39,10 @@ struct GraphView: View {
             } else {
                 Text("Before we can chart some graphs we need at least two measurements. Come back after you have taken some.").Paragraph(align: .center, size: .MD)
                 LottieView(filename: "empty")
+                if UserDefaults.standard.bool(forKey: StoreManager.productKey) {
+                    ManualRecordButton()
+                    Spacer()
+                }
             }
         }.onAppear {
             let name = UserDefaults.standard.string(forKey: "CURRENT_PET") ?? "MyPet"

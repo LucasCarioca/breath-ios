@@ -30,6 +30,10 @@ struct ListView: View {
             } else {
                 Text("Breathing records are currently empty. Come back after you have taken some measurements.").Paragraph(align: .center, size: .MD)
                 LottieView(filename: "empty")
+                if UserDefaults.standard.bool(forKey: StoreManager.productKey) {
+                    ManualRecordButton()
+                    Spacer()
+                }
             }
             MailButtonView(csvData: getCsvData(countRecords: countRecords))
             Picker(selection: self.$filter.onChange { by in

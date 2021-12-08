@@ -11,6 +11,8 @@ import CoreData
 import QuickComponents
 
 struct HistoryView: View {
+    @Environment(\.countRecordRepository) var countRecordRepository: CountRecordRepository
+    @Environment(\.petRepository) var petRepository: PetRepository
     @State var refreshId = UUID()
     @State var pickerSelectedItem = 0
     var body: some View {
@@ -30,7 +32,15 @@ struct HistoryView: View {
                 ])),
                 SwitcherPage(label: "Stats", view: StatsView())
             ])
-        }.id(refreshId)
+        }
+                .id(refreshId)
+                .toolbar {
+                    if UserDefaults.standard.bool(forKey: StoreManager.productKey) {
+                        NavigationLink(destination: ManualRecordForm()) {
+                            Image(systemName: "plus")
+                        }
+                    }
+                }
     }
 }
 

@@ -13,57 +13,34 @@ struct NewPetProfileView: View {
     @Environment(\.petRepository) var petRepository: PetRepository
     @State private var refreshID = UUID()
     @State var name: String = ""
-    @State var targetBreathing: Double = 30
+    @State var targetBreathing = ""
     @State var chipId: String = ""
 
     var body: some View {
         VStack {
-            List {
-                NavigationLink(destination: PetProfileTextFieldView(label: "Target breathing", name: String(format: "%.0f", targetBreathing), action: updateTargetBpm)) {
-                    HStack {
-                        Image(systemName: "timer")
-                        Text("Target breathing rate: ")
-                        Text("\(String(format: "%.0f", targetBreathing))").fontWeight(.heavy)
-                        Spacer()
-                    }
+            Form {
+                TextField("Pet Name", text: $name)
+                        .padding()
+                TextField("Target Breathing Rate", text: $targetBreathing)
+                        .padding()
+                        .keyboardType(.numberPad)
+                TextField("Chip Id", text: $chipId)
+                        .padding()
+                Button(action: save) {
+                    Text("Save")
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
                 }
-                NavigationLink(destination: PetProfileTextFieldView(label: "Pet name", name: name, action: updateName)) {
-                    HStack {
-                        Text("Pet name: ")
-                        Text(name).fontWeight(.heavy)
-                        Spacer()
-                    }
-                }
-                NavigationLink(destination: PetProfileTextFieldView(label: "Chip Id", name: chipId, action: updateChipId)) {
-                    HStack {
-                        Text("Chip Id: ")
-                        Text(chipId).fontWeight(.heavy)
-                        Spacer()
-                    }
-                }
-            }.id(refreshID)
-            Spacer()
-            Button(action: save) {
-                Text("Save")
             }
+                    .id(refreshID)
+                    .navigationTitle("New Pet")
         }
     }
 
-    func updateTargetBpm(newTarget: String) {
-        targetBreathing = Double(newTarget) ?? 30
-    }
-
-    func updateName(newName: String) {
-        name = newName
-    }
-
-    func updateChipId(newChipId: String) {
-        chipId = newChipId
-    }
-
     func save() {
-        let _ = petRepository.create(name: name, chipId: chipId, targetBreathing: targetBreathing)
-        refreshID = UUID()
-        presentationMode.wrappedValue.dismiss()
+        if name.count >= 1 {
+            let _ = petRepository.create(name: name, chipId: chipId, targetBreathing: Double(targetBreathing) ?? 30)
+            refreshID = UUID()
+            presentationMode.wrappedValue.dismiss()
+        }
     }
 }
