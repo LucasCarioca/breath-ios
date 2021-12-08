@@ -52,7 +52,7 @@ struct CountView: View {
                     .onReceive(timePublisher) { time in
                         if (isCounting) {
                             if (timer >= 30) {
-                                self.saveRecord(timeInterval: time.timeIntervalSinceReferenceDate)
+                                saveRecord(timeInterval: time.timeIntervalSinceReferenceDate)
                                 finishCounting()
                             } else {
                                 self.timer += 1
@@ -61,15 +61,29 @@ struct CountView: View {
                     }
 
             isCounting ? CountResetButton(action: reset) : nil
-            Spacer().navigationBarItems(trailing: CountShowHelpButton(action: toggleHelp))
-        }.toast(isPresented: $showWarning) {
-            CountWarningToast(messageTitle: messageTitle, messageContent: messageContent, action: dismissToast)
-        }.onAppear {
-            let name = UserDefaults.standard.string(forKey: "CURRENT_PET") ?? "MyPet"
-            pet = petRepository.findByName(name)
-        }.sheet(isPresented: $showHelp) {
-            CountHowTowPopOver(action: helpOff)
-        }.id(refreshId)
+            Spacer()
+        }
+                .toolbar {
+                    HStack {
+                        if UserDefaults.standard.bool(forKey: StoreManager.productKey) {
+                            NavigationLink(destination: ManualRecordForm()) {
+                                Image(systemName: "plus")
+                            }
+                        }
+                        CountShowHelpButton(action: toggleHelp)
+                    }
+                }
+                .toast(isPresented: $showWarning) {
+                    CountWarningToast(messageTitle: messageTitle, messageContent: messageContent, action: dismissToast)
+                }
+                .onAppear {
+                    let name = UserDefaults.standard.string(forKey: "CURRENT_PET") ?? "MyPet"
+                    pet = petRepository.findByName(name)
+                }
+                .sheet(isPresented: $showHelp) {
+                    CountHowTowPopOver(action: helpOff)
+                }
+                .id(refreshId)
 
     }
 

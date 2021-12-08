@@ -10,63 +10,54 @@ import SwiftUI
 
 struct PetProfileView: View {
     @Environment(\.petRepository) var petRepository: PetRepository
-    @State private var refreshID = UUID()
     var pet: Pet
+    @State var name: String
+    @State var targetBreathing: String
+    @State var chipId: String
+    @State var selected: Bool = false
     var body: some View {
-        List {
-            NavigationLink(destination: PetProfileTextFieldView(label: "Target breathing", name: String(format: "%.0f", pet.targetBreathing), action: updateTargetBpm)) {
-                HStack {
-                    Image(systemName: "timer")
-                    Text("Target breathing rate: ")
-                    Text("\(String(format: "%.0f", pet.targetBreathing))").fontWeight(.heavy)
-                    Spacer()
-                }
-            }
-            NavigationLink(destination: PetProfileTextFieldView(label: "Pet name", name: pet.name ?? "", action: updateName)) {
-                HStack {
-                    Text("Pet name: ")
-                    Text(pet.name ?? "Missing pet name").fontWeight(.heavy)
-                    Spacer()
-                }
-            }
-            NavigationLink(destination: PetProfileTextFieldView(label: "Chip Id", name: pet.chipId ?? "", action: updateChipId)) {
-                HStack {
-                    Text("Chip Id: ")
-                    Text(pet.chipId ?? "Missing chip id").fontWeight(.heavy)
-                    Spacer()
-                }
-            }
+        Form {
+            TextField("Pet Name", text: $name)
+                    .padding()
+            TextField("Target Breathing Rate", text: $targetBreathing)
+                    .padding()
+                    .keyboardType(.numberPad)
+            TextField("Chip Id", text: $chipId)
+                    .padding()
             if UserDefaults.standard.bool(forKey: StoreManager.productKey) {
                 Button(action: selectPet) {
                     HStack {
                         Text("Selected")
                         Spacer()
-                        UserDefaults.standard.string(forKey: "CURRENT_PET") == pet.name ? Image(systemName: "checkmark.circle.fill") : Image(systemName: "checkmark.circle")
+                        selected ? Image(systemName: "checkmark.circle.fill") : Image(systemName: "checkmark.circle")
                     }
                 }
             }
-        }.id(refreshID).navigationTitle(pet.name ?? "Missing name")
+            Button(action: save) {
+                Text("Save")
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+            }
+        }
+                .onAppear {
+                    self.selected = UserDefaults.standard.string(forKey: "CURRENT_PET") == pet.name
+                }
+                .navigationTitle(pet.name ?? "Missing name")
     }
 
-    func updateTargetBpm(newTarget: String) {
-        pet.targetBreathing = Double(newTarget) ?? 30
-        petRepository.save()
-        refreshID = UUID()
-    }
-
-    func updateName(newName: String) {
-        pet.name = newName
-        petRepository.save()
-        refreshID = UUID()
-    }
-
-    func updateChipId(newChipId: String) {
-        pet.chipId = newChipId
+    func save() {
+        pet.name = name
+        if selected {
+            UserDefaults.standard.set(name, forKey: "CURRENT_PET")
+        }
+        if let targetBreathing = Double(targetBreathing) {
+            pet.targetBreathing = targetBreathing
+        }
+        pet.chipId = chipId
         petRepository.save()
     }
 
     func selectPet() {
         UserDefaults.standard.set(pet.name, forKey: "CURRENT_PET")
-        refreshID = UUID()
+        selected = true
     }
 }

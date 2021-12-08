@@ -83,6 +83,10 @@ struct ProFeaturesiOSTabView: View {
                     text: "Pro users will now have the ability to add multiple pet profiles to track the health individually.",
                     lottieAnimation: "dog")
             ProFeaturesPage(
+                    title: "Take control of you data",
+                    text: "Members can now better manage their pets breathing records by adding manual recordings. If you're ever away from your devices and take a reading, you can now add that to your data.",
+                    lottieAnimation: "data")
+            ProFeaturesPage(
                     title: "Members only features",
                     text: "Help fund additional member's only features.",
                     lottieAnimation: "application")
@@ -104,10 +108,15 @@ struct ProFeaturesMacOSTabView: View {
                         lottieAnimation: "dog")
             } else if page == 1 {
                 ProFeaturesPage(
+                        title: "Take control of you data",
+                        text: "Members can now better manage their pets breathing records by adding manual recordings. If you're ever away from your devices and take a reading, you can now add that to your data.",
+                        lottieAnimation: "data")
+            } else if page == 2 {
+                ProFeaturesPage(
                         title: "Members only features",
                         text: "Help fund additional member's only features.",
                         lottieAnimation: "application")
-            } else if page == 2 {
+            } else if page == 3 {
                 ProFeaturesCallToAction(action: action)
             }
 
@@ -119,7 +128,7 @@ struct ProFeaturesMacOSTabView: View {
                             .buttonStyle(PrimaryButton())
                             .frame(width: 50, height: 50)
                 }
-                if page < 2 {
+                if page < 3 {
                     Button(action: { page += 1 }) {
                         Image(systemName: "chevron.forward")
                     }

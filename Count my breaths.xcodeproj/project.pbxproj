@@ -49,12 +49,14 @@
 		F8C4D11001D8EDB994409EE8 /* CurrentPetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D40885946CD5958CD19F /* CurrentPetView.swift */; };
 		F8C4D16D110C5EFE777E85F1 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DC0344A919F923A5DD75 /* ListView.swift */; };
 		F8C4D333D1DE85423E3CD95E /* PetHealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DBCAF760247815D3C4A8 /* PetHealthView.swift */; };
+		F8C4D3BC745BEFEF78A9FD40 /* ManualRecordForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D1F2EEB725C04C1ABAED /* ManualRecordForm.swift */; };
 		F8C4D415D89239E4496F3F02 /* CountShowHelpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D55D009A6C724A2F66C8 /* CountShowHelpButton.swift */; };
 		F8C4D6A4A4226575503A6234 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D3222819B96152879DDB /* GraphView.swift */; };
 		F8C4D6ABF7E2663F3D67188F /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DCBBFE2DE17C8028C6B9 /* StoreManager.swift */; };
 		F8C4D6B4C264F17C9679A7CA /* HowToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DE81C0A3624CDF2A6FF6 /* HowToView.swift */; };
 		F8C4D7A6E2FCDE83C42D019A /* MailButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DE65EDFBCB8B01B277C4 /* MailButton.swift */; };
 		F8C4D80825BA6BF747B6322C /* DevTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DD1CCFF1DC2EE430F99B /* DevTools.swift */; };
+		F8C4D830774B30F353849D8B /* ManualRecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D34A725B5FB094E59952 /* ManualRecordButton.swift */; };
 		F8C4D855376A8C793203D8EE /* PetSelectionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D6EB8335DEA24BC42419 /* PetSelectionListView.swift */; };
 		F8C4D893CF27D17B084057CB /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D8AF7B37FD409F27E0B1 /* Utilities.swift */; };
 		F8C4D998B9EA0424E9F7B07D /* CountHowTowPopOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DF960ABFB062D3F0BAB3 /* CountHowTowPopOver.swift */; };
@@ -66,6 +68,7 @@
 		F8C4DACDAF13B978446FE67D /* application.json in Resources */ = {isa = PBXBuildFile; fileRef = F8C4DBA770A722A2F245D30F /* application.json */; };
 		F8C4DB2E0C3B19E070EDF203 /* CountInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DCFA800F958DDAEDA9BE /* CountInstructions.swift */; };
 		F8C4DB6730AA424BAD4DFA11 /* BreathRecordCSVBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D99E15B371A2CD78632B /* BreathRecordCSVBuilder.swift */; };
+		F8C4DBB56229D8F9A9DDDB3C /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = F8C4D0A7480244BCC28E69EA /* data.json */; };
 		F8C4DC9E64220F3AC89ED398 /* NewPetProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4D5CED1196CF2B1B2EBA2 /* NewPetProfileView.swift */; };
 		F8C4DD2D5182E6A658632BDD /* CountButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DF5A2465D5FACC847374 /* CountButton.swift */; };
 		F8C4DD83FFB8CF9C848F9051 /* CountWarningToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4DA2E6338862605EAB236 /* CountWarningToast.swift */; };
@@ -129,8 +132,11 @@
 		DFB21BD32544FB5A003CE2DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFF402D1253FCB57007979E4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		F8C4D00CA5B9AF6C13FD2695 /* CountResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountResults.swift; sourceTree = "<group>"; };
+		F8C4D0A7480244BCC28E69EA /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		F8C4D0E2EA905326DA8BB69C /* ProFeatures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProFeatures.swift; sourceTree = "<group>"; };
+		F8C4D1F2EEB725C04C1ABAED /* ManualRecordForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualRecordForm.swift; sourceTree = "<group>"; };
 		F8C4D3222819B96152879DDB /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		F8C4D34A725B5FB094E59952 /* ManualRecordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualRecordButton.swift; sourceTree = "<group>"; };
 		F8C4D3A93FCBB9B1A2FC3C56 /* LottieView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		F8C4D3C2FDEF0B24243A39F1 /* StatsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
 		F8C4D40885946CD5958CD19F /* CurrentPetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentPetView.swift; sourceTree = "<group>"; };
@@ -335,6 +341,7 @@
 				F8C4DE81C0A3624CDF2A6FF6 /* HowToView.swift */,
 				F8C4D3222819B96152879DDB /* GraphView.swift */,
 				DF2B080C253FCED9000631D4 /* MailView.swift */,
+				F8C4D1F2EEB725C04C1ABAED /* ManualRecordForm.swift */,
 			);
 			path = pages;
 			sourceTree = "<group>";
@@ -352,6 +359,7 @@
 				F8C4D55D009A6C724A2F66C8 /* CountShowHelpButton.swift */,
 				F8C4DA2E6338862605EAB236 /* CountWarningToast.swift */,
 				F8C4DF960ABFB062D3F0BAB3 /* CountHowTowPopOver.swift */,
+				F8C4D34A725B5FB094E59952 /* ManualRecordButton.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -432,6 +440,7 @@
 				DF662B05275DE20800ED536D /* rocket.json */,
 				DF662B0B275DE40500ED536D /* dog.json */,
 				F8C4DBA770A722A2F245D30F /* application.json */,
+				F8C4D0A7480244BCC28E69EA /* data.json */,
 			);
 			path = animations;
 			sourceTree = "<group>";
@@ -510,10 +519,10 @@
 			);
 			mainGroup = DF8E95AA246B8E8E004AB783;
 			packageReferences = (
-				DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference "ChartView.git" */,
-				DF8D99342479CD4C00824C52 /* XCRemoteSwiftPackageReference "QuickComponents.git" */,
-				DFFC8E1424E9DD08006882B4 /* XCRemoteSwiftPackageReference "ToastUI.git" */,
-				DF662AFE275DDD1C00ED536D /* XCRemoteSwiftPackageReference "lottie-ios.git" */,
+				DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference "ChartView" */,
+				DF8D99342479CD4C00824C52 /* XCRemoteSwiftPackageReference "QuickComponents" */,
+				DFFC8E1424E9DD08006882B4 /* XCRemoteSwiftPackageReference "ToastUI" */,
+				DF662AFE275DDD1C00ED536D /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = DF8E95B4246B8E8F004AB783 /* Products */;
 			projectDirPath = "";
@@ -540,6 +549,7 @@
 				DF662B08275DE20800ED536D /* payment-error.json in Resources */,
 				DF662B09275DE20800ED536D /* payment-confirmation.json in Resources */,
 				F8C4DACDAF13B978446FE67D /* application.json in Resources */,
+				F8C4DBB56229D8F9A9DDDB3C /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -622,6 +632,8 @@
 				F8C4DF9137B103FF71B1A078 /* ProFeatures.swift in Sources */,
 				F8C4DA634382B5688793C12C /* LottieView.swift in Sources */,
 				F8C4D80825BA6BF747B6322C /* DevTools.swift in Sources */,
+				F8C4D3BC745BEFEF78A9FD40 /* ManualRecordForm.swift in Sources */,
+				F8C4D830774B30F353849D8B /* ManualRecordButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -787,7 +799,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Count my breaths/Count my breaths.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"Count my breaths/Preview Content\"";
 				DEVELOPMENT_TEAM = Y259ZT3SQK;
 				ENABLE_PREVIEWS = YES;
@@ -815,7 +827,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Count my breaths/Count my breaths.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"Count my breaths/Preview Content\"";
 				DEVELOPMENT_TEAM = Y259ZT3SQK;
 				ENABLE_PREVIEWS = YES;
@@ -911,7 +923,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference "ChartView.git" */ = {
+		DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference "ChartView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AppPear/ChartView.git";
 			requirement = {
@@ -919,7 +931,7 @@
 				minimumVersion = 1.5.0;
 			};
 		};
-		DF662AFE275DDD1C00ED536D /* XCRemoteSwiftPackageReference "lottie-ios.git" */ = {
+		DF662AFE275DDD1C00ED536D /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
 			requirement = {
@@ -927,7 +939,7 @@
 				minimumVersion = 3.0.0;
 			};
 		};
-		DF8D99342479CD4C00824C52 /* XCRemoteSwiftPackageReference "QuickComponents.git" */ = {
+		DF8D99342479CD4C00824C52 /* XCRemoteSwiftPackageReference "QuickComponents" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/LucasCarioca/QuickComponents.git";
 			requirement = {
@@ -935,7 +947,7 @@
 				minimumVersion = 0.7.2;
 			};
 		};
-		DFFC8E1424E9DD08006882B4 /* XCRemoteSwiftPackageReference "ToastUI.git" */ = {
+		DFFC8E1424E9DD08006882B4 /* XCRemoteSwiftPackageReference "ToastUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/quanshousio/ToastUI.git";
 			requirement = {
@@ -948,22 +960,22 @@
 /* Begin XCSwiftPackageProductDependency section */
 		DF12190A2471E0B500112F63 /* SwiftUICharts */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference "ChartView.git" */;
+			package = DF1219092471E0B500112F63 /* XCRemoteSwiftPackageReference "ChartView" */;
 			productName = SwiftUICharts;
 		};
 		DF662AFF275DDD1C00ED536D /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DF662AFE275DDD1C00ED536D /* XCRemoteSwiftPackageReference "lottie-ios.git" */;
+			package = DF662AFE275DDD1C00ED536D /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
 		};
 		DF8D99352479CD4C00824C52 /* QuickComponents */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DF8D99342479CD4C00824C52 /* XCRemoteSwiftPackageReference "QuickComponents.git" */;
+			package = DF8D99342479CD4C00824C52 /* XCRemoteSwiftPackageReference "QuickComponents" */;
 			productName = QuickComponents;
 		};
 		DFFC8E1524E9DD08006882B4 /* ToastUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DFFC8E1424E9DD08006882B4 /* XCRemoteSwiftPackageReference "ToastUI.git" */;
+			package = DFFC8E1424E9DD08006882B4 /* XCRemoteSwiftPackageReference "ToastUI" */;
 			productName = ToastUI;
 		};
 /* End XCSwiftPackageProductDependency section */
