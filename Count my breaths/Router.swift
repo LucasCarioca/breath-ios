@@ -12,6 +12,8 @@ struct Router: View {
     @State var refreshId = UUID()
     @Binding var selected: Routes?
     @Environment(\.storeManager) var storeManager: StoreManager
+    @Environment(\.petRepository) var petRepository: PetRepository
+    @State var pet: Pet?
 
     var body: some View {
         List {
@@ -54,19 +56,32 @@ struct Router: View {
                 }
             }
             Section(header: Text("Settings")) {
-                NavigationLink(
-                        destination:
-                        PetListView()
-                                .navigationBarTitle("Pets"),
-                        tag: .profile,
-                        selection: self.$selected) {
-                    Label("Pets", systemImage: "person.crop.circle.fill")
-                }
+
                 if !UserDefaults.standard.bool(forKey: StoreManager.productKey) {
+                    if let pet = pet {
+                        NavigationLink(
+                                destination: PetProfileView(
+                                        pet: pet,
+                                        name: pet.name ?? "",
+                                        targetBreathing: String(pet.targetBreathing),
+                                        chipId: pet.chipId ?? "").onDisappear {
+                                    refreshId = UUID()
+                                }) {
+                            Label(pet.name ?? "No pet name", systemImage: "person.crop.circle.fill")
+                        }
+                    }
                     NavigationLink(destination: ProFeatures(storeManager: storeManager)) {
-                        Label("Upgrade to Pro", systemImage: "star")
+                        Label("Unlock All Features", systemImage: "star")
                     }
                 } else {
+                    NavigationLink(
+                            destination:
+                            PetListView()
+                                    .navigationBarTitle("Pets"),
+                            tag: .profile,
+                            selection: self.$selected) {
+                        Label("Pets", systemImage: "person.crop.circle.fill")
+                    }
                     CurrentPetView(onRefresh: { refreshId = UUID() }, label: { name in
                         AnyView(Label("Selected pet: \(name)", systemImage: "checkmark.circle.fill"))
                     })
@@ -79,6 +94,9 @@ struct Router: View {
                 }
             }
             #endif
+        }.onAppear {
+            let name = UserDefaults.standard.string(forKey: "CURRENT_PET") ?? "MyPet"
+            pet = petRepository.findByName(name)
         }
     }
 }
