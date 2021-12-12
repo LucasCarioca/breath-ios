@@ -79,14 +79,16 @@ struct AppRoot: App {
                         }
                         SKPaymentQueue.default().add(storeManager)
                         storeManager.loadProducts(productIDs: [StoreManager.productKey])
-                    }.fullScreenCover(isPresented: self.$showNewVersion) {
+                    }
+                   /* .fullScreenCover(isPresented: self.$showNewVersion) {
                         UpdateChangeView(
                                 version: version.version,
                                 versionDescription: version.description,
                                 changes: version.newFeatures,
                                 action: dismissNewVersionPopup
                         )
-                    }.environment(\.managedObjectContext, datasource.getContainer().viewContext)
+                    }*/
+                    .environment(\.managedObjectContext, datasource.getContainer().viewContext)
                     .environment(\.countRecordRepository, countRecordRepository)
                     .environment(\.petRepository, petRepository)
                     .environment(\.storeManager, storeManager)
