@@ -5,7 +5,8 @@ Count my breaths.app.dSYM.zip
 Count my breaths.ipa
 fastlane/report.xml
 Brewfile.lock.json
-Count my breaths.xcodeproj/project.xcworkspace/
+Count my breaths.xcodeproj/project.xcworkspace/xcuserdata
+Count my breaths.xcodeproj/project.xcworkspace/contents.xcworkspacedata
 Count my breaths.xcodeproj/xcuserdata/
 .idea/
 *.iml
